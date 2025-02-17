@@ -33,7 +33,7 @@ body {
 
 .main-content {
     background: var(--section-bg);
-    padding: 3rem;
+    padding: 2.5rem;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
 }
@@ -64,7 +64,7 @@ h2 {
     font-size: 1.4rem;
     color: var(--primary-color);
     padding-bottom: 0.75rem;
-    margin: 3rem 0 1.5rem;
+    margin: 2.5rem 0 1.5rem;
     font-weight: 600;
     display: flex;
     align-items: center;
@@ -121,11 +121,25 @@ li::before {
     display: none;
 }
 
-#projects ul li::before {
+#projects ul li::before, #research ul li::before {
     content: "•";
     color: var(--primary-color);
     font-weight: bold;
-    margin-right: 0.25rem;
+    display: inline-block;
+    margin-right: 0.5rem;
+    position: absolute;
+    left: -1.2rem;
+}
+
+#projects ul, #research ul {
+    padding-left: 1.2rem;
+    list-style: none;
+}
+
+#projects ul li, #research ul li {
+    position: relative;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
 }
 
 .language-switch {
@@ -222,20 +236,6 @@ li::before {
     margin-bottom: 0.5rem;
 }
 
-#research ul {
-    padding-left: 1.5rem;
-}
-
-#research ul li::before {
-    content: "•";
-    display: block;
-    color: var(--primary-color);
-    font-size: 1.2rem;
-    line-height: 1;
-    margin-left: -1.5rem;
-    position: absolute;
-}
-
 .honors-list {
     display: flex;
     flex-wrap: wrap;
@@ -271,7 +271,7 @@ li::before {
     }
     
     h2 {
-        font-size: 1.3rem;
+        margin: 2rem 0 1.25rem;
     }
     
     .contact-info {
