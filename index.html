@@ -3,140 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="周世扬的个人主页 - 大气科学研究者和数据分析师">
     <title>周世扬 - 个人主页</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="language-switch">
-        <button onclick="toggleLanguage()" id="langBtn">Switch to English</button>
+        <button onclick="toggleLanguage('zh')" id="zhBtn">中文</button>
+        <div class="separator"></div>
+        <button onclick="toggleLanguage('en')" id="enBtn" class="active">English</button>
     </div>
     
     <div class="container">
-        <header>
-            <h1 class="zh" style="color: black;">周世扬</h1>
-            <h1 class="en" style="color: black;">Shiyang Zhou</h1>
+        <section class="main-content">
+            <h1 class="zh">周世扬</h1>
+            <h1 class="en">Shiyang Zhou</h1>
             <div class="contact-info">
-                <p class="zh">邮箱：zhoushiyang1207@outlook.com | 籍贯：山东日照</p>
-                <p class="en">Email: zhoushiyang1207@outlook.com | Hometown: Rizhao, Shandong</p>
+                <p class="zh"><i class="ri-mail-line"></i> 邮箱: zhoushiyang1207@outlook.com | <i class="ri-map-pin-line"></i> 地点: 山东日照, 中国</p>
+                <p class="en"><i class="ri-mail-line"></i> Email: zhoushiyang1207@outlook.com | <i class="ri-map-pin-line"></i> Location: Rizhao, Shandong, China</p>
             </div>
-        </header>
 
-        <section id="education">
-            <h2 class="zh">教育经历</h2>
-            <h2 class="en">Education</h2>
-            <div class="zh">
-                <h3>南京信息工程大学 (2019.09 - 2023.06)</h3>
-                <p>大气科学学院 | 理学学士（大气科学）</p>
-                <p>GPA：3.88 (88.8/100，前12%)</p>
+            <div id="education">
+                <h2 class="zh"><i class="ri-graduation-cap-line"></i> 教育经历</h2>
+                <h2 class="en"><i class="ri-graduation-cap-line"></i> Education</h2>
+                <div class="zh education-info">
+                    <h3><i class="ri-building-line"></i> 南京信息工程大学</h3>
+                    <p><i class="ri-building-line"></i> 大气科学学院 | 理学学士（大气科学）</p>
+                    <p><i class="ri-time-line"></i> 2019.09 - 2023.06</p>
+                </div>
+                <div class="en education-info">
+                    <h3><i class="ri-building-line"></i> Nanjing University of Information Science & Technology</h3>
+                    <p><i class="ri-building-line"></i> School of Atmospheric Sciences | B.Sc. in Atmospheric Science</p>
+                    <p><i class="ri-time-line"></i> 2019.09 - 2023.06</p>
+                </div>
             </div>
-            <div class="en">
-                <h3>Nanjing University of Information Science & Technology (2019.09 - 2023.06)</h3>
-                <p>School of Atmospheric Sciences | Bachelor of Science (Atmospheric Science)</p>
-                <p>GPA: 3.88 (88.8/100, Top 12%)</p>
-            </div>
-        </section>
 
-        <section id="work">
-            <h2 class="zh">工作经历</h2>
-            <h2 class="en">Work Experience</h2>
-            <div class="zh">
-                <h3>济南天昱农业科技有限公司 (2023.07 - 至今)</h3>
-                <p>数据分析师</p>
+            <div id="work">
+                <h2 class="zh"><i class="ri-briefcase-line"></i> 工作经历</h2>
+                <h2 class="en"><i class="ri-briefcase-line"></i> Work Experience</h2>
+                <div class="zh work-info">
+                    <h3><i class="ri-building-line"></i> 济南天昱农业科技有限公司</h3>
+                    <p><i class="ri-bar-chart-line"></i> 数据分析师</p>
+                    <p><i class="ri-time-line"></i> 2023.07 - 至今</p>
+                </div>
+                <div class="en work-info">
+                    <h3><i class="ri-building-line"></i> Jinan Tianyu Agricultural Technology Co., Ltd.</h3>
+                    <p><i class="ri-bar-chart-line"></i> Data Analyst</p>
+                    <p><i class="ri-time-line"></i> 2023.07 - Present</p>
+                </div>
             </div>
-            <div class="en">
-                <h3>Jinan Tianyu Agricultural Technology Co., Ltd. (2023.07 - Present)</h3>
-                <p>Data Analyst</p>
-            </div>
-        </section>
 
-        <section id="honors">
-            <h2 class="zh">荣誉奖项</h2>
-            <h2 class="en">Honors & Awards</h2>
-            <div class="zh">
-                <p>校一等奖学金、校三好学生、校优秀学生干部、校优秀毕业生、"气象菁英"奖学金、龙山书院"科创之星"</p>
+            <div id="honors">
+                <h2 class="zh"><i class="ri-award-line"></i> 荣誉奖项</h2>
+                <h2 class="en"><i class="ri-award-line"></i> Honors & Awards</h2>
+                <div class="zh">
+                    <ul class="honors-list">
+                        <li>一等奖学金</li>
+                        <li>三好学生</li>
+                        <li>优秀学生干部</li>
+                        <li>优秀毕业生</li>
+                        <li>"气象菁英"奖学金</li>
+                        <li>龙山书院"科创之星"</li>
+                    </ul>
+                </div>
+                <div class="en">
+                    <ul class="honors-list">
+                        <li>First-Class Scholarship</li>
+                        <li>Outstanding Student</li>
+                        <li>Outstanding Student Leader</li>
+                        <li>Outstanding Graduate</li>
+                        <li>Meteorological Elite Scholarship</li>
+                        <li>Longshan Academy Innovation Star</li>
+                    </ul>
+                </div>
             </div>
-            <div class="en">
-                <p>First-Class Scholarship, Excellent Student, Outstanding Student Leader, Outstanding Graduate, "Meteorological Elite" Scholarship, "Innovation Star" of Longshan Academy</p>
-            </div>
-        </section>
 
-        <section id="research">
-            <h2 class="zh">研究经历</h2>
-            <h2 class="en">Research Experience</h2>
-            <div class="zh">
-                <h3>印度地区绿化对北半球夏季气候的影响过程和机理 (项目负责人, 2021.03 - 2023.06)</h3>
-                <ul>
-                    <li>利用NASA的GIMMS LAI研究全球植被近三十年的变化特征</li>
-                    <li>使用CAM-CLM模式进行植被改变数值试验</li>
-                    <li>研究印度地区绿化对北半球气候的影响过程与作用机制</li>
-                    <li>参加江苏省"陆面过程与陆气相互作用"研究生暑期学校</li>
-                </ul>
-                
-                <h3>南海夏季风爆发的无缝隙预报研究 (主要参与者, 2022.01 - 2023.01)</h3>
-                <ul>
-                    <li>负责CAMS-CSM数值模式的运行和数据处理</li>
-                    <li>探究模式分辨率及初始化方案对预测能力的影响</li>
-                </ul>
+            <div id="research">
+                <h2 class="zh"><i class="ri-flask-line"></i> 研究经历</h2>
+                <h2 class="en"><i class="ri-flask-line"></i> Research Experience</h2>
+                <div class="zh">
+                    <h3><i class="ri-plant-line"></i> 印度地区绿化对北半球夏季气候的影响及机理</h3>
+                    <p><i class="ri-time-line"></i> 2021.03 - 2023.06 | 项目负责人</p>
+                    <ul>
+                        <li>利用NASA的GIMMS LAI数据研究全球植被近三十年的变化特征</li>
+                        <li>基于CAM-CLM模式开展植被变化数值试验</li>
+                        <li>探究印度绿化对北半球气候的影响过程及作用机制</li>
+                        <li>参与江苏省"陆面过程与陆气相互作用"研究生暑期学校</li>
+                    </ul>
+                    
+                    <h3><i class="ri-cloud-line"></i> 南海夏季风爆发的无缝隙预报研究</h3>
+                    <p><i class="ri-time-line"></i> 2022.01 - 2023.01 | 主要参与者</p>
+                    <ul>
+                        <li>负责CAMS-CSM数值模式运行与数据处理</li>
+                        <li>研究模式分辨率及初始化方案对预报能力的影响</li>
+                    </ul>
+                </div>
+                <div class="en">
+                    <h3><i class="ri-plant-line"></i> Impact of India's Greening on Northern Hemisphere Summer Climate</h3>
+                    <p><i class="ri-time-line"></i> 2021.03 - 2023.06 | Project Leader</p>
+                    <ul>
+                        <li>Analyzed global vegetation changes using NASA's GIMMS LAI data over nearly 30 years</li>
+                        <li>Conducted numerical experiments with the CAM-CLM model on vegetation changes</li>
+                        <li>Explored the impact and mechanisms of India's greening on hemispheric summer climate</li>
+                        <li>Attended the Summer School on Land-Atmosphere Interactions, Jiangsu Province</li>
+                    </ul>
+                    
+                    <h3><i class="ri-cloud-line"></i> Seamless Prediction of the Onset of the South China Sea Summer Monsoon</h3>
+                    <p><i class="ri-time-line"></i> 2022.01 - 2023.01 | Key Participant</p>
+                    <ul>
+                        <li>Operated the CAMS-CSM numerical model and processed relevant data</li>
+                        <li>Investigated the effects of model resolution and initialization on forecast accuracy</li>
+                    </ul>
+                </div>
             </div>
-            <div class="en">
-                <h3>Impact of Greening in India on Northern Hemisphere Summer Climate (Project Leader, 2021.03 - 2023.06)</h3>
-                <ul>
-                    <li>Analyzed global vegetation changes over the past 30 years using NASA's GIMMS LAI data</li>
-                    <li>Conducted numerical experiments on vegetation changes using the CAM-CLM model</li>
-                    <li>Explored the impact mechanisms of greening in India on the Northern Hemisphere climate</li>
-                    <li>Attended the Jiangsu Province Summer School on "Land Surface Processes and Land-Atmosphere Interactions"</li>
-                </ul>
-                
-                <h3>Seamless Prediction of South China Sea Summer Monsoon Onset (Key Participant, 2022.01 - 2023.01)</h3>
-                <ul>
-                    <li>Operated the CAMS-CSM numerical model and processed data</li>
-                    <li>Investigated the effects of model resolution and initialization schemes on prediction capability</li>
-                </ul>
-            </div>
-        </section>
 
-        <section id="internship">
-            <h2 class="zh">实习经历</h2>
-            <h2 class="en">Internship Experience</h2>
-            <div class="zh">
-                <ul>
-                    <li>山东省五莲县气象局 (2023.01 - 2023.02)</li>
-                    <li>南京信息工程大学大气与环境实验教学中心气象台 (2022.09 - 2022.11)</li>
-                    <li>山东省日照市生态环保局五莲分局 (2021.01 - 2021.02)</li>
-                </ul>
+            <div id="internship">
+                <h2 class="zh"><i class="ri-calendar-line"></i> 实习经历</h2>
+                <h2 class="en"><i class="ri-calendar-line"></i> Internship Experience</h2>
+                <div class="zh">
+                    <ul>
+                        <li><i class="ri-building-2-line"></i> 山东省五莲县气象局 | 2023.01 - 2023.02</li>
+                        <li><i class="ri-building-2-line"></i> 南京信息工程大学气象台 | 2022.09 - 2022.11</li>
+                        <li><i class="ri-building-2-line"></i> 山东省日照市生态环保局 | 2021.01 - 2021.02</li>
+                    </ul>
+                </div>
+                <div class="en">
+                    <ul>
+                        <li><i class="ri-building-2-line"></i> Wulian Meteorological Bureau | 2023.01 - 2023.02</li>
+                        <li><i class="ri-building-2-line"></i> NUIST Meteorological Observatory | 2022.09 - 2022.11</li>
+                        <li><i class="ri-building-2-line"></i> Rizhao Environmental Protection Bureau | 2021.01 - 2021.02</li>
+                    </ul>
+                </div>
             </div>
-            <div class="en">
-                <ul>
-                    <li>Wulian County Meteorological Bureau, Shandong Province (2023.01 - 2023.02)</li>
-                    <li>Meteorological Observatory, NUIST (2022.09 - 2022.11)</li>
-                    <li>Wulian Branch, Rizhao Ecological and Environmental Protection Bureau (2021.01 - 2021.02)</li>
-                </ul>
-            </div>
-        </section>
 
-        <section id="skills">
-            <h2 class="zh">技能特长</h2>
-            <h2 class="en">Skills</h2>
-            <div class="zh">
-                <ul>
-                    <li>编程语言：Python、NCL、MATLAB、Fortran等</li>
-                    <li>数值模式：CESM、WRF、CAMS-CSM以及NeuralGCM等气象大模型</li>
-                    <li>证书：计算机二级、CET-6、驾驶证C1</li>
-                    <li>软件：MICAPS、PUP等气象业务软件，ChatGPT等生成式AI，Office、PS、剪映等办公剪辑软件</li>
-                    <li>兴趣：羽毛球、烹饪、视频制作</li>
-                </ul>
-            </div>
-            <div class="en">
-                <ul>
-                    <li>Programming Languages: Python, NCL, MATLAB, Fortran, etc.</li>
-                    <li>Numerical Models: CESM, WRF, CAMS-CSM, NeuralGCM</li>
-                    <li>Certificates: Computer Level II, CET-6, Driver's License C1</li>
-                    <li>Software: MICAPS, PUP, ChatGPT, Office, PS, Video Editing Tools</li>
-                    <li>Interests: Badminton, Cooking, Video Production</li>
-                </ul>
+            <div id="skills">
+                <h2 class="zh"><i class="ri-tools-line"></i> 技能特长</h2>
+                <h2 class="en"><i class="ri-tools-line"></i> Skills</h2>
+                <div class="zh">
+                    <ul>
+                        <li><i class="ri-code-line"></i> 编程语言：Python、NCL、MATLAB、Fortran</li>
+                        <li><i class="ri-cloud-line"></i> 数值模式：CESM、WRF、CAMS-CSM、NeuralGCM</li>
+                        <li><i class="ri-file-list-3-line"></i> 证书：计算机二级、CET-6、C1 驾照</li>
+                        <li><i class="ri-apps-line"></i> 软件：MICAPS、PUP、ChatGPT、Office、Photoshop、剪映</li>
+                        <li><i class="ri-heart-line"></i> 爱好：羽毛球、烹饪、视频制作</li>
+                    </ul>
+                </div>
+                <div class="en">
+                    <ul>
+                        <li><i class="ri-code-line"></i> Programming Languages: Python, NCL, MATLAB, Fortran</li>
+                        <li><i class="ri-cloud-line"></i> Numerical Models: CESM, WRF, CAMS-CSM, NeuralGCM</li>
+                        <li><i class="ri-file-list-3-line"></i> Certificates: National Computer Rank Examination (Level II), CET-6, Driver's License (Class C1)</li>
+                        <li><i class="ri-apps-line"></i> Software: MICAPS, PUP, ChatGPT, Office, Photoshop</li>
+                        <li><i class="ri-heart-line"></i> Hobbies: Badminton, Cooking, Video Production</li>
+                    </ul>
+                </div>
             </div>
         </section>
     </div>
+
+    <div id="back-to-top">
+        <i class="ri-arrow-up-line"></i>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html> 
