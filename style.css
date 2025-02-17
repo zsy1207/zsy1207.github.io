@@ -27,20 +27,20 @@ body {
 
 .container {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 2rem auto;
     padding: 1.5rem;
 }
 
 .main-content {
     background: var(--section-bg);
-    padding: 2.5rem;
+    padding: 3rem;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
 }
 
 .contact-info {
-    margin-top: 0.75rem;
-    margin-bottom: 2.5rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
     font-size: 0.95rem;
     color: #64748b;
     text-align: center;
@@ -63,8 +63,8 @@ h1 {
 h2 {
     font-size: 1.4rem;
     color: var(--primary-color);
-    padding-bottom: 0.5rem;
-    margin: 2.5rem 0 1.25rem;
+    padding-bottom: 0.75rem;
+    margin: 3rem 0 1.5rem;
     font-weight: 600;
     display: flex;
     align-items: center;
@@ -83,7 +83,7 @@ h2 i {
 h3 {
     font-size: 1.1rem;
     color: #334155;
-    margin: 1.25rem 0 0.5rem;
+    margin: 1.5rem 0 0.75rem;
     font-weight: 600;
     display: flex;
     align-items: center;
@@ -110,7 +110,7 @@ ul {
 }
 
 li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
     position: relative;
     display: flex;
     align-items: baseline;
@@ -119,6 +119,13 @@ li {
 
 li::before {
     display: none;
+}
+
+#projects ul li::before {
+    content: "•";
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-right: 0.25rem;
 }
 
 .language-switch {
@@ -204,6 +211,7 @@ li::before {
 
 .education-info, .work-info {
     padding-left: 0;
+    margin-bottom: 1.5rem;
 }
 
 .education-info h3, .work-info h3 {
@@ -211,16 +219,7 @@ li::before {
 }
 
 .education-info p, .work-info p {
-    position: relative;
-    display: flex;
-    align-items: baseline;
-    gap: 0.5rem;
     margin-bottom: 0.5rem;
-    padding-left: 0;
-}
-
-.education-info p::before, .work-info p::before {
-    display: none;
 }
 
 #research ul {
@@ -242,11 +241,12 @@ li::before {
     flex-wrap: wrap;
     gap: 0.75rem;
     padding-left: 0;
+    margin-top: 1rem;
 }
 
 .honors-list li {
     background-color: #f1f5f9;
-    padding: 0.35rem 0.75rem;
+    padding: 0.5rem 1rem;
     border-radius: 1rem;
     margin: 0;
     font-size: 0.95rem;
@@ -259,10 +259,11 @@ li::before {
 @media (max-width: 768px) {
     .container {
         padding: 1rem;
+        margin: 1rem auto;
     }
     
     .main-content {
-        padding: 1.5rem;
+        padding: 2rem;
     }
     
     h1 {
