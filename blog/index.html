@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shiyang Zhou's Blog - Atmospheric Science, Data Analysis, Programming">
+    <meta name="keywords" content="Shiyang Zhou, Atmospheric Science, Data Analysis, Meteorology, Programming, Blog">
+    <meta name="author" content="Shiyang Zhou">
+    <title>Shiyang's Blog</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="blog.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2270%22>☁️</text></svg>" type="image/svg+xml">
+</head>
+<body>
+    <header class="main-nav">
+        <nav class="nav-container">
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">Blog</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Language <i class="ri-arrow-down-s-line"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a id="enBtn" class="dropdown-item active">English</a></li>
+                        <li><a id="zhBtn" class="dropdown-item">中文</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="theme-toggle" onclick="toggleTheme()">
+        <i class="ri-sun-line" id="light-icon"></i>
+        <i class="ri-moon-line" id="dark-icon" style="display: none;"></i>
+    </div>
+    
+    <div class="container">
+        <section class="main-content">
+            <div class="blog-header">
+                <div class="blog-title">
+                    <h1 class="zh">周世扬的博客</h1>
+                    <h1 class="en">Shiyang's Blog</h1>
+                    <p class="subtitle en">Atmospheric Science, Data Analysis, and Programming</p>
+                </div>
+                <div class="blog-nav">
+                    <a href="../index.html" class="btn-secondary"><i class="ri-home-line"></i> <span class="zh">返回主页</span><span class="en">Back to Home</span></a>
+                </div>
+            </div>
+
+            <div class="blog-categories">
+                <span class="zh">分类：</span>
+                <span class="en">Categories: </span>
+                <a href="#" class="blog-category active" data-category="all"><span class="zh">全部</span><span class="en">All</span></a>
+                <a href="#" class="blog-category" data-category="atmospheric-science"><span class="zh">大气科学</span><span class="en">Atmospheric Science</span></a>
+                <a href="#" class="blog-category" data-category="data-analysis"><span class="zh">数据分析</span><span class="en">Data Analysis</span></a>
+                <a href="#" class="blog-category" data-category="programming"><span class="zh">编程</span><span class="en">Programming</span></a>
+                <a href="#" class="blog-category" data-category="books"><span class="zh">读书</span><span class="en">Books</span></a>
+                <a href="#" class="blog-category" data-category="philosophy"><span class="zh">哲学</span><span class="en">Philosophy</span></a>
+                <a href="#" class="blog-category" data-category="education"><span class="zh">教育</span><span class="en">Education</span></a>
+            </div>
+
+            <div class="blog-grid">
+                <div class="blog-card" data-categories="books philosophy education">
+                    <div class="blog-card-content">
+                        <div class="blog-tags">
+                            <a href="#" class="blog-tag" data-category="books"><i class="ri-book-line"></i> <span class="zh">读书</span><span class="en">Books</span></a>
+                            <a href="#" class="blog-tag" data-category="philosophy"><i class="ri-mind-map"></i> <span class="zh">哲学</span><span class="en">Philosophy</span></a>
+                            <a href="#" class="blog-tag" data-category="education"><i class="ri-school-line"></i> <span class="zh">教育</span><span class="en">Education</span></a>
+                        </div>
+                        <h2><a href="hermann-hesse.html"><span class="zh">赫尔曼·黑塞《在轮下》的文学解构与哲学省思</span><span class="en">Literary Deconstruction and Philosophical Reflection on Hermann Hesse's "Beneath the Wheel"</span></a></h2>
+                        <p class="blog-date"><i class="ri-calendar-line"></i> 2024-06-01</p>
+                        <p class="blog-excerpt zh">通过文学解构与哲学分析，探讨黑塞的《在轮下》如何揭示现代教育体制的困境与人性异化。</p>
+                        <p class="blog-excerpt en">Through literary deconstruction and philosophical analysis, exploring how Hesse's "Beneath the Wheel" reveals the predicament of modern education systems and the alienation of human nature.</p>
+                        <a href="hermann-hesse.html" class="read-more">
+                            <span class="zh">阅读更多</span>
+                            <span class="en">Read More</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 更多博客卡片将在这里添加 -->
+            </div>
+            
+            <div class="pagination">
+                <span class="current-page">1</span>
+                <!-- 更多页码将在这里添加 -->
+            </div>
+        </section>
+        
+        <footer>
+            <p class="zh">© 2024 周世扬 | 使用 <i class="ri-heart-fill"></i> 制作</p>
+            <p class="en">© 2024 Shiyang Zhou | Made with <i class="ri-heart-fill"></i></p>
+        </footer>
+    </div>
+    
+    <a href="#" id="back-to-top" title="Back to Top">
+        <i class="ri-arrow-up-line"></i>
+    </a>
+    
+    <script src="../script.js"></script>
+    <script src="blog.js"></script>
+</body>
+</html>

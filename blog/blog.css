@@ -1,0 +1,795 @@
+/* 博客页面样式 */
+:root {
+    --primary-color: #4a89dc;
+    --secondary-color: #5d9cec;
+    --accent-color: #3d7dd8;
+    --text-color: #333;
+    --bg-color: #fff;
+    --card-bg: #fff;
+    --border-color: #eaeaea;
+    --hover-bg: #f5f7fa;
+    --dark-bg: #1a1a1a;
+    --dark-card-bg: #2a2a2a;
+    --dark-border: #3a3a3a;
+    --dark-text: #eaeaea;
+    --dark-hover-bg: #333;
+    --spacing: 1rem;
+    --radius: 8px;
+    --tag-radius: 4px;  /* 新增标签圆角变量 */
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --card-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    --transition: all 0.3s ease;
+}
+
+/* 确保使用主页的导航栏样式，删除旧的导航样式 */
+/* 博客页面特定样式 */
+.blog-header {
+    margin-top: 4rem;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.blog-title h1 {
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+    color: var(--text-color);
+}
+
+.dark-mode .blog-title h1 {
+    color: var(--dark-text);
+}
+
+.blog-title .subtitle {
+    margin-top: 0;
+    font-weight: normal;
+    color: #666;
+}
+
+.dark-mode .blog-title .subtitle {
+    color: #aaa;
+}
+
+.blog-nav {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.category-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 2rem 0;
+}
+
+.category {
+    padding: 0.5rem 1.25rem;
+    background-color: var(--hover-bg);
+    border-radius: var(--radius);
+    color: var(--text-color);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.dark-mode .category {
+    background-color: var(--dark-hover-bg);
+    color: var(--dark-text);
+}
+
+.category:hover, .category.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.blog-card {
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border-color);
+    position: relative;
+}
+
+.blog-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--card-shadow);
+    border-color: rgba(74, 137, 220, 0.2);
+}
+
+.dark-mode .blog-card {
+    background-color: var(--dark-card-bg);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--dark-border);
+}
+
+.dark-mode .blog-card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border-color: rgba(93, 156, 236, 0.2);
+}
+
+.blog-card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.blog-card-content {
+    padding: 1.75rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.blog-card-title {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+.dark-mode .blog-card-title {
+    color: var(--dark-text);
+}
+
+.blog-card-excerpt {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.dark-mode .blog-card-excerpt {
+    color: #aaa;
+}
+
+.blog-card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.dark-mode .blog-card-meta {
+    color: #777;
+}
+
+.blog-card-date {
+    display: flex;
+    align-items: center;
+}
+
+.blog-card-date i {
+    margin-right: 0.25rem;
+}
+
+.blog-card-tags {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.blog-tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.4rem 0.8rem;
+    background-color: var(--hover-bg);
+    border-radius: var(--tag-radius);
+    font-size: 0.85rem;
+    color: var(--text-color);
+    font-weight: 500;
+    margin-right: 0.6rem;
+    margin-bottom: 0.6rem;
+    transition: var(--transition);
+    text-decoration: none;
+    border: 1px solid rgba(0,0,0,0.05);
+    cursor: pointer;
+}
+
+.blog-tag i {
+    margin-right: 0.4rem;
+    font-size: 1.1em;
+}
+
+.dark-mode .blog-tag {
+    background-color: var(--dark-hover-bg);
+    color: var(--dark-text);
+    border-color: rgba(255,255,255,0.05);
+}
+
+.blog-tag:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(74, 137, 220, 0.3);
+}
+
+.dark-mode .blog-tag:hover {
+    background-color: var(--secondary-color);
+    box-shadow: 0 3px 8px rgba(93, 156, 236, 0.3);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.pagination-item {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius);
+    background-color: var(--hover-bg);
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+.dark-mode .pagination-item {
+    background-color: var(--dark-hover-bg);
+    color: var(--dark-text);
+}
+
+.pagination-item:hover, .pagination-item.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* 博客文章页面样式 */
+.blog-post-header {
+    text-align: center;
+    margin: 5rem 0 3rem 0; /* 增加上下边距 */
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+}
+
+.blog-post-header::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+.dark-mode .blog-post-header {
+    border-bottom-color: var(--dark-border);
+}
+
+.dark-mode .blog-post-header::after {
+    background-color: var(--secondary-color);
+}
+
+.blog-post-title {
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.4;
+    color: var(--text-color);
+}
+
+.dark-mode .blog-post-title {
+    color: var(--dark-text);
+}
+
+.blog-post-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: #666;
+    font-size: 0.95rem;
+    margin-top: 1.5rem;
+}
+
+.dark-mode .blog-post-meta {
+    color: #aaa;
+}
+
+.blog-post-date,
+.blog-post-tag {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.blog-post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 0.8rem;
+}
+
+.blog-post-tag {
+    background-color: var(--hover-bg);
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius);
+}
+
+.dark-mode .blog-post-tag {
+    background-color: var(--dark-hover-bg);
+}
+
+.blog-post-content {
+    line-height: 1.9;
+    color: var(--text-color);
+    font-size: 1.12em;
+    margin: 0 auto;
+    max-width: 780px;
+}
+
+/* Markdown样式 */
+.blog-post-content h1, 
+.blog-post-content h2, 
+.blog-post-content h3, 
+.blog-post-content h4, 
+.blog-post-content h5, 
+.blog-post-content h6 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.dark-mode .blog-post-content h1, 
+.dark-mode .blog-post-content h2, 
+.dark-mode .blog-post-content h3, 
+.dark-mode .blog-post-content h4, 
+.dark-mode .blog-post-content h5, 
+.dark-mode .blog-post-content h6 {
+    color: var(--dark-text);
+}
+
+.blog-post-content h1 {
+    font-size: 2rem;
+}
+
+.blog-post-content h2 {
+    font-size: 1.8rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--hover-bg);
+}
+
+.dark-mode .blog-post-content h2 {
+    border-color: var(--dark-hover-bg);
+}
+
+.blog-post-content h3 {
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+.dark-mode .blog-post-content h3 {
+    color: #ccc;
+}
+
+.blog-post-content p {
+    margin-bottom: 1.5rem;
+}
+
+.blog-post-content blockquote {
+    padding: 1.2rem 1.8rem;
+    margin: 2rem 0;
+    background-color: var(--hover-bg);
+    border-left: 4px solid var(--primary-color);
+    color: #555;
+    font-style: italic;
+    border-radius: var(--tag-radius);
+}
+
+.dark-mode .blog-post-content blockquote {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #aaa;
+}
+
+.blog-post-content pre {
+    background-color: #f6f8fa;
+    padding: 1rem;
+    border-radius: var(--radius);
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+}
+
+.dark-mode .blog-post-content pre {
+    background-color: #2d2d2d;
+}
+
+.blog-post-content code {
+    font-family: monospace;
+}
+
+.blog-post-content ul, 
+.blog-post-content ol {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+}
+
+.blog-post-content li {
+    margin-bottom: 0.5rem;
+}
+
+.blog-post-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    margin: 1.5rem 0;
+}
+
+.blog-post-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+}
+
+.blog-post-content th, 
+.blog-post-content td {
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+}
+
+.dark-mode .blog-post-content th, 
+.dark-mode .blog-post-content td {
+    border-color: var(--dark-border);
+}
+
+.blog-post-content th {
+    background-color: var(--hover-bg);
+}
+
+.dark-mode .blog-post-content th {
+    background-color: var(--dark-hover-bg);
+}
+
+.blog-post-content hr {
+    display: none;
+}
+
+.dark-mode .blog-post-content hr {
+    border-color: var(--dark-border);
+}
+
+.blog-post-content a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.blog-post-content a:hover {
+    text-decoration: underline;
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .blog-header {
+        padding: 1.5rem 0;
+    }
+    
+    .blog-title h1 {
+        font-size: 2rem;
+    }
+    
+    .blog-post-title {
+        font-size: 1.9rem;
+    }
+    
+    .blog-post-content {
+        font-size: 1.05em;
+    }
+}
+
+@media (max-width: 576px) {
+    .category-container {
+        margin: 1.5rem 0;
+    }
+    
+    .category {
+        padding: 0.4rem 1rem;
+        font-size: 0.8rem;
+    }
+    
+    .blog-title h1 {
+        font-size: 1.8rem;
+    }
+    
+    .blog-post-title {
+        font-size: 1.7rem;
+    }
+    
+    .blog-card-img {
+        height: 160px;
+    }
+    
+    .blog-card-content {
+        padding: 1.25rem;
+    }
+    
+    .blog-card-title {
+        font-size: 1.2rem;
+    }
+    
+    .pagination-item {
+        width: 2rem;
+        height: 2rem;
+    }
+    
+    .blog-categories {
+        padding: 0.8rem 1rem;
+        margin: 1.5rem 0;
+    }
+    
+    .blog-category {
+        padding: 0.35rem 0.8rem;
+        font-size: 0.85rem;
+    }
+    
+    .blog-tag {
+        padding: 0.35rem 0.7rem;
+        font-size: 0.8rem;
+    }
+    
+    .blog-post-content h2 {
+        font-size: 1.6rem;
+    }
+    
+    .blog-post-content h3 {
+        font-size: 1.3rem;
+    }
+}
+
+/* 阅读更多链接样式 */
+.read-more {
+    display: inline-flex;
+    align-items: center;
+    color: var(--primary-color);
+    font-weight: 500;
+    text-decoration: none;
+    transition: var(--transition);
+    padding: 0.5rem 1rem;
+    background-color: rgba(74, 137, 220, 0.1);
+    border-radius: var(--tag-radius);
+    margin-top: auto;
+}
+
+.read-more::after {
+    content: '\ea6e';
+    font-family: 'remixicon';
+    margin-left: 0.5rem;
+    font-size: 0.9em;
+    transition: transform 0.3s ease;
+}
+
+.read-more:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.read-more:hover::after {
+    transform: translateX(3px);
+}
+
+.dark-mode .read-more {
+    background-color: rgba(93, 156, 236, 0.2);
+    color: var(--secondary-color);
+}
+
+.dark-mode .read-more:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+/* 博客卡片内容布局优化 */
+.blog-card-content {
+    padding: 1.75rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.blog-card h2 {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    transition: var(--transition);
+    line-height: 1.4;
+}
+
+.blog-card h2 a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: var(--transition);
+    display: inline-block;
+}
+
+.dark-mode .blog-card h2 a {
+    color: var(--dark-text);
+}
+
+.blog-card h2 a:hover {
+    color: var(--primary-color);
+}
+
+.dark-mode .blog-card h2 a:hover {
+    color: var(--secondary-color);
+}
+
+.blog-date {
+    display: flex;
+    align-items: center;
+    font-size: 0.85rem;
+    color: #777;
+    margin-bottom: 1rem;
+}
+
+.dark-mode .blog-date {
+    color: #999;
+}
+
+.blog-date i {
+    margin-right: 0.5rem;
+    color: var(--primary-color);
+}
+
+.dark-mode .blog-date i {
+    color: var(--secondary-color);
+}
+
+.blog-excerpt {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.dark-mode .blog-excerpt {
+    color: #aaa;
+}
+
+/* 博客分类美化 */
+.blog-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 2.5rem 0;
+    justify-content: center;
+    padding: 1rem 1.5rem;
+    background-color: var(--hover-bg);
+    border-radius: var(--radius);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.dark-mode .blog-categories {
+    background-color: var(--dark-hover-bg);
+}
+
+.blog-categories span {
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.blog-category {
+    color: #666;
+    text-decoration: none;
+    padding: 0.4rem 1rem;
+    border-radius: var(--tag-radius);
+    transition: var(--transition);
+    font-size: 0.9rem;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.dark-mode .blog-category {
+    color: #aaa;
+}
+
+.blog-category:hover,
+.blog-category.active {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(74, 137, 220, 0.3);
+}
+
+.dark-mode .blog-category:hover,
+.dark-mode .blog-category.active {
+    background-color: var(--secondary-color);
+    box-shadow: 0 3px 8px rgba(93, 156, 236, 0.3);
+}
+
+/* 优化博客页面整体布局 */
+.container {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* 隐藏博客页面中已删除的返回按钮区域 */
+.blog-nav,
+.blog-post-navigation {
+    display: none;
+}
+
+/* 优化文章标题样式 */
+.blog-post-title {
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* 优化文章内容排版 */
+.blog-post-content {
+    line-height: 1.8;
+    font-size: 1.1em;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 0;
+}
+
+/* 优化博客头部样式 */
+.blog-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* 优化页脚样式 */
+footer {
+    text-align: center;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    color: #777;
+}
+
+.dark-mode footer {
+    border-color: var(--dark-border);
+    color: #888;
+}
+
+footer i {
+    color: #e25555;
+}
+
+/* 增加整体页面间距及视觉统一性 */
+section.main-content {
+    padding: 20px;
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* 增加页面整体动效 */
+.blog-card, .blog-tag, .blog-category, .read-more, blockquote {
+    will-change: transform;
+}
+
+/* 添加全局动画效果 */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

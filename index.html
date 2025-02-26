@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shiyang Zhou's Personal Homepage - Atmospheric Science">
+    <meta name="keywords" content="Shiyang Zhou, Atmospheric Science, Data Analysis, Meteorology, Programming">
+    <meta name="author" content="Shiyang Zhou">
+    <title>Shiyang Zhou - Personal Homepage</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2270%22>☁️</text></svg>" type="image/svg+xml">
+</head>
+<body>
+    <header class="main-nav">
+        <nav class="nav-container">
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a href="blog/index.html" class="nav-link">Blog</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Language <i class="ri-arrow-down-s-line"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a id="enBtn" class="dropdown-item active">English</a></li>
+                        <li><a id="zhBtn" class="dropdown-item">中文</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="theme-toggle" onclick="toggleTheme()">
+        <i class="ri-sun-line" id="light-icon"></i>
+        <i class="ri-moon-line" id="dark-icon" style="display: none;"></i>
+    </div>
+    
+    <div class="container">
+        <section class="main-content">
+            <div class="profile-header">
+                <div class="name-title">
+                    <h1 class="zh">周世扬</h1>
+                    <h1 class="en">Shiyang (Zephyr) Zhou</h1>
+                    <p class="subtitle zh">大气科学</p>
+                    <p class="subtitle en">Atmospheric Science</p>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="ri-mail-line"></i>
+                        <span class="zh">zhoushiyang1207@outlook.com</span>
+                        <span class="en">zhoushiyang1207@outlook.com</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/zsy1207" target="_blank" title="GitHub" id="github-link"><i class="ri-github-fill"></i></a>
+                        <a href="https://space.bilibili.com/476997702" target="_blank" title="Bilibili" id="bilibili-link"><i class="ri-bilibili-fill"></i></a>
+                        <a href="#" title="个人简历" id="cv-link"><i class="ri-file-text-fill"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-grid">
+                <div id="education" class="section-card">
+                    <h2 class="zh"><i class="ri-graduation-cap-line"></i> 教育经历</h2>
+                    <h2 class="en"><i class="ri-graduation-cap-line"></i> Education</h2>
+                    <div class="zh education-info">
+                        <h3><i class="ri-building-line"></i> 南京信息工程大学</h3>
+                        <p><i class="ri-building-line"></i> 大气科学学院</p>
+                        <p><i class="ri-graduation-cap-line"></i> 理学学士（大气科学）</p>
+                        <p><i class="ri-time-line"></i> 2019.09 - 2023.06</p>
+                    </div>
+                    <div class="en education-info">
+                        <h3><i class="ri-building-line"></i> Nanjing University of Information Science & Technology (NUIST)</h3>
+                        <p><i class="ri-building-line"></i> School of Atmospheric Sciences</p>
+                        <p><i class="ri-graduation-cap-line"></i> B.Sc. in Atmospheric Science</p>
+                        <p><i class="ri-time-line"></i> 2019.09 - 2023.06</p>
+                    </div>
+                </div>
+
+                <div id="work" class="section-card">
+                    <h2 class="zh"><i class="ri-briefcase-line"></i> 工作经历</h2>
+                    <h2 class="en"><i class="ri-briefcase-line"></i> Work Experience</h2>
+                    <div class="zh work-info">
+                        <h3><i class="ri-building-line"></i> 济南天昱农业科技有限公司</h3>
+                        <p><i class="ri-bar-chart-line"></i> 数据分析师</p>
+                        <p><i class="ri-time-line"></i> 2023.07 - 至今</p>
+                    </div>
+                    <div class="en work-info">
+                        <h3><i class="ri-building-line"></i> Jinan Tianyu Agricultural Technology Co., Ltd.</h3>
+                        <p><i class="ri-bar-chart-line"></i> Data Analyst</p>
+                        <p><i class="ri-time-line"></i> 2023.07 - Present</p>
+                    </div>
+                </div>
+
+                <div id="projects" class="section-card">
+                    <h2 class="zh"><i class="ri-code-box-line"></i> 项目经历</h2>
+                    <h2 class="en"><i class="ri-code-box-line"></i> Repositories</h2>
+                    <div class="zh">
+                        <h3><i class="ri-terminal-box-line"></i> <a href="https://marketplace.visualstudio.com/items?itemName=zsy1207.netcdf-explorer" target="_blank">NetCDF Explorer - VS Code扩展</a></h3>
+                        <p><i class="ri-time-line"></i> 2024.01 - 至今 | 个人项目</p>
+                        <ul>
+                            <li>开发了一个用于浏览NetCDF文件的VS Code扩展，已在VS Code市场发布</li>
+                            <li>自动生成NetCDF文件的结构和元数据文档，提高AI编程效率</li>
+                            <li>集成AI编程工具，增强自动化程度，获得100+次安装</li>
+                        </ul>
+                    </div>
+                    <div class="en">
+                        <h3><i class="ri-terminal-box-line"></i> <a href="https://marketplace.visualstudio.com/items?itemName=zsy1207.netcdf-explorer" target="_blank">NetCDF Explorer - VS Code Extension</a></h3>
+                        <p><i class="ri-time-line"></i> 2024.01 - Present | Personal Project</p>
+                        <ul>
+                            <li>Developed a VS Code extension for exploring NetCDF files, published on VS Code Marketplace</li>
+                            <li>Automatically generates documentation for NetCDF file structure and metadata, improving AI programming efficiency</li>
+                            <li>Integrated with AI programming tools for enhanced automation, achieved 100+ installations</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="honors" class="section-card">
+                    <h2 class="zh"><i class="ri-award-line"></i> 荣誉奖项</h2>
+                    <h2 class="en"><i class="ri-award-line"></i> Honors & Awards</h2>
+                    <div class="zh">
+                        <ul class="honors-list">
+                            <li><i class="ri-medal-line"></i> 一等奖学金</li>
+                            <li><i class="ri-medal-line"></i> 三好学生</li>
+                            <li><i class="ri-medal-line"></i> 优秀学生干部</li>
+                            <li><i class="ri-medal-line"></i> 优秀毕业生</li>
+                            <li><i class="ri-medal-line"></i> "气象菁英"奖学金</li>
+                            <li><i class="ri-medal-line"></i> 龙山书院"科创之星"</li>
+                        </ul>
+                    </div>
+                    <div class="en">
+                        <ul class="honors-list">
+                            <li><i class="ri-medal-line"></i> First-Class Scholarship</li>
+                            <li><i class="ri-medal-line"></i> Outstanding Student</li>
+                            <li><i class="ri-medal-line"></i> Outstanding Student Leader</li>
+                            <li><i class="ri-medal-line"></i> Outstanding Graduate</li>
+                            <li><i class="ri-medal-line"></i> Meteorological Elite Scholarship</li>
+                            <li><i class="ri-medal-line"></i> Longshan Academy Innovation Star</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="research" class="section-card">
+                    <h2 class="zh"><i class="ri-flask-line"></i> 研究经历</h2>
+                    <h2 class="en"><i class="ri-flask-line"></i> Research Experience</h2>
+                    <div class="zh">
+                        <h3><i class="ri-plant-line"></i> 印度地区绿化对北半球夏季气候的影响及机理</h3>
+                        <p><i class="ri-time-line"></i> 2021.03 - 2023.06 | 项目负责人</p>
+                        <ul>
+                            <li>利用NASA的GIMMS LAI数据研究全球植被近三十年的变化特征</li>
+                            <li>基于CAM-CLM模式开展植被变化数值试验</li>
+                            <li>探究印度绿化对北半球气候的影响过程及作用机制</li>
+                            <li>参与江苏省"陆面过程与陆气相互作用"研究生暑期学校</li>
+                        </ul>
+                        
+                        <h3><i class="ri-cloud-line"></i> 南海夏季风爆发的无缝隙预报研究</h3>
+                        <p><i class="ri-time-line"></i> 2022.01 - 2023.01 | 主要参与者</p>
+                        <ul>
+                            <li>负责CAMS-CSM数值模式运行与数据处理</li>
+                            <li>研究模式分辨率及初始化方案对预报能力的影响</li>
+                        </ul>
+                    </div>
+                    <div class="en">
+                        <h3><i class="ri-plant-line"></i> Impact of India's Greening on Northern Hemisphere Summer Climate</h3>
+                        <p><i class="ri-time-line"></i> 2021.03 - 2023.06 | Project Leader</p>
+                        <ul>
+                            <li>Analyzed global vegetation changes using NASA's GIMMS LAI data and conducted numerical experiments with the CAM-CLM model</li>
+                            <li>Explored the impact and mechanisms of India's greening on hemispheric summer climate</li>
+                            <li>Participated in the Summer School on Land-Atmosphere Interactions, focusing on land surface processes</li>
+                        </ul>
+                        
+                        <h3><i class="ri-cloud-line"></i> Seamless Prediction of the Onset of the South China Sea Summer Monsoon</h3>
+                        <p><i class="ri-time-line"></i> 2022.01 - 2023.01 | Key Participant</p>
+                        <ul>
+                            <li>Operated the CAMS-CSM numerical model and processed relevant data</li>
+                            <li>Investigated the effects of model resolution and initialization on forecast accuracy</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="internship" class="section-card">
+                    <h2 class="zh"><i class="ri-calendar-line"></i> 实习经历</h2>
+                    <h2 class="en"><i class="ri-calendar-line"></i> Internship Experience</h2>
+                    <div class="zh">
+                        <ul>
+                            <li><i class="ri-building-2-line"></i> 山东省五莲县气象局 | 2023.01 - 2023.02</li>
+                            <li><i class="ri-building-2-line"></i> 南京信息工程大学气象台 | 2022.09 - 2022.11</li>
+                            <li><i class="ri-building-2-line"></i> 山东省日照市生态环保局 | 2021.01 - 2021.02</li>
+                        </ul>
+                    </div>
+                    <div class="en">
+                        <ul>
+                            <li><i class="ri-building-2-line"></i> Wulian Meteorological Bureau | 2023.01 - 2023.02</li>
+                            <li><i class="ri-building-2-line"></i> NUIST Meteorological Observatory | 2022.09 - 2022.11</li>
+                            <li><i class="ri-building-2-line"></i> Rizhao Environmental Protection Bureau | 2021.01 - 2021.02</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="skills" class="section-card">
+                    <h2 class="zh"><i class="ri-tools-line"></i> 技能特长</h2>
+                    <h2 class="en"><i class="ri-tools-line"></i> Skills</h2>
+                    <div class="zh">
+                        <ul class="skills-list">
+                            <li><i class="ri-code-line"></i> <span>编程语言：</span>Python、NCL、MATLAB、Fortran</li>
+                            <li><i class="ri-cloud-line"></i> <span>数值模式：</span>CESM、WRF、CAMS-CSM、NeuralGCM</li>
+                            <li><i class="ri-file-list-3-line"></i> <span>证书：</span>计算机二级、CET-6、驾照</li>
+                            <li><i class="ri-apps-line"></i> <span>软件：</span>MICAPS、PUP、ChatGPT、Office、Photoshop、剪映</li>
+                            <li><i class="ri-heart-line"></i> <span>爱好：</span>羽毛球、烹饪、视频制作</li>
+                        </ul>
+                    </div>
+                    <div class="en">
+                        <ul class="skills-list">
+                            <li><i class="ri-code-line"></i> <span>Programming:</span> Python, NCL, MATLAB, Fortran</li>
+                            <li><i class="ri-cloud-line"></i> <span>Models:</span> CESM, WRF, CAMS-CSM, NeuralGCM</li>
+                            <li><i class="ri-file-list-3-line"></i> <span>Certificates:</span> Computer Level 2, CET-6, Driver's License</li>
+                            <li><i class="ri-apps-line"></i> <span>Software:</span> MICAPS, PUP, ChatGPT, Office, Photoshop, CapCut</li>
+                            <li><i class="ri-heart-line"></i> <span>Hobbies:</span> Badminton, Cooking, Video Editing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <footer>
+                <p class="zh">© 2024 周世扬 | <i class="ri-html5-line"></i> HTML <i class="ri-css3-line"></i> CSS <i class="ri-javascript-line"></i> JavaScript</p>
+                <p class="en">© 2024 Shiyang Zhou | <i class="ri-html5-line"></i> HTML <i class="ri-css3-line"></i> CSS <i class="ri-javascript-line"></i> JavaScript</p>
+            </footer>
+        </section>
+    </div>
+
+    <div id="back-to-top">
+        <i class="ri-arrow-up-line"></i>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
