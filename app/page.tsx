@@ -61,7 +61,14 @@ export default function HomePage() {
       <div className="container max-w-4xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-8 sm:gap-10 lg:gap-14 px-4 py-10">
         <div className="flex-shrink-0 flex justify-center mb-4 lg:mb-0">
           <Avatar className="h-40 w-40 sm:h-48 sm:w-48 lg:h-56 lg:w-56 border-4 border-background shadow-md">
-            <AvatarImage src="/avatar.png" alt="Avatar" />
+            <Image 
+              src="/avatar.png" 
+              alt="Avatar" 
+              width={224} 
+              height={224} 
+              priority
+              unoptimized
+            />
           </Avatar>
         </div>
         <div className="flex flex-col text-center lg:text-left max-w-xs sm:max-w-xl mx-auto lg:mx-0">

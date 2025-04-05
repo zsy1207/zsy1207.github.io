@@ -489,7 +489,7 @@ export default function ResumePage() {
                 {language === "en" ? "Software: " : "软件："}
               </span>
               <span>
-                MICAPS, PUP, ChatGPT, Axure, Zotero, Office, Photoshop, CapCut
+                MICAPS, PUP, ChatGPT, Cursor, Obsidian, Zotero, Office, Photoshop, CapCut
               </span>
             </div>
           </div>
