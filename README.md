@@ -16,8 +16,52 @@ A modern, elegant personal portfolio website with multiple pages, language switc
 - **Custom Favicon**: Weather icon as the browser favicon
 - **Academic Profile**: Meteorology research information with institutional links
 
+## Deployment to GitHub Pages
+
+This website is automatically deployed to GitHub Pages using GitHub Actions. Here's how to update and deploy:
+
+### Setup (Already Done)
+
+1. Repository is configured as `zsy1207.github.io` for GitHub Pages
+2. GitHub Actions workflow in `.github/workflows/deploy.yml` handles the build and deployment
+3. `.nojekyll` file is included to prevent GitHub Pages from processing the site with Jekyll
+4. Next.js is configured with `output: 'export'` for static site generation
+
+### How to Update and Deploy
+
+1. Make changes to your code locally
+2. Commit your changes:
+   ```bash
+   git add .
+   git commit -m "Your update description"
+   ```
+3. Push to GitHub:
+   ```bash
+   git push
+   ```
+4. GitHub Actions will automatically build and deploy the site
+5. Check deployment status in GitHub repository under "Actions" tab
+6. After successful deployment, your site will be live at https://zsy1207.github.io
+
+### Troubleshooting Deployment
+
+If deployment fails or site doesn't update:
+
+1. Check GitHub Actions workflow logs for errors
+2. Ensure `.nojekyll` file exists in the repository root
+3. Verify `next.config.js` has these settings:
+   ```js
+   output: 'export',
+   images: {
+     unoptimized: true,
+   }
+   ```
+4. If files with underscores aren't showing up, make sure `.nojekyll` file is being correctly copied to the output directory
+5. Clear browser cache if site appears outdated after deployment
+
 ## Latest Updates
 
+- **GitHub Pages Deployment**: Added automatic deployment to GitHub Pages
 - **Personal Information**: Updated with current academic info and research focus
 - **Link Updates**: Added links to Fudan University and professor's homepage
 - **Improved Centering**: Enhanced layout for better content centering and readability
@@ -55,10 +99,18 @@ A modern, elegant personal portfolio website with multiple pages, language switc
 
 3. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
+4. Build for production:
+   ```bash
+   npm run build
+   ```
+   This generates static files in the `out` directory.
+
 ## Project Structure
 
 ```
 /
+├── .github/workflows/ - GitHub Actions workflow files
+│   └── deploy.yml - Workflow for GitHub Pages deployment
 ├── app/ - Next.js App Router
 │   ├── (routes)/ - Page routes
 │   │   ├── blog/ - Blog page
@@ -77,10 +129,13 @@ A modern, elegant personal portfolio website with multiple pages, language switc
 │   └── theme-context.tsx - Theme state with persistence
 ├── lib/ - Utility functions
 │   └── utils.ts - Helper functions
-└── public/ - Static assets
-    ├── avatar.png - Profile avatar
-    ├── bilibili-svgrepo-com.svg - Bilibili icon
-    └── researchgate-svgrepo-com.svg - ResearchGate icon
+├── public/ - Static assets
+│   ├── avatar.png - Profile avatar
+│   ├── bilibili-svgrepo-com.svg - Bilibili icon
+│   └── researchgate-svgrepo-com.svg - ResearchGate icon
+├── .nojekyll - Tells GitHub Pages not to use Jekyll processing
+├── next.config.js - Next.js configuration for static export
+└── package.json - Project dependencies and scripts
 ```
 
 ## Component Implementation Details
