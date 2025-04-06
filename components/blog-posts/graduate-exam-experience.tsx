@@ -53,12 +53,123 @@ export function GraduateExamExperiencePost() {
             </div>
             
             <div className="h-px w-full bg-gray-200 dark:bg-gray-700 mb-8"></div>
-            
-            <div className="leading-relaxed text-base">
-              <p className="italic text-muted-foreground text-center mb-8">
-                Note: This article was originally written in Chinese. The English version will be available soon.
-              </p>
-            </div>
+
+            <h2 className="text-2xl font-bold mt-6 mb-6">Introduction</h2>
+            <p className="leading-relaxed text-base">
+              As someone who ranked first in both the written exam and interview for admission to a TOP-3 university in China, I'd like to share my experience and insights, combined with observations from my fellow exam-takers.
+            </p>
+
+            <div className="h-px w-full bg-gray-200 dark:bg-gray-700 my-10"></div>
+
+            <h2 className="text-2xl font-bold mt-10 mb-6">University Selection</h2>
+            <p className="leading-relaxed text-base">
+              Although my undergraduate degree is from a regular "Double First-Class" university, I'm in a strong major where many students each year get into TOP-3 universities through either the graduate entrance exam or direct recommendation. Plus, two good friends from different universities were already admitted there through recommendation, so I decisively chose this university. Overall, if you're not in a highly competitive major, top-tier 985 universities are worth aiming for. Even with high cutoff scores, around 360 points is usually sufficient, giving you substantial room for error. With dedicated effort, it's absolutely achievable. For highly competitive majors, however, you should carefully consider the margin for error.
+            </p>
+
+            <div className="h-px w-full bg-gray-200 dark:bg-gray-700 my-10"></div>
+
+            <h2 className="text-2xl font-bold mt-10 mb-6">General Methodology</h2>
+            <p className="leading-relaxed text-base">
+              1. Mentality matters far more than effort. This is the most crucial point. Many students experience mental breakdowns in the final month or even days before the exam, which is truly unfortunate. Maintaining confidence and optimism is essential.
+            </p>
+            <p className="leading-relaxed text-base mt-4">
+              2. Sustainable, consistent goals are better than high-intensity cramming. I've seen many students create overly packed schedules that they can't complete due to various circumstances. Excessive goals can negatively impact your mental state. Balance between work and rest, along with persistence, is more important. Setting unrealistically high goals can undermine your confidence and lead to abandoning your efforts halfway.
+            </p>
+            <p className="leading-relaxed text-base mt-4">
+              3. Practice questions take priority over watching lectures. Avoid lectures when possible. Of course, staring at materials can also make it difficult to concentrate, so you can watch lectures to organize your thoughts, but don't let lectures take away from practice time.
+            </p>
+            <p className="leading-relaxed text-base mt-4">
+              4. Don't easily trust what teachers and online content creators say. Their goal is to sell more courses and make more money, so they generate anxiety, and once you're anxious, they sell you courses or materials.
+            </p>
+            <p className="leading-relaxed text-base mt-4">
+              5. Reject perfectionism; complete tasks first, then perfect them. For most universities and majors, a reasonably good score is sufficient. There's no need to pursue perfection, which can either cause mental issues or result in imbalanced subject performance where you fail to meet minimum requirements in certain subjects.
+            </p>
+            <p className="leading-relaxed text-base mt-4">
+              6. Time management and priorities: March-September: Mathematics takes highest priority; you must complete your self-set tasks. English (1hr) and specialized courses (2hrs) just need sufficient time; reduce if you have too many lectures. October-early December: Specialized courses take highest priority; you must complete your self-set tasks. For mathematics, complete daily assignments (one full practice paper); political theory needs sufficient time (1hr); study English as time permits. Early December-Exam: Political theory and specialized courses take highest priority; mathematics requires daily assignments (one full or half practice paper); maintain English practice to keep your skills sharp.
+            </p>
+            <p className="leading-relaxed text-base mt-4">
+              7. It's never too late to start. Many students who began in July or even September still got into excellent universities. Don't worry too much about your progress; focus more on your understanding and capability.
+            </p>
+
+            <div className="h-px w-full bg-gray-200 dark:bg-gray-700 my-10"></div>
+
+            <h2 className="text-2xl font-bold mt-10 mb-6">Political Theory</h2>
+            <p className="leading-relaxed text-base">
+              This is the least important subject; just passing the threshold is fine. I didn't score very high in it either. For this subject, study Marxist principles well, and just review the rest occasionally. Many students who dedicate significant daily time to it—and even some who barely study it—score well. If you're aiming for an ordinary university, you can relax; use political theory study as a break during your regular study routine. Just study "Xiao Ba" and "Xiao Si" materials well and memorize them. For 985 universities, there are minimum subject thresholds, so you should still study seriously. I saw a case on Xiaohongshu (Little Red Book) where a student applying to a 985 university scored high in all other subjects but failed to meet the political theory threshold because they followed advice from a Bilibili creator named Paradiyu and only started studying in late November, which was quite unfortunate.
+            </p>
+            <p className="leading-relaxed text-base mt-4">
+              My preparation began with Teacher Xu Tao's memorization handbook. I followed his intensive course for Marxist principles once, and his previous year's intensive classes for History Outline, Mao Zedong Thought, and Ideological and Moral Cultivation. During this time, I used spare moments to complete the Marxist principles section of the 1000-question set and followed Xu Tao's daily questions. When mock exams became available on the mini-program, I started doing lots of practice papers, basically completing one set and reviewing another set each day until I began memorizing subjective questions. After that, I alternated between doing and reviewing. This year's questions were described by Xiao Xiurong as the most difficult in ten years, and indeed they were quite flexible, requiring deep understanding rather than surface-level memorization.
+            </p>
+            <p className="leading-relaxed text-base mt-4">
+              For subjective questions, I only memorized "Xiao Si." After receiving it, I spent about three hours daily (though half of that time was spent anxious, and after subtracting time for organizing and printing materials, I effectively memorized for about an hour daily). I've had poor memory since childhood, and combined with the anxiety of not being able to memorize everything, I couldn't even get through the condensed version summarized by Bilibili creators. I mainly became familiar with the content, with deeper impressions of the answer approaches, important phrases, and frameworks. Before the exam, I watched Teacher Yu Feng's technique class on Bilibili, mainly covering objective question techniques and how to incorporate material into subjective answers, which was quite useful. In the exam, although I hadn't completely memorized everything, by following the framework and incorporating material, I still achieved a decent score.
+            </p>
+
+            <div className="h-px w-full bg-gray-200 dark:bg-gray-700 my-10"></div>
+
+            <h2 className="text-2xl font-bold mt-10 mb-6">English</h2>
+            <p className="leading-relaxed text-base">
+              Recently, there have been many scandals in the graduate exam English teaching circle, with many teachers scoring lower than I did. I realized early on that this circle was quite unprofessional. When learning English reading, I found that these teachers' methods were more like explaining answers rather than teaching skills. I watched a few sessions and stopped. This was further confirmed when they taught essay writing. In my freshman year, our English teacher was an exam grader who told us what makes a good essay: 1. Avoid grammatical errors, 2. Express ideas smoothly without clichés, 3. Stay on topic with high information density. But the templates provided by these graduate exam English teachers are full of clichés with almost zero information density—it would be strange if they scored well.
+            </p>
+            <p className="leading-relaxed text-base mt-4">
+              Let me share my foundation: I passed CET-4 and CET-6 on the first attempt, with a CET-6 score of 500, but I hadn't studied English for a long time and my vocabulary was particularly weak. So during winter break, I dedicated 10 days to intensive vocabulary building, spending over 5 hours daily. I set a target of 500 words per day in the MoMo app, focusing on key graduate exam vocabulary, and also studied synonyms and word roots/affixes. After these 10 days, I recognized virtually all the vocabulary in question stems. Afterward, I set a daily target of 100 real exam vocabulary words in MoMo, quickly reviewing them in spare moments (swiping past each word once I saw its meaning).
+            </p>
+            <p className="leading-relaxed text-base mt-4">
+              Regarding methodologies for different question types, as mentioned above, I don't recommend wasting time on these teachers' courses. If necessary, you can watch quick tutorials on Bilibili or review some notes. For essays, you can find any template to learn the framework (what content to generally include), but don't learn the expressions they use. Instead, learn from GPT and use GPT to review your essays.
+            </p>
+            <p className="leading-relaxed text-base mt-4">
+              Additionally, early-year exam questions differ significantly in style and difficulty from recent years, so don't let them damage your confidence; use them only to familiarize yourself with question types. My study materials were just the 9.9 yuan English Type 1 and 2 past papers and an electronic version of the Yellow Book. Starting in March, I began doing full papers regardless of question type (except essays), spending 1 hour daily. For questions I got wrong, I analyzed how the examiners set traps. If needed, I consulted the electronic Yellow Book and looked up unfamiliar words afterward. I also reviewed vocabulary and incorrect questions from the previous two days daily. From October onward, I started writing essays when doing practice papers. Write frequently, have a framework in mind, and after writing a few times, you'll naturally get the hang of it without needing to deliberately memorize (though you should still memorize a bit in the days before the exam). If you've completed all questions once, focus on studying post-2016 questions, and also practice with English Type 2 or 1 (whichever you're not taking) to maintain the feeling of working with new questions.
+            </p>
+
+            <div className="h-px w-full bg-gray-200 dark:bg-gray-700 my-10"></div>
+
+            <h2 className="text-2xl font-bold mt-10 mb-6">Mathematics</h2>
+            <p className="leading-relaxed text-base">
+              There are too many experience posts about this subject online. Although I didn't score poorly, I'll just share briefly.
+            </p>
+            <p className="leading-relaxed text-base mt-4">
+              From winter break to May, I used the 2024 version (the 2025 version is reportedly more difficult, so I used the older version) of Zhang Yu's "30 Lectures" and foundational course, working through the 300 Questions and 880 Foundational Section.
+            </p>
+            <p className="leading-relaxed text-base mt-4">
+              From May to mid-August, I used the 2023 version (again, the 2025 version is reportedly more difficult) of Zhang Yu's "27 Lectures" and intensive course. When following the lectures, I paused whenever a problem was presented to try solving it myself before watching the solution. I completed the exercises from the 27 Lectures and the 880 Intensive Section.
+            </p>
+            <p className="leading-relaxed text-base mt-4">
+              From mid-August to mid-September, I worked through Yu Bingsen's compiled past exam questions (including questions from Mathematics 1, 2, and 3), interspersed with a second review of Zhang Yu's 27 Lectures examples and exercises (the examples are generally the most important problems, and the 27 Lectures cover a comprehensive range of problem types).
+            </p>
+            <p className="leading-relaxed text-base mt-4">
+              From mid-September until the exam, I did mock papers from 8:30 to 11:30 daily (most papers don't require the full 3 hours, so after finishing, I could review errors and organize an error collection, usually having lunch around noon). I worked through all the well-regarded 2024 and 2025 papers on the market once (HFUT, Li Lin, Yu Bingsen, etc.). I don't recommend attempting the more difficult ones like Zhang Yu's.
+            </p>
+            <p className="leading-relaxed text-base mt-4">
+              Additionally, I followed Wu Zhongxiang's daily problems. For concepts you don't fully understand while solving problems, you can check Bilibili, and nowadays you can also ask GPT. Although I don't recommend following Bilibili creators, watching some videos (like Your Gourd, Yeyu's various courses, 3blue1brown's linear algebra) as supplementary material is quite good.
+            </p>
+
+            <div className="h-px w-full bg-gray-200 dark:bg-gray-700 my-10"></div>
+
+            <h2 className="text-2xl font-bold mt-10 mb-6">Specialized Courses</h2>
+            <p className="leading-relaxed text-base">
+              When reviewing, don't blindly memorize; use an outline + understanding approach. Don't rely excessively on materials; you can create your own outline or notes. Resources for Atmospheric Dynamics and Thermodynamics are quite comprehensive in the market. I've compiled a "Atmospheric Physics" resource that covers all basic knowledge points, which I've made open source for anyone to view and modify (link: https://pan.baidu.com/s/1I3ThNjsIJ0QkyWbm36MlkQ?pwd=e9vj).
+            </p>
+            <p className="leading-relaxed text-base mt-4">
+              From March to September, go through all content meticulously, and thoroughly study the corresponding past exam questions for each chapter as you learn it.
+            </p>
+            <p className="leading-relaxed text-base mt-4">
+              From September to October, spend a month studying past years' questions chronologically, analyzing question styles and approaches, and writing out answers by hand.
+            </p>
+            <p className="leading-relaxed text-base mt-4">
+              From early October to early December, create an outline based on question patterns and approaches, highlighting potentially testable content and previously tested content in your outline.
+            </p>
+            <p className="leading-relaxed text-base mt-4">
+              From early December until the exam, intensively memorize based on past questions and your outline.
+            </p>
+
+            <div className="h-px w-full bg-gray-200 dark:bg-gray-700 my-10"></div>
+
+            <h2 className="text-2xl font-bold mt-10 mb-6">Interview</h2>
+            <p className="leading-relaxed text-base">
+              I'm a typical introvert and was very nervous during the interview. I couldn't answer many questions, and my voice was trembling, but I still ranked first. My impression is that effort should be applied to regular academic activities; you should participate in more research, as professors value the research experience, demonstrated abilities, and undergraduate performance you mention in your self-introduction.
+            </p>
+            <p className="leading-relaxed text-base mt-4">
+              I recommend looking up international PhD admission announcements in your field (why international? because domestic ones don't include the following content). Find several announcements, see what qualities these professors value, and subtly mention them in your self-introduction. If certain tools or skills are required, learn them and mention them in your introduction. Additionally, be genuine; what you mention in your self-introduction should be things you have a relatively deep understanding of to avoid exposing weaknesses.
+            </p>
           </>
         ) : (
           <>
