@@ -7,8 +7,9 @@ import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
-import { BookOpen, BookText, School, Film, Pencil } from "lucide-react"
+import { BookOpen, BookText, School, Film, Pencil, GraduationCap } from "lucide-react"
 import { HesseUnderTheWheelPost } from "@/components/blog-posts/hesse-under-the-wheel"
+import { GraduateExamExperiencePost } from "@/components/blog-posts/graduate-exam-experience"
 
 interface Tag {
   id: string
@@ -94,6 +95,20 @@ export default function BlogPage() {
         en: "Social Critique",
         zh: "社会评论"
       }
+    },
+    "exam": {
+      id: "exam",
+      name: {
+        en: "Graduate Exam",
+        zh: "考研"
+      }
+    },
+    "experience": {
+      id: "experience",
+      name: {
+        en: "Experience",
+        zh: "经验"
+      }
     }
   }
   
@@ -133,6 +148,24 @@ export default function BlogPage() {
         en: "\"Suzhou River\" (1999/2000), directed by Lou Ye, is considered one of his representative works and a landmark of China's Sixth Generation cinema. The film won the Tiger Award at the Rotterdam International Film Festival but was banned in mainland China for being submitted to festivals without going through censorship review. Set in modern Shanghai, the film interweaves two seemingly parallel love stories, creating a complex and captivating urban landscape.\n\nThis article offers an in-depth analysis of the film's artistic techniques, social reflections, contemporary significance, and character symbolism. The film's innovative narrative structure, with its unreliable narrator and visual style characterized by handheld cinematography, creates a dreamlike sense that questions the nature of truth and memory. The film also serves as a mirror of social transformation in 1990s Shanghai, capturing marginal spaces and individuals on the edge of modernization.\n\nThe symbolic significance of the four core characters and the multiple meanings of the Suzhou River itself provide rich layers of interpretation, while the film's themes of love, identity, and obsession transcend specific cultural boundaries. As a representative work of the Sixth Generation directors, \"Suzhou River\" continues to inspire reflection on urban life, interpersonal relationships, and the nature of image narrative.",
         zh: "《苏州河》（1999/2000），导演娄烨的代表作，也被视为中国第六代电影的标志之一。该片获鹿特丹国际电影节金虎奖，却因未经审查赴展在中国大陆遭禁映。影片以现代上海为背景，交织两条貌似平行的爱情线索，勾画出一幅复杂而引人入胜的都市图景。\n\n本文将对这部影片的艺术手法、社会镜像、现实意义及人物象征意义进行深入分析。影片创新的叙事结构，以不可靠的叙述者和手持摄影的视觉风格，营造出质疑真相与记忆本质的迷幻感。电影也作为90年代上海社会转型的镜子，捕捉了边缘空间和现代化边缘的个体。\n\n四位核心角色的象征意义和苏州河本身的多重含义提供了丰富的解读层次，而影片关于爱情、身份和痴迷的主题超越了特定的文化界限。作为第六代导演的代表作，《苏州河》持续激发人们对都市生活、人际关系及影像叙事本质的思考。"
       }
+    },
+    {
+      id: "3",
+      slug: "graduate-exam-experience",
+      title: {
+        en: "Graduate Entrance Exam Experience: Strategic Insights from a Top-3 University Admit",
+        zh: "考研经验贴"
+      },
+      date: "2025-04-06",
+      tags: ["exam", "education", "experience"],
+      excerpt: {
+        en: "Insights and strategies from a student who achieved top scores on both the written and interview portions of the graduate entrance examination for a prestigious TOP3 university.",
+        zh: "作者以初试和复试双第一考入某TOP3，结合身边研友的状况和自己的经验分享考研经验和方法论。"
+      },
+      content: {
+        en: "The author shares their experience of achieving top scores in both written exams and interviews for a prestigious TOP3 university. Drawing from their own journey and observations of fellow students, this article provides comprehensive guidance for graduate entrance exam preparation. Topics covered include school selection, general study methodology, subject-specific strategies for politics, English, mathematics, and specialized courses, as well as interview preparation techniques. Emphasizing the importance of mental state, consistent effort over intense cramming, practice over passive learning, and a balanced approach to study, the author offers practical advice and encouragement for students at any stage of their preparation journey.",
+        zh: "作者以初试和复试双第一考入某TOP3，结合身边研友的状况和自己的经验给大家分享考研心得。本文全面覆盖择校策略、总体学习方法论、政治/英语/数学/专业课的备考技巧以及复试准备等关键环节。作者强调心态远重于努力、持续坚持优于高强度冲刺、做题优先于看课、拒绝完美主义等核心理念，并提供了各科目的具体复习时间安排和资料推荐。针对政治科目，文章建议以马原为重点；英语部分分享了高效词汇记忆和真题练习方法；数学章节提供了阶段性学习计划；专业课强调理解优先于背诵。此外，文章还特别强调了复试过程中科研经历展示和个人能力呈现的重要性，为考研学子提供了全方位的备考指导。"
+      }
     }
   ]
 
@@ -169,6 +202,10 @@ export default function BlogPage() {
         return <School className="h-3 w-3 mr-1" />;
       case 'critique':
         return <Pencil className="h-3 w-3 mr-1" />;
+      case 'exam':
+        return <GraduationCap className="h-3 w-3 mr-1" />;
+      case 'experience':
+        return <BookOpen className="h-3 w-3 mr-1" />;
       default:
         return null;
     }
@@ -187,6 +224,10 @@ export default function BlogPage() {
     
     if (post && post.slug === "hesse-under-the-wheel") {
       return <HesseUnderTheWheelPost />
+    }
+    
+    if (post && post.slug === "graduate-exam-experience") {
+      return <GraduateExamExperiencePost />
     }
     
     // If post not found or not implemented, go back to list

@@ -4,7 +4,8 @@ import BlogPostClient from "./client"
 export function generateStaticParams() {
   return [
     { slug: "hesse-under-the-wheel" },
-    { slug: "suzhou-river" }
+    { slug: "suzhou-river" },
+    { slug: "graduate-exam-experience" }
   ]
 }
 
