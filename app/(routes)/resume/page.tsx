@@ -58,7 +58,7 @@ export default function ResumePage() {
               <div className="flex mt-1">
                 <div className="mr-2">•</div>
                 <div className="text-sm">
-                  {language === "en" ? "Research Direction: Extratropical Cyclones" : "研究方向：温带气旋"}
+                  {language === "en" ? "Research Direction: Extratropical Cyclones (Ranked first in both preliminary and final exams)" : "研究方向：温带气旋（初复试双第一）"}
                 </div>
               </div>
             </div>
@@ -91,7 +91,7 @@ export default function ResumePage() {
               </p>
               <div className="flex mt-1">
                 <div className="mr-2">•</div>
-                <div>
+                <div className="text-sm">
                   {language === "en" 
                     ? "Main Courses: Synoptic Meteorology Principles and Methods, Dynamic Meteorology, Atmospheric Physics, Modern Climatology, Radar and Satellite Meteorology, Mesoscale Meteorology." 
                     : "主要课程：天气学原理和方法、动力气象学、大气物理学、现代气候学、雷达与卫星气象学、中尺度气象学。"
