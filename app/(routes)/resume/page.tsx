@@ -64,7 +64,7 @@ export default function ResumePage() {
               <div className="flex mt-1">
                 <div className="mr-2">•</div>
                 <div className="text-sm">
-                  {language === "en" ? "First place in both preliminary and final examinations" : "初复试双第一"}
+                  {language === "en" ? "Ranked first in both preliminary and final examinations" : "初复试双第一"}
                 </div>
               </div>
             </div>
@@ -95,15 +95,15 @@ export default function ResumePage() {
                 <span className="mr-2">•</span>
                 <span className="text-sm">{language === "en" ? "GPA: 3.87 (88.7/100)" : "GPA：3.87（88.7/100）"}</span>
               </p>
-              <div className="flex mt-1">
-                <div className="mr-2">•</div>
-                <div className="text-sm">
+              <p className="flex items-center">
+                <span className="mr-2">•</span>
+                <span className="text-sm">
                   {language === "en" 
                     ? "Main Courses: Synoptic Meteorology Principles and Methods, Dynamic Meteorology, Atmospheric Physics, Modern Climatology, Radar and Satellite Meteorology, Mesoscale Meteorology." 
                     : "主要课程：天气学原理和方法、动力气象学、大气物理学、现代气候学、雷达与卫星气象学、中尺度气象学。"
                   }
-                </div>
-              </div>
+                </span>
+              </p>
             </div>
           </div>
         </CardContent>
