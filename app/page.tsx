@@ -55,6 +55,19 @@ export default function HomePage() {
         />
       ),
     },
+    {
+      name: "WeChat",
+      href: "https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=&scene=124#wechat_redirect",
+      icon: (
+        <Image 
+          src="/wechat-4.svg" 
+          alt="WeChat" 
+          width={24} 
+          height={24} 
+          className={theme === "dark" ? "invert" : ""}
+        />
+      ),
+    },
   ]
 
   return (
