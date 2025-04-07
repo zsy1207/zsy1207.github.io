@@ -6,6 +6,7 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 import Image from "next/image"
 import Link from "next/link"
 import { useTheme } from "@/context/theme-context"
+import React from "react"
 
 interface SocialLink {
   name: string
@@ -21,12 +22,12 @@ export default function HomePage() {
     {
       name: "Email",
       href: "mailto:zhoushiyang1207@outlook.com",
-      icon: <Mail className="h-6 w-6" />,
+      icon: <Mail />,
     },
     {
       name: "GitHub",
       href: "https://github.com/zsy1207",
-      icon: <Github className="h-6 w-6" />,
+      icon: <Github />,
     },
     {
       name: "ResearchGate",
@@ -37,7 +38,7 @@ export default function HomePage() {
           alt="ResearchGate" 
           width={24} 
           height={24} 
-          className={`h-6 w-6 ${theme === "dark" ? "invert" : ""}`}
+          className={theme === "dark" ? "invert" : ""}
         />
       ),
     },
@@ -50,7 +51,7 @@ export default function HomePage() {
           alt="Bilibili" 
           width={24} 
           height={24} 
-          className={`h-6 w-6 ${theme === "dark" ? "invert" : ""}`}
+          className={theme === "dark" ? "invert" : ""}
         />
       ),
     },
@@ -75,22 +76,29 @@ export default function HomePage() {
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-6">
             {language === "en" ? "Shiyang (Zephyr) Zhou" : "周世扬"}
           </h1>
-          <div className="text-lg sm:text-xl text-muted-foreground mb-6 leading-relaxed max-w-prose">
+          <div className="text-lg sm:text-xl text-muted-foreground mb-4 leading-relaxed max-w-prose">
             {language === "en" 
-              ? <>I am currently pursuing a M.Sc. in Meteorology at the <Link href="https://aos.fudan.edu.cn/" target="_blank" className="text-muted-foreground hover:underline">Department of Atmospheric and Oceanic Sciences (AOS)</Link>, <strong>Fudan University</strong>, under the supervision of <Link href="http://www.wenzhou-clim.com/" target="_blank" className="text-muted-foreground hover:underline">Prof. Wen Zhou</Link>. My research focuses on extratropical cyclones. Beyond academia, I hold strong interests across diverse fields, including Artificial Intelligence (AI), Large Language Models (LLMs), Esports, Digital Technology, Crypto, Soccer, Badminton, Rap Music, Philosophy, and Abstract Art.</>
+              ? <>I am currently pursuing a M.Sc. in Meteorology at the <Link href="https://aos.fudan.edu.cn/" target="_blank" className="text-muted-foreground hover:underline">Department of Atmospheric and Oceanic Sciences (AOS)</Link>, <strong>Fudan University</strong>, under the supervision of <Link href="http://www.wenzhou-clim.com/" target="_blank" className="text-muted-foreground hover:underline">Prof. Wen Zhou</Link>. My research focuses on extratropical cyclones. Beyond academia, I hold strong interests across diverse fields, including AI, LLMs, Esports, Digital Technology, Crypto, Soccer, Badminton, Rap Music, Philosophy, and Abstract Art.</>
               : <>我目前正在<strong>复旦大学</strong><Link href="https://aos.fudan.edu.cn/" target="_blank" className="text-muted-foreground hover:underline">大气与海洋科学系</Link>攻读气象专业硕士，指导老师为<Link href="http://www.wenzhou-clim.com/" target="_blank" className="text-muted-foreground hover:underline">周文教授</Link>，研究方向为温带气旋。我对AI/大模型/电竞/数码/Crypto/足球/羽毛球/说唱/哲学/抽象艺术等领域都有浓厚的兴趣。</>
             }
           </div>
-          <div className="flex items-center justify-center lg:justify-start mt-4 space-x-5">
+          <div className="flex items-center justify-center lg:justify-start mt-2 space-x-6">
             {socialLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2.5 rounded-full border border-border hover:bg-accent transition-colors"
+                className="p-2 rounded-full border border-border hover:bg-accent transition-colors"
               >
-                {link.icon}
+                {link.name === "Email" || link.name === "GitHub" ? 
+                  React.cloneElement(link.icon as React.ReactElement, { className: "h-7 w-7" }) : 
+                  React.cloneElement(link.icon as React.ReactElement, { 
+                    width: 28, 
+                    height: 28,
+                    className: `h-7 w-7 ${theme === "dark" ? "invert" : ""}`
+                  })
+                }
                 <span className="sr-only">{link.name}</span>
               </a>
             ))}
