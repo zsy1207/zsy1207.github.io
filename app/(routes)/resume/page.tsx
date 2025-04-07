@@ -58,7 +58,7 @@ export default function ResumePage() {
               <div className="flex mt-1">
                 <div className="mr-2">•</div>
                 <div className="text-sm">
-                  {language === "en" ? "Research Direction: Extratropical Cyclones (Ranked first in both preliminary and final exams)" : "研究方向：温带气旋（初复试双第一）"}
+                  {language === "en" ? "Research Direction: Extratropical Cyclones (First in both preliminary and final exams)" : "研究方向：温带气旋（初复试双第一）"}
                 </div>
               </div>
             </div>
@@ -87,7 +87,9 @@ export default function ResumePage() {
             <div className="mt-2">
               <p className="flex items-center">
                 <span className="mr-2">•</span>
-                {language === "en" ? "GPA: 3.87 (88.7/100)" : "GPA：3.87（88.7/100）"}
+                <div className="text-sm">
+                  {language === "en" ? "GPA: 3.87 (88.7/100)" : "GPA：3.87（88.7/100）"}
+                </div>
               </p>
               <div className="flex mt-1">
                 <div className="mr-2">•</div>
