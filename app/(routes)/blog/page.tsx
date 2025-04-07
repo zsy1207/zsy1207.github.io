@@ -193,11 +193,11 @@ export default function BlogPage() {
       id: "4",
       slug: "trump-art-of-deal",
       title: {
-        en: "Trump's \"The Art of the Deal\": Analysis of Negotiation Principles and Their Implications for International Relations in 2025",
-        zh: "特朗普《交易的艺术》谈判原则解析及其在2025年国际博弈中的启示"
+        en: "Trump's \"The Art of the Deal\": Analysis of Negotiation Principles and Their Implications",
+        zh: "特朗普《交易的艺术》谈判原则解析及其启示"
       },
-      date: "2025-04-08",
-      tags: ["politics", "economics", "usa"],
+      date: "April 8, 2025",
+      tags: ["politics", "economics", "reading"],
       excerpt: {
         en: "An in-depth analysis of Donald Trump's negotiation principles from \"The Art of the Deal\" and their application to international relations and trade conflicts in 2025's complex geopolitical landscape.",
         zh: "深入分析唐纳德·特朗普《交易的艺术》中的谈判原则，及其在2025年复杂地缘政治格局下对国际关系和贸易冲突的应用。"

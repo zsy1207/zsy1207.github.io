@@ -13,7 +13,7 @@ export function TrumpArtOfDealPost() {
   const tags = [
     { id: "politics", en: "Politics", zh: "政治", icon: <Landmark className="h-4 w-4" /> },
     { id: "economics", en: "Economics", zh: "经济", icon: <DollarSign className="h-4 w-4" /> },
-    { id: "usa", en: "USA", zh: "美国", icon: <Globe className="h-4 w-4" /> }
+    { id: "reading", en: "Reading", zh: "阅读", icon: <Globe className="h-4 w-4" /> }
   ]
   
   return (
@@ -32,7 +32,7 @@ export function TrumpArtOfDealPost() {
         {language === "en" ? (
           <>
             <h1 className="text-4xl font-bold tracking-tight text-center mb-4">
-              Trump&apos;s &quot;The Art of the Deal&quot;: Analysis of Negotiation Principles and Their Implications for International Relations in 2025
+              Trump&apos;s &quot;The Art of the Deal&quot;: Analysis of Negotiation Principles and Their Implications
             </h1>
             
             <div className="flex justify-center mt-2 mb-4">
@@ -56,110 +56,82 @@ export function TrumpArtOfDealPost() {
             
             <h2 className="text-2xl font-bold mt-6 mb-6">Introduction</h2>
             <p className="leading-relaxed text-base">
-              Examining Donald Trump&apos;s &quot;The Art of the Deal&quot; through the lens of 2025&apos;s geopolitical landscape allows us to gain insight into the negotiation principles that continue to shape international relations. As global powers navigate the ongoing US-China trade tensions and economic recession, Trump&apos;s negotiation framework provides valuable context for understanding strategic decision-making in complex diplomatic and economic situations.
+              Donald Trump in his book &quot;The Art of the Deal&quot; shares a series of winning negotiation tactics that reflect his bold yet calculated style. His approach combines ambitious goal-setting with careful risk management, creating a framework that has influenced both business and political negotiations.
             </p>
 
             <div className="h-px w-full bg-gray-200 dark:bg-gray-700 my-10"></div>
 
-            <h2 className="text-2xl font-bold mt-12 mb-6">I. Trump&apos;s Key Negotiation Principles</h2>
+            <h2 className="text-2xl font-bold mt-10 mb-6">Key Negotiation Principles</h2>
             
-            <h3 className="text-xl font-bold mt-8 mb-4">(A) Think Big</h3>
+            <h3 className="text-xl font-bold mt-8 mb-4">1. Think Big</h3>
             <p className="leading-relaxed text-base">
-              The essence of Trump&apos;s &quot;Think Big&quot; principle encourages negotiators to set ambitious goals. As Trump famously stated, &quot;If you&apos;re going to be thinking anyway, you might as well think big.&quot; This reflects his belief that setting high initial targets creates room for concessions while still achieving favorable outcomes. The psychological mechanism at work is the anchoring effect—when negotiators begin with bold proposals, they shift the frame of reference and guide negotiations toward more favorable territory.
-            </p>
-            <p className="leading-relaxed text-base mt-4">
-              In practice, this principle manifests in starting with ambitious demands or conditions, allowing space for later concessions while still securing advantageous terms. In business, salespeople might set higher initial prices to accommodate buyer negotiations. In political negotiations, leaders often present extensive demands, knowing they&apos;ll achieve only some key objectives after compromise. The approach works best when high targets remain within the realm of plausibility; as Trump acknowledges, completely unrealistic opening positions can damage credibility.
+              &quot;Think Big&quot; encourages setting ambitious goals in negotiations. Trump famously stated, &quot;If you&apos;re going to be thinking anyway, you might as well think big.&quot; This reflects his belief that setting high initial targets creates room for concessions while still achieving favorable outcomes. The psychological mechanism at work is the anchoring effect—when negotiators begin with bold proposals, they shift the reference frame and guide negotiations toward more favorable territory.
             </p>
             
-            <h3 className="text-xl font-bold mt-8 mb-4">(B) Protect the Downside</h3>
+            <h3 className="text-xl font-bold mt-8 mb-4">2. Protect the Downside</h3>
             <p className="leading-relaxed text-base">
-              &quot;Protect the Downside&quot; emphasizes preparing for worst-case scenarios while pursuing ambitious goals. Trump asserts he &quot;always goes into a deal anticipating the worst,&quot; believing that &quot;if you plan for the worst—if you can live with the worst—the good will always take care of itself.&quot; This embodies risk management thinking: secure a position where failure won&apos;t be catastrophic before pursuing greater victories.
-            </p>
-            <p className="leading-relaxed text-base mt-4">
-              Psychologically, this principle employs pessimistic expectation management. By envisioning and preparing for negative outcomes, negotiators reduce anxiety about unknowns and develop greater confidence in their positions. When you aren&apos;t afraid of the worst result, you can more firmly hold your ground, as you have the confidence to walk away from unfavorable terms rather than accepting a bad deal out of desperation.
+              &quot;Protect the Downside&quot; emphasizes preparing for worst-case scenarios while pursuing ambitious goals. Trump asserts he &quot;always anticipates the worst,&quot; believing that &quot;if you plan for the worst—if you can live with the worst—the good will always take care of itself.&quot; This embodies risk management thinking: secure a position where failure won&apos;t be catastrophic before pursuing greater victories.
             </p>
             
-            <h3 className="text-xl font-bold mt-8 mb-4">(C) Maximize Your Options</h3>
+            <h3 className="text-xl font-bold mt-8 mb-4">3. Know Your Market</h3>
             <p className="leading-relaxed text-base">
-              &quot;Maximize Your Options&quot; advises against excessive dependence on any single deal or approach. Trump prides himself on keeping multiple possibilities in play simultaneously, recognizing that most potential deals fall through. This embodies strategic flexibility and contingency planning. By creating multiple pathways to success, negotiators avoid putting all their eggs in one basket and maintain greater control over outcomes.
+              &quot;Know Your Market&quot; emphasizes thorough research and understanding of the relevant environment before negotiating. Trump prefers to rely on his own research rather than completely trusting advisors or experts. The essence is gathering and analyzing intelligence before negotiation: understanding the opponent&apos;s needs and weaknesses, market conditions, industry trends, and stakeholder perspectives.
             </p>
-            <p className="leading-relaxed text-base mt-4">
-              The psychological advantage comes from elevated negotiating leverage. When counterparties know you have alternatives, they cannot easily pressure you into unfavorable terms. This relates directly to the concept of BATNA (Best Alternative To a Negotiated Agreement)—the stronger your alternatives, the more confidently you can negotiate. Multiple options also foster creativity; when one approach fails, negotiators more readily pivot to alternative strategies rather than becoming fixated on dead ends.
+            
+            <h3 className="text-xl font-bold mt-8 mb-4">4. Maximize Your Options</h3>
+            <p className="leading-relaxed text-base">
+              &quot;Maximize Your Options&quot; advises against excessive dependence on any single deal or approach. Trump prides himself on keeping multiple possibilities in play simultaneously, recognizing that most potential deals fall through. By creating multiple pathways to success, negotiators avoid putting all their eggs in one basket and maintain greater control over outcomes.
+            </p>
+            
+            <h3 className="text-xl font-bold mt-8 mb-4">5. Use Your Leverage</h3>
+            <p className="leading-relaxed text-base">
+              &quot;Use Your Leverage&quot; means fully utilizing your advantages to influence the other party&apos;s decisions. Trump defines &quot;leverage&quot; as &quot;something the other guy wants—or better yet needs—or ideally can&apos;t do without.&quot; When you possess resources, opportunities, or concessions that the other party urgently needs, you can use these as bargaining chips to get them to meet your conditions.
+            </p>
+
+            <h3 className="text-xl font-bold mt-8 mb-4">6. Enhance Your Location</h3>
+            <p className="leading-relaxed text-base">
+              Literally, &quot;Enhance Your Location&quot; comes from the real estate principle that &quot;location is king,&quot; but Trump gives it a more flexible meaning: even if your starting point is average, you can increase its value through effort. This involves discovering and enhancing the value of your assets, including location, resources, or conditions.
+            </p>
+
+            <h3 className="text-xl font-bold mt-8 mb-4">7. Get the Word Out</h3>
+            <p className="leading-relaxed text-base">
+              &quot;Get the Word Out&quot; emphasizes promoting and publicizing deals after they&apos;re made, and using media and public opinion to create momentum during the negotiation process. Trump points out that attracting customers after closing a deal is what creates value, and building a public image helps you get better deals next time.
+            </p>
+
+            <h3 className="text-xl font-bold mt-8 mb-4">8. Fight Back</h3>
+            <p className="leading-relaxed text-base">
+              &quot;Fight Back&quot; means having the courage to confront unfair treatment or aggressive pressure rather than always yielding. Trump claims he normally prefers cooperation and a positive attitude, but sometimes must fight back if others try to take advantage of him. This strategy establishes an image that cannot be bullied in negotiation.
+            </p>
+
+            <h3 className="text-xl font-bold mt-8 mb-4">9. Deliver the Goods</h3>
+            <p className="leading-relaxed text-base">
+              &quot;Deliver the Goods&quot; means that regardless of how much promotion or hype you create, you must ultimately produce actual results, or all techniques will fail. Trump states directly: &quot;You can&apos;t con people for long... If you don&apos;t deliver results, people will eventually see through you.&quot; This principle essentially emphasizes integrity and results.
+            </p>
+
+            <h3 className="text-xl font-bold mt-8 mb-4">10. Contain the Costs</h3>
+            <p className="leading-relaxed text-base">
+              &quot;Contain the Costs&quot; requires strict management of expenses in deals and project operations, avoiding unnecessary waste. Trump learned from his father to &quot;never pay a penny more than necessary,&quot; because &quot;small sums don&apos;t count, but large sums get out of control.&quot; Careful budgeting and efficiency are at the core of this principle.
+            </p>
+
+            <h3 className="text-xl font-bold mt-8 mb-4">11. Have Fun</h3>
+            <p className="leading-relaxed text-base">
+              &quot;Have Fun&quot; seems unrelated to serious negotiation, yet it&apos;s Trump&apos;s final emphasized principle. He believes successful deals shouldn&apos;t just be about making money, but about enjoying the thrill and sense of achievement. He personally uses money as a way of keeping score, but what truly excites him is &quot;playing the game.&quot;
             </p>
 
             <div className="h-px w-full bg-gray-200 dark:bg-gray-700 my-10"></div>
 
-            <h2 className="text-2xl font-bold mt-10 mb-6">II. Application to International Relations in 2025</h2>
-            
-            <h3 className="text-xl font-bold mt-8 mb-4">(A) Supply Chain: Diversification and Risk Hedging</h3>
+            <h2 className="text-2xl font-bold mt-10 mb-6">Conclusion</h2>
             <p className="leading-relaxed text-base">
-              The US-China trade war has accelerated global supply chain reorganization, with &quot;de-risking&quot; and diversification becoming corporate imperatives. Mutual tariffs and technology restrictions have exposed the vulnerabilities of concentrated supply chains: American companies fear dependence on China could lead to supply disruptions, while China worries about critical technology bottlenecks. Against this backdrop of global recession concerns, countries increasingly prioritize domestic industrial security.
+              &quot;The Art of the Deal&quot; establishes Trump&apos;s unique negotiation logic that puts psychological strategy first: set ambitious goals, use tough tactics, have strategic advances and retreats, and exploit human nature. He views negotiation as a psychological game, using high demands, ambiguous intentions, and leveraging to get opponents to concede on his terms.
             </p>
             <p className="leading-relaxed text-base mt-4">
-              Trump&apos;s &quot;Protect the Downside&quot; and &quot;Maximize Options&quot; principles apply directly to current supply chain strategies. Companies and nations employ diversified supply arrangements to hedge against worst-case scenarios. Western nations pursue &quot;de-risking&quot; by seeking production bases beyond China, while China accelerates domestic semiconductor development and supply chain independence. These strategies mirror Trump&apos;s negotiation advice: prepare for the worst while maintaining multiple pathways to success.
-            </p>
-            
-            <h3 className="text-xl font-bold mt-8 mb-4">(B) Tariff Dynamics and Negotiation Leverage</h3>
-            <p className="leading-relaxed text-base">
-              Tariffs remain a primary negotiation tool in US-China relations, with most tariff measures from the initial trade war still in effect. These measures continue to impact bilateral trade and global economic confidence. Tariffs function as both negotiation leverage and retaliatory weapons, creating a complex game theory scenario where neither side can easily back down without securing concessions.
-            </p>
-            <p className="leading-relaxed text-base mt-4">
-              Trump&apos;s &quot;Use Your Leverage&quot; principle is evident in how tariffs are deployed as pressure mechanisms. The United States leverages its massive consumer market to push for Chinese trade practice reforms, while China responds with targeted countermeasures against politically sensitive US sectors like agriculture. This dynamic demonstrates the &quot;Fight Back&quot; principle—showing willingness to respond proportionally to maintain negotiating credibility and prevent being perceived as weak.
-            </p>
-
-            <h3 className="text-xl font-bold mt-8 mb-4">(C) Technology and Security Competition</h3>
-            <p className="leading-relaxed text-base">
-              The US-China rivalry has increasingly focused on high technology and national security. The United States has implemented export controls and investment restrictions toward China, particularly in advanced semiconductor technology, while China has responded with export limitations on critical minerals and accelerated domestic innovation initiatives. This technological competition has evolved into a security standoff with significant economic implications.
-            </p>
-            <p className="leading-relaxed text-base mt-4">
-              Both sides employ Trump&apos;s &quot;Use Your Leverage&quot; and &quot;Fight Back&quot; principles extensively in this domain. The US leverages its semiconductor technology advantage to constrain China&apos;s high-tech development, while China counters by restricting exports of critical materials where it dominates global supply. Each nation demonstrates willingness to absorb economic pain to maintain technological independence, reflecting the &quot;Protect the Downside&quot; principle&apos;s emphasis on preparing for and withstanding worst-case scenarios.
-            </p>
-
-            <div className="h-px w-full bg-gray-200 dark:bg-gray-700 my-10"></div>
-
-            <h2 className="text-2xl font-bold mt-10 mb-6">III. Strategic Implications for Global Stakeholders</h2>
-            
-            <h3 className="text-xl font-bold mt-8 mb-4">(A) Diplomatic Strategy and International Alliances</h3>
-            <p className="leading-relaxed text-base">
-              The US-China economic and technological conflict extends to diplomatic competition for global influence. The United States works to consolidate alliances from the &quot;Five Eyes&quot; intelligence partnership to the Quad Security Dialogue, pursuing a strategy of multilateral pressure. China counters by strengthening relationships with developing nations through BRICS expansion and Shanghai Cooperation Organization frameworks, attempting to establish alternative blocs beyond US influence.
-            </p>
-            <p className="leading-relaxed text-base mt-4">
-              Trump&apos;s &quot;Enhance Your Location&quot; and &quot;Get the Word Out&quot; principles manifest in how both powers cultivate diplomatic advantage. The US leverages its established alliance networks to amplify its geopolitical position, while China develops new cooperation platforms like the Belt and Road Initiative to enhance its standing with strategic partners. Both nations actively shape international narratives to gain moral authority and negotiating leverage—classic examples of messaging strategy in high-stakes negotiations.
-            </p>
-            
-            <h3 className="text-xl font-bold mt-8 mb-4">(B) Financial Markets and Capital Flows</h3>
-            <p className="leading-relaxed text-base">
-              Trade tensions and technological decoupling have significant implications for financial markets and global capital flows. Policy uncertainties trigger market volatility, while capital markets experience their own version of decoupling through measures like heightened scrutiny of Chinese companies on US exchanges. Investment restrictions increasingly affect both directions of capital flow, disrupting established financing patterns amid global recession concerns.
-            </p>
-            <p className="leading-relaxed text-base mt-4">
-              The principle of &quot;Contain the Costs&quot; is particularly evident in financial domain strategies. Both the US and China carefully avoid triggering systemic financial instability despite their confrontational postures. Neither has deployed extreme measures like freezing sovereign holdings, recognizing such actions could unleash uncontrollable market chaos. Instead, both powers pursue incremental financial pressure while maintaining critical stabilizing mechanisms—illustrating how even aggressive negotiators must consider collateral damage and maintain certain boundaries.
-            </p>
-            
-            <h3 className="text-xl font-bold mt-8 mb-4">(C) Multinational Corporate Strategy</h3>
-            <p className="leading-relaxed text-base">
-              Multinational corporations face difficult strategic choices amid US-China tensions. American companies risk losing access to Chinese markets and supply chains while facing domestic pressure to reduce Chinese exposure. Chinese firms confront technology access limitations and international expansion challenges. Third-country multinationals carefully navigate relationships with both powers, seeking to minimize disruption while maintaining market access.
-            </p>
-            <p className="leading-relaxed text-base mt-4">
-              For these companies, Trump&apos;s principles of &quot;Maximize Your Options&quot; and &quot;Protect the Downside&quot; offer valuable guidance. Successful multinationals maintain supply chain diversity, political risk insurance, and market access alternatives to ensure business continuity regardless of geopolitical developments. They leverage their economic importance to influence policy decisions while focusing relentlessly on core business performance—recognizing that market relevance remains their strongest negotiating position in volatile political environments.
-            </p>
-
-            <div className="h-px w-full bg-gray-200 dark:bg-gray-700 my-10"></div>
-
-            <h2 className="text-2xl font-bold mt-10 mb-6">IV. Conclusion: The Future of International Negotiation</h2>
-            <p className="leading-relaxed text-base">
-              Viewing 2025&apos;s international landscape through the lens of Trump&apos;s negotiation principles reveals both the application and limitations of these approaches in complex geopolitical contexts. From ambitious positioning to risk management, from leveraging strength to maintaining multiple options, these principles continue to influence how nations and corporations navigate an increasingly complex world.
-            </p>
-            <p className="leading-relaxed text-base mt-4">
-              The most successful international actors combine assertiveness with pragmatism—defending core interests firmly while recognizing interdependence realities. As Trump emphasizes, negotiation ultimately requires parties to &quot;deliver the goods&quot; with tangible results. If major powers seek both prosperity and stability, they must find new terms of exchange amid their competition, fulfilling their responsibilities to global order even while protecting national interests.
-            </p>
-            <p className="leading-relaxed text-base mt-4">
-              Perhaps the most enduring insight from &quot;The Art of the Deal&quot; for our current moment is that sustainable agreements aren&apos;t zero-sum victories but arrangements where all parties perceive value. In the high-stakes game of international relations, those who master both the boldness to advance interests and the wisdom to find mutual gains will ultimately prove most successful in navigating our challenging global landscape.
+              His principles of protecting downside risk and maintaining flexibility ensure he can comfortably experiment without a single setback leading to total failure. These business negotiation techniques later became important components in his &quot;America First&quot; policy toolkit when he entered politics.
             </p>
           </>
         ) : (
           <>
             <h1 className="text-4xl font-bold tracking-tight text-center mb-4">
-              特朗普《交易的艺术》谈判原则解析及其在2025年国际博弈中的启示
+              特朗普《交易的艺术》谈判原则解析及其启示
             </h1>
             
             <div className="flex justify-center mt-2 mb-4">
@@ -183,104 +155,76 @@ export function TrumpArtOfDealPost() {
             
             <h2 className="text-2xl font-bold mt-6 mb-6">引言</h2>
             <p className="leading-relaxed text-base">
-              透过2025年地缘政治格局的视角审视唐纳德·特朗普的《交易的艺术》，能让我们深入了解持续塑造国际关系的谈判原则。随着全球大国应对持续的中美贸易紧张局势和经济衰退，特朗普的谈判框架为理解复杂外交和经济形势下的战略决策提供了宝贵的参考。
+              特朗普在《交易的艺术》中分享了一系列谈判制胜之道，这些"特朗普牌"技巧体现出大胆进取又精于算计的风格。他的方法结合了远大目标设定与谨慎风险管理，创造了一个影响商业和政治谈判的框架。
             </p>
 
             <div className="h-px w-full bg-gray-200 dark:bg-gray-700 my-10"></div>
 
-            <h2 className="text-2xl font-bold mt-10 mb-6">一、特朗普的核心谈判原则</h2>
+            <h2 className="text-2xl font-bold mt-10 mb-6">核心谈判原则</h2>
             
-            <h3 className="text-xl font-bold mt-8 mb-4">（一）志存高远（Think Big）</h3>
+            <h3 className="text-xl font-bold mt-8 mb-4">1. 志存高远（Think Big）</h3>
             <p className="leading-relaxed text-base">
-              特朗普"志存高远"原则的本质在于鼓励谈判者设定远大目标。正如他著名的格言："如果横竖要想，不如想大一点"，这反映了他的信念：设定较高的初始目标可为让步创造空间，同时仍能获得有利结果。这里起作用的心理机制是锚定效应——当谈判者以大胆主张开局，他们会转变参考框架，引导谈判朝有利方向发展。
-            </p>
-            <p className="leading-relaxed text-base mt-4">
-              在实践中，这一原则体现为以雄心勃勃的要求或条件开始，为后续让步留出空间，同时仍能确保有利条件。在商业中，销售人员可能设定较高的初始价格以适应买方谈判。在政治谈判中，领导人通常提出广泛要求，知道在妥协后只能实现其中一些关键目标。这种方法在高目标仍然合理可信时最为有效；正如特朗普承认的，完全不切实际的开局立场会损害可信度。
+              "志存高远"要求谈判者设定远大的目标和雄心。"如果横竖要想，不如想大一点"是特朗普的名言之一，这体现出他的信念：只有敢于提出超出常规的高目标，才能在谈判中占据主动。一开始把要价或目标定高，在后续的讨价还价中即使有所让步，最后达成的结果也可能远好于一开始就保守设定的目标。
             </p>
             
-            <h3 className="text-xl font-bold mt-8 mb-4">（二）守住底线（Protect the Downside）</h3>
+            <h3 className="text-xl font-bold mt-8 mb-4">2. 守住底线（Protect the Downside）</h3>
             <p className="leading-relaxed text-base">
-              "守住底线"强调在追求远大目标的同时为最坏情况做好准备。特朗普断言他"总是预料最坏情况进入交易"，相信"如果你为最坏情况做好规划——如果你能接受最坏结果——好的结果自然会水到渠成"。这体现了风险管理思维：在追求更大胜利之前，确保失败不会造成灾难性后果。
-            </p>
-            <p className="leading-relaxed text-base mt-4">
-              心理上，这一原则采用悲观预期管理。通过设想并准备负面结果，谈判者减轻对未知的焦虑，增强对自身立场的信心。当你不惧怕最坏结果时，你能更坚定地站稳立场，因为你有信心拒绝不利条件而不是出于绝望接受糟糕的交易。
+              "守住底线"强调在追求高目标的同时，一定要确保最坏的结果你也能接受。特朗普直言自己"总是以最坏的情况来做打算"，并相信"只要你能承受最坏的结果，好事就会自己来找你"。简而言之，就是在进入交易前就确定好止损点或底线条件，确保任何谈判结果都不会让自己遭受无法承受的损失。
             </p>
             
-            <h3 className="text-xl font-bold mt-8 mb-4">（三）留有余地（Maximize Your Options）</h3>
+            <h3 className="text-xl font-bold mt-8 mb-4">3. 深谙市场（Know Your Market）</h3>
             <p className="leading-relaxed text-base">
-              "留有余地"建议避免过度依赖任何单一交易或方法。特朗普以同时保持多种可能性为傲，认识到大多数潜在交易最终会落空。这体现了战略灵活性和应急规划。通过创造多条成功路径，谈判者避免把所有鸡蛋放在一个篮子里，保持对结果的更大控制权。
+              "深谙市场"强调在谈判和交易中必须充分调研和了解相关环境。特朗普在书中表示，他喜欢依靠自己的研究来判断市场，而不是完全听信顾问或专家。这一原则的本质是在谈判前做好情报收集和分析：包括了解对手的需求和弱点、市场供求状况、行业趋势、利益相关者的想法等。
             </p>
-            <p className="leading-relaxed text-base mt-4">
-              心理优势来自提升的谈判杠杆。当对方知道你有替代选择时，他们不能轻易将你逼入不利条件。这直接关联到"最佳替代方案"(BATNA)概念——你的替代方案越强，谈判时就越有信心。多种选择也促进创造力；当一种方法失败时，谈判者更容易转向替代策略，而不是固执于死胡同。
+            
+            <h3 className="text-xl font-bold mt-8 mb-4">4. 留有余地（Maximize Your Options）</h3>
+            <p className="leading-relaxed text-base">
+              "留有余地"指在谈判过程中要保持灵活性和多种备选方案。特朗普强调自己"从不让自己过度依赖于某一笔交易或某一种方案"。他喜欢同时"让很多球在空中飞"，因为在商业世界中多数交易最终可能落空。此外，即便一项交易已经谈成，他仍会想出至少六种不同的方法去推动其成功。
+            </p>
+            
+            <h3 className="text-xl font-bold mt-8 mb-4">5. 运用杠杆（Use Your Leverage）</h3>
+            <p className="leading-relaxed text-base">
+              "运用杠杆"是指充分利用自己手中的优势来影响对方决策。特朗普将"杠杆"定义为："对方想要（或更好是需要，甚至无法没有）的东西"。换言之，谈判中的杠杆就是对方基于利益或需求而在意的筹码。当你握有对方急需的资源、机会或让步时，就可以以此为筹码要求对方满足你的条件。
+            </p>
+
+            <h3 className="text-xl font-bold mt-8 mb-4">6. 提升地位（Enhance Your Location）</h3>
+            <p className="leading-relaxed text-base">
+              字面上，"Enhance Your Location"源自地产领域"地段为王"的理念，但特朗普赋予了它更灵活的含义：即使起点平平，也可以通过后天努力使之增值。本质在于发掘和提升手中资产的价值，包括地点、资源或条件。特朗普举例说，地点固然重要，但可以通过吸引合适的人群来让一个普通地段变得更有价值。
+            </p>
+
+            <h3 className="text-xl font-bold mt-8 mb-4">7. 广而告之（Get the Word Out）</h3>
+            <p className="leading-relaxed text-base">
+              "广而告之"强调交易达成后要积极宣传推广，在谈判过程中也要利用媒体和舆论造势。特朗普指出，达成交易后吸引顾客才有价值，而打造公众形象有助于你下次得到更好的交易。他坦承自己一直喜欢运用哗众取宠和制造争议来引起媒体关注。
+            </p>
+
+            <h3 className="text-xl font-bold mt-8 mb-4">8. 敢于反击（Fight Back）</h3>
+            <p className="leading-relaxed text-base">
+              "敢于反击"指在遭遇不公平对待或对方强硬打压时，要勇于对抗，绝不一味退让。特朗普声称他平时更喜欢合作与积极的态度，但如果对方试图占他便宜或不公，他有时必须对抗。这一策略的机制是在谈判中树立不可欺辱的形象，通过强硬回应来遏制对方的过分要求。
+            </p>
+
+            <h3 className="text-xl font-bold mt-8 mb-4">9. 兑现承诺（Deliver the Goods）</h3>
+            <p className="leading-relaxed text-base">
+              "兑现承诺"是指无论前期如何宣传造势，最终都必须拿出实际成果，否则一切技巧都将失效。特朗普直言："你不能一直骗所有人……如果不能兑现成果，人们迟早会看穿。"这条原则的本质可以说是对诚信与结果的强调：谈判达成的协议、做出的承诺必须履行，否则信誉受损。
+            </p>
+
+            <h3 className="text-xl font-bold mt-8 mb-4">10. 控制成本（Contain the Costs）</h3>
+            <p className="leading-relaxed text-base">
+              "控制成本"要求在交易和项目运作中严格管理支出，避免不必要的浪费。特朗普从父亲那里学到"哪怕一分钱也不多付"的观念，因为"小钱不算，大钱难控"。他观察到一些竞争对手喜欢靠砸钱解决问题，但如果项目本身计划不周，烧再多钱也无济于事。因此精打细算、提高效率是这一原则的核心。
+            </p>
+
+            <h3 className="text-xl font-bold mt-8 mb-4">11. 享受过程（Have Fun）</h3>
+            <p className="leading-relaxed text-base">
+              "享受过程"看似与严肃的谈判无关，却是特朗普强调的最后一条原则。他认为成功的交易不应只是为了赚钱，而应享受那种赢的刺激和成就感。他本人把赚钱当作计分方式，真正让他兴奋的是"玩这个游戏"的乐趣。这一原则的本质在于以热情和积极的心态对待谈判，将其视作富有挑战性的游戏或探险，而非沉重的任务。
             </p>
 
             <div className="h-px w-full bg-gray-200 dark:bg-gray-700 my-10"></div>
 
-            <h2 className="text-2xl font-bold mt-10 mb-6">二、2025年国际关系中的应用</h2>
-            
-            <h3 className="text-xl font-bold mt-8 mb-4">（一）供应链：多元布局与风险对冲</h3>
+            <h2 className="text-2xl font-bold mt-10 mb-6">结语</h2>
             <p className="leading-relaxed text-base">
-              中美贸易战加速了全球供应链重组，"去风险化"和多元化成为企业迫切需求。相互加征关税和技术限制暴露了集中供应链的脆弱性：美国公司担心对中国的依赖可能导致供应中断，而中国担忧关键技术瓶颈。在全球衰退担忧的背景下，各国越来越优先考虑国内产业安全。
+              《交易的艺术》奠定了特朗普一套独特的"攻心为上"的谈判逻辑：目标定大，手段强硬，进退有据，善抓人性。他将谈判视为心理博弈，通过高要价、模糊意图和善用杠杆等方法，让对手在不知不觉中按照自己的节奏让步。
             </p>
             <p className="leading-relaxed text-base mt-4">
-              特朗普的"守住底线"和"留有余地"原则直接适用于当前供应链策略。企业和国家采用多元化供应安排来对冲最坏情况。西方国家通过寻求中国以外的生产基地推进"去风险化"，而中国加速国内半导体发展和供应链独立。这些策略反映了特朗普的谈判建议：为最坏情况做准备，同时保持多条成功路径。
-            </p>
-            
-            <h3 className="text-xl font-bold mt-8 mb-4">（二）关税博弈与谈判筹码</h3>
-            <p className="leading-relaxed text-base">
-              关税仍是中美关系中的主要谈判工具，初始贸易战中的大多数关税措施仍然有效。这些措施继续影响双边贸易和全球经济信心。关税既是谈判杠杆又是报复武器，创造了复杂的博弈论情境，双方都难以在未获得让步的情况下轻易退让。
-            </p>
-            <p className="leading-relaxed text-base mt-4">
-              特朗普的"运用杠杆"原则在关税作为压力机制的部署中显而易见。美国利用其巨大消费市场推动中国改革贸易做法，而中国则针对美国政治敏感部门如农业进行有针对性的反制。这种动态展示了"敢于反击"原则——表明愿意按比例回应以维持谈判信誉并避免被视为软弱。
-            </p>
-
-            <h3 className="text-xl font-bold mt-8 mb-4">（三）科技与安全竞争</h3>
-            <p className="leading-relaxed text-base">
-              中美竞争日益聚焦于高科技和国家安全。美国对中国实施出口管制和投资限制，特别是在先进半导体技术领域，而中国则以关键矿物出口限制和加速国内创新计划作为回应。这种技术竞争已演变为具有重大经济影响的安全对峙。
-            </p>
-            <p className="leading-relaxed text-base mt-4">
-              双方在这一领域广泛运用特朗普的"运用杠杆"和"敢于反击"原则。美国利用其半导体技术优势限制中国高科技发展，而中国则通过限制其全球供应占主导地位的关键材料出口进行反制。每个国家都表现出愿意承受经济痛苦以维持技术独立，反映了"守住底线"原则对准备并承受最坏情况的强调。
-            </p>
-
-            <div className="h-px w-full bg-gray-200 dark:bg-gray-700 my-10"></div>
-
-            <h2 className="text-2xl font-bold mt-10 mb-6">三、全球利益相关者的战略启示</h2>
-            
-            <h3 className="text-xl font-bold mt-8 mb-4">（一）外交策略与国际联盟</h3>
-            <p className="leading-relaxed text-base">
-              中美经济和技术冲突延伸至争夺全球影响力的外交竞争。美国努力巩固从"五眼联盟"情报伙伴关系到四方安全对话的联盟，推行多边施压战略。中国则通过金砖国家扩员和上海合作组织框架加强与发展中国家的关系，试图建立超越美国影响的替代集团。
-            </p>
-            <p className="leading-relaxed text-base mt-4">
-              特朗普的"提升地位"和"广而告之"原则体现在两大国如何培养外交优势上。美国利用其建立的联盟网络放大其地缘政治地位，而中国则发展"一带一路"倡议等新合作平台，提升其在战略伙伴中的地位。两国都积极塑造国际叙事以获得道德权威和谈判杠杆——这是高风险谈判中信息战略的典型例子。
-            </p>
-            
-            <h3 className="text-xl font-bold mt-8 mb-4">（二）金融市场与资本流动</h3>
-            <p className="leading-relaxed text-base">
-              贸易紧张和技术脱钩对金融市场和全球资本流动产生重大影响。政策不确定性引发市场波动，而资本市场通过加强对在美上市中国公司的审查等措施经历自身版本的脱钩。投资限制越来越影响资本双向流动，在全球衰退担忧中扰乱既定融资模式。
-            </p>
-            <p className="leading-relaxed text-base mt-4">
-              "控制成本"原则在金融领域策略中特别明显。尽管态度对抗，中美双方都谨慎避免引发系统性金融不稳定。两国都未采取冻结主权持有等极端措施，认识到此类行动可能引发不可控的市场混乱。相反，两国在维持关键稳定机制的同时推行渐进式金融压力——说明即使激进谈判者也必须考虑附带损害并保持一定底线。
-            </p>
-            
-            <h3 className="text-xl font-bold mt-8 mb-4">（三）跨国企业战略</h3>
-            <p className="leading-relaxed text-base">
-              跨国企业在中美紧张关系中面临艰难战略选择。美国公司冒着失去中国市场和供应链的风险，同时面临减少中国曝光的国内压力。中国企业面临技术获取限制和国际扩张挑战。第三国跨国公司谨慎处理与两大国关系，寻求最小化干扰同时保持市场准入。
-            </p>
-            <p className="leading-relaxed text-base mt-4">
-              对这些公司而言，特朗普的"留有余地"和"守住底线"原则提供了宝贵指导。成功的跨国公司保持供应链多样性、政治风险保险和市场准入替代方案，确保无论地缘政治如何发展业务都能持续。它们利用经济重要性影响政策决定，同时坚定专注核心业务表现——认识到市场相关性仍是它们在动荡政治环境中最强的谈判位置。
-            </p>
-
-            <div className="h-px w-full bg-gray-200 dark:bg-gray-700 my-10"></div>
-
-            <h2 className="text-2xl font-bold mt-10 mb-6">四、结语：国际谈判的未来</h2>
-            <p className="leading-relaxed text-base">
-              通过特朗普谈判原则的视角审视2025年国际格局，揭示了这些方法在复杂地缘政治环境中的应用和局限。从雄心勃勃的定位到风险管理，从运用优势到保持多重选择，这些原则继续影响国家和企业如何驾驭日益复杂的世界。
-            </p>
-            <p className="leading-relaxed text-base mt-4">
-              最成功的国际行为体将果断与务实相结合——坚定捍卫核心利益同时认识到相互依存现实。正如特朗普强调的，谈判最终要求各方以切实成果"兑现承诺"。如果大国既寻求繁荣又追求稳定，它们必须在竞争中找到新的交换条件，在保护国家利益的同时履行对全球秩序的责任。
-            </p>
-            <p className="leading-relaxed text-base mt-4">
-              或许《交易的艺术》对当前时刻最持久的启示是，可持续协议不是零和胜利，而是各方都能感知价值的安排。在高风险的国际关系博弈中，那些既掌握推进利益的勇气又具备寻找互利的智慧的参与者，将在我们充满挑战的全球格局中最终证明最为成功。
+              而保护下档和灵活多变又保障了他能从容试错，不会因一次挫败而全盘皆输。这些商业谈判技巧后来被他带入政治舞台，成为其"美国优先"政策工具箱的重要组成部分。
             </p>
           </>
         )}
