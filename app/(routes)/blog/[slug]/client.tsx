@@ -3,7 +3,8 @@
 import { HesseUnderTheWheelPost } from "@/components/blog-posts/hesse-under-the-wheel"
 import { SuzhouRiverPost } from "@/components/blog-posts/suzhou-river"
 import { GraduateExamExperiencePost } from "@/components/blog-posts/graduate-exam-experience"
-import { BookOpen, BookText, School, Film, GraduationCap, Pencil } from "lucide-react"
+import { TrumpArtOfDealPost } from "@/components/blog-posts/trump-art-of-deal"
+import { BookOpen, BookText, School, Film, GraduationCap, Pencil, DollarSign, Landmark, Globe } from "lucide-react"
 
 interface BlogPostClientProps {
   slug: string
@@ -26,6 +27,12 @@ function getTagIcon(tagId: string) {
       return <GraduationCap className="h-4 w-4 mr-1" />;
     case 'experience':
       return <BookOpen className="h-4 w-4 mr-1" />;
+    case 'politics':
+      return <Landmark className="h-4 w-4 mr-1" />;
+    case 'economics':
+      return <DollarSign className="h-4 w-4 mr-1" />;
+    case 'usa':
+      return <Globe className="h-4 w-4 mr-1" />;
     default:
       return null;
   }
@@ -61,6 +68,18 @@ function getTagName(tagId: string, language: 'en' | 'zh') {
     "experience": {
       en: "Experience",
       zh: "经验"
+    },
+    "politics": {
+      en: "Politics",
+      zh: "政治"
+    },
+    "economics": {
+      en: "Economics",
+      zh: "经济"
+    },
+    "usa": {
+      en: "USA",
+      zh: "美国"
     }
   }
   
@@ -79,6 +98,10 @@ export default function BlogPostClient({ slug }: BlogPostClientProps) {
   
   if (slug === "graduate-exam-experience") {
     return <GraduateExamExperiencePost />
+  }
+  
+  if (slug === "trump-art-of-deal") {
+    return <TrumpArtOfDealPost />
   }
   
   // Handle unknown slug case

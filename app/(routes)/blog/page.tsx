@@ -7,9 +7,10 @@ import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
-import { BookOpen, BookText, School, Film, Pencil, GraduationCap } from "lucide-react"
+import { BookOpen, BookText, School, Film, Pencil, GraduationCap, DollarSign, Landmark, Globe } from "lucide-react"
 import { HesseUnderTheWheelPost } from "@/components/blog-posts/hesse-under-the-wheel"
 import { GraduateExamExperiencePost } from "@/components/blog-posts/graduate-exam-experience"
+import { TrumpArtOfDealPost } from "@/components/blog-posts/trump-art-of-deal"
 
 interface Tag {
   id: string
@@ -109,6 +110,27 @@ export default function BlogPage() {
         en: "Experience",
         zh: "经验"
       }
+    },
+    "politics": {
+      id: "politics",
+      name: {
+        en: "Politics",
+        zh: "政治"
+      }
+    },
+    "economics": {
+      id: "economics",
+      name: {
+        en: "Economics",
+        zh: "经济"
+      }
+    },
+    "usa": {
+      id: "usa",
+      name: {
+        en: "USA",
+        zh: "美国"
+      }
     }
   }
   
@@ -166,6 +188,24 @@ export default function BlogPage() {
         en: "The author shares their experience of achieving top scores in both written exams and interviews for a prestigious TOP3 university. Drawing from their own journey and observations of fellow students, this article provides comprehensive guidance for graduate entrance exam preparation. Topics covered include school selection, general study methodology, subject-specific strategies for politics, English, mathematics, and specialized courses, as well as interview preparation techniques. Emphasizing the importance of mental state, consistent effort over intense cramming, practice over passive learning, and a balanced approach to study, the author offers practical advice and encouragement for students at any stage of their preparation journey.",
         zh: "作者以初试和复试双第一考入某TOP3，结合身边研友的状况和自己的经验给大家分享考研心得。本文全面覆盖择校策略、总体学习方法论、政治/英语/数学/专业课的备考技巧以及复试准备等关键环节。作者强调心态远重于努力、持续坚持优于高强度冲刺、做题优先于看课、拒绝完美主义等核心理念，并提供了各科目的具体复习时间安排和资料推荐。针对政治科目，文章建议以马原为重点；英语部分分享了高效词汇记忆和真题练习方法；数学章节提供了阶段性学习计划；专业课强调理解优先于背诵。此外，文章还特别强调了复试过程中科研经历展示和个人能力呈现的重要性，为考研学子提供了全方位的备考指导。"
       }
+    },
+    {
+      id: "4",
+      slug: "trump-art-of-deal",
+      title: {
+        en: "Trump's \"The Art of the Deal\": Analysis of Negotiation Principles and Their Implications for International Relations in 2025",
+        zh: "特朗普《交易的艺术》谈判原则解析及其在2025年国际博弈中的启示"
+      },
+      date: "2025-04-08",
+      tags: ["politics", "economics", "usa"],
+      excerpt: {
+        en: "An in-depth analysis of Donald Trump's negotiation principles from \"The Art of the Deal\" and their application to international relations and trade conflicts in 2025's complex geopolitical landscape.",
+        zh: "深入分析唐纳德·特朗普《交易的艺术》中的谈判原则，及其在2025年复杂地缘政治格局下对国际关系和贸易冲突的应用。"
+      },
+      content: {
+        en: "This article examines Donald Trump's negotiation framework detailed in \"The Art of the Deal\" and applies these principles to the geopolitical challenges of 2025. With ongoing US-China trade tensions and global economic recession as backdrop, the analysis explores how principles like \"Think Big,\" \"Protect the Downside,\" and \"Maximize Your Options\" continue to influence international strategic decision-making.\n\nThe article systematically examines key negotiation strategies and their application to contemporary issues including supply chain diversification, tariff dynamics, technology competition, diplomatic alliances, financial markets, and multinational corporate strategy. Each section reveals how Trump's assertive yet pragmatic approach to negotiation provides a framework for understanding the complex interplay between national interests and global interdependence.\n\nUltimately, the analysis suggests that successful international actors in 2025 must combine firmness in defending core interests with pragmatic recognition of mutual dependencies. The most enduring insight may be that sustainable international agreements aren't zero-sum victories but arrangements where all parties perceive value—a lesson particularly relevant in today's fractured global landscape.",
+        zh: "本文解析了唐纳德·特朗普在《交易的艺术》中详述的谈判框架，并将这些原则应用于2025年的地缘政治挑战。以持续的中美贸易紧张局势和全球经济衰退为背景，分析探讨了\"志存高远\"、\"守住底线\"和\"留有余地\"等原则如何继续影响国际战略决策。\n\n文章系统地考察了关键谈判策略及其在当代问题中的应用，包括供应链多元化、关税动态、技术竞争、外交联盟、金融市场和跨国企业战略。每个部分揭示了特朗普既强硬又务实的谈判方法如何为理解国家利益与全球相互依存之间的复杂相互作用提供框架。\n\n最终，分析表明，2025年成功的国际行为体必须将坚定捍卫核心利益与务实认识相互依赖结合起来。最持久的见解可能是，可持续的国际协议不是零和胜利，而是所有各方都能感知价值的安排——这一教训在当今分裂的全球格局中尤为相关。"
+      }
     }
   ]
 
@@ -206,6 +246,12 @@ export default function BlogPage() {
         return <GraduationCap className="h-3 w-3 mr-1" />;
       case 'experience':
         return <BookOpen className="h-3 w-3 mr-1" />;
+      case 'politics':
+        return <Landmark className="h-3 w-3 mr-1" />;
+      case 'economics':
+        return <DollarSign className="h-3 w-3 mr-1" />;
+      case 'usa':
+        return <Globe className="h-3 w-3 mr-1" />;
       default:
         return null;
     }
@@ -228,6 +274,10 @@ export default function BlogPage() {
     
     if (post && post.slug === "graduate-exam-experience") {
       return <GraduateExamExperiencePost />
+    }
+    
+    if (post && post.slug === "trump-art-of-deal") {
+      return <TrumpArtOfDealPost />
     }
     
     // If post not found or not implemented, go back to list
