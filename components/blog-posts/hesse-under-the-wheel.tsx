@@ -37,7 +37,7 @@ export function HesseUnderTheWheelPost() {
             
             <div className="flex justify-center mt-2 mb-4">
               <time className="text-muted-foreground text-center">
-                May 1, 2025
+                March 1, 2025
               </time>
             </div>
             
@@ -157,7 +157,7 @@ export function HesseUnderTheWheelPost() {
             
             <div className="flex justify-center mt-2 mb-4">
               <time className="text-muted-foreground text-center">
-                2025年5月1日
+                2025年3月1日
               </time>
             </div>
             

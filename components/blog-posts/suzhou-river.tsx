@@ -31,21 +31,13 @@ export function SuzhouRiverPost() {
       <article className="prose dark:prose-invert max-w-none leading-relaxed">
         {language === "en" ? (
           <>
-            <h1 className="flex flex-col items-center text-center mb-4">
-              <span className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">
-                Artistic Analysis, Social
-              </span>
-              <span className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">
-                Interpretation and Contemporary
-              </span>
-              <span className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">
-                Significance of the Film "Suzhou River"
-              </span>
+            <h1 className="text-4xl font-bold tracking-tight text-center mb-4">
+              Artistic Analysis, Social Interpretation and Contemporary Significance of the Film "Suzhou River"
             </h1>
             
             <div className="flex justify-center mt-2 mb-4">
               <time className="text-muted-foreground text-center">
-                May 15, 2025
+                March 15, 2025
               </time>
             </div>
             
@@ -193,18 +185,13 @@ export function SuzhouRiverPost() {
           </>
         ) : (
           <>
-            <h1 className="flex flex-col items-center text-center mb-4">
-              <span className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">
-                电影《苏州河》的艺术赏析、
-              </span>
-              <span className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">
-                社会解读与现实意义
-              </span>
+            <h1 className="text-4xl font-bold tracking-tight text-center mb-4">
+              电影《苏州河》的艺术赏析、社会解读与现实意义
             </h1>
             
             <div className="flex justify-center mt-2 mb-4">
               <time className="text-muted-foreground text-center">
-                2025年5月15日
+                2025年3月15日
               </time>
             </div>
             

@@ -137,12 +137,12 @@ export default function BlogPage() {
   const blogPosts: BlogPost[] = [
     {
       id: "1",
-      slug: "hesse-under-the-wheel", // Add slug for the dedicated page
+      slug: "hesse-under-the-wheel",
       title: {
         en: "Hesse's \"Under the Wheel\": Literary Deconstruction and Philosophical Reflections",
         zh: "赫尔曼·黑塞《在轮下》的文学解构与哲学省思"
       },
-      date: "2025-05-01", // Updated to match the post component
+      date: "2025-03-01",
       tags: ["philosophy", "education", "reading"],
       excerpt: {
         en: "Through literary deconstruction and philosophical analysis, this article explores how Hesse's \"Under the Wheel\" reveals the constraints and dehumanization of modern educational systems.",
@@ -160,7 +160,7 @@ export default function BlogPage() {
         en: "Artistic Analysis, Social Interpretation, and Contemporary Significance of the Film \"Suzhou River\"",
         zh: "电影《苏州河》的艺术赏析、社会解读与现实意义"
       },
-      date: "2025-05-15",
+      date: "2025-03-15",
       tags: ["film", "philosophy", "shanghai"],
       excerpt: {
         en: "An in-depth analysis of Lou Ye's \"Suzhou River\", exploring its innovative narrative techniques, social reflections of 1990s Shanghai, and the film's enduring significance in Chinese cinema.",

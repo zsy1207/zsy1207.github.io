@@ -1,6 +1,6 @@
 "use client"
 
-import React, { createContext, useContext, useState } from "react"
+import React, { createContext, useContext, useState, useEffect } from "react"
 
 export type Language = "en" | "zh"
 
@@ -15,7 +15,24 @@ const LanguageContext = createContext<LanguageContextType>({
 })
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguage] = useState<Language>("en")
+  const [language, setLanguage] = useState<Language>("zh")
+
+  useEffect(() => {
+    // 检测浏览器语言
+    const detectBrowserLanguage = () => {
+      if (typeof window !== "undefined") {
+        const browserLang = navigator.language.toLowerCase()
+        // 如果是中文浏览器则使用中文，否则使用英文
+        if (browserLang.includes("zh")) {
+          setLanguage("zh")
+        } else {
+          setLanguage("en")
+        }
+      }
+    }
+
+    detectBrowserLanguage()
+  }, [])
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage }}>
