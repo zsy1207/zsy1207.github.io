@@ -134,7 +134,7 @@ export function TrumpArtOfDealPost() {
           // --- START OF CHINESE CONTENT (Detailed version from aa.md) ---
           <>
             <h1 className="text-4xl font-bold tracking-tight text-center mb-4">
-              特朗普《交易的艺术》谈判原则与2025年贸易战略运用分析
+              特朗普《交易的艺术》谈判原则与运用分析
             </h1>
             
             <div className="flex justify-center mt-2 mb-4">

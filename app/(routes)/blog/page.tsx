@@ -194,7 +194,7 @@ export default function BlogPage() {
       slug: "trump-art-of-deal",
       title: {
         en: "Trump's \"The Art of the Deal\": Analysis of Negotiation Principles and Their Implications",
-        zh: "特朗普《交易的艺术》谈判原则解析及其启示"
+        zh: "特朗普《交易的艺术》谈判原则与运用分析"
       },
       date: "April 8, 2025",
       tags: ["politics", "economics", "reading"],
