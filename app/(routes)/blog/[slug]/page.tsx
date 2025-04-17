@@ -5,7 +5,7 @@ export function generateStaticParams() {
   return [
     { slug: "hesse-under-the-wheel" },
     { slug: "suzhou-river" },
-    { slug: "graduate-exam-experience" },
+    { slug: "pyramid-principle" },
     { slug: "trump-art-of-deal" }
   ]
 }
