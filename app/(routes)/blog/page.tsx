@@ -182,14 +182,14 @@ export default function BlogPage() {
       id: "3",
       slug: "pyramid-principle",
       title: {
-        en: "The Pyramid Principle: Crafting Clear Communication in the Information Age",
-        zh: "金字塔原理：信息时代的清晰沟通之道"
+        en: "The Pyramid Principle Summary",
+        zh: "《金字塔原理》总结"
       },
       date: "2025-04-17",
       tags: ["reading", "expression"],
       excerpt: {
-        en: "An exploration of Barbara Minto's Pyramid Principle and how this structured approach to communication can enhance clarity and impact in professional and academic contexts.",
-        zh: "探索芭芭拉·明托的金字塔原理，以及这种结构化的沟通方法如何在专业和学术环境中提高表达的清晰度和影响力。"
+        en: "An overview of Barbara Minto's Pyramid Principle, detailing its top-down framework for organizing thoughts into three hierarchical levels to deliver clear and impactful communication.",
+        zh: "本文概述芭芭拉·明托的金字塔原理，介绍其自上而下的三层结构信息组织方法，并探讨其在专业沟通中的应用价值。"
       },
       content: {
         en: "The Pyramid Principle, developed by Barbara Minto at McKinsey & Company in the 1970s, offers a powerful framework for organizing thoughts and presenting information effectively. This article explores the core concepts, application methods, and benefits of this structured communication approach.\n\nAt its heart, the Pyramid Principle advocates starting with the conclusion or key message, then supporting it with hierarchically organized arguments and evidence. This top-down approach contrasts with traditional bottom-up communication, respecting the audience's cognitive limitations and time constraints.\n\nThe article examines the pyramid structure (key message, supporting arguments, and evidence), logical grouping methods, and practical applications across various contexts including business presentations, reports, emails, and academic writing. While acknowledging implementation challenges such as resistance to conclusion-first approaches and the difficulty of identifying the true key message, the analysis demonstrates how mastering this principle can transform communication effectiveness.\n\nIn an age of information overload, the ability to present ideas with pyramid-like clarity represents an invaluable skill that enhances comprehension, retention, and ultimately, persuasive impact across professional and academic domains.",
