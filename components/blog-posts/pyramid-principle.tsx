@@ -102,333 +102,325 @@ export function PyramidPrinciplePost() {
 
             <div className="h-px w-full bg-gray-200 dark:bg-gray-700 my-10"></div>
 
-            <h2 className="text-2xl font-bold mt-10 mb-6">3. 思考与沟通模式</h2>
+            <h2 className="text-2xl font-bold mt-10 mb-6">3. Building Logical Thought</h2>
             <p className="leading-relaxed text-base">
-              <strong>3. 逻辑地构建思想</strong>
+              <strong>Grouping Principles: How to Effectively Group Related Ideas</strong>
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>分组原则：如何有效地分组相关思想</strong>
+              Ideas at any level of the pyramid must be summaries of the grouped ideas below them. This ensures clear hierarchical relationships and logical flow of information. Ideas within each grouping must be of the same kind. This principle promotes clarity and prevents mixing different types of arguments or information at the same level. Ideas within each grouping must be arranged in a logical order. The logical order can be based on time, structure, importance, or degree. Summarize action ideas by stating the effect of the actions, and situation ideas by stating what their similarity implies. This provides meaningful summaries rather than merely restating the type of ideas. Avoid "intellectual blank" summaries that don't summarize essence. For example, "We recommend 5 changes" without specifying the nature or impact of these changes.
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              金字塔中任何层级的思想都必须是其下方分组思想的总结。这确保了清晰的层级关系和信息的逻辑流动。每个分组中的思想必须是同一种类的思想。此原则促进了清晰性，并防止在同一层级混合不同类型的论点或信息。每个分组中的思想必须按逻辑顺序排列。逻辑顺序可以基于时间、结构、重要性或程度。通过说明行动的效果来总结行动思想，并通过说明其相似性所暗示的内容来总结情境思想。这提供了有意义的总结，而不仅仅是重申思想的类型。避免不总结本质的"智力空白"式总结。例如，"我们建议进行5项更改"而没有说明这些更改的性质或影响。
+              <strong>Insight:</strong> These grouping principles ensure cohesiveness in the pyramid structure and that relationships between ideas are clear and logical, making communication easier to understand and more persuasive. If ideas in a grouping aren't of the same kind, the summary point will be weak and the logic unclear. Similarly, if a point above isn't a true summary of the points below, the vertical logic of the pyramid breaks down. Logical ordering within groups helps the audience understand the reasoning and grasp the connections between ideas. Avoiding generic summaries ensures that higher-level points convey substantive meaning.
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>洞察：</strong> 这些分组原则确保了金字塔结构的连贯性，并且思想之间的关系清晰且符合逻辑，从而使沟通更容易理解且更具说服力。如果一个分组中的思想不是同一种类的，那么总结点就会很弱，逻辑也不清晰。同样，如果上方的点不是下方点的真实总结，那么金字塔的垂直逻辑就会崩溃。分组内的逻辑排序有助于听众理解推理并理解思想之间的联系。避免使用通用的总结可以确保更高层级的点传达实质性的意义。
+              <strong>MECE Principle (Mutually Exclusive, Collectively Exhaustive): Explanation and Examples of Its Application in Idea Grouping</strong>
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>MECE原则（相互独立，完全穷尽）：解释及其在思想分组中的应用示例</strong>
+              MECE stands for Mutually Exclusive, Collectively Exhaustive. Barbara Minto developed this principle during her time at McKinsey. Mutually exclusive means each point is unique, with no overlap. This ensures clarity of argument and avoids redundancy. Collectively exhaustive means all relevant points are covered, with no omissions. This ensures comprehensiveness of analysis and consideration of all important aspects. MECE aids in brainstorming, problem-solving, and planning. It provides a structured approach to breaking down complex problems. Examples include categorizing people by birth year or apartment building number. These are examples of clear non-overlapping and complete categories. Non-MECE examples include categorization by nationality, as some people may have dual citizenship or no citizenship. In business, MECE can be applied to customer segmentation (e.g., price-driven, trend-driven, quality-driven, convenience-driven), product features, revenue sources (e.g., online sales, physical store sales, wholesale, licensing), and market entry strategies (market, company, competition, how to enter).
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              MECE代表相互独立，完全穷尽。芭芭拉·明托在麦肯锡工作期间提出了这个原则。相互独立意味着每个点都是独特的，没有重叠。这确保了论证的清晰性并避免了冗余。完全穷尽意味着涵盖了所有相关的点，没有遗漏。这确保了分析的全面性并考虑了所有重要的方面。MECE有助于头脑风暴、问题解决和规划。它为分解复杂问题提供了一种结构化的方法。示例包括按出生年份或公寓楼号对人员进行分类。这些是清晰的非重叠和完整的类别示例。非MECE示例包括按国籍分类，因为有些人可能拥有双重国籍或没有国籍。在商业中，MECE可应用于客户细分（例如，价格驱动型、趋势驱动型、质量驱动型、便利性驱动型）、产品特性、收入来源（例如，在线销售、实体店销售、批发、许可）和市场进入策略（市场、公司、竞争、如何进入）。
+              <strong>Insight:</strong> The MECE principle is a powerful tool for ensuring thorough analysis and clear communication. By avoiding overlap and omission, it strengthens the logical foundation of the pyramid structure. If categories overlap (not mutually exclusive), it can lead to double-counting or confusion, weakening the logical structure. If some aspects are omitted (not collectively exhaustive), the analysis will be incomplete and conclusions may be flawed. MECE ensures that all relevant angles are considered in a structured and organized way, resulting in more robust and persuasive communication.
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>洞察：</strong> MECE原则是确保分析彻底和沟通清晰的有力工具。通过避免重叠和遗漏，它可以加强金字塔结构的逻辑基础。如果类别重叠（不相互独立），则可能导致重复计算或混淆，从而削弱逻辑结构。如果遗漏了一些方面（不完全穷尽），则分析将不完整，结论也可能存在缺陷。MECE确保以结构化和有组织的方式考虑所有相关的角度，从而产生更强大和更具说服力的沟通。
+              <strong>Establishing Logical Order</strong>
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>建立逻辑顺序</strong>
+              <strong>Vertical Logic: Question-and-Answer Dialogue Between Pyramid Levels</strong>
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>纵向逻辑：金字塔层级之间的问答对话</strong>
+              Vertical logic is the storyline, a question-and-answer dialogue. Each level answers questions posed by the level above. Any point made must raise a question in the reader's mind, and the next level must answer that question. This forms a natural flow of asking and answering. As you move down the pyramid, you start with the main idea, pose questions, and answer them with supporting arguments. This step-by-step process aids understanding. Each level should summarize the details that follow it. This ensures the audience can grasp the main point of each section before diving into the details.
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              纵向逻辑是故事情节，是问答式的对话。每个层级都回答了上方层级提出的问题。提出的任何观点都必须在读者的脑海中引起一个问题，而下一层级必须回答这个问题。这形成了一个自然的提问和回答的流程。当你向下移动金字塔时，你从主要思想开始，提出问题，并用支撑性论点来回答它们。这种循序渐进的过程有助于理解。每个层级都应该总结其后跟随的细节。这确保了听众可以在深入了解细节之前掌握每个部分的主要观点。
+              <strong>Insight:</strong> Vertical logic creates a natural flow of information that mirrors a logical dialogue, making arguments easy to understand and follow. The question-and-answer format anticipates the audience's curiosity and addresses it proactively. When someone makes a statement, it naturally raises questions like "Why?" or "How?". The vertical logic in the Pyramid Principle harnesses this natural human tendency by ensuring each level of the pyramid answers the implicit questions raised by the level above. This creates a coherent and engaging narrative where each point logically leads to the next one.
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>洞察：</strong> 纵向逻辑创建了一个自然的信息流，它反映了逻辑对话，使论证易于理解和遵循。问答形式预先考虑了听众的好奇心并主动地解决了它。当有人做出陈述时，自然会引发"为什么？"或"如何？"之类的问题。金字塔原理中的纵向逻辑通过确保金字塔的每个层级都回答了上方层级提出的隐含问题，从而利用了这种自然的人类倾向。这创建了一个连贯且引人入胜的叙述，其中每个点都逻辑地引出下一个点。
+              <strong>Horizontal Logic: Relationships Between Ideas at the Same Level (Deductive and Inductive Reasoning)</strong>
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>横向逻辑：同一层级思想之间的关系（演绎推理和归纳推理）</strong>
-            </p>
-            
-            <p className="leading-relaxed text-base mt-4">
-              横向逻辑是理解所呈现信息时使用的推理类型。它决定了同一层级的支撑性论点如何相互关联。主要有两种类型：演绎推理和归纳推理。选择哪种取决于所呈现论点的性质。
+              Horizontal logic is the type of reasoning used to understand the information presented. It determines how supporting arguments at the same level relate to each other. There are primarily two types: deductive and inductive reasoning. The choice depends on the nature of the arguments being presented.
             </p>
 
             <div className="h-px w-full bg-gray-200 dark:bg-gray-700 my-10"></div>
 
-            <h2 className="text-2xl font-bold mt-10 mb-6">4. 信息组织与分组原则</h2>
+            <h2 className="text-2xl font-bold mt-10 mb-6">4. Information Organization and Grouping Principles</h2>
             <p className="leading-relaxed text-base">
-              <strong>4. 横向逻辑详解</strong>
+              <strong>Deductive Reasoning: Explanation and Examples in Business Context</strong>
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>演绎推理：商业背景下的解释和示例</strong>
+              Deductive reasoning involves stating a general statement first and then using specific examples to validate it. It derives a specific conclusion from a general premise. If the premises are true, then the conclusion must be true. For example: "Consultants are smart -&gt; I am a consultant -&gt; Therefore, I am smart." Another example: "Businessmen wear ties to work. Ties are part of business formal attire. Therefore, businessmen dress in business formal attire." This illustrates how a general rule applies to a specific case. In presentations, it might involve stating a universal market trend and then showing how that trend applies to the specific company being discussed. For example: "The electric vehicle market is growing rapidly. Our company is in the automotive industry. Therefore, our company should invest in electric vehicles."
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              演绎推理涉及先提出一个普遍性的陈述，然后使用具体的例子来验证它。它从一个普遍性的前提推导出一个具体的结论。如果前提为真，那么结论必然为真。例如："顾问很聪明 -> 我是顾问 -> 所以我很聪明"。另一个例子："商人上班穿领带。领带是商务正装的一部分。因此，商人穿着商务正装"。这说明了一般规则如何应用于具体案例。在演示文稿中，它可能涉及陈述一个普遍的市场趋势，然后展示该趋势如何适用于正在讨论的特定公司。例如："电动汽车市场正在快速增长。我们公司在汽车行业。因此，我们公司应该投资电动汽车。"
+              <strong>Insight:</strong> Deductive reasoning provides a powerful and logical way to connect general principles with specific situations, making arguments more persuasive. By starting with a widely accepted truth or principle (major premise) and then applying it to a specific case (minor premise), deductive reasoning arrives at a logically sound conclusion. This approach is particularly effective when the universal premise is widely accepted and recognized by the audience, providing a sense of certainty to the argument.
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>洞察：</strong> 演绎推理提供了一种强大而合乎逻辑的方式，将普遍原则与具体情况联系起来，从而使论证更具说服力。通过从一个广为接受的真理或原则（大前提）开始，然后将其应用于一个具体的案例（小前提），演绎推理得出了一个逻辑上合理的结论。当普遍前提被听众广泛接受和认可时，这种方法尤其有效，为论证提供了一种确定性。
+              <strong>Inductive Reasoning: Explanation and Examples in Business Context</strong>
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>归纳推理：商业背景下的解释和示例</strong>
+              Inductive reasoning derives a specific conclusion from a set of general supporting statements. It moves from specific observations to a broader generalization. The conclusion is probable but not certain. For example: "Pomeranians help relieve stress. Samoyeds help relieve stress. Dachshunds help relieve stress. Therefore, dogs help relieve stress." Another example: Observing that several smart consultants are nerdy, work hard, and competitive might lead to the inductive conclusion: "Consultants are smart, so they are nerdy, hardworking, and competitive." This inference is based on observed patterns. In business, this might involve observing several successful marketing campaigns that used a particular strategy and concluding that the strategy is generally effective. For example: "Marketing campaign A increased sales by 10%. Marketing campaign B increased sales by 12%. Marketing campaign C increased sales by 9%. Therefore, this type of marketing campaign effectively increases sales."
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              归纳推理从一组一般的支撑性陈述中得出一个特定的结论。它从具体的观察结果推导出一个更广泛的概括。结论是可能的，但并非必然。例如："博美犬有助于缓解压力。萨摩耶犬有助于缓解压力。腊肠犬有助于缓解压力。因此，狗有助于缓解压力"。另一个例子：观察到几位聪明的顾问都是书呆子、工作努力且具有竞争力，这可能会导致归纳结论："顾问很聪明，因此他们是书呆子、工作努力且具有竞争力"。这种推断是基于观察到的模式。在商业中，这可能涉及观察到几个使用特定策略的成功营销活动，并得出结论认为该策略通常有效。例如："A营销活动销售额增长了10%。B营销活动销售额增长了12%。C营销活动销售额增长了9%。因此，这种类型的营销活动能有效提高销售额。"
-            </p>
-            
-            <p className="leading-relaxed text-base mt-4">
-              <strong>洞察：</strong> 归纳推理对于根据具体数据点或观察结果识别模式和形成假设非常有用，这些假设随后可以导致更广泛的结论或策略。通过观察一组共享共同特征的具体实例，归纳推理使我们能够推断出关于该特征的一般原则或结论。虽然归纳结论并非在所有情况下都保证正确，但它们可能具有很高的可能性，并为决策提供有价值的见解，尤其是在基于充分相关的证据的情况下。
+              <strong>Insight:</strong> Inductive reasoning is useful for identifying patterns and forming hypotheses based on specific data points or observations, which can then lead to broader conclusions or strategies. By observing a set of specific instances that share a common trait, inductive reasoning allows us to infer a general principle or conclusion about that trait. While inductive conclusions are not guaranteed to be true in all cases, they can have a high probability and provide valuable insights for decision-making, especially when based on sufficient relevant evidence.
             </p>
 
             <div className="h-px w-full bg-gray-200 dark:bg-gray-700 my-10"></div>
 
-            <h2 className="text-2xl font-bold mt-10 mb-6">5. 应用场景</h2>
+            <h2 className="text-2xl font-bold mt-10 mb-6">5. Application Scenarios</h2>
             <p className="leading-relaxed text-base">
-              <strong>5. 引言和结论的构建</strong>
+              <strong>Constructing Introductions and Conclusions</strong>
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>使用SCQA框架构建引言：情境、冲突、问题、答案</strong>
+              <strong>Using the SCQA Framework for Introductions: Situation, Complication, Question, Answer</strong>
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              引言通常遵循SCQA框架。这个框架为有效地开启沟通提供了一种结构化的方法。
+              Introductions typically follow the SCQA framework. This framework provides a structured approach to effectively opening communication.
             </p>
             
             <ul className="list-disc pl-6 mt-4">
-              <li><strong>情境（Situation）：</strong> 从一个读者可以认同的关于主题的自给自足且无争议的陈述开始。建立背景、时间和地点。例如："过去五年，我们公司的收入一直稳步增长。"</li>
-              <li><strong>冲突（Complication）：</strong> 引入需要解决的变化或问题。解释困境并营造紧迫感。回答"谁关心？"。例如："然而，我们的主要竞争对手最近推出了一款创新产品，导致我们本季度的市场份额有所下降。"</li>
-              <li><strong>问题（Question）：</strong> 询问如何解决冲突。这引出了文档将要回答的主要问题。例如："面对这种新的竞争威胁，我们如何才能重新获得市场份额并保持增长势头？"</li>
-              <li><strong>答案（Answer）：</strong> 将主要论点作为解决方案呈现。这是您试图表达的主要观点。例如："我们建议推出一款反创新产品并实施有针对性的营销活动，以突出我们独特的价值主张。"</li>
+              <li><strong>Situation:</strong> Start with a self-contained and non-controversial statement about the topic that the reader can agree with. Establish background, time, and place. For example: "For the past five years, our company has experienced steady revenue growth."</li>
+              <li><strong>Complication:</strong> Introduce a change or problem that needs to be addressed. Explain the dilemma and create urgency. Answer "who cares?". For example: "However, our main competitor recently launched an innovative product, causing our market share to decline this quarter."</li>
+              <li><strong>Question:</strong> Ask how to resolve the complication. This raises the key question the document will answer. For example: "How can we regain market share and maintain our growth momentum in the face of this new competitive threat?"</li>
+              <li><strong>Answer:</strong> Present the main argument as the solution. This is the key point you're trying to make. For example: "We recommend launching a counter-innovation product and implementing a targeted marketing campaign to highlight our unique value proposition."</li>
             </ul>
             
             <p className="leading-relaxed text-base mt-4">
-              SCQA结构有助于"吸引"听众。它创建了一个引人入胜的叙述流程。
+              The SCQA structure helps to "hook" the audience. It creates an engaging narrative flow.
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>洞察：</strong> SCQA框架提供了一种结构化且引人入胜的方式来介绍主题、构建问题并预先呈现解决方案，确保听众立即了解情况并理解沟通的目的。通过遵循SCQA顺序，引言模仿了一个引人入胜的叙述结构。它首先建立共同点（情境），然后引入一个扰乱或问题（冲突），从而产生对解决方案的需求（问题），然后由沟通者提供解决方案（答案）。这种结构自然地吸引了听众，并为其余的信息奠定了基础，使他们更有可能关注并理解后续的论点。
+              <strong>Insight:</strong> The SCQA framework provides a structured and engaging way to introduce topics, build up a problem, and pre-present the solution, ensuring the audience immediately understands the situation and the purpose of the communication. By following the SCQA sequence, the introduction mimics an engaging narrative structure. It first establishes common ground (Situation), then introduces a disruption or problem (Complication), which creates a need for a solution (Question), then provided by the communicator (Answer). This structure naturally draws in the audience and sets the stage for the rest of the information, making them more likely to pay attention and understand the subsequent arguments.
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>构建强有力的支撑性论点：有效论证的标准</strong>
+              <strong>Building Strong Supporting Arguments: Criteria for Effective Arguments</strong>
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              支撑性论点应直接支持主要论断。它们应清楚地解释论断成立的"原因"。它们应该是合乎逻辑且完整的。推理应严谨，并涵盖论断的所有关键方面。旨在获得有限数量的关键论点（例如，3-5个）以提高记忆性。这符合人类短期记忆的限制。逻辑地分组和总结支撑性论点。使用MECE原则确保有效分组。按重要性对论点进行排序。首先呈现最关键的论点可以最大化影响力。
+              Supporting arguments should directly support the main assertion. They should clearly explain the "why" behind why the assertion holds true. They should be logical and complete. The reasoning should be rigorous and cover all key aspects of the assertion. Aim for a limited number of key points (e.g., 3-5) for memorability. This aligns with limitations of human short-term memory. Group and summarize supporting arguments logically. Use the MECE principle to ensure effective grouping. Order arguments by importance. Presenting the most critical arguments first maximizes impact.
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>洞察：</strong> 强有力的支撑性论点是金字塔原理的基石。它们为主要论断提供了必要的理由，应仔细选择和构建，既要具有说服力又要易于理解。如果支撑性论点薄弱、不相关或组织不当，听众就不会被主要论断所说服。通过关注少数几个关键的、有充分证据支撑的论点，沟通者可以建立一个强有力的案例。逻辑分组和排序有助于以清晰且有影响力的方式呈现信息，使听众更容易理解推理并接受结论。
+              <strong>Insight:</strong> Strong supporting arguments are the cornerstone of the Pyramid Principle. They provide the necessary rationale for the main assertion and should be carefully chosen and constructed to be both persuasive and easy to understand. If supporting arguments are weak, irrelevant, or poorly organized, the audience won't be convinced of the main assertion. By focusing on a few key, well-evidenced points, communicators can build a strong case. Logical grouping and ordering helps present information in a clear and impactful way, making it easier for the audience to understand the reasoning and accept the conclusion.
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>形成清晰简洁的结论：总结关键信息</strong>
+              <strong>Forming Clear, Concise Conclusions: Summarizing Key Information</strong>
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              结论应强化主要论断。重申最初的关键要点。总结关键的支撑性论点。简要回顾支持论断的主要原因。清晰地重申主要思想。确保核心信息被再次强调以获得最大的影响力。结论应具有可操作性并推动决策。它应明确指出下一步或期望的结果。在演示文稿中，它可能包括行动号召。告诉听众您希望他们做什么。
+              Conclusions should reinforce the main assertion. Restate the initial key point. Summarize the key supporting arguments. Briefly recap the main reasons that support the assertion. Clearly restate the main idea. Ensure the core message is emphasized again for maximum impact. Conclusions should be actionable and drive decision-making. They should clearly indicate next steps or expected outcomes. In presentations, they may include a call to action. Tell the audience what you want them to do.
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>洞察：</strong> 强有力的结论提供了总结，并确保听众记住关键信息。它应该是一个简洁的总结，强化主要信息并激发期望的行动。在呈现主要论断和支撑性论点之后，结论是最后一次重申关键信息并确保其在听众中产生共鸣的机会。清晰简洁的总结有助于巩固理解并促进行动的意愿。通过重申主要思想并总结支撑要点，结论强化了整体信息并提高了其记忆性。
+              <strong>Insight:</strong> Strong conclusions provide closure and ensure the audience remembers the key information. It should be a concise summary that reinforces the main message and inspires the desired action. After presenting the main assertion and supporting arguments, the conclusion is the final opportunity to restate the key information and ensure it resonates with the audience. A clear, concise summary helps solidify understanding and promote willingness to act. By restating the main idea and summarizing the supporting points, the conclusion reinforces the overall message and increases its memorability.
             </p>
 
             <div className="h-px w-full bg-gray-200 dark:bg-gray-700 my-10"></div>
 
-            <h2 className="text-2xl font-bold mt-10 mb-6">6. 金字塔原理在不同场景下的应用</h2>
+            <h2 className="text-2xl font-bold mt-10 mb-6">6. Application of the Pyramid Principle in Different Scenarios</h2>
             <p className="leading-relaxed text-base">
-              <strong>撰写报告：以逻辑流程构建复杂信息</strong>
+              <strong>Writing Reports: Structuring Complex Information with Logical Flow</strong>
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              金字塔原理旨在撰写复杂的报告和分析。它有助于将推理结构化为连贯且透明的论证。使用答案先行的方法。在开头呈现主要发现和建议。逻辑地分组支撑性论点。使用类别使信息更易于理解。逻辑地排序支撑性思想。遵循基于时间、重要性或结构的清晰顺序。该原理可用于各种商业文档，如BRD（业务需求文档）和FTD（功能和技术设计）。这突出了该原理在不同类型的商业写作中的多功能性。
+              The Pyramid Principle was designed for writing complex reports and analyses. It helps structure reasoning into coherent and transparent arguments. Use the answer-first approach. Present main findings and recommendations at the beginning. Group supporting arguments logically. Use categories to make information more digestible. Order supporting ideas logically. Follow a clear sequence based on time, importance, or structure. The principle can be used for various business documents such as BRDs (Business Requirement Documents) and FTDs (Functional and Technical Designs). This highlights the versatility of the principle in different types of business writing.
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>洞察：</strong> 在报告撰写中，金字塔原理确保最重要的发现和建议立即显现，而详细的分析则以逻辑方式构建以支持这些关键信息。撰写报告时，读者通常希望快速了解主要的结论和建议，而不会迷失在过多的细节中。金字塔原理允许作者在开头呈现这些信息，然后是支持这些结论的详细分析和数据。这种结构使读者更容易浏览复杂的信息，快速掌握关键的见解，并理解建议背后的基本原理。
+              <strong>Insight:</strong> In report writing, the Pyramid Principle ensures the most important findings and recommendations are immediately visible, while detailed analysis is structured logically to support these key insights. When writing reports, readers typically want to quickly understand the main conclusions and recommendations without getting lost in excessive detail. The Pyramid Principle allows authors to present this information at the beginning, followed by the detailed analysis and data that support these conclusions. This structure makes it easier for readers to navigate complex information, quickly grasp key insights, and understand the rationale behind recommendations.
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>进行演示：以清晰简洁的信息吸引繁忙的高管</strong>
+              <strong>Giving Presentations: Engaging Busy Executives with Clear, Concise Information</strong>
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              该原理对于组织与繁忙高管的讨论非常重要。高管们欣赏简洁明了，直奔主题。高管的注意力持续时间很短，因此应该快速阐明要点。避免拐弯抹角。从建议开始。这尊重了他们的时间并使讨论集中。使用SCQA框架进行引言。这提供了一个引人注目的开场。使用主要思想、支撑点和证据来构建演示文稿。这种层级结构确保了清晰度。使用幻灯片标题来传达数据的关键信息。使每张幻灯片的关键信息立即显现。
+              The principle is crucial for organizing discussions with busy executives. Executives appreciate brevity and getting to the point. Executive attention spans are short, so points should be made quickly. Avoid beating around the bush. Start with the recommendation. This respects their time and keeps discussions focused. Use the SCQA framework for introductions. This provides an engaging opening. Structure presentations using main idea, supporting points, and evidence. This hierarchical structure ensures clarity. Use slide titles to convey the key message of the data. Make the key information of each slide immediately visible.
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>洞察：</strong> 对于演示文稿，尤其是向高管进行的演示文稿，金字塔原理对于传递清晰、简洁且有影响力的信息至关重要，这些信息尊重了他们的时间并专注于最关键的信息。高管通常时间有限，需要快速理解演示文稿的关键信息。通过以结论开头并使用支撑性论点和数据以逻辑方式构建演示文稿，金字塔原理确保了以高效有效的方式传递最重要的信息，从而最大限度地提高了演示文稿的影响力并增加了获得支持或采取行动的可能性。
+              <strong>Insight:</strong> For presentations, especially to executives, the Pyramid Principle is crucial for delivering clear, concise, and impactful information that respects their time and focuses on the most critical information. Executives are typically time-constrained and need to grasp the key messages of a presentation quickly. By starting with the conclusion and building the presentation logically with supporting arguments and data, the Pyramid Principle ensures the most important information is delivered in an efficient and effective way, maximizing the impact of the presentation and increasing the likelihood of gaining support or action.
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>解决问题：使用该原理构建分析和建议</strong>
+              <strong>Problem Solving: Using the Principle to Structure Analysis and Recommendations</strong>
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              该原理与咨询问题解决过程非常契合，尤其适用于假设驱动型思维。它有助于更合乎逻辑地思考问题。使用自上而下和自下而上的过程。收集信息，对其进行分组，并提取关键论点以得出结论。使用逻辑框架，如问题树。该原理可用于案例的开始、中间和结束阶段。
+              The principle aligns well with consulting problem-solving processes, particularly with hypothesis-driven thinking. It helps think about problems more logically. Use both top-down and bottom-up processes. Gather information, group it, and extract key points to form conclusions. Use logical frameworks, such as problem trees. The principle can be used at the beginning, middle, and end stages of cases.
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>洞察：</strong> 金字塔原理通过指导分析的组织和以清晰且合乎逻辑的方式呈现建议，为解决问题提供了一种结构化的方法。在处理复杂问题时，拥有一个结构化的方法来分析信息和制定解决方案至关重要。金字塔原理通过鼓励自上而下的方法来定义问题和制定假设，自下而上的方法来收集和综合数据，以及再次自上而下的方法来沟通发现和建议，从而提供了这种结构。这种系统化和迭代的过程有助于确保全面且经过深思熟虑的解决方案。
+              <strong>Insight:</strong> The Pyramid Principle provides a structured approach to problem solving by guiding the organization of analysis and presenting recommendations in a clear and logical manner. When dealing with complex problems, having a structured approach to analyzing information and formulating solutions is crucial. The Pyramid Principle provides this structure by encouraging a top-down approach to defining the problem and forming hypotheses, a bottom-up approach to collecting and synthesizing data, and a top-down approach again to communicating findings and recommendations. This systematic and iterative process helps ensure a comprehensive and well-thought-out solution.
             </p>
 
             <div className="h-px w-full bg-gray-200 dark:bg-gray-700 my-10"></div>
 
-            <h2 className="text-2xl font-bold mt-10 mb-6">7. 金字塔原理的优点和局限性</h2>
+            <h2 className="text-2xl font-bold mt-10 mb-6">7. Advantages and Limitations of the Pyramid Principle</h2>
             <p className="leading-relaxed text-base">
-              <strong>清晰度和效率的优点</strong>
+              <strong>Advantages of Clarity and Efficiency</strong>
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              它直奔主题。这节省了时间并立即吸引了注意力。有助于快速吸收信息。自上而下的结构有助于快速理解。减少混乱并缩短会议时间。清晰的结构最大限度地减少了歧义并使讨论保持专注。突出结构化思维。展示了一种逻辑和有组织的方法。使信息更容易理解和记忆。层级结构有助于认知处理。提高说服力。结构良好的论证更具说服力。如果时间有限，则很灵活。自上而下的方法允许即使在时间有限的情况下也能传达核心信息。可以用作逻辑思维的诊断工具。有助于识别推理中的差距或不一致之处。逻辑清晰，易于理解。结构化的格式提高了清晰度。最大限度地利用与听众的时间。尊重听众的时间限制。迫使优先排序。鼓励关注最重要的点。使演讲者看起来自信而果断。首先呈现答案会传递自信。提高写作的清晰度并减少篇幅。鼓励简洁明了的沟通。
+              It gets to the point. This saves time and immediately captures attention. Aids quick absorption of information. The top-down structure helps quick understanding. Reduces confusion and shortens meeting time. Clear structure minimizes ambiguity and keeps discussions focused. Highlights structured thinking. Demonstrates a logical and organized approach. Makes information easier to understand and remember. Hierarchical structure aids cognitive processing. Enhances persuasiveness. Well-structured arguments are more persuasive. Offers flexibility if time is limited. The top-down approach allows core information to be conveyed even when time is constrained. Can be used as a diagnostic tool for logical thinking. Helps identify gaps or inconsistencies in reasoning. Provides clarity and is easy to follow. Structured format enhances clarity. Maximizes the use of time with the audience. Respects audience time constraints. Forces prioritization. Encourages focus on the most important points. Makes speakers appear confident and decisive. Presenting the answer first conveys confidence. Improves writing clarity and reduces length. Encourages concise and clear communication.
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>洞察：</strong> 金字塔原理在沟通的有效性和效率方面提供了显著的优势，尤其是在时间和清晰度至关重要的专业环境中。通过优先考虑主要信息并逻辑地组织支撑信息，金字塔原理帮助沟通者快速清晰地传达他们的想法。这不仅节省了发送者和接收者的时间，而且增加了信息被理解和采取行动的可能性，最终导致更有效的决策和结果。
+              <strong>Insight:</strong> The Pyramid Principle offers significant advantages in terms of effectiveness and efficiency of communication, especially in professional environments where time and clarity are critical. By prioritizing key information and organizing supporting information logically, the Pyramid Principle helps communicators convey their ideas quickly and clearly. This not only saves time for both sender and receiver but also increases the likelihood that information will be understood and acted upon, ultimately leading to more effective decisions and outcomes.
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>应用中可能存在的挑战</strong>
+              <strong>Potential Challenges in Application</strong>
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              创建需要纪律和反复试验。需要练习和努力才能掌握。需要对主要思想有清晰的理解。核心信息必须明确定义。假定听众是合乎逻辑的。可能并非对所有听众或所有文化背景都普遍有效。可能过度简化复杂问题。需要确保提供足够的细节来支持论点，而不会过度简化。需要努力和技巧才能有效实施。它不是一个简单的模板，而是一种思考和构建的方式。如果最低层的数据存在缺陷，那么结论即使结构合乎逻辑也可能是错误的。基本数据的有效性至关重要。有些人认为它会削弱"妙语"。对于期望逐步得出结论的听众来说，可能会感觉不那么引人入胜。自下而上地思考可能很难学会。将信息综合为关键见解需要练习。最初的假设可能不正确。需要保持开放的态度，根据分析调整最初的论断。如果主要建议被拒绝，其余的也可能被拒绝。自上而下的方法可能会使整个沟通都依赖于最初的论断。
+              Creating requires discipline and practice. It takes practice and effort to master. Requires clear understanding of main idea. Core message must be clearly defined. Assumes audience is logical. May not be universally effective for all audiences or cultural backgrounds. May oversimplify complex issues. Need to ensure sufficient detail to support arguments without oversimplifying. Requires effort and skill to implement effectively. It's not a simple template but a way of thinking and structuring. If data at the lowest level is flawed, conclusions can be wrong even if logically structured. Validity of underlying data is crucial. Some feel it detracts from "the reveal." For audiences who expect to be led step-by-step to conclusions, it may feel less engaging. Bottom-up thinking can be difficult to learn. Synthesizing information into key insights requires practice. Initial hypotheses may not be correct. Need to stay open to adjusting initial assertions based on analysis. If main recommendation is rejected, the rest might be rejected too. The top-down approach can make the entire communication dependent on the initial assertion.
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>洞察：</strong> 虽然强大，但金字塔原理并非没有局限性。有效应用需要实践、对主题的清晰理解以及对听众视角的认识。创建结构良好的金字塔需要仔细思考和努力。识别核心信息或以相互独立和完全穷尽的方式逻辑地组织复杂信息并非总是容易的。此外，该原理的有效性取决于听众对直接、自上而下方法的接受程度，并且沟通者需要注意潜在的过度简化以及可靠的基础数据的重要性。
+              <strong>Insight:</strong> While powerful, the Pyramid Principle is not without limitations. Effective application requires practice, a clear understanding of the subject, and awareness of audience perspectives. Creating a well-structured pyramid requires careful thought and effort. Identifying the core message or organizing complex information in a mutually exclusive and collectively exhaustive way is not always easy. Additionally, the effectiveness of the principle depends on the audience's receptiveness to direct, top-down approaches, and communicators need to be mindful of potential oversimplification and the importance of reliable underlying data.
             </p>
 
             <div className="h-px w-full bg-gray-200 dark:bg-gray-700 my-10"></div>
 
-            <h2 className="text-2xl font-bold mt-10 mb-6">8. 结论</h2>
+            <h2 className="text-2xl font-bold mt-10 mb-6">8. Conclusion</h2>
             <p className="leading-relaxed text-base">
-              <strong>关键要点总结</strong>
+              <strong>Summary of Key Points</strong>
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              金字塔原理是一种自上而下的沟通方法，首先提出主要结论或建议。它将信息构建为三个层级：论断（主要观点）、支撑性论点（原因）和支撑性数据（证据）。逻辑构建涉及使用MECE原则（相互独立，完全穷尽）对思想进行分组，并建立纵向（问答）和横向（演绎/归纳）逻辑。引言通常使用SCQA框架（情境、冲突、问题、答案）来吸引听众。该原理适用于各种场景，如报告撰写、演示和问题解决。它具有清晰高效等优点，但也存在应用和可能过度简化等局限性。有效使用需要实践和对听众的了解。
+              The Pyramid Principle is a top-down communication approach that presents main conclusions or recommendations first. It structures information into three levels: assertion (main point), supporting arguments (reasons), and supporting data (evidence). Logical construction involves grouping ideas using the MECE principle (Mutually Exclusive, Collectively Exhaustive) and establishing vertical (question-answer) and horizontal (deductive/inductive) logic. Introductions typically use the SCQA framework (Situation, Complication, Question, Answer) to engage the audience. The principle applies to various scenarios, such as report writing, presentations, and problem-solving. It offers advantages of clarity and efficiency but also has limitations related to application and potential oversimplification. Effective use requires practice and understanding of the audience.
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>金字塔原理的持久价值</strong>
+              <strong>Enduring Value of the Pyramid Principle</strong>
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              尽管是几十年前开发的，但它仍然是一种相关且有价值的沟通工具。其在领先组织中的持续使用证明了其有效性。它为构建沟通和呈现思想提供了坚实的基础。它为传递复杂信息提供了一个可靠的框架。它有助于清晰思考和有效表达。该原理鼓励结构化的思考过程。它是商业世界中关键的沟通和演示方法。其广泛采用突显了其在专业沟通中的重要性。
+              Despite being developed decades ago, it remains a relevant and valuable communication tool. Its continued use in leading organizations demonstrates its effectiveness. It provides a solid foundation for structuring communications and presenting ideas. It offers a reliable framework for conveying complex information. It aids clear thinking and effective expression. The principle encourages structured thought processes. It is a key communication and presentation methodology in the business world. Its widespread adoption highlights its importance in professional communication.
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>洞察：</strong> 金字塔原理的持久影响力强调了其逻辑组织和以受众为中心的沟通的基本原则，这些原则在专业环境中仍然是必不可少的技能。顶级咨询公司和商业专业人士对金字塔原理的持续使用和推荐突显了其持久的价值。在一个有效沟通对于成功越来越重要的世界中，明托的框架所提供的清晰、简洁和逻辑结构的原则仍然高度相关和适用，为有效传递复杂思想提供了一种永恒的方法。
+              <strong>Insight:</strong> The enduring impact of the Pyramid Principle underscores the fundamental principles of logical organization and audience-centered communication that remain essential skills in professional settings. The continued use and recommendation of the Pyramid Principle by top consulting firms and business professionals highlight its lasting value. In a world where effective communication is increasingly important for success, the principles of clarity, conciseness, and logical structure offered by Minto's framework remain highly relevant and applicable, providing an enduring approach to effectively conveying complex ideas.
             </p>
             
             <div className="bg-muted/50 p-6 rounded-lg mt-8 overflow-x-auto">
-              <h3 className="text-xl font-semibold mb-4">表1：金字塔原理的三个层级（第2节）</h3>
+              <h3 className="text-xl font-semibold mb-4">Table 1: Three Levels of the Pyramid (Section 2)</h3>
               <table className="w-full border-collapse">
                 <thead>
                   <tr className="border-b border-border">
-                    <th className="text-left py-2 px-4">层级</th>
-                    <th className="text-left py-2 px-4">描述</th>
-                    <th className="text-left py-2 px-4">主要目的</th>
+                    <th className="text-left py-2 px-4">Level</th>
+                    <th className="text-left py-2 px-4">Description</th>
+                    <th className="text-left py-2 px-4">Primary Purpose</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr className="border-b border-border">
                     <td className="py-2 px-4">1</td>
-                    <td className="py-2 px-4">论断（主要结论/建议）</td>
-                    <td className="py-2 px-4">呈现单一、最重要的信息</td>
+                    <td className="py-2 px-4">Assertion (Main Conclusion/Recommendation)</td>
+                    <td className="py-2 px-4">Present the single, most important message</td>
                   </tr>
                   <tr className="border-b border-border">
                     <td className="py-2 px-4">2</td>
-                    <td className="py-2 px-4">支撑性论点（关键原因）</td>
-                    <td className="py-2 px-4">提供证明论断成立的主要理由</td>
+                    <td className="py-2 px-4">Supporting Arguments (Key Reasons)</td>
+                    <td className="py-2 px-4">Provide the main reasons why the assertion holds true</td>
                   </tr>
                   <tr>
                     <td className="py-2 px-4">3</td>
-                    <td className="py-2 px-4">支撑性数据（证据和细节）</td>
-                    <td className="py-2 px-4">提供支持论点和论断的详细数据、分析和证据</td>
+                    <td className="py-2 px-4">Supporting Data (Evidence and Details)</td>
+                    <td className="py-2 px-4">Provide detailed data, analysis, and evidence that support the arguments and assertion</td>
                   </tr>
                 </tbody>
               </table>
             </div>
             
             <div className="bg-muted/50 p-6 rounded-lg mt-8 overflow-x-auto">
-              <h3 className="text-xl font-semibold mb-4">表2：演绎推理与归纳推理的比较（第4节）</h3>
+              <h3 className="text-xl font-semibold mb-4">Table 2: Comparison of Deductive and Inductive Reasoning (Section 4)</h3>
               <table className="w-full border-collapse">
                 <thead>
                   <tr className="border-b border-border">
-                    <th className="text-left py-2 px-4">特征</th>
-                    <th className="text-left py-2 px-4">演绎推理</th>
-                    <th className="text-left py-2 px-4">归纳推理</th>
+                    <th className="text-left py-2 px-4">Characteristic</th>
+                    <th className="text-left py-2 px-4">Deductive Reasoning</th>
+                    <th className="text-left py-2 px-4">Inductive Reasoning</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr className="border-b border-border">
-                    <td className="py-2 px-4">定义</td>
-                    <td className="py-2 px-4">从一般前提推导出具体结论</td>
-                    <td className="py-2 px-4">从具体观察推导出一个更广泛的概括</td>
+                    <td className="py-2 px-4">Definition</td>
+                    <td className="py-2 px-4">Deriving specific conclusion from general premises</td>
+                    <td className="py-2 px-4">Deriving a broader generalization from specific observations</td>
                   </tr>
                   <tr className="border-b border-border">
-                    <td className="py-2 px-4">推理方向</td>
-                    <td className="py-2 px-4">自上而下</td>
-                    <td className="py-2 px-4">自下而上</td>
+                    <td className="py-2 px-4">Direction of Reasoning</td>
+                    <td className="py-2 px-4">Top-down</td>
+                    <td className="py-2 px-4">Bottom-up</td>
                   </tr>
                   <tr className="border-b border-border">
-                    <td className="py-2 px-4">结论的确定性</td>
-                    <td className="py-2 px-4">如果前提为真，结论必然为真</td>
-                    <td className="py-2 px-4">结论是可能的，但并非必然</td>
+                    <td className="py-2 px-4">Certainty of Conclusion</td>
+                    <td className="py-2 px-4">If premises are true, conclusion must be true</td>
+                    <td className="py-2 px-4">Conclusion is probable, but not certain</td>
                   </tr>
                   <tr>
-                    <td className="py-2 px-4">示例</td>
-                    <td className="py-2 px-4">所有市场经理都懂营销。张三是市场经理。因此，张三懂营销。</td>
-                    <td className="py-2 px-4">A营销活动提高了销售额。B营销活动提高了销售额。因此，营销活动可以提高销售额。</td>
+                    <td className="py-2 px-4">Example</td>
+                    <td className="py-2 px-4">All marketing managers understand marketing. John is a marketing manager. Therefore, John understands marketing.</td>
+                    <td className="py-2 px-4">Marketing campaign A improved sales. Marketing campaign B improved sales. Therefore, marketing campaigns can improve sales.</td>
                   </tr>
                 </tbody>
               </table>
             </div>
             
             <div className="bg-muted/50 p-6 rounded-lg mt-8 overflow-x-auto">
-              <h3 className="text-xl font-semibold mb-4">表3：SCQA引言框架（第5节）</h3>
+              <h3 className="text-xl font-semibold mb-4">Table 3: SCQA Introduction Framework (Section 5)</h3>
               <table className="w-full border-collapse">
                 <thead>
                   <tr className="border-b border-border">
-                    <th className="text-left py-2 px-4">元素</th>
-                    <th className="text-left py-2 px-4">描述</th>
-                    <th className="text-left py-2 px-4">目的</th>
-                    <th className="text-left py-2 px-4">示例（商业场景）</th>
+                    <th className="text-left py-2 px-4">Element</th>
+                    <th className="text-left py-2 px-4">Description</th>
+                    <th className="text-left py-2 px-4">Purpose</th>
+                    <th className="text-left py-2 px-4">Example (Business Scenario)</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr className="border-b border-border">
-                    <td className="py-2 px-4">情境</td>
-                    <td className="py-2 px-4">关于主题的背景信息，听众可以认同</td>
-                    <td className="py-2 px-4">建立共同的理解</td>
-                    <td className="py-2 px-4">我们的公司在过去五年中实现了持续的盈利增长。</td>
+                    <td className="py-2 px-4">Situation</td>
+                    <td className="py-2 px-4">Background information about the topic that the audience can agree with</td>
+                    <td className="py-2 px-4">Establish common understanding</td>
+                    <td className="py-2 px-4">Our company has achieved consistent profit growth over the past five years.</td>
                   </tr>
                   <tr className="border-b border-border">
-                    <td className="py-2 px-4">冲突</td>
-                    <td className="py-2 px-4">引入需要解决的问题或变化</td>
-                    <td className="py-2 px-4">突出问题并创造紧迫感</td>
-                    <td className="py-2 px-4">然而，竞争对手最近推出了一款新产品，正在威胁我们的市场份额。</td>
+                    <td className="py-2 px-4">Complication</td>
+                    <td className="py-2 px-4">Introduction of a problem or change that needs to be addressed</td>
+                    <td className="py-2 px-4">Highlight issue and create urgency</td>
+                    <td className="py-2 px-4">However, a competitor recently launched a new product that is threatening our market share.</td>
                   </tr>
                   <tr className="border-b border-border">
-                    <td className="py-2 px-4">问题</td>
-                    <td className="py-2 px-4">针对冲突提出的问题</td>
-                    <td className="py-2 px-4">明确沟通需要回答的主要问题</td>
-                    <td className="py-2 px-4">我们应该如何应对竞争对手的新产品并保持我们的市场领先地位？</td>
+                    <td className="py-2 px-4">Question</td>
+                    <td className="py-2 px-4">Question posed regarding the complication</td>
+                    <td className="py-2 px-4">Clarify the main question that the communication needs to answer</td>
+                    <td className="py-2 px-4">How should we respond to the competitor's new product and maintain our market leadership?</td>
                   </tr>
                   <tr>
-                    <td className="py-2 px-4">答案</td>
-                    <td className="py-2 px-4">针对问题的建议或解决方案</td>
-                    <td className="py-2 px-4">提出沟通的主要信息</td>
-                    <td className="py-2 px-4">我们建议加快我们自己的创新步伐，并推出具有独特优势的新产品。</td>
+                    <td className="py-2 px-4">Answer</td>
+                    <td className="py-2 px-4">Recommendation or solution to the question</td>
+                    <td className="py-2 px-4">Present the main message of the communication</td>
+                    <td className="py-2 px-4">We recommend accelerating our own innovation timeline and launching a new product with distinct advantages.</td>
                   </tr>
                 </tbody>
               </table>
@@ -487,7 +479,7 @@ export function PyramidPrinciplePost() {
             <ul className="list-disc pl-6 mt-4">
               <li><strong>第一层级：论断（主要结论/建议）</strong> - 这是金字塔的顶端，代表着单一、最重要的信息。最好只有一个关键的结论。</li>
               <li><strong>第二层级：支撑性论点（关键原因）</strong> - 中间部分由支持论断的论点组成。这些是证明论断成立的主要原因。明托建议使用三个支撑点原则。这符合心理学关于短期记忆限制的研究。可以将这些论点看作故事的章节。这个比喻有助于构建沟通的叙述流程。</li>
-              <li><strong>第三层级：支撑性数据（证据和细节）</strong> - 底层包含详细的数据、分析和证据，这些信息支持关键的见解或论点。这提供了必要的深度和可信度。只包含支持论点的相关数据。强调以数据为驱动，而不是数据堆积。
+              <li><strong>第三层级：支撑性数据（证据和细节）</strong> - 底层包含详细的数据、分析和证据，这些信息支持关键的见解或论点。这提供了必要的深度和可信度。只包含支持论点的相关数据。强调以数据为驱动，而不是数据堆积。</li>
             </ul>
             
             <p className="leading-relaxed text-base mt-4">
@@ -573,7 +565,7 @@ export function PyramidPrinciplePost() {
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              演绎推理涉及先提出一个普遍性的陈述，然后使用具体的例子来验证它。它从一个普遍性的前提推导出一个具体的结论。如果前提为真，那么结论必然为真。例如："顾问很聪明 -> 我是顾问 -> 所以我很聪明"。另一个例子："商人上班穿领带。领带是商务正装的一部分。因此，商人穿着商务正装"。这说明了一般规则如何应用于具体案例。在演示文稿中，它可能涉及陈述一个普遍的市场趋势，然后展示该趋势如何适用于正在讨论的特定公司。例如："电动汽车市场正在快速增长。我们公司在汽车行业。因此，我们公司应该投资电动汽车。"
+              演绎推理涉及先提出一个普遍性的陈述，然后使用具体的例子来验证它。它从一个普遍性的前提推导出一个具体的结论。如果前提为真，那么结论必然为真。例如："顾问很聪明 -&gt; 我是顾问 -&gt; 所以我很聪明"。另一个例子："商人上班穿领带。领带是商务正装的一部分。因此，商人穿着商务正装"。这说明了一般规则如何应用于具体案例。在演示文稿中，它可能涉及陈述一个普遍的市场趋势，然后展示该趋势如何适用于正在讨论的特定公司。例如："电动汽车市场正在快速增长。我们公司在汽车行业。因此，我们公司应该投资电动汽车。"
             </p>
             
             <p className="leading-relaxed text-base mt-4">
