@@ -2,7 +2,7 @@
 
 import { HesseUnderTheWheelPost } from "@/components/blog-posts/hesse-under-the-wheel"
 import { SuzhouRiverPost } from "@/components/blog-posts/suzhou-river"
-import { GraduateExamExperiencePost } from "@/components/blog-posts/graduate-exam-experience"
+import { PyramidPrinciplePost } from "@/components/blog-posts/pyramid-principle"
 import { TrumpArtOfDealPost } from "@/components/blog-posts/trump-art-of-deal"
 import { BookOpen, BookText, School, Film, GraduationCap, Pencil, DollarSign, Landmark, Globe } from "lucide-react"
 
@@ -33,6 +33,8 @@ function getTagIcon(tagId: string) {
       return <DollarSign className="h-4 w-4 mr-1" />;
     case 'usa':
       return <Globe className="h-4 w-4 mr-1" />;
+    case 'expression':
+      return <Pencil className="h-4 w-4 mr-1" />;
     default:
       return null;
   }
@@ -80,6 +82,10 @@ function getTagName(tagId: string, language: 'en' | 'zh') {
     "usa": {
       en: "USA",
       zh: "美国"
+    },
+    "expression": {
+      en: "Expression",
+      zh: "表达"
     }
   }
   
@@ -96,8 +102,8 @@ export default function BlogPostClient({ slug }: BlogPostClientProps) {
     return <SuzhouRiverPost />
   }
   
-  if (slug === "graduate-exam-experience") {
-    return <GraduateExamExperiencePost />
+  if (slug === "pyramid-principle") {
+    return <PyramidPrinciplePost />
   }
   
   if (slug === "trump-art-of-deal") {
