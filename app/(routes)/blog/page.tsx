@@ -9,7 +9,7 @@ import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { BookOpen, BookText, School, Film, Pencil, GraduationCap, DollarSign, Landmark, Globe } from "lucide-react"
 import { HesseUnderTheWheelPost } from "@/components/blog-posts/hesse-under-the-wheel"
-import { GraduateExamExperiencePost } from "@/components/blog-posts/graduate-exam-experience"
+import { PyramidPrinciplePost } from "@/components/blog-posts/pyramid-principle"
 import { TrumpArtOfDealPost } from "@/components/blog-posts/trump-art-of-deal"
 
 interface Tag {
@@ -131,6 +131,13 @@ export default function BlogPage() {
         en: "USA",
         zh: "美国"
       }
+    },
+    "expression": {
+      id: "expression",
+      name: {
+        en: "Expression",
+        zh: "表达"
+      }
     }
   }
   
@@ -173,20 +180,20 @@ export default function BlogPage() {
     },
     {
       id: "3",
-      slug: "graduate-exam-experience",
+      slug: "pyramid-principle",
       title: {
-        en: "Graduate Entrance Exam Experience: Strategic Insights from a Top-3 University Admit",
-        zh: "考研经验贴"
+        en: "The Pyramid Principle: Crafting Clear Communication in the Information Age",
+        zh: "金字塔原理：信息时代的清晰沟通之道"
       },
-      date: "2025-04-06",
-      tags: ["exam", "education", "experience"],
+      date: "2025-04-17",
+      tags: ["reading", "expression"],
       excerpt: {
-        en: "Insights and strategies from a student who achieved top scores on both the written and interview portions of the graduate entrance examination for a prestigious TOP3 university.",
-        zh: "作者以初试和复试双第一考入某TOP3，结合身边研友的状况和自己的经验分享考研经验和方法论。"
+        en: "An exploration of Barbara Minto's Pyramid Principle and how this structured approach to communication can enhance clarity and impact in professional and academic contexts.",
+        zh: "探索芭芭拉·明托的金字塔原理，以及这种结构化的沟通方法如何在专业和学术环境中提高表达的清晰度和影响力。"
       },
       content: {
-        en: "The author shares their experience of achieving top scores in both written exams and interviews for a prestigious TOP3 university. Drawing from their own journey and observations of fellow students, this article provides comprehensive guidance for graduate entrance exam preparation. Topics covered include school selection, general study methodology, subject-specific strategies for politics, English, mathematics, and specialized courses, as well as interview preparation techniques. Emphasizing the importance of mental state, consistent effort over intense cramming, practice over passive learning, and a balanced approach to study, the author offers practical advice and encouragement for students at any stage of their preparation journey.",
-        zh: "作者以初试和复试双第一考入某TOP3，结合身边研友的状况和自己的经验给大家分享考研心得。本文全面覆盖择校策略、总体学习方法论、政治/英语/数学/专业课的备考技巧以及复试准备等关键环节。作者强调心态远重于努力、持续坚持优于高强度冲刺、做题优先于看课、拒绝完美主义等核心理念，并提供了各科目的具体复习时间安排和资料推荐。针对政治科目，文章建议以马原为重点；英语部分分享了高效词汇记忆和真题练习方法；数学章节提供了阶段性学习计划；专业课强调理解优先于背诵。此外，文章还特别强调了复试过程中科研经历展示和个人能力呈现的重要性，为考研学子提供了全方位的备考指导。"
+        en: "The Pyramid Principle, developed by Barbara Minto at McKinsey & Company in the 1970s, offers a powerful framework for organizing thoughts and presenting information effectively. This article explores the core concepts, application methods, and benefits of this structured communication approach.\n\nAt its heart, the Pyramid Principle advocates starting with the conclusion or key message, then supporting it with hierarchically organized arguments and evidence. This top-down approach contrasts with traditional bottom-up communication, respecting the audience's cognitive limitations and time constraints.\n\nThe article examines the pyramid structure (key message, supporting arguments, and evidence), logical grouping methods, and practical applications across various contexts including business presentations, reports, emails, and academic writing. While acknowledging implementation challenges such as resistance to conclusion-first approaches and the difficulty of identifying the true key message, the analysis demonstrates how mastering this principle can transform communication effectiveness.\n\nIn an age of information overload, the ability to present ideas with pyramid-like clarity represents an invaluable skill that enhances comprehension, retention, and ultimately, persuasive impact across professional and academic domains.",
+        zh: "金字塔原理由芭芭拉·明托于20世纪70年代在麦肯锡公司工作期间开发，为有效组织思想和呈现信息提供了强大的框架。本文探讨了这种结构化沟通方法的核心概念、应用方法和益处。\n\n金字塔原理的核心是主张先提出结论或关键信息，然后以层级结构组织的论点和证据来支持它。这种自上而下的方法与传统的自下而上沟通形成对比，尊重受众的认知限制和时间约束。\n\n文章考察了金字塔结构（关键信息、支持论点和证据）、逻辑分组方法，以及在商业演示、报告、电子邮件和学术写作等各种环境中的实际应用。虽然承认实施挑战，如对结论优先方法的抵抗和识别真正关键信息的困难，但分析表明，掌握这一原则如何可以改变沟通效果。\n\n在信息过载的时代，以金字塔般清晰地呈现想法的能力是一项宝贵的技能，可以增强理解、记忆，并最终在专业和学术领域产生说服力影响。"
       }
     },
     {
@@ -252,6 +259,8 @@ export default function BlogPage() {
         return <DollarSign className="h-3 w-3 mr-1" />;
       case 'usa':
         return <Globe className="h-3 w-3 mr-1" />;
+      case 'expression':
+        return <Pencil className="h-3 w-3 mr-1" />;
       default:
         return null;
     }
@@ -272,8 +281,8 @@ export default function BlogPage() {
       return <HesseUnderTheWheelPost />
     }
     
-    if (post && post.slug === "graduate-exam-experience") {
-      return <GraduateExamExperiencePost />
+    if (post && post.slug === "pyramid-principle") {
+      return <PyramidPrinciplePost />
     }
     
     if (post && post.slug === "trump-art-of-deal") {
