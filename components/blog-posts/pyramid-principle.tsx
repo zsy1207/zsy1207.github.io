@@ -102,29 +102,41 @@ export function PyramidPrinciplePost() {
 
             <div className="h-px w-full bg-gray-200 dark:bg-gray-700 my-10"></div>
 
-            <h2 className="text-2xl font-bold mt-10 mb-6">3. Building Logical Thought</h2>
+            <h2 className="text-2xl font-bold mt-10 mb-6">3. 思考与沟通模式</h2>
             <p className="leading-relaxed text-base">
+              <strong>3. Thinking and Communication Patterns</strong>
+            </p>
+            
+            <p className="leading-relaxed text-base mt-4">
               <strong>Grouping Principles: How to Effectively Group Related Ideas</strong>
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              Ideas at any level of the pyramid must be summaries of the grouped ideas below them. This ensures clear hierarchical relationships and logical flow of information. Ideas within each grouping must be of the same kind. This principle promotes clarity and prevents mixing different types of arguments or information at the same level. Ideas within each grouping must be arranged in a logical order. The logical order can be based on time, structure, importance, or degree. Summarize action ideas by stating the effect of the actions, and situation ideas by stating what their similarity implies. This provides meaningful summaries rather than merely restating the type of ideas. Avoid "intellectual blank" summaries that don't summarize essence. For example, "We recommend 5 changes" without specifying the nature or impact of these changes.
+              Ideas at any level of the pyramid must be a summary of the grouped ideas below them. This ensures clear hierarchical relationships and logical flow of information. Ideas within each group must be ideas of the same kind. This principle promotes clarity and prevents mixing different types of arguments or information at the same level. Ideas within each group must be arranged in a logical order. The logical order can be based on time, structure, importance, or degree. Summarize action ideas by stating the effect of the actions, and summarize situational ideas by stating what their similarity implies. This provides meaningful summaries rather than merely restating the type of ideas. Avoid "intellectual blank" summaries that don't summarize the essence. For example, "We recommend making 5 changes" without specifying the nature or impact of these changes.
+              
+              金字塔中任何层级的思想都必须是其下方分组思想的总结。这确保了清晰的层级关系和信息的逻辑流动。每个分组中的思想必须是同一种类的思想。此原则促进了清晰性，并防止在同一层级混合不同类型的论点或信息。每个分组中的思想必须按逻辑顺序排列。逻辑顺序可以基于时间、结构、重要性或程度。通过说明行动的效果来总结行动思想，并通过说明其相似性所暗示的内容来总结情境思想。这提供了有意义的总结，而不仅仅是重申思想的类型。避免不总结本质的"智力空白"式总结。例如，"我们建议进行5项更改"而没有说明这些更改的性质或影响。
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>Insight:</strong> These grouping principles ensure cohesiveness in the pyramid structure and that relationships between ideas are clear and logical, making communication easier to understand and more persuasive. If ideas in a grouping aren't of the same kind, the summary point will be weak and the logic unclear. Similarly, if a point above isn't a true summary of the points below, the vertical logic of the pyramid breaks down. Logical ordering within groups helps the audience understand the reasoning and grasp the connections between ideas. Avoiding generic summaries ensures that higher-level points convey substantive meaning.
+              <strong>Insight:</strong> These grouping principles ensure the coherence of the pyramid structure and that the relationships between ideas are clear and logical, making communication easier to understand and more persuasive. If ideas in a group are not of the same kind, the summary point will be weak and the logic unclear. Similarly, if the point above is not a true summary of the points below, the vertical logic of the pyramid collapses. Logical ordering within groups helps the audience understand the reasoning and see the connections between ideas. Avoiding generic summaries ensures that higher-level points convey substantive meaning.
+              
+              <strong>洞察：</strong> 这些分组原则确保了金字塔结构的连贯性，并且思想之间的关系清晰且符合逻辑，从而使沟通更容易理解且更具说服力。如果一个分组中的思想不是同一种类的，那么总结点就会很弱，逻辑也不清晰。同样，如果上方的点不是下方点的真实总结，那么金字塔的垂直逻辑就会崩溃。分组内的逻辑排序有助于听众理解推理并理解思想之间的联系。避免使用通用的总结可以确保更高层级的点传达实质性的意义。
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>MECE Principle (Mutually Exclusive, Collectively Exhaustive): Explanation and Examples of Its Application in Idea Grouping</strong>
+              <strong>MECE Principle (Mutually Exclusive, Collectively Exhaustive): Explanation and Examples of Its Application in Grouping Ideas</strong>
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              MECE stands for Mutually Exclusive, Collectively Exhaustive. Barbara Minto developed this principle during her time at McKinsey. Mutually exclusive means each point is unique, with no overlap. This ensures clarity of argument and avoids redundancy. Collectively exhaustive means all relevant points are covered, with no omissions. This ensures comprehensiveness of analysis and consideration of all important aspects. MECE aids in brainstorming, problem-solving, and planning. It provides a structured approach to breaking down complex problems. Examples include categorizing people by birth year or apartment building number. These are examples of clear non-overlapping and complete categories. Non-MECE examples include categorization by nationality, as some people may have dual citizenship or no citizenship. In business, MECE can be applied to customer segmentation (e.g., price-driven, trend-driven, quality-driven, convenience-driven), product features, revenue sources (e.g., online sales, physical store sales, wholesale, licensing), and market entry strategies (market, company, competition, how to enter).
+              MECE stands for Mutually Exclusive, Collectively Exhaustive. This principle was developed by Barbara Minto during her time at McKinsey. Mutually exclusive means each point is unique, with no overlap. This ensures clarity of argument and avoids redundancy. Collectively exhaustive means all relevant points are covered, with nothing left out. This ensures comprehensiveness of analysis and considers all important aspects. MECE helps with brainstorming, problem-solving, and planning. It provides a structured approach to breaking down complex problems. Examples include categorizing people by birth year or apartment building number. These are clear examples of non-overlapping and complete categories. Non-MECE examples include categorization by nationality, as some people may have dual citizenship or no citizenship. In business, MECE can be applied to customer segmentation (e.g., price-driven, trend-driven, quality-driven, convenience-driven), product features, revenue streams (e.g., online sales, physical store sales, wholesale, licensing), and market entry strategies (market, company, competition, how to enter).
+              
+              MECE代表相互独立，完全穷尽。芭芭拉·明托在麦肯锡工作期间提出了这个原则。相互独立意味着每个点都是独特的，没有重叠。这确保了论证的清晰性并避免了冗余。完全穷尽意味着涵盖了所有相关的点，没有遗漏。这确保了分析的全面性并考虑了所有重要的方面。MECE有助于头脑风暴、问题解决和规划。它为分解复杂问题提供了一种结构化的方法。示例包括按出生年份或公寓楼号对人员进行分类。这些是清晰的非重叠和完整的类别示例。非MECE示例包括按国籍分类，因为有些人可能拥有双重国籍或没有国籍。在商业中，MECE可应用于客户细分（例如，价格驱动型、趋势驱动型、质量驱动型、便利性驱动型）、产品特性、收入来源（例如，在线销售、实体店销售、批发、许可）和市场进入策略（市场、公司、竞争、如何进入）。
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>Insight:</strong> The MECE principle is a powerful tool for ensuring thorough analysis and clear communication. By avoiding overlap and omission, it strengthens the logical foundation of the pyramid structure. If categories overlap (not mutually exclusive), it can lead to double-counting or confusion, weakening the logical structure. If some aspects are omitted (not collectively exhaustive), the analysis will be incomplete and conclusions may be flawed. MECE ensures that all relevant angles are considered in a structured and organized way, resulting in more robust and persuasive communication.
+              <strong>Insight:</strong> The MECE principle is a powerful tool for ensuring thorough analysis and clear communication. By avoiding overlap and omissions, it strengthens the logical foundation of the pyramid structure. If categories overlap (not mutually exclusive), it can lead to double-counting or confusion, weakening the logical structure. If some aspects are left out (not collectively exhaustive), the analysis will be incomplete and conclusions potentially flawed. MECE ensures that all relevant angles are considered in a structured and organized way, resulting in stronger and more persuasive communication.
+              
+              <strong>洞察：</strong> MECE原则是确保分析彻底和沟通清晰的有力工具。通过避免重叠和遗漏，它可以加强金字塔结构的逻辑基础。如果类别重叠（不相互独立），则可能导致重复计算或混淆，从而削弱逻辑结构。如果遗漏了一些方面（不完全穷尽），则分析将不完整，结论也可能存在缺陷。MECE确保以结构化和有组织的方式考虑所有相关的角度，从而产生更强大和更具说服力的沟通。
             </p>
             
             <p className="leading-relaxed text-base mt-4">
@@ -132,15 +144,19 @@ export function PyramidPrinciplePost() {
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>Vertical Logic: Question-and-Answer Dialogue Between Pyramid Levels</strong>
+              <strong>Vertical Logic: Question-Answer Dialogue Between Pyramid Levels</strong>
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              Vertical logic is the storyline, a question-and-answer dialogue. Each level answers questions posed by the level above. Any point made must raise a question in the reader's mind, and the next level must answer that question. This forms a natural flow of asking and answering. As you move down the pyramid, you start with the main idea, pose questions, and answer them with supporting arguments. This step-by-step process aids understanding. Each level should summarize the details that follow it. This ensures the audience can grasp the main point of each section before diving into the details.
+              Vertical logic is the storyline, a question-and-answer dialogue. Each level answers questions raised by the level above it. Any point raised must trigger a question in the reader's mind, and the next level must answer that question. This forms a natural flow of asking and answering. As you move down the pyramid, you start with the main idea, raise questions, and answer them with supporting arguments. This step-by-step process aids understanding. Each level should summarize the details that follow it. This ensures the audience can grasp the main point of each section before diving into details.
+              
+              纵向逻辑是故事情节，是问答式的对话。每个层级都回答了上方层级提出的问题。提出的任何观点都必须在读者的脑海中引起一个问题，而下一层级必须回答这个问题。这形成了一个自然的提问和回答的流程。当你向下移动金字塔时，你从主要思想开始，提出问题，并用支撑性论点来回答它们。这种循序渐进的过程有助于理解。每个层级都应该总结其后跟随的细节。这确保了听众可以在深入了解细节之前掌握每个部分的主要观点。
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>Insight:</strong> Vertical logic creates a natural flow of information that mirrors a logical dialogue, making arguments easy to understand and follow. The question-and-answer format anticipates the audience's curiosity and addresses it proactively. When someone makes a statement, it naturally raises questions like "Why?" or "How?". The vertical logic in the Pyramid Principle harnesses this natural human tendency by ensuring each level of the pyramid answers the implicit questions raised by the level above. This creates a coherent and engaging narrative where each point logically leads to the next one.
+              <strong>Insight:</strong> Vertical logic creates a natural flow of information that reflects a logical dialogue, making arguments easy to understand and follow. The question-answer format anticipates the audience's curiosity and proactively addresses it. When someone makes a statement, it naturally raises questions like "why?" or "how?". The vertical logic in the Pyramid Principle leverages this natural human tendency by ensuring that each level of the pyramid answers the implicit questions raised by the level above it. This creates a coherent and engaging narrative where each point logically leads to the next.
+              
+              <strong>洞察：</strong> 纵向逻辑创建了一个自然的信息流，它反映了逻辑对话，使论证易于理解和遵循。问答形式预先考虑了听众的好奇心并主动地解决了它。当有人做出陈述时，自然会引发"为什么？"或"如何？"之类的问题。金字塔原理中的纵向逻辑通过确保金字塔的每个层级都回答了上方层级提出的隐含问题，从而利用了这种自然的人类倾向。这创建了一个连贯且引人入胜的叙述，其中每个点都逻辑地引出下一个点。
             </p>
             
             <p className="leading-relaxed text-base mt-4">
@@ -148,22 +164,32 @@ export function PyramidPrinciplePost() {
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              Horizontal logic is the type of reasoning used to understand the information presented. It determines how supporting arguments at the same level relate to each other. There are primarily two types: deductive and inductive reasoning. The choice depends on the nature of the arguments being presented.
+              Horizontal logic is the type of reasoning used to understand the information presented. It determines how supporting arguments at the same level relate to each other. There are primarily two types: deductive reasoning and inductive reasoning. The choice of which to use depends on the nature of the arguments being presented.
+              
+              横向逻辑是理解所呈现信息时使用的推理类型。它决定了同一层级的支撑性论点如何相互关联。主要有两种类型：演绎推理和归纳推理。选择哪种取决于所呈现论点的性质。
             </p>
 
             <div className="h-px w-full bg-gray-200 dark:bg-gray-700 my-10"></div>
 
-            <h2 className="text-2xl font-bold mt-10 mb-6">4. Information Organization and Grouping Principles</h2>
+            <h2 className="text-2xl font-bold mt-10 mb-6">4. 信息组织与分组原则</h2>
             <p className="leading-relaxed text-base">
+              <strong>4. Information Organization and Grouping Principles</strong>
+            </p>
+            
+            <p className="leading-relaxed text-base mt-4">
               <strong>Deductive Reasoning: Explanation and Examples in Business Context</strong>
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              Deductive reasoning involves stating a general statement first and then using specific examples to validate it. It derives a specific conclusion from a general premise. If the premises are true, then the conclusion must be true. For example: "Consultants are smart -&gt; I am a consultant -&gt; Therefore, I am smart." Another example: "Businessmen wear ties to work. Ties are part of business formal attire. Therefore, businessmen dress in business formal attire." This illustrates how a general rule applies to a specific case. In presentations, it might involve stating a universal market trend and then showing how that trend applies to the specific company being discussed. For example: "The electric vehicle market is growing rapidly. Our company is in the automotive industry. Therefore, our company should invest in electric vehicles."
+              Deductive reasoning involves stating a general statement first and then validating it with specific examples. It derives a specific conclusion from a general premise. If the premises are true, then the conclusion must be true. For example: "Consultants are smart -> I am a consultant -> Therefore, I am smart." Another example: "Businessmen wear ties to work. Ties are part of business formal attire. Therefore, businessmen dress in business formal attire." This illustrates how a general rule applies to a specific case. In presentations, it might involve stating a universal market trend and then showing how that trend applies to the specific company being discussed. For example: "The electric vehicle market is growing rapidly. Our company is in the automotive industry. Therefore, our company should invest in electric vehicles."
+              
+              演绎推理涉及先提出一个普遍性的陈述，然后使用具体的例子来验证它。它从一个普遍性的前提推导出一个具体的结论。如果前提为真，那么结论必然为真。例如："顾问很聪明 -> 我是顾问 -> 所以我很聪明"。另一个例子："商人上班穿领带。领带是商务正装的一部分。因此，商人穿着商务正装"。这说明了一般规则如何应用于具体案例。在演示文稿中，它可能涉及陈述一个普遍的市场趋势，然后展示该趋势如何适用于正在讨论的特定公司。例如："电动汽车市场正在快速增长。我们公司在汽车行业。因此，我们公司应该投资电动汽车。"
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>Insight:</strong> Deductive reasoning provides a powerful and logical way to connect general principles with specific situations, making arguments more persuasive. By starting with a widely accepted truth or principle (major premise) and then applying it to a specific case (minor premise), deductive reasoning arrives at a logically sound conclusion. This approach is particularly effective when the universal premise is widely accepted and recognized by the audience, providing a sense of certainty to the argument.
+              <strong>Insight:</strong> Deductive reasoning provides a powerful and logical way to connect general principles to specific situations, making arguments more persuasive. By starting with a widely accepted truth or principle (major premise) and then applying it to a specific case (minor premise), deductive reasoning arrives at a logically sound conclusion. This approach is particularly effective when the universal premise is widely accepted and recognized by the audience, providing a certainty to the argument.
+              
+              <strong>洞察：</strong> 演绎推理提供了一种强大而合乎逻辑的方式，将普遍原则与具体情况联系起来，从而使论证更具说服力。通过从一个广为接受的真理或原则（大前提）开始，然后将其应用于一个具体的案例（小前提），演绎推理得出了一个逻辑上合理的结论。当普遍前提被听众广泛接受和认可时，这种方法尤其有效，为论证提供了一种确定性。
             </p>
             
             <p className="leading-relaxed text-base mt-4">
@@ -171,104 +197,122 @@ export function PyramidPrinciplePost() {
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              Inductive reasoning derives a specific conclusion from a set of general supporting statements. It moves from specific observations to a broader generalization. The conclusion is probable but not certain. For example: "Pomeranians help relieve stress. Samoyeds help relieve stress. Dachshunds help relieve stress. Therefore, dogs help relieve stress." Another example: Observing that several smart consultants are nerdy, work hard, and competitive might lead to the inductive conclusion: "Consultants are smart, so they are nerdy, hardworking, and competitive." This inference is based on observed patterns. In business, this might involve observing several successful marketing campaigns that used a particular strategy and concluding that the strategy is generally effective. For example: "Marketing campaign A increased sales by 10%. Marketing campaign B increased sales by 12%. Marketing campaign C increased sales by 9%. Therefore, this type of marketing campaign effectively increases sales."
+              Inductive reasoning derives a specific conclusion from a set of general supporting statements. It moves from specific observations to a broader generalization. The conclusion is possible, but not certain. For example: "Pomeranians help reduce stress. Samoyeds help reduce stress. Dachshunds help reduce stress. Therefore, dogs help reduce stress." Another example: observing that several smart consultants are nerdy, hardworking, and competitive might lead to the inductive conclusion: "Consultants are smart, therefore they are nerdy, hardworking, and competitive." This inference is based on observed patterns. In business, this might involve observing several successful marketing campaigns that used a particular strategy and concluding that the strategy generally works. For example: "Marketing campaign A increased sales by 10%. Marketing campaign B increased sales by 12%. Marketing campaign C increased sales by 9%. Therefore, this type of marketing campaign effectively increases sales."
+              
+              归纳推理从一组一般的支撑性陈述中得出一个特定的结论。它从具体的观察结果推导出一个更广泛的概括。结论是可能的，但并非必然。例如："博美犬有助于缓解压力。萨摩耶犬有助于缓解压力。腊肠犬有助于缓解压力。因此，狗有助于缓解压力"。另一个例子：观察到几位聪明的顾问都是书呆子、工作努力且具有竞争力，这可能会导致归纳结论："顾问很聪明，因此他们是书呆子、工作努力且具有竞争力"。这种推断是基于观察到的模式。在商业中，这可能涉及观察到几个使用特定策略的成功营销活动，并得出结论认为该策略通常有效。例如："A营销活动销售额增长了10%。B营销活动销售额增长了12%。C营销活动销售额增长了9%。因此，这种类型的营销活动能有效提高销售额。"
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>Insight:</strong> Inductive reasoning is useful for identifying patterns and forming hypotheses based on specific data points or observations, which can then lead to broader conclusions or strategies. By observing a set of specific instances that share a common trait, inductive reasoning allows us to infer a general principle or conclusion about that trait. While inductive conclusions are not guaranteed to be true in all cases, they can have a high probability and provide valuable insights for decision-making, especially when based on sufficient relevant evidence.
+              <strong>Insight:</strong> Inductive reasoning is useful for identifying patterns and forming hypotheses based on specific data points or observations, which can then lead to broader conclusions or strategies. By observing a set of specific instances that share a common characteristic, inductive reasoning allows us to infer a general principle or conclusion about that characteristic. While inductive conclusions are not guaranteed to be correct in all cases, they can have a high probability and provide valuable insights for decision-making, especially when based on sufficient relevant evidence.
+              
+              <strong>洞察：</strong> 归纳推理对于根据具体数据点或观察结果识别模式和形成假设非常有用，这些假设随后可以导致更广泛的结论或策略。通过观察一组共享共同特征的具体实例，归纳推理使我们能够推断出关于该特征的一般原则或结论。虽然归纳结论并非在所有情况下都保证正确，但它们可能具有很高的可能性，并为决策提供有价值的见解，尤其是在基于充分相关的证据的情况下。
             </p>
 
             <div className="h-px w-full bg-gray-200 dark:bg-gray-700 my-10"></div>
 
-            <h2 className="text-2xl font-bold mt-10 mb-6">5. Application Scenarios</h2>
+            <h2 className="text-2xl font-bold mt-10 mb-6">5. 应用场景</h2>
             <p className="leading-relaxed text-base">
-              <strong>Constructing Introductions and Conclusions</strong>
+              <strong>5. Application Scenarios</strong>
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>Using the SCQA Framework for Introductions: Situation, Complication, Question, Answer</strong>
+              <strong>Building Introductions and Conclusions Using the SCQA Framework: Situation, Complication, Question, Answer</strong>
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              Introductions typically follow the SCQA framework. This framework provides a structured approach to effectively opening communication.
+              Introductions typically follow the SCQA framework. This framework provides a structured approach to effectively opening communications.
+              
+              引言通常遵循SCQA框架。这个框架为有效地开启沟通提供了一种结构化的方法。
             </p>
             
             <ul className="list-disc pl-6 mt-4">
-              <li><strong>Situation:</strong> Start with a self-contained and non-controversial statement about the topic that the reader can agree with. Establish background, time, and place. For example: "For the past five years, our company has experienced steady revenue growth."</li>
-              <li><strong>Complication:</strong> Introduce a change or problem that needs to be addressed. Explain the dilemma and create urgency. Answer "who cares?". For example: "However, our main competitor recently launched an innovative product, causing our market share to decline this quarter."</li>
-              <li><strong>Question:</strong> Ask how to resolve the complication. This raises the key question the document will answer. For example: "How can we regain market share and maintain our growth momentum in the face of this new competitive threat?"</li>
-              <li><strong>Answer:</strong> Present the main argument as the solution. This is the key point you're trying to make. For example: "We recommend launching a counter-innovation product and implementing a targeted marketing campaign to highlight our unique value proposition."</li>
+              <li><strong>Situation:</strong> Begin with a self-contained and non-controversial statement about the topic that the reader can agree with. Establish the background, time, and place. For example: "Our company's revenue has been steadily growing over the past five years."
+              
+              <strong>情境（Situation）：</strong> 从一个读者可以认同的关于主题的自给自足且无争议的陈述开始。建立背景、时间和地点。例如："过去五年，我们公司的收入一直稳步增长。"</li>
+              <li><strong>Complication:</strong> Introduce a change or problem that needs to be addressed. Explain the predicament and create a sense of urgency. Answer "who cares?". For example: "However, our main competitor recently launched an innovative product, leading to a decline in our market share this quarter."
+              
+              <strong>冲突（Complication）：</strong> 引入需要解决的变化或问题。解释困境并营造紧迫感。回答"谁关心？"。例如："然而，我们的主要竞争对手最近推出了一款创新产品，导致我们本季度的市场份额有所下降。"</li>
+              <li><strong>Question:</strong> Ask how to resolve the complication. This raises the main question that the document will answer. For example: "How can we regain market share and maintain our growth momentum in the face of this new competitive threat?"
+              
+              <strong>问题（Question）：</strong> 询问如何解决冲突。这引出了文档将要回答的主要问题。例如："面对这种新的竞争威胁，我们如何才能重新获得市场份额并保持增长势头？"</li>
+              <li><strong>Answer:</strong> Present the main argument as the solution. This is the key point you're trying to make. For example: "We recommend launching a counter-innovation product and implementing a targeted marketing campaign to highlight our unique value proposition."
+              
+              <strong>答案（Answer）：</strong> 将主要论点作为解决方案呈现。这是您试图表达的主要观点。例如："我们建议推出一款反创新产品并实施有针对性的营销活动，以突出我们独特的价值主张。"</li>
             </ul>
             
             <p className="leading-relaxed text-base mt-4">
               The SCQA structure helps to "hook" the audience. It creates an engaging narrative flow.
+              
+              SCQA结构有助于"吸引"听众。它创建了一个引人入胜的叙述流程。
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>Insight:</strong> The SCQA framework provides a structured and engaging way to introduce topics, build up a problem, and pre-present the solution, ensuring the audience immediately understands the situation and the purpose of the communication. By following the SCQA sequence, the introduction mimics an engaging narrative structure. It first establishes common ground (Situation), then introduces a disruption or problem (Complication), which creates a need for a solution (Question), then provided by the communicator (Answer). This structure naturally draws in the audience and sets the stage for the rest of the information, making them more likely to pay attention and understand the subsequent arguments.
+              <strong>Insight:</strong> The SCQA framework provides a structured and engaging way to introduce a topic, build a case, and pre-present the solution, ensuring the audience immediately understands the situation and the purpose of the communication. By following the SCQA sequence, the introduction mimics an engaging narrative structure. It first establishes common ground (Situation), then introduces a disruption or problem (Complication), creating a need for a solution (Question), which is then provided by the communicator (Answer). This structure naturally draws in the audience and sets the stage for the rest of the information, making them more likely to pay attention and understand the subsequent arguments.
+              
+              <strong>洞察：</strong> SCQA框架提供了一种结构化且引人入胜的方式来介绍主题、构建问题并预先呈现解决方案，确保听众立即了解情况并理解沟通的目的。通过遵循SCQA顺序，引言模仿了一个引人入胜的叙述结构。它首先建立共同点（情境），然后引入一个扰乱或问题（冲突），从而产生对解决方案的需求（问题），然后由沟通者提供解决方案（答案）。这种结构自然地吸引了听众，并为其余的信息奠定了基础，使他们更有可能关注并理解后续的论点。
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>Building Strong Supporting Arguments: Criteria for Effective Arguments</strong>
+              <strong>Building Strong Supporting Arguments: The Standard for Effective Argumentation</strong>
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              Supporting arguments should directly support the main assertion. They should clearly explain the "why" behind why the assertion holds true. They should be logical and complete. The reasoning should be rigorous and cover all key aspects of the assertion. Aim for a limited number of key points (e.g., 3-5) for memorability. This aligns with limitations of human short-term memory. Group and summarize supporting arguments logically. Use the MECE principle to ensure effective grouping. Order arguments by importance. Presenting the most critical arguments first maximizes impact.
+              Supporting arguments should directly support the main claim. They should clearly explain the "why" of the claim. They should be logical and complete. The reasoning should be rigorous and cover all key aspects of the claim. Aim to obtain a limited number of key points (e.g., 3-5) to improve memorability. This aligns with the limitations of human short-term memory. Logical grouping and summarizing supporting arguments. Using the MECE principle to ensure effective grouping. Ranking points by importance. Presenting the most critical points first maximizes impact.
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>Insight:</strong> Strong supporting arguments are the cornerstone of the Pyramid Principle. They provide the necessary rationale for the main assertion and should be carefully chosen and constructed to be both persuasive and easy to understand. If supporting arguments are weak, irrelevant, or poorly organized, the audience won't be convinced of the main assertion. By focusing on a few key, well-evidenced points, communicators can build a strong case. Logical grouping and ordering helps present information in a clear and impactful way, making it easier for the audience to understand the reasoning and accept the conclusion.
+              <strong>Insight:</strong> Strong supporting arguments are the cornerstone of the Pyramid Principle. They provide the necessary reasons for the main claim, should be carefully selected and constructed, to be persuasive and easy to understand. If supporting arguments are weak, irrelevant, or disorganized, the main claim won't be convincing to the audience. By focusing on a few key points with strong evidence, communicators can establish a strong case. Logical grouping and sequencing help to present information in a clear and impactful way, making it easier for the audience to understand the reasoning and accept the conclusion.
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>Forming Clear, Concise Conclusions: Summarizing Key Information</strong>
+              <strong>Forming Clear and Concise Conclusions: Summarizing Key Information</strong>
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              Conclusions should reinforce the main assertion. Restate the initial key point. Summarize the key supporting arguments. Briefly recap the main reasons that support the assertion. Clearly restate the main idea. Ensure the core message is emphasized again for maximum impact. Conclusions should be actionable and drive decision-making. They should clearly indicate next steps or expected outcomes. In presentations, they may include a call to action. Tell the audience what you want them to do.
+              Conclusions should reinforce the main claim. Restate the initial key points. Summarize key supporting arguments. Briefly review the reasons supporting the claim. Clearly restate the main idea. Ensure that the core information is emphasized again for maximum impact. Conclusions should be actionable and drive decision-making. They should clearly state what the next step or expected outcome is. In presentations, it might include a call to action. Tell the audience what you want them to do.
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>Insight:</strong> Strong conclusions provide closure and ensure the audience remembers the key information. It should be a concise summary that reinforces the main message and inspires the desired action. After presenting the main assertion and supporting arguments, the conclusion is the final opportunity to restate the key information and ensure it resonates with the audience. A clear, concise summary helps solidify understanding and promote willingness to act. By restating the main idea and summarizing the supporting points, the conclusion reinforces the overall message and increases its memorability.
+              <strong>Insight:</strong> Strong conclusions provide a summary and ensure the audience remembers key information. They should be a concise summary that reinforces the main information and motivates desired action. After presenting the main claim and supporting arguments, the conclusion is the last time to restate key information and ensure it resonates with the audience. Clear and concise summaries help to solidify understanding and encourage the willingness to take action. By restating the main idea and summarizing supporting points, the conclusion reinforces the overall information and improves its memorability.
             </p>
 
             <div className="h-px w-full bg-gray-200 dark:bg-gray-700 my-10"></div>
 
             <h2 className="text-2xl font-bold mt-10 mb-6">6. Application of the Pyramid Principle in Different Scenarios</h2>
             <p className="leading-relaxed text-base">
-              <strong>Writing Reports: Structuring Complex Information with Logical Flow</strong>
+              <strong>Writing Reports: Building Complex Information with a Logical Flow</strong>
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              The Pyramid Principle was designed for writing complex reports and analyses. It helps structure reasoning into coherent and transparent arguments. Use the answer-first approach. Present main findings and recommendations at the beginning. Group supporting arguments logically. Use categories to make information more digestible. Order supporting ideas logically. Follow a clear sequence based on time, importance, or structure. The principle can be used for various business documents such as BRDs (Business Requirement Documents) and FTDs (Functional and Technical Designs). This highlights the versatility of the principle in different types of business writing.
+              The Pyramid Principle aims to write complex reports and analyses. It helps to structure reasoning into a coherent and transparent argument. Using a top-down approach. Present the main findings and recommendations at the beginning. Logical grouping of supporting arguments. Using categories to make information easier to understand. Logical sequencing of supporting ideas. Following a clear and logical sequence based on time, importance, or structure. This principle can be used in various business documents, such as BRD (Business Requirements Document) and FTD (Functional and Technical Design). This highlights the versatility of this principle in different types of business writing.
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>Insight:</strong> In report writing, the Pyramid Principle ensures the most important findings and recommendations are immediately visible, while detailed analysis is structured logically to support these key insights. When writing reports, readers typically want to quickly understand the main conclusions and recommendations without getting lost in excessive detail. The Pyramid Principle allows authors to present this information at the beginning, followed by the detailed analysis and data that support these conclusions. This structure makes it easier for readers to navigate complex information, quickly grasp key insights, and understand the rationale behind recommendations.
+              <strong>Insight:</strong> In report writing, the Pyramid Principle ensures that the most important findings and recommendations immediately appear, while detailed analysis is built logically to support these key points. When writing a report, readers usually want to quickly understand the main conclusions and recommendations without getting lost in too many details. The Pyramid Principle allows authors to present this information at the beginning, followed by detailed analysis and data supporting these conclusions. This structure makes it easier for readers to navigate complex information, quickly grasp key insights, and understand the underlying principles behind the recommendations.
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>Giving Presentations: Engaging Busy Executives with Clear, Concise Information</strong>
+              <strong>Presenting: Attracting Busy Executives with Clear and Concise Information</strong>
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              The principle is crucial for organizing discussions with busy executives. Executives appreciate brevity and getting to the point. Executive attention spans are short, so points should be made quickly. Avoid beating around the bush. Start with the recommendation. This respects their time and keeps discussions focused. Use the SCQA framework for introductions. This provides an engaging opening. Structure presentations using main idea, supporting points, and evidence. This hierarchical structure ensures clarity. Use slide titles to convey the key message of the data. Make the key information of each slide immediately visible.
+              This principle is crucial for discussions with busy executives. Executives appreciate straightforwardness and focus. Their attention spans are short, so key points should be made clear quickly. Avoid beating around the bush. Start with the recommendation. This respects their time and keeps the discussion focused. Using the SCQA framework for introduction. This provides an eye-catching opening. Using main ideas, supporting points, and evidence to build presentations. This hierarchical structure ensures clarity. Using slide titles to convey key information. Making key information immediately visible on each slide.
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>Insight:</strong> For presentations, especially to executives, the Pyramid Principle is crucial for delivering clear, concise, and impactful information that respects their time and focuses on the most critical information. Executives are typically time-constrained and need to grasp the key messages of a presentation quickly. By starting with the conclusion and building the presentation logically with supporting arguments and data, the Pyramid Principle ensures the most important information is delivered in an efficient and effective way, maximizing the impact of the presentation and increasing the likelihood of gaining support or action.
+              <strong>Insight:</strong> For presentations, especially those aimed at executives, the Pyramid Principle is crucial for conveying clear, concise, and impactful information that respects their time and focuses on the most critical information. Executives often have limited time and need to quickly understand the key information in presentations. By starting with the conclusion and using supporting arguments and data in a logical way to build presentations, the Pyramid Principle ensures that the most important information is conveyed in an efficient and effective manner, maximizing the impact of the presentation and increasing the likelihood of support or taking action.
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>Problem Solving: Using the Principle to Structure Analysis and Recommendations</strong>
+              <strong>Problem Solving: Using the Principle to Build Analysis and Recommendations</strong>
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              The principle aligns well with consulting problem-solving processes, particularly with hypothesis-driven thinking. It helps think about problems more logically. Use both top-down and bottom-up processes. Gather information, group it, and extract key points to form conclusions. Use logical frameworks, such as problem trees. The principle can be used at the beginning, middle, and end stages of cases.
+              This principle aligns well with the problem-solving process in consulting, especially for hypothesis-driven thinking. It helps to think more logically. Using a top-down and bottom-up approach. Collect information, group it, and extract key points to draw conclusions. Using a logical framework, such as a problem tree. This principle can be used at the beginning, middle, and end of cases.
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>Insight:</strong> The Pyramid Principle provides a structured approach to problem solving by guiding the organization of analysis and presenting recommendations in a clear and logical manner. When dealing with complex problems, having a structured approach to analyzing information and formulating solutions is crucial. The Pyramid Principle provides this structure by encouraging a top-down approach to defining the problem and forming hypotheses, a bottom-up approach to collecting and synthesizing data, and a top-down approach again to communicating findings and recommendations. This systematic and iterative process helps ensure a comprehensive and well-thought-out solution.
+              <strong>Insight:</strong> The Pyramid Principle provides a structured approach to organizing information and developing solutions by presenting clear and logical recommendations. In dealing with complex problems, having a structured method for analyzing information and developing solutions is crucial. The Pyramid Principle encourages a top-down approach to defining problems and formulating hypotheses, a bottom-up approach to collecting and synthesizing data, and a top-down approach to communicating findings and recommendations, which provides this structure. This systematic and iterative process helps to ensure a comprehensive and well-considered solution.
             </p>
 
             <div className="h-px w-full bg-gray-200 dark:bg-gray-700 my-10"></div>
@@ -279,50 +323,50 @@ export function PyramidPrinciplePost() {
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              It gets to the point. This saves time and immediately captures attention. Aids quick absorption of information. The top-down structure helps quick understanding. Reduces confusion and shortens meeting time. Clear structure minimizes ambiguity and keeps discussions focused. Highlights structured thinking. Demonstrates a logical and organized approach. Makes information easier to understand and remember. Hierarchical structure aids cognitive processing. Enhances persuasiveness. Well-structured arguments are more persuasive. Offers flexibility if time is limited. The top-down approach allows core information to be conveyed even when time is constrained. Can be used as a diagnostic tool for logical thinking. Helps identify gaps or inconsistencies in reasoning. Provides clarity and is easy to follow. Structured format enhances clarity. Maximizes the use of time with the audience. Respects audience time constraints. Forces prioritization. Encourages focus on the most important points. Makes speakers appear confident and decisive. Presenting the answer first conveys confidence. Improves writing clarity and reduces length. Encourages concise and clear communication.
+              It gets to the point quickly. This saves time and immediately grabs attention. Helps to quickly absorb information. The top-down structure helps to quickly understand. Reduces confusion and shortens meeting time. Clear structure minimizes ambiguity and keeps the discussion focused. Highlights structured thinking. Shows a logical and organized approach. Makes information easier to understand and remember. Hierarchical structure aids cognitive processing. Improves persuasiveness. Well-structured arguments are more persuasive. If time is limited, it's flexible. The top-down approach allows core information to be conveyed even when time is limited. Can be used as a diagnostic tool for logical thinking. Helps to identify gaps or inconsistencies in reasoning. Clear and logical structure improves clarity. Maximizes the use of time with the audience. Respects the audience's time constraints. Forces prioritization. Encourages focusing on the most important points. Makes the presenter look confident and decisive. Presenting the answer first conveys confidence. Improves clarity of writing and reduces length. Encourages clear and concise communication.
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>Insight:</strong> The Pyramid Principle offers significant advantages in terms of effectiveness and efficiency of communication, especially in professional environments where time and clarity are critical. By prioritizing key information and organizing supporting information logically, the Pyramid Principle helps communicators convey their ideas quickly and clearly. This not only saves time for both sender and receiver but also increases the likelihood that information will be understood and acted upon, ultimately leading to more effective decisions and outcomes.
+              <strong>Insight:</strong> The Pyramid Principle offers significant advantages in terms of effectiveness and efficiency in communication, especially in professional environments where time and clarity are crucial. By prioritizing key information and logically organizing supporting information, the Pyramid Principle helps communicators quickly and clearly convey their ideas. This not only saves time for both the sender and receiver but also increases the likelihood of information being understood and acted upon, ultimately leading to more effective decisions and outcomes.
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>Potential Challenges in Application</strong>
+              <strong>Challenges in Application</strong>
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              Creating requires discipline and practice. It takes practice and effort to master. Requires clear understanding of main idea. Core message must be clearly defined. Assumes audience is logical. May not be universally effective for all audiences or cultural backgrounds. May oversimplify complex issues. Need to ensure sufficient detail to support arguments without oversimplifying. Requires effort and skill to implement effectively. It's not a simple template but a way of thinking and structuring. If data at the lowest level is flawed, conclusions can be wrong even if logically structured. Validity of underlying data is crucial. Some feel it detracts from "the reveal." For audiences who expect to be led step-by-step to conclusions, it may feel less engaging. Bottom-up thinking can be difficult to learn. Synthesizing information into key insights requires practice. Initial hypotheses may not be correct. Need to stay open to adjusting initial assertions based on analysis. If main recommendation is rejected, the rest might be rejected too. The top-down approach can make the entire communication dependent on the initial assertion.
+              Creating requires discipline and trial and error. Practice and effort are needed to master it. Clear understanding of the main ideas is required. Core information must be clearly defined. Assuming the audience is logical. It may not be effective for all audiences or all cultural backgrounds. It might oversimplify complex problems. Ensure enough detail is provided to support the argument without oversimplifying. Effective implementation requires effort and skill. It's not a simple template but a way of thinking and constructing. If the data at the bottom level is flawed, the conclusion, even if structurally logical, may be incorrect. The validity of basic data is crucial. Some people think it weakens "flair". For audiences expecting a step-by-step conclusion, it may not be as compelling. Thinking bottom-up may be difficult to learn. Summarizing key insights from information synthesis requires practice. Initial assumptions may be incorrect. Need to maintain an open mind and adjust initial assumptions based on analysis. If main recommendations are rejected, others may be rejected too. The top-down approach may make the entire communication dependent on initial assumptions.
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>Insight:</strong> While powerful, the Pyramid Principle is not without limitations. Effective application requires practice, a clear understanding of the subject, and awareness of audience perspectives. Creating a well-structured pyramid requires careful thought and effort. Identifying the core message or organizing complex information in a mutually exclusive and collectively exhaustive way is not always easy. Additionally, the effectiveness of the principle depends on the audience's receptiveness to direct, top-down approaches, and communicators need to be mindful of potential oversimplification and the importance of reliable underlying data.
+              <strong>Insight:</strong> Although powerful, the Pyramid Principle is not without limitations. Effective application requires practice, clear understanding of the topic, and recognition of the audience's perspective. Creating a well-structured pyramid requires careful thought and effort. Identifying core information or logically organizing complex information in a mutually exclusive and collectively exhaustive way is not always easy. Additionally, the effectiveness of the principle depends on the audience's acceptance of a direct, top-down approach, and communicators need to be aware of potential oversimplification and the importance of reliable foundational data.
             </p>
 
             <div className="h-px w-full bg-gray-200 dark:bg-gray-700 my-10"></div>
 
             <h2 className="text-2xl font-bold mt-10 mb-6">8. Conclusion</h2>
             <p className="leading-relaxed text-base">
-              <strong>Summary of Key Points</strong>
+              <strong>Key Takeaways</strong>
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              The Pyramid Principle is a top-down communication approach that presents main conclusions or recommendations first. It structures information into three levels: assertion (main point), supporting arguments (reasons), and supporting data (evidence). Logical construction involves grouping ideas using the MECE principle (Mutually Exclusive, Collectively Exhaustive) and establishing vertical (question-answer) and horizontal (deductive/inductive) logic. Introductions typically use the SCQA framework (Situation, Complication, Question, Answer) to engage the audience. The principle applies to various scenarios, such as report writing, presentations, and problem-solving. It offers advantages of clarity and efficiency but also has limitations related to application and potential oversimplification. Effective use requires practice and understanding of the audience.
+              The Pyramid Principle is a top-down communication method that first presents main conclusions or recommendations. It structures information into three levels: assertion (main claim), supporting arguments (reasons), and supporting data (evidence). Logical construction involves using the MECE principle (mutually exclusive, collectively exhaustive) to group ideas and establish vertical (question-answer) and horizontal (deductive/inductive) logic. Introductions typically use the SCQA framework (situation, complication, question, answer) to engage the audience. This principle applies to various scenarios, such as report writing, presentations, and problem-solving. It has advantages like clarity and efficiency, but also limitations like potential oversimplification. Effective use requires practice and understanding of the audience.
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>Enduring Value of the Pyramid Principle</strong>
+              <strong>The Long-Term Value of the Pyramid Principle</strong>
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              Despite being developed decades ago, it remains a relevant and valuable communication tool. Its continued use in leading organizations demonstrates its effectiveness. It provides a solid foundation for structuring communications and presenting ideas. It offers a reliable framework for conveying complex information. It aids clear thinking and effective expression. The principle encourages structured thought processes. It is a key communication and presentation methodology in the business world. Its widespread adoption highlights its importance in professional communication.
+              Although developed decades ago, it remains a relevant and valuable communication tool. Its continued use in leading organizations proves its effectiveness. It provides a solid foundation for building communication and presenting ideas. It provides a reliable framework for conveying complex information. It helps to think clearly and express effectively. The principle encourages a structured thinking process. It's a key method of communication and presentation in the business world. Its widespread adoption highlights its importance in professional communication.
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>Insight:</strong> The enduring impact of the Pyramid Principle underscores the fundamental principles of logical organization and audience-centered communication that remain essential skills in professional settings. The continued use and recommendation of the Pyramid Principle by top consulting firms and business professionals highlight its lasting value. In a world where effective communication is increasingly important for success, the principles of clarity, conciseness, and logical structure offered by Minto's framework remain highly relevant and applicable, providing an enduring approach to effectively conveying complex ideas.
+              <strong>Insight:</strong> The long-term impact of the Pyramid Principle emphasizes its logical organization and the basic principles of communication centered on the audience, which are still essential skills in professional environments. The continued use and recommendation of the Pyramid Principle by top consulting companies and business professionals highlight its enduring value. In a world where effective communication is increasingly important for success, the clear, logical, and structured principles provided by Minto's framework remain highly relevant and applicable, providing an eternal method for effectively conveying complex ideas.
             </p>
             
             <div className="bg-muted/50 p-6 rounded-lg mt-8 overflow-x-auto">
-              <h3 className="text-xl font-semibold mb-4">Table 1: Three Levels of the Pyramid (Section 2)</h3>
+              <h3 className="text-xl font-semibold mb-4">Table 1: The Three Levels of the Pyramid (Section 2)</h3>
               <table className="w-full border-collapse">
                 <thead>
                   <tr className="border-b border-border">
@@ -335,17 +379,17 @@ export function PyramidPrinciplePost() {
                   <tr className="border-b border-border">
                     <td className="py-2 px-4">1</td>
                     <td className="py-2 px-4">Assertion (Main Conclusion/Recommendation)</td>
-                    <td className="py-2 px-4">Present the single, most important message</td>
+                    <td className="py-2 px-4">Presenting a single, most important message</td>
                   </tr>
                   <tr className="border-b border-border">
                     <td className="py-2 px-4">2</td>
                     <td className="py-2 px-4">Supporting Arguments (Key Reasons)</td>
-                    <td className="py-2 px-4">Provide the main reasons why the assertion holds true</td>
+                    <td className="py-2 px-4">Providing evidence for the assertion</td>
                   </tr>
                   <tr>
                     <td className="py-2 px-4">3</td>
                     <td className="py-2 px-4">Supporting Data (Evidence and Details)</td>
-                    <td className="py-2 px-4">Provide detailed data, analysis, and evidence that support the arguments and assertion</td>
+                    <td className="py-2 px-4">Providing detailed data, analysis, and evidence to support the key insights or arguments</td>
                   </tr>
                 </tbody>
               </table>
@@ -356,7 +400,7 @@ export function PyramidPrinciplePost() {
               <table className="w-full border-collapse">
                 <thead>
                   <tr className="border-b border-border">
-                    <th className="text-left py-2 px-4">Characteristic</th>
+                    <th className="text-left py-2 px-4">Feature</th>
                     <th className="text-left py-2 px-4">Deductive Reasoning</th>
                     <th className="text-left py-2 px-4">Inductive Reasoning</th>
                   </tr>
@@ -364,23 +408,23 @@ export function PyramidPrinciplePost() {
                 <tbody>
                   <tr className="border-b border-border">
                     <td className="py-2 px-4">Definition</td>
-                    <td className="py-2 px-4">Deriving specific conclusion from general premises</td>
-                    <td className="py-2 px-4">Deriving a broader generalization from specific observations</td>
+                    <td className="py-2 px-4">Deriving a specific conclusion from a general premise</td>
+                    <td className="py-2 px-4">Moving from specific observations to a broader generalization</td>
                   </tr>
                   <tr className="border-b border-border">
-                    <td className="py-2 px-4">Direction of Reasoning</td>
+                    <td className="py-2 px-4">Reasoning Direction</td>
                     <td className="py-2 px-4">Top-down</td>
                     <td className="py-2 px-4">Bottom-up</td>
                   </tr>
                   <tr className="border-b border-border">
                     <td className="py-2 px-4">Certainty of Conclusion</td>
-                    <td className="py-2 px-4">If premises are true, conclusion must be true</td>
-                    <td className="py-2 px-4">Conclusion is probable, but not certain</td>
+                    <td className="py-2 px-4">If the premise is true, the conclusion must be true</td>
+                    <td className="py-2 px-4">The conclusion is possible but not certain</td>
                   </tr>
                   <tr>
                     <td className="py-2 px-4">Example</td>
-                    <td className="py-2 px-4">All marketing managers understand marketing. John is a marketing manager. Therefore, John understands marketing.</td>
-                    <td className="py-2 px-4">Marketing campaign A improved sales. Marketing campaign B improved sales. Therefore, marketing campaigns can improve sales.</td>
+                    <td className="py-2 px-4">All market managers understand marketing. Zhang San is a market manager. Therefore, Zhang San understands marketing.</td>
+                    <td className="py-2 px-4">Marketing campaign A increased sales by 10%. Marketing campaign B increased sales by 12%. Therefore, marketing can increase sales.</td>
                   </tr>
                 </tbody>
               </table>
@@ -400,27 +444,27 @@ export function PyramidPrinciplePost() {
                 <tbody>
                   <tr className="border-b border-border">
                     <td className="py-2 px-4">Situation</td>
-                    <td className="py-2 px-4">Background information about the topic that the audience can agree with</td>
-                    <td className="py-2 px-4">Establish common understanding</td>
-                    <td className="py-2 px-4">Our company has achieved consistent profit growth over the past five years.</td>
+                    <td className="py-2 px-4">Background information about the topic, which the audience can agree with</td>
+                    <td className="py-2 px-4">Establishing common understanding</td>
+                    <td className="py-2 px-4">Our company's revenue has been steadily growing over the past five years.</td>
                   </tr>
                   <tr className="border-b border-border">
                     <td className="py-2 px-4">Complication</td>
-                    <td className="py-2 px-4">Introduction of a problem or change that needs to be addressed</td>
-                    <td className="py-2 px-4">Highlight issue and create urgency</td>
-                    <td className="py-2 px-4">However, a competitor recently launched a new product that is threatening our market share.</td>
+                    <td className="py-2 px-4">Introducing a change or problem that needs to be addressed</td>
+                    <td className="py-2 px-4">Highlighting the issue and creating a sense of urgency</td>
+                    <td className="py-2 px-4">However, our main competitor recently launched an innovative product, leading to a decline in our market share this quarter.</td>
                   </tr>
                   <tr className="border-b border-border">
                     <td className="py-2 px-4">Question</td>
-                    <td className="py-2 px-4">Question posed regarding the complication</td>
-                    <td className="py-2 px-4">Clarify the main question that the communication needs to answer</td>
-                    <td className="py-2 px-4">How should we respond to the competitor's new product and maintain our market leadership?</td>
+                    <td className="py-2 px-4">Asking how to resolve the complication</td>
+                    <td className="py-2 px-4">Clarifying the main question the document will answer</td>
+                    <td className="py-2 px-4">How can we regain market share and maintain our growth momentum in the face of this new competitive threat?</td>
                   </tr>
                   <tr>
                     <td className="py-2 px-4">Answer</td>
-                    <td className="py-2 px-4">Recommendation or solution to the question</td>
-                    <td className="py-2 px-4">Present the main message of the communication</td>
-                    <td className="py-2 px-4">We recommend accelerating our own innovation timeline and launching a new product with distinct advantages.</td>
+                    <td className="py-2 px-4">Presenting the main argument as the solution</td>
+                    <td className="py-2 px-4">Communicating the key point you're trying to make</td>
+                    <td className="py-2 px-4">We recommend launching a counter-innovation product and implementing a targeted marketing campaign to highlight our unique value proposition.</td>
                   </tr>
                 </tbody>
               </table>
@@ -642,6 +686,10 @@ export function PyramidPrinciplePost() {
 
             <h2 className="text-2xl font-bold mt-10 mb-6">6. 金字塔原理在不同场景下的应用</h2>
             <p className="leading-relaxed text-base">
+              <strong>6. Applications of the Pyramid Principle in Different Scenarios</strong>
+            </p>
+            
+            <p className="leading-relaxed text-base mt-4">
               <strong>撰写报告：以逻辑流程构建复杂信息</strong>
             </p>
             
@@ -681,7 +729,11 @@ export function PyramidPrinciplePost() {
 
             <h2 className="text-2xl font-bold mt-10 mb-6">7. 金字塔原理的优点和局限性</h2>
             <p className="leading-relaxed text-base">
-              <strong>清晰度和效率的优点</strong>
+              <strong>7. Advantages and Limitations of the Pyramid Principle</strong>
+            </p>
+            
+            <p className="leading-relaxed text-base mt-4">
+              <strong>Advantages of Clarity and Efficiency</strong>
             </p>
             
             <p className="leading-relaxed text-base mt-4">
@@ -689,11 +741,11 @@ export function PyramidPrinciplePost() {
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>洞察：</strong> 金字塔原理在沟通的有效性和效率方面提供了显著的优势，尤其是在时间和清晰度至关重要的专业环境中。通过优先考虑主要信息并逻辑地组织支撑信息，金字塔原理帮助沟通者快速清晰地传达他们的想法。这不仅节省了发送者和接收者的时间，而且增加了信息被理解和采取行动的可能性，最终导致更有效的决策和结果。
+              <strong>Insight:</strong> The Pyramid Principle offers significant advantages in terms of effectiveness and efficiency of communication, particularly in professional environments where time and clarity are crucial. By prioritizing the main message and logically organizing supporting information, the Pyramid Principle helps communicators convey their ideas quickly and clearly. This not only saves time for both the sender and receiver but also increases the likelihood that the information will be understood and acted upon, ultimately leading to more effective decisions and outcomes.
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>应用中可能存在的挑战</strong>
+              <strong>Potential Challenges in Application</strong>
             </p>
             
             <p className="leading-relaxed text-base mt-4">
@@ -701,14 +753,18 @@ export function PyramidPrinciplePost() {
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>洞察：</strong> 虽然强大，但金字塔原理并非没有局限性。有效应用需要实践、对主题的清晰理解以及对听众视角的认识。创建结构良好的金字塔需要仔细思考和努力。识别核心信息或以相互独立和完全穷尽的方式逻辑地组织复杂信息并非总是容易的。此外，该原理的有效性取决于听众对直接、自上而下方法的接受程度，并且沟通者需要注意潜在的过度简化以及可靠的基础数据的重要性。
+              <strong>Insight:</strong> While powerful, the Pyramid Principle is not without limitations. Effective application requires practice, a clear understanding of the subject, and awareness of audience perspectives. Creating a well-structured pyramid takes careful thought and effort. Identifying the core message or logically organizing complex information in a mutually exclusive and collectively exhaustive way is not always easy. Additionally, the effectiveness of the principle depends on the audience's receptiveness to a direct, top-down approach, and communicators need to be mindful of potential oversimplification and the importance of reliable underlying data.
             </p>
 
             <div className="h-px w-full bg-gray-200 dark:bg-gray-700 my-10"></div>
 
             <h2 className="text-2xl font-bold mt-10 mb-6">8. 结论</h2>
             <p className="leading-relaxed text-base">
-              <strong>关键要点总结</strong>
+              <strong>8. Conclusion</strong>
+            </p>
+            
+            <p className="leading-relaxed text-base mt-4">
+              <strong>Summary of Key Points</strong>
             </p>
             
             <p className="leading-relaxed text-base mt-4">
@@ -716,7 +772,7 @@ export function PyramidPrinciplePost() {
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>金字塔原理的持久价值</strong>
+              <strong>The Enduring Value of the Pyramid Principle</strong>
             </p>
             
             <p className="leading-relaxed text-base mt-4">
@@ -724,7 +780,7 @@ export function PyramidPrinciplePost() {
             </p>
             
             <p className="leading-relaxed text-base mt-4">
-              <strong>洞察：</strong> 金字塔原理的持久影响力强调了其逻辑组织和以受众为中心的沟通的基本原则，这些原则在专业环境中仍然是必不可少的技能。顶级咨询公司和商业专业人士对金字塔原理的持续使用和推荐突显了其持久的价值。在一个有效沟通对于成功越来越重要的世界中，明托的框架所提供的清晰、简洁和逻辑结构的原则仍然高度相关和适用，为有效传递复杂思想提供了一种永恒的方法。
+              <strong>Insight:</strong> The enduring impact of the Pyramid Principle underscores the fundamental principles of logical organization and audience-centered communication that remain essential skills in professional settings. The continued use and recommendation of the Pyramid Principle by top consulting firms and business professionals highlight its lasting value. In a world where effective communication is increasingly important for success, the principles of clarity, conciseness, and logical structure provided by Minto's framework remain highly relevant and applicable, offering a timeless approach to effectively conveying complex ideas.
             </p>
             
             <div className="bg-muted/50 p-6 rounded-lg mt-8 overflow-x-auto">
