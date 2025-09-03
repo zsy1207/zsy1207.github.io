@@ -34,9 +34,10 @@ export function Navigation() {
   const navItems: NavItem[] = [
     { title: { en: "Home", zh: "首页" }, href: "/" },
     { title: { en: "Resume", zh: "简历" }, href: "/resume" },
-    { title: { en: "Timeline", zh: "时间线" }, href: "/news" },
-    { title: { en: "Publications", zh: "出版物" }, href: "/publications" },
+    { title: { en: "Research", zh: "研究" }, href: "/research" },
     { title: { en: "Blogs", zh: "博客" }, href: "/blog" },
+    { title: { en: "Projects", zh: "项目" }, href: "/projects" },
+    { title: { en: "Publications", zh: "出版物" }, href: "/publications" },
   ]
 
   return (
@@ -68,7 +69,7 @@ export function Navigation() {
             <span className={cn(
               "font-bold text-lg hidden sm:inline-block",
               enabled && "transition-transform duration-300 ease-out group-hover:translate-x-1"
-            )}>Shiyang Zhou (周世扬)</span>
+            )}>{language === "en" ? "Shiyang Zhou" : "Shiyang Zhou（周世扬）"}</span>
           </Link>
           <nav className="hidden md:flex items-center space-x-6 text-sm font-medium ml-8">
             {navItems.map((item) => (

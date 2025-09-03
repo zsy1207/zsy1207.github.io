@@ -60,14 +60,7 @@ export default function ResumePage() {
               <div className="flex items-baseline">
                 <div className="mr-2">•</div>
                 <div className="text-sm">
-                  {language === "en" ? "Research Direction: Extratropical Cyclones" : "研究方向：温带气旋"}
-                </div>
-              </div>
-              {/* --- Applied items-baseline here --- */}
-              <div className="flex items-baseline">
-                <div className="mr-2">•</div>
-                <div className="text-sm">
-                  {language === "en" ? "Ranked first in both the preliminary and final exam" : "初复试双第一"}
+                  {language === "en" ? "Research Direction: Monsoons and Extreme Weather" : "研究方向：季风与极端天气气候"}
                 </div>
               </div>
             </div>
@@ -98,7 +91,7 @@ export default function ResumePage() {
               <div className="flex items-baseline">
                 <div className="mr-2">•</div>
                 <div className="text-sm">
-                  {language === "en" ? "GPA: 3.87 (88.7/100)" : "GPA：3.87（88.7/100）"}
+                  {language === "en" ? "GPA: 3.88 (88.8/100)" : "GPA：3.88（88.8/100）"}
                 </div>
               </div>
               {/* --- Applied items-baseline here --- */}
@@ -108,145 +101,6 @@ export default function ResumePage() {
                   {language === "en"
                     ? "Main Courses: Synoptic Meteorology Principles and Methods, Dynamic Meteorology, Atmospheric Physics, Modern Climatology, Radar and Satellite Meteorology, Mesoscale Meteorology."
                     : "主要课程：天气学原理和方法、动力气象学、大气物理学、现代气候学、雷达与卫星气象学、中尺度气象学。"
-                  }
-                </div>
-              </div>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
-
-      <Card className="mb-4">
-        <CardHeader>
-          <CardTitle>{language === "en" ? "Work & Internship Experience" : "工作&实习经历"}</CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-6">
-          <div>
-            <div className="flex justify-between items-start">
-              <h3 className="font-bold">
-                {language === "en" ? "Jinan Tianyu Agricultural Technology Co., Ltd." : "济南天昱农业科技有限公司"}
-              </h3>
-              <p className="text-sm text-right">
-                {language === "en" ? "Oct 2023 - Jun 2025" : "2023年10月 - 2025年06月"}
-              </p>
-            </div>
-            <div className="flex justify-between items-start mt-1">
-              <p>
-                {language === "en"
-                  ? "Technical Management Trainee"
-                  : "技术管培生"
-                }
-              </p>
-              <p className="text-sm text-right">
-                {language === "en" ? "Jinan, Shandong" : "山东济南"}
-              </p>
-            </div>
-            <div className="mt-2 space-y-1"> {/* Added space-y-1 for consistent spacing */}
-              {/* --- Applied items-baseline here --- */}
-              <div className="flex items-baseline">
-                <div className="mr-2">•</div>
-                <div className="text-sm">
-                  {language === "en"
-                    ? "Estimated the market potential of agrochemicals in global emerging markets by modeling and analyzing agricultural data such as planting area, yield, variety, and climate."
-                    : "通过对种植面积、产量、种类、气候等农业数据进行建模和分析，预估全球新兴市场各国农业化学品的市场潜力。"
-                  }
-                </div>
-              </div>
-              {/* --- Applied items-baseline here --- */}
-              <div className="flex items-baseline">
-                <div className="mr-2">•</div>
-                <div className="text-sm">
-                  {language === "en"
-                    ? "Responsible for the company's digital transformation and AI integration, optimizing company workflows using AI and other tools."
-                    : "负责公司的信息化、AI化改革，用AI等工具优化公司的工作流程。"
-                  }
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div className="flex justify-between items-start">
-              <h3 className="font-bold">
-                {language === "en" ? "Wulian County Meteorological Bureau, Shandong Province" : "山东省五莲县气象局"}
-              </h3>
-              <p className="text-sm text-right">
-                {language === "en" ? "Jan 2023" : "2023年1月"}
-              </p>
-            </div>
-            <div className="flex justify-between items-start mt-1">
-              <p>
-                {language === "en"
-                  ? "Intern"
-                  : "实习生"
-                }
-              </p>
-              <p className="text-sm text-right">
-                {language === "en" ? "Wulian, Shandong" : "山东五莲"}
-              </p>
-            </div>
-            <div className="mt-2 space-y-1"> {/* Added space-y-1 for consistent spacing */}
-              {/* --- Applied items-baseline here --- */}
-              <div className="flex items-baseline">
-                <div className="mr-2">•</div>
-                <div className="text-sm">
-                  {language === "en"
-                    ? "Participated in daily weather consultations, observation, and forecasting tasks; focused on analyzing and forecasting the cold wave process from January 11th to 15th."
-                    : "参与日常天气会商、观测与预报工作；重点针对1月11日至15日的寒潮天气过程进行分析预报。"
-                  }
-                </div>
-              </div>
-              {/* --- Applied items-baseline here --- */}
-              <div className="flex items-baseline">
-                <div className="mr-2">•</div>
-                <div className="text-sm">
-                  {language === "en"
-                    ? "Assisted colleagues in completing meteorological support tasks during the Spring Festival travel rush; internship performance was highly recognized and rated as Excellent."
-                    : "协助同事完成春运期间气象服务保障任务；实习表现获单位高度认可，评定为优秀等级。"
-                  }
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div className="flex justify-between items-start">
-              <h3 className="font-bold">
-                {language === "en" ? "Meteorological Station, Atmospheric and Environmental Teaching Center, NUIST" : "南京信息工程大学大气与环境实验教学中心气象台"}
-              </h3>
-              <p className="text-sm text-right">
-                {language === "en" ? "Oct - Nov 2022" : "2022年10-11月"}
-              </p>
-            </div>
-            <div className="flex justify-between items-start mt-1">
-              <p>
-                {language === "en"
-                  ? "Intern"
-                  : "实习生"
-                }
-              </p>
-              <p className="text-sm text-right">
-                {language === "en" ? "Nanjing, China" : "江苏南京"}
-              </p>
-            </div>
-            <div className="mt-2 space-y-1"> {/* Added space-y-1 for consistent spacing */}
-              {/* --- Applied items-baseline here --- */}
-              <div className="flex items-baseline">
-                <div className="mr-2">•</div>
-                <div className="text-sm">
-                  {language === "en"
-                    ? "Learned and mastered fundamental skills and operational standards for weather analysis and forecasting; mastered the operational procedures for short-term and nowcasting."
-                    : "学习并掌握天气分析预报的基础技能与业务规范；掌握短时临近预报的业务流程与预报思路。"
-                  }
-                </div>
-              </div>
-              {/* --- Applied items-baseline here --- */}
-              <div className="flex items-baseline">
-                <div className="mr-2">•</div>
-                <div className="text-sm">
-                  {language === "en"
-                    ? "Utilized numerical forecasts, satellite, radar data, and meteorological software like MICAPS to analyze and forecast weather patterns and key meteorological elements."
-                    : "运用数值预报、卫星、雷达等资料及MICAPS等气象业务软件，对天气形势及温度、风、降水等关键气象要素进行分析与预报。"
                   }
                 </div>
               </div>
@@ -538,3 +392,6 @@ export default function ResumePage() {
     </>
   )
 }
+
+
+

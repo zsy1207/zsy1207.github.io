@@ -15,24 +15,25 @@ const LanguageContext = createContext<LanguageContextType>({
 })
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguage] = useState<Language>("zh")
-
+  const [language, setLanguage] = useState<Language>("en")
+  
+  // Prefer English by default; load saved preference if available
   useEffect(() => {
-    // 检测浏览器语言
-    const detectBrowserLanguage = () => {
-      if (typeof window !== "undefined") {
-        const browserLang = navigator.language.toLowerCase()
-        // 如果是中文浏览器则使用中文，否则使用英文
-        if (browserLang.includes("zh")) {
-          setLanguage("zh")
-        } else {
-          setLanguage("en")
-        }
+    if (typeof window !== "undefined") {
+      const saved = window.localStorage.getItem("language") as Language | null
+      if (saved === "en" || saved === "zh") {
+        setLanguage(saved)
+      } else {
+        setLanguage("en")
       }
     }
-
-    detectBrowserLanguage()
   }, [])
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.localStorage.setItem("language", language)
+    }
+  }, [language])
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage }}>

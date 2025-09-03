@@ -16,7 +16,7 @@ export function ThemeToggle() {
     return (
       <div
         className={cn(
-          "flex w-16 h-8 p-1 rounded-full cursor-pointer",
+          "flex w-12 h-6 p-1 rounded-full cursor-pointer",
           isDark 
             ? "bg-zinc-800 border border-zinc-700" 
             : "bg-white border border-zinc-200"
@@ -28,10 +28,10 @@ export function ThemeToggle() {
         <div className="flex justify-between items-center w-full">
           <div
             className={cn(
-              "flex justify-center items-center w-6 h-6 rounded-full",
+              "flex justify-center items-center w-5 h-5 rounded-full",
               isDark 
                 ? "transform translate-x-0 bg-zinc-700" 
-                : "transform translate-x-8 bg-gray-200"
+                : "transform translate-x-5 bg-gray-200"
             )}
           >
             {isDark ? (
@@ -48,10 +48,10 @@ export function ThemeToggle() {
           </div>
           <div
             className={cn(
-              "flex justify-center items-center w-6 h-6 rounded-full",
+              "flex justify-center items-center w-5 h-5 rounded-full",
               isDark 
                 ? "bg-transparent" 
-                : "transform -translate-x-8"
+                : "transform -translate-x-5"
             )}
           >
             {isDark ? (
@@ -75,7 +75,7 @@ export function ThemeToggle() {
   return (
     <motion.div
       className={cn(
-        "flex w-16 h-8 p-1 rounded-full cursor-pointer",
+        "flex w-12 h-6 p-1 rounded-full cursor-pointer",
         isDark 
           ? "bg-zinc-800 border border-zinc-700" 
           : "bg-white border border-zinc-200"
@@ -90,13 +90,13 @@ export function ThemeToggle() {
         {/* Moving circle with active icon */}
         <motion.div
           className={cn(
-            "absolute flex justify-center items-center w-6 h-6 rounded-full",
+            "absolute flex justify-center items-center w-5 h-5 rounded-full",
             isDark 
               ? "bg-zinc-700" 
               : "bg-gray-200"
           )}
           animate={{ 
-            x: isDark ? 0 : 32,
+            x: isDark ? 0 : 20,
             transition: { 
               type: "spring", 
               stiffness: 300, 
@@ -129,8 +129,8 @@ export function ThemeToggle() {
         </motion.div>
         
         {/* Invisible placeholders to maintain layout */}
-        <div className="w-6 h-6" />
-        <div className="w-6 h-6" />
+        <div className="w-5 h-5" />
+        <div className="w-5 h-5" />
       </div>
     </motion.div>
   )
