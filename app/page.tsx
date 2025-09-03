@@ -1,6 +1,6 @@
 "use client"
 
-import { Mail, Github, GraduationCap } from "lucide-react"
+import { Mail, Github } from "lucide-react"
 import { useLanguage } from "@/context/language-context"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 import Image from "next/image"
@@ -32,7 +32,15 @@ export default function HomePage() {
     {
       name: "Google Scholar",
       href: "https://scholar.google.com",
-      icon: <GraduationCap />,
+      icon: (
+        <Image
+          src="/google-scholar.svg"
+          alt="Google Scholar"
+          width={24}
+          height={24}
+          className={theme === "dark" ? "invert" : ""}
+        />
+      ),
     },
     {
       name: "ResearchGate",
@@ -106,7 +114,7 @@ export default function HomePage() {
                 rel="noopener noreferrer"
                 className="p-2 rounded-full border border-border hover:bg-accent transition-colors"
               >
-                {link.name === "Email" || link.name === "GitHub" || link.name === "Google Scholar" ? 
+                {link.name === "Email" || link.name === "GitHub" ? 
                   React.cloneElement(link.icon as React.ReactElement, { className: "h-7 w-7" }) : 
                   React.cloneElement(link.icon as React.ReactElement, { 
                     width: 28, 
