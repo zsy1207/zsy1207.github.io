@@ -14,24 +14,24 @@ interface Publication {
   link?: string;
 }
 
-const publications: Publication[] = [
-  {
-    title: "Sequential tropical cyclones and intraseasonal waves drive the record-breaking circulation-convection decoupling of the 2023 south China sea summer monsoon onset",
-    authors: (
-      <>
-        Wang, X., <strong>Zhou, S.</strong>, & Zhou, W.
-      </>
-    ),
-    journal: "Atmospheric Research",
-    year: 2026,
-    pages: "108949",
-    doi: "10.1016/j.atmosres.2026.108949",
-    link: "https://doi.org/10.1016/j.atmosres.2026.108949",
-  },
-]
-
 export default function PublicationsPage() {
   const { language } = useLanguage()
+  
+  const publications: Publication[] = [
+    {
+      title: "Sequential tropical cyclones and intraseasonal waves drive the record-breaking circulation-convection decoupling of the 2023 south China sea summer monsoon onset",
+      authors: (
+        <>
+          Wang, X., <strong>Zhou, S.</strong>, & Zhou, W.
+        </>
+      ),
+      journal: "Atmospheric Research",
+      year: 2026,
+      pages: "108949",
+      doi: "10.1016/j.atmosres.2026.108949",
+      link: "https://doi.org/10.1016/j.atmosres.2026.108949",
+    },
+  ]
 
   return (
     <div className="space-y-12">

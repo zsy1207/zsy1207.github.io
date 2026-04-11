@@ -20,14 +20,6 @@ interface NavItem {
   href: string
 }
 
-const navItems: NavItem[] = [
-  { title: { en: "Home", zh: "首页" }, href: "/" },
-  { title: { en: "Resume", zh: "简历" }, href: "/resume" },
-  { title: { en: "Publications", zh: "出版物" }, href: "/publications" },
-  { title: { en: "Blogs", zh: "博客" }, href: "/blog" },
-  { title: { en: "Projects", zh: "项目" }, href: "/projects" },
-]
-
 export function Navigation() {
   const pathname = usePathname()
   const { language } = useLanguage()
@@ -38,6 +30,14 @@ export function Navigation() {
   const toggleMobileMenu = () => {
     setMobileMenuOpen((prev) => !prev)
   }
+  
+  const navItems: NavItem[] = [
+    { title: { en: "Home", zh: "首页" }, href: "/" },
+    { title: { en: "Resume", zh: "简历" }, href: "/resume" },
+    { title: { en: "Publications", zh: "出版物" }, href: "/publications" },
+    { title: { en: "Blogs", zh: "博客" }, href: "/blog" },
+    { title: { en: "Projects", zh: "项目" }, href: "/projects" },
+  ]
 
   return (
     <header className={cn(
