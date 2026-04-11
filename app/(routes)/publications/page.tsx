@@ -43,40 +43,24 @@ export default function PublicationsPage() {
         <div className="space-y-10">
           {publications.map((pub, index) => (
             <div key={index} className="border-l-4 border-primary pl-6 py-2">
-              {language === "en" ? (
-                // AGU Citation Format for English
-                <>
-                  <p className="text-muted-foreground mb-3">
-                    {pub.authors}, ({pub.year}), {pub.title}, <span className="italic">{pub.journal}</span>, {pub.volume && pub.volume}{pub.pages && `, ${pub.pages}`}{pub.doi && `, doi:${pub.doi}`}.
-                  </p>
-                  {pub.link && (
-                    <a 
-                      href={pub.link} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-primary hover:underline text-sm mb-3 inline-block"
-                    >
-                      [PDF]
-                    </a>
-                  )}
-                </>
-              ) : (
-                // Chinese National Standard Format
-                <>
-                  <p className="text-muted-foreground mb-3">
-                    {pub.authors}. {pub.title}[J]. {pub.journal}, {pub.year}{pub.volume && `, ${pub.volume}`}{pub.pages && `: ${pub.pages}`}.
-                  </p>
-                  {pub.link && (
-                    <a 
-                      href={pub.link} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-primary hover:underline text-sm mb-3 inline-block"
-                    >
-                      [PDF]
-                    </a>
-                  )}
-                </>
+              <p className="text-foreground mb-2 font-medium">
+                [{index + 1}] ({pub.year}) {pub.title}
+              </p>
+              <p className="text-muted-foreground mb-1">{pub.authors}</p>
+              <p className="text-muted-foreground mb-1">
+                <span className="italic">{pub.journal}</span>
+                {pub.volume && `, ${pub.volume}`}
+                {pub.pages && `, ${pub.pages}`}
+              </p>
+              {pub.link && (
+                <a
+                  href={pub.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline text-sm"
+                >
+                  DOI: {pub.doi ?? pub.link}
+                </a>
               )}
             </div>
           ))}

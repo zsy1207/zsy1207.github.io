@@ -28,16 +28,15 @@ export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   
   const toggleMobileMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen)
+    setMobileMenuOpen((prev) => !prev)
   }
-
+  
   const navItems: NavItem[] = [
     { title: { en: "Home", zh: "首页" }, href: "/" },
     { title: { en: "Resume", zh: "简历" }, href: "/resume" },
-    { title: { en: "Research", zh: "研究" }, href: "/research" },
+    { title: { en: "Publications", zh: "出版物" }, href: "/publications" },
     { title: { en: "Blogs", zh: "博客" }, href: "/blog" },
     { title: { en: "Projects", zh: "项目" }, href: "/projects" },
-    { title: { en: "Publications", zh: "出版物" }, href: "/publications" },
   ]
 
   return (
