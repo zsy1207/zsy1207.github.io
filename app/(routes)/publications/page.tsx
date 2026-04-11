@@ -42,7 +42,7 @@ export default function PublicationsPage() {
       {publications.length > 0 ? (
         <div className="space-y-10">
           {publications.map((pub, index) => (
-            <div key={index} className="border-l-4 border-primary pl-6 py-2">
+            <div key={index} className="py-2">
               <p className="text-foreground mb-2 font-medium">
                 [{index + 1}] ({pub.year}) {pub.title}
               </p>
