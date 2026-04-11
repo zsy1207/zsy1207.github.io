@@ -20,6 +20,14 @@ interface NavItem {
   href: string
 }
 
+const NAV_ITEMS: NavItem[] = [
+  { title: { en: "Home", zh: "首页" }, href: "/" },
+  { title: { en: "Resume", zh: "简历" }, href: "/resume" },
+  { title: { en: "Publications", zh: "出版物" }, href: "/publications" },
+  { title: { en: "Blogs", zh: "博客" }, href: "/blog" },
+  { title: { en: "Projects", zh: "项目" }, href: "/projects" },
+]
+
 export function Navigation() {
   const pathname = usePathname()
   const { language } = useLanguage()
@@ -31,21 +39,13 @@ export function Navigation() {
     setMobileMenuOpen((prev) => !prev)
   }
   
-  const navItems: NavItem[] = [
-    { title: { en: "Home", zh: "首页" }, href: "/" },
-    { title: { en: "Resume", zh: "简历" }, href: "/resume" },
-    { title: { en: "Publications", zh: "出版物" }, href: "/publications" },
-    { title: { en: "Blogs", zh: "博客" }, href: "/blog" },
-    { title: { en: "Projects", zh: "项目" }, href: "/projects" },
-  ]
-
   return (
     <header className={cn(
       "sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60",
       enabled && "transition-all duration-300 ease-out"
     )}>
-      <div className="container max-w-4xl mx-auto flex h-16 items-center justify-between px-4">
-        <div className="flex items-center">
+      <div className="container max-w-4xl mx-auto grid h-16 grid-cols-[1fr_auto_1fr] items-center px-4">
+        <div className="flex items-center justify-start">
           <Link href="/" className={cn(
             "flex items-center gap-0 group",
             enabled && "transition-all duration-300 ease-out"
@@ -70,26 +70,26 @@ export function Navigation() {
               enabled && "transition-transform duration-300 ease-out group-hover:translate-x-1"
             )}>{language === "en" ? "Shiyang Zhou" : "Shiyang Zhou（周世扬）"}</span>
           </Link>
-          <nav className="hidden md:flex items-center space-x-6 text-sm font-medium ml-8">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={cn(
-                  "transition-colors hover:text-foreground/80 py-1 px-1 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-primary after:w-0 hover:after:w-full",
-                  enabled && "after:transition-all after:duration-300",
-                  pathname === item.href
-                    ? "text-foreground border-b-2 border-primary"
-                    : "text-foreground/60"
-                )}
-              >
-                {item.title[language]}
-              </Link>
-            ))}
-          </nav>
         </div>
+        <nav className="hidden md:flex items-center justify-center space-x-6 text-sm font-medium">
+          {NAV_ITEMS.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={cn(
+                "transition-colors hover:text-foreground/80 py-1 px-1 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-primary after:w-0 hover:after:w-full",
+                enabled && "after:transition-all after:duration-300",
+                pathname === item.href
+                  ? "text-foreground border-b-2 border-primary"
+                  : "text-foreground/60"
+              )}
+            >
+              {item.title[language]}
+            </Link>
+          ))}
+        </nav>
         <div className={cn(
-          "flex items-center gap-4",
+          "flex items-center justify-end gap-4",
           enabled && "transition-all duration-300 ease-out"
         )}>
           <ThemeToggle />
@@ -112,7 +112,7 @@ export function Navigation() {
       {mobileMenuOpen && (
         <div className="md:hidden p-4 bg-background border-t">
           <nav className="flex flex-col space-y-4">
-            {navItems.map((item) => (
+            {NAV_ITEMS.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
