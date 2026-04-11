@@ -1,27 +1,37 @@
 "use client"
 
 import { useLanguage } from "@/context/language-context"
+import { ReactNode } from "react"
 
 interface Publication {
   title: string;
-  authors: string;
+  authors: ReactNode;
   journal: string;
   year: number;
   volume?: string;
   pages?: string;
   doi?: string;
   link?: string;
-  description: {
-    en: string;
-    zh: string;
-  };
 }
+
+const publications: Publication[] = [
+  {
+    title: "Sequential tropical cyclones and intraseasonal waves drive the record-breaking circulation-convection decoupling of the 2023 south China sea summer monsoon onset",
+    authors: (
+      <>
+        Wang, X., <strong>Zhou, S.</strong>, & Zhou, W.
+      </>
+    ),
+    journal: "Atmospheric Research",
+    year: 2026,
+    pages: "108949",
+    doi: "10.1016/j.atmosres.2026.108949",
+    link: "https://doi.org/10.1016/j.atmosres.2026.108949",
+  },
+]
 
 export default function PublicationsPage() {
   const { language } = useLanguage()
-  
-  // Empty publications array - to be updated later
-  const publications: Publication[] = []
 
   return (
     <div className="space-y-12">
@@ -33,46 +43,24 @@ export default function PublicationsPage() {
         <div className="space-y-10">
           {publications.map((pub, index) => (
             <div key={index} className="border-l-4 border-primary pl-6 py-2">
-              {language === "en" ? (
-                // AGU Citation Format for English
-                <>
-                  <p className="text-muted-foreground mb-3">
-                    {pub.authors}, ({pub.year}), {pub.title}, <span className="italic">{pub.journal}</span>, {pub.volume && pub.volume}{pub.pages && `, ${pub.pages}`}{pub.doi && `, doi:${pub.doi}`}.
-                  </p>
-                  {pub.link && (
-                    <a 
-                      href={pub.link} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-primary hover:underline text-sm mb-3 inline-block"
-                    >
-                      [PDF]
-                    </a>
-                  )}
-                  <p className="text-muted-foreground mt-2">
-                    {pub.description.en}
-                  </p>
-                </>
-              ) : (
-                // Chinese National Standard Format
-                <>
-                  <p className="text-muted-foreground mb-3">
-                    {pub.authors}. {pub.title}[J]. {pub.journal}, {pub.year}{pub.volume && `, ${pub.volume}`}{pub.pages && `: ${pub.pages}`}.
-                  </p>
-                  {pub.link && (
-                    <a 
-                      href={pub.link} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-primary hover:underline text-sm mb-3 inline-block"
-                    >
-                      [PDF]
-                    </a>
-                  )}
-                  <p className="text-muted-foreground mt-2">
-                    {pub.description.zh}
-                  </p>
-                </>
+              <p className="text-foreground mb-2 font-medium">
+                [{index + 1}] ({pub.year}) {pub.title}
+              </p>
+              <p className="text-muted-foreground mb-1">{pub.authors}</p>
+              <p className="text-muted-foreground mb-1">
+                <span className="italic">{pub.journal}</span>
+                {pub.volume && `, ${pub.volume}`}
+                {pub.pages && `, ${pub.pages}`}
+              </p>
+              {pub.link && (
+                <a
+                  href={pub.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline text-sm"
+                >
+                  DOI: {pub.doi ?? pub.link}
+                </a>
               )}
             </div>
           ))}
