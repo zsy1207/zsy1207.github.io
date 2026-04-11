@@ -1,27 +1,37 @@
 "use client"
 
 import { useLanguage } from "@/context/language-context"
+import { ReactNode } from "react"
 
 interface Publication {
   title: string;
-  authors: string;
+  authors: ReactNode;
   journal: string;
   year: number;
   volume?: string;
   pages?: string;
   doi?: string;
   link?: string;
-  description: {
-    en: string;
-    zh: string;
-  };
 }
 
 export default function PublicationsPage() {
   const { language } = useLanguage()
   
-  // Empty publications array - to be updated later
-  const publications: Publication[] = []
+  const publications: Publication[] = [
+    {
+      title: "Sequential tropical cyclones and intraseasonal waves drive the record-breaking circulation-convection decoupling of the 2023 south China sea summer monsoon onset",
+      authors: (
+        <>
+          Wang, X., <strong>Zhou, S.</strong>, & Zhou, W.
+        </>
+      ),
+      journal: "Atmospheric Research",
+      year: 2026,
+      pages: "108949",
+      doi: "10.1016/j.atmosres.2026.108949",
+      link: "https://doi.org/10.1016/j.atmosres.2026.108949",
+    },
+  ]
 
   return (
     <div className="space-y-12">
@@ -49,9 +59,6 @@ export default function PublicationsPage() {
                       [PDF]
                     </a>
                   )}
-                  <p className="text-muted-foreground mt-2">
-                    {pub.description.en}
-                  </p>
                 </>
               ) : (
                 // Chinese National Standard Format
@@ -69,9 +76,6 @@ export default function PublicationsPage() {
                       [PDF]
                     </a>
                   )}
-                  <p className="text-muted-foreground mt-2">
-                    {pub.description.zh}
-                  </p>
                 </>
               )}
             </div>
