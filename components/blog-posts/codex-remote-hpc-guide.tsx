@@ -107,6 +107,12 @@ Host xxx
   IdentityFile "C:\Users\你的用户名\.ssh\id_ed25519"
   IdentitiesOnly yes
   RemoteForward 1xxxx 127.0.0.1:7897
+  ServerAliveInterval 60
+  ServerAliveCountMax 5
+  TCPKeepAlive yes
+  ExitOnForwardFailure yes
+  Compression yes
+  ConnectTimeout 30
 ~~~
 
 Host 随便填。
