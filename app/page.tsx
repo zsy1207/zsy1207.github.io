@@ -10,7 +10,7 @@ import { useTheme } from "@/context/theme-context"
 interface SocialLink {
   name: string
   href: string
-  icon: "mail" | "github" | "google-scholar" | "researchgate" | "bilibili" | "wechat"
+  icon: "mail" | "github" | "google-scholar" | "researchgate" | "bilibili"
 }
 
 const SOCIAL_LINKS: SocialLink[] = [
@@ -38,11 +38,6 @@ const SOCIAL_LINKS: SocialLink[] = [
     name: "Bilibili",
     href: "https://space.bilibili.com/476997702",
     icon: "bilibili",
-  },
-  {
-    name: "WeChat",
-    href: "https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=&scene=124#wechat_redirect",
-    icon: "wechat",
   },
 ]
 
@@ -107,16 +102,6 @@ export default function HomePage() {
                   <Image
                     src="/bilibili-svgrepo-com.svg"
                     alt="Bilibili"
-                    width={28}
-                    height={28}
-                    sizes="28px"
-                    className={`h-7 w-7 ${theme === "dark" ? "invert" : ""}`}
-                  />
-                )}
-                {link.icon === "wechat" && (
-                  <Image
-                    src="/wechat-4.svg"
-                    alt="WeChat"
                     width={28}
                     height={28}
                     sizes="28px"

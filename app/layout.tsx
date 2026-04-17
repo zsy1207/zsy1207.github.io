@@ -33,13 +33,6 @@ export default function RootLayout({
                 <main className="flex-1 mx-auto w-full max-w-4xl px-4 sm:px-6 lg:px-8 py-6">
                   {children}
                 </main>
-                <footer className="py-6">
-                  <div className="container text-center max-w-4xl mx-auto">
-                    <p className="text-sm text-muted-foreground">
-                      © 2025 Zephyr. All rights reserved.
-                    </p>
-                  </div>
-                </footer>
               </div>
             </AnimationProvider>
           </LanguageProvider>
@@ -48,4 +41,3 @@ export default function RootLayout({
     </html>
   )
 }
-
