@@ -6,11 +6,11 @@ import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
 const CODEX_REMOTE_HPC_GUIDE_SOURCE = [
-  "# Codex 远程连接HPC指南",
+  "# Codex APP 远程连接HPC指南",
   "",
   "##### 全文总结",
   "",
-  "![Codex 远程连接HPC指南全文总结](/blog/blog1.png)",
+  "![Codex APP 远程连接HPC指南全文总结](/blog/blog1.png)",
   "",
   "##### 一.前提条件",
   "",

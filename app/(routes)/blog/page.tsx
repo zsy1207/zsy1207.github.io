@@ -55,8 +55,8 @@ const USE_GUIDE_POST: BlogPost = {
   id: "codex-remote-guide",
   slug: "codex-remote-guide",
   title: {
-    en: "Codex Remote HPC Guide",
-    zh: "Codex 远程连接HPC指南",
+    en: "Codex APP Remote HPC Guide",
+    zh: "Codex APP 远程连接HPC指南",
   },
   date: "2026-04-17",
   tags: ["experience", "expression"],
