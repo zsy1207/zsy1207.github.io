@@ -45,7 +45,7 @@ export function Navigation() {
       enabled && "transition-all duration-300 ease-out"
     )}>
       <div className="container max-w-4xl mx-auto grid h-16 grid-cols-[1fr_auto_1fr] items-center px-4">
-        <div className="flex items-center justify-start">
+        <div className="col-start-1 flex items-center justify-start">
           <Link href="/" className={cn(
             "flex items-center gap-0 group",
             enabled && "transition-all duration-300 ease-out"
@@ -71,7 +71,7 @@ export function Navigation() {
             )}>{language === "en" ? "Shiyang Zhou" : "Shiyang Zhou（周世扬）"}</span>
           </Link>
         </div>
-        <nav className="hidden md:flex items-center justify-center space-x-6 text-sm font-medium">
+        <nav className="col-start-2 hidden items-center justify-center space-x-6 text-sm font-medium md:flex">
           {NAV_ITEMS.map((item) => (
             <Link
               key={item.href}
@@ -89,6 +89,7 @@ export function Navigation() {
           ))}
         </nav>
         <div className={cn(
+          "col-start-3",
           "flex items-center justify-end gap-4",
           enabled && "transition-all duration-300 ease-out"
         )}>
