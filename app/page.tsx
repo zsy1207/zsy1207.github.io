@@ -26,7 +26,7 @@ const SOCIAL_LINKS: SocialLink[] = [
   },
   {
     name: "Google Scholar",
-    href: "https://scholar.google.com",
+    href: "https://scholar.google.com/citations?hl=en&user=0l54DjwAAAAJ",
     icon: "google-scholar",
   },
   {
