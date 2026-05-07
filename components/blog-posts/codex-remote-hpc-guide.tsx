@@ -151,7 +151,9 @@ const CODEX_REMOTE_HPC_GUIDE_SOURCE = [
   "",
   "- Default to CPU. Use GPU only when the task uses CUDA/GPU (e.g., torch.cuda, TensorFlow GPU, JAX GPU, CUDA-dependent code).",
   "",
-  "- Use the smallest sufficient resources and prefer the partition most likely to start sooner.",
+  "- Allocate compute resources to optimize time-to-result while preserving reliability, efficiency, and fair cluster usage. Base the request on the workload’s demonstrated or expected CPU/GPU scalability, memory needs, I/O behavior, and queue/start-time tradeoffs. Do not under-request resources in a way that risks failure or excessive runtime, and do not over-request resources the job cannot efficiently use.",
+
+  "- If suitable compute nodes are idle or likely to start quickly, consider increasing the requested CPU, memory, node, or GPU resources to a reasonably high level that the workload is expected to use efficiently, so the task can complete faster without clearly wasteful over-allocation or undue impact on other users.",
   "",
   "- Print the full Slurm command immediately before executing it.",
   "",
