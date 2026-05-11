@@ -37,6 +37,22 @@ export default function PublicationsPage() {
             </>
           ),
         },
+        {
+          citation: (
+            <>
+              Xiao, M., Yu, M., &amp; <strong>Zhou, S.</strong> (2026). Seasonal Differences in the Local and Teleconnected Climate
+              Responses to Vegetation Greening in China and India. Atmosphere, 17(5), 486.{" "}
+              <a
+                href="https://doi.org/10.3390/atmos17050486"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:underline"
+              >
+                https://doi.org/10.3390/atmos17050486
+              </a>
+            </>
+          ),
+        },
       ],
     },
   ]
