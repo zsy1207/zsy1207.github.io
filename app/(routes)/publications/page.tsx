@@ -23,6 +23,22 @@ export default function PublicationsPage() {
         {
           citation: (
             <>
+              Xiao, M., Yu, M., <strong>Zhou, S.</strong>, Zhu, J., Zhang, J., Chen, H., &amp; Chen, C. (2026). Climate responses to
+              vegetation greening in China and India and their combined effects. Advances in Atmospheric Sciences.{" "}
+              <a
+                href="https://doi.org/10.1007/s00376-026-6125-2"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:underline"
+              >
+                https://doi.org/10.1007/s00376-026-6125-2
+              </a>
+            </>
+          ),
+        },
+        {
+          citation: (
+            <>
               Wang, X., <strong>Zhou, S.</strong>, &amp; Zhou, W. (2026). Sequential tropical cyclones and intraseasonal waves drive the
               record-breaking circulation-convection decoupling of the 2023 south China sea summer monsoon onset. Atmospheric
               Research, 108949.{" "}
