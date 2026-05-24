@@ -60,7 +60,7 @@ export default function ResumePage() {
               <div className="flex items-baseline">
                 <div className="mr-2">•</div>
                 <div className="text-sm">
-                  {language === "en" ? "Research Direction: Monsoons and Extreme Weather" : "研究方向：季风与极端天气气候"}
+                  {language === "en" ? "Research Direction: Ocean-Ice-Atmosphere Interactions, Climate Dynamics, Monsoons, and Extreme Weather" : "研究方向：海-冰-气相互作用、气候动力学、季风与极端天气"}
                 </div>
               </div>
             </div>
@@ -118,50 +118,21 @@ export default function ResumePage() {
             <div className="flex justify-between items-start">
               <h3 className="font-bold" style={{maxWidth: '75%'}}>
                 {language === "en"
-                  ? "Process and Mechanism of the Impact of Greening in the Indian Region on Northern Hemisphere Summer Climate"
-                  : "印度地区绿化对北半球夏季气候的影响过程和机理"
+                  ? "Teleconnection Between Northwest Pacific Convection and North American Temperature During Seasonal Transitions"
+                  : "季节转换期西北太平洋对流-北美气温遥相关"
                 }
               </h3>
               <p className="text-sm text-right">
-                {language === "en" ? "Mar 2021 - Jun 2023" : "2021年03月 - 2023年06月"}
+                {language === "en" ? "May 2026 - Jun 2028" : "2026年05月 - 2028年06月"}
               </p>
             </div>
-            <div className="flex justify-between items-start mt-1">
-              <p>
-                {language === "en"
-                  ? "Project Lead"
-                  : "项目负责人"
-                }
-              </p>
-            </div>
-            <div className="mt-2 space-y-1"> {/* Added space-y-1 for consistent spacing */}
-              {/* --- Applied items-baseline here --- */}
+            <div className="mt-2 space-y-1">
               <div className="flex items-baseline">
                 <div className="mr-2">•</div>
                 <div className="text-sm">
                   {language === "en"
-                    ? "Quantitatively analyzed the dynamic changes in global vegetation over the past three decades using NASA's GIMMS LAI (Leaf Area Index) dataset."
-                    : "基于NASA的GIMMS LAI（叶面积指数）数据集，量化分析了近三十年全球植被动态变化。"
-                  }
-                </div>
-              </div>
-              {/* --- Applied items-baseline here --- */}
-              <div className="flex items-baseline">
-                <div className="mr-2">•</div>
-                <div className="text-sm">
-                  {language === "en"
-                    ? "Utilized the CAM-CLM coupled model for numerical simulation experiments; designed and implemented vegetation increase experiments and control experiments, the comparative analysis of which revealed the significant impact of vegetation changes in the Indian region on local and regional temperature and precipitation distribution."
-                    : "利用CAM-CLM耦合模式进行数值模拟实验，设计并实施了植被增加实验与控制实验，对比分析结果揭示了印度地区植被变化对局地以及区域气温与降水分布的显著影响。"
-                  }
-                </div>
-              </div>
-              {/* --- Applied items-baseline here --- */}
-              <div className="flex items-baseline">
-                <div className="mr-2">•</div>
-                <div className="text-sm">
-                  {language === "en"
-                    ? "Thoroughly analyzed the impact mechanism of vegetation changes in the Indian region on climate, systematically elucidating the impact process and mechanism from the perspectives of atmospheric circulation adjustments and local thermal exchange."
-                    : "深入剖析了印度地区植被变化对气候的影响机制，从环流调整和局地热力交换两个方面，系统阐释了其影响过程与作用机理。"
+                    ? "Focuses on the teleconnection between convective anomalies over the Northwest Pacific and North American temperature variations during seasonal transitions, revealing tropical-midlatitude climate linkage features; applies MCA, composite analysis, and regression analysis to investigate circulation propagation pathways and physical mechanisms through which Northwest Pacific convection affects North American temperatures, identifying a climate dynamics pathway that differs from traditional views."
+                    : "聚焦季节转换期西北太平洋对流异常与北美气温变化之间的遥相关关系，揭示热带—中高纬气候联动特征；通过MCA、合成分析、回归分析等方法，探讨西北太平洋对流影响北美气温的环流传播路径与物理机制，发现了不同于传统观点的气候动力路径。"
                   }
                 </div>
               </div>
@@ -170,52 +141,23 @@ export default function ResumePage() {
 
           <div>
             <div className="flex justify-between items-start">
-              <h3 className="font-bold">
+              <h3 className="font-bold" style={{maxWidth: '75%'}}>
                 {language === "en"
-                  ? "Seamless Prediction of the South China Sea Summer Monsoon Onset"
-                  : "南海夏季风爆发的无缝隙预报研究"
+                  ? "Process and Mechanism of the Impact of Greening in the Indian Region on Northern Hemisphere Summer Climate"
+                  : "印度地区绿化对北半球夏季气候的影响过程和机理"
                 }
               </h3>
               <p className="text-sm text-right">
-                {language === "en" ? "Jan 2022 - Jan 2023" : "2022年01月 - 2023年01月"}
+                {language === "en" ? "Mar 2021 - Jun 2023" : "2021年03月 - 2023年06月"}
               </p>
             </div>
-            <div className="flex justify-between items-start mt-1">
-              <p>
-                {language === "en"
-                  ? "Main Participant"
-                  : "主要参与者"
-                }
-              </p>
-            </div>
-            <div className="mt-2 space-y-1"> {/* Added space-y-1 for consistent spacing */}
-              {/* --- Applied items-baseline here --- */}
+            <div className="mt-2 space-y-1">
               <div className="flex items-baseline">
                 <div className="mr-2">•</div>
                 <div className="text-sm">
                   {language === "en"
-                    ? "Project funded by the National Undergraduate Innovation and Entrepreneurship Training Program."
-                    : "受国家级大学生创新创业训练计划项目资助。"
-                  }
-                </div>
-              </div>
-              {/* --- Applied items-baseline here --- */}
-              <div className="flex items-baseline">
-                <div className="mr-2">•</div>
-                <div className="text-sm">
-                  {language === "en"
-                    ? "Primarily responsible for the configuration, execution, and partial data processing and visualization for CAMS-CSM numerical model experiments."
-                    : "主要负责CAMS-CSM数值模式实验的配置、运行和部分的数据处理以及绘图。"
-                  }
-                </div>
-              </div>
-              {/* --- Applied items-baseline here --- */}
-              <div className="flex items-baseline">
-                <div className="mr-2">•</div>
-                <div className="text-sm">
-                  {language === "en"
-                    ? "The project investigated the influence of different CAMS-CSM model configurations on the predictive skill for the South China Sea summer monsoon onset, providing insights for potential model improvements based on the assessment results."
-                    : "项目探究了CAMS-CSM模式不同配置下对于预测南海夏季风能力的影响，并根据评估的结果为模式改进提供思路。"
+                    ? "Based on NASA GIMMS LAI data, quantifies global vegetation change characteristics over the past three decades; uses the CAM-CLM coupled model to conduct vegetation increase and control experiments, evaluating the impacts of Indian vegetation change on temperature and precipitation; reveals the mechanisms by which Indian vegetation change affects climate from the perspectives of circulation adjustment and local thermal exchange."
+                    : "基于 NASA GIMMS LAI 数据，量化近三十年全球植被变化特征；利用 CAM-CLM 耦合模式开展植被增加与控制实验，评估印度植被变化对气温和降水的影响；从环流调整与局地热力交换两方面，揭示印度植被变化影响气候的机制。"
                   }
                 </div>
               </div>
@@ -239,6 +181,18 @@ export default function ResumePage() {
             </h3>
             <p className="text-sm text-right">
               {language === "en" ? "Honorable Mention" : "二等奖"}
+            </p>
+          </div>
+
+          <div className="flex justify-between items-start">
+            <h3 className="font-semibold">
+              {language === "en"
+                ? "\"Changwang Cup\" Meteorology Talent Competition Preliminary Round"
+                : "\"长望杯\"气象达人赛初赛"
+              }
+            </h3>
+            <p className="text-sm text-right">
+              {language === "en" ? "Third Prize" : "三等奖"}
             </p>
           </div>
 

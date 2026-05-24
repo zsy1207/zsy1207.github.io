@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Shiyang (Zephyr) Zhou",
   description:
-    "M.Sc. student in Meteorology at Fudan University; monsoons and extreme weather research.",
+    "M.Sc. student in Meteorology at Fudan University; ocean-ice-atmosphere interactions, climate dynamics, monsoons, and extreme weather research.",
   icons: {
     icon: "/weather-icons-59-svgrepo-com.svg",
   },
