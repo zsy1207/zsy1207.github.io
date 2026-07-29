@@ -28,6 +28,10 @@ const NAV_ITEMS: NavItem[] = [
   { title: { en: "Projects", zh: "项目" }, href: "/projects" },
 ]
 
+function isNavItemActive(pathname: string, href: string) {
+  return pathname === href || (href !== "/" && pathname.startsWith(`${href}/`))
+}
+
 export function Navigation() {
   const pathname = usePathname()
   const { language } = useLanguage()
@@ -79,7 +83,7 @@ export function Navigation() {
               className={cn(
                 "transition-colors hover:text-foreground/80 py-1 px-1 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-primary after:w-0 hover:after:w-full",
                 enabled && "after:transition-all after:duration-300",
-                pathname === item.href
+                isNavItemActive(pathname, item.href)
                   ? "text-foreground border-b-2 border-primary"
                   : "text-foreground/60"
               )}
@@ -120,7 +124,7 @@ export function Navigation() {
                 onClick={() => setMobileMenuOpen(false)}
                 className={cn(
                   "transition-colors hover:text-foreground/80 py-2 px-2",
-                  pathname === item.href
+                  isNavItemActive(pathname, item.href)
                     ? "text-foreground font-bold border-l-4 border-primary pl-2"
                     : "text-foreground/60"
                 )}

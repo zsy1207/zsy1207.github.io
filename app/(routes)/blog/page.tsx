@@ -1,7 +1,8 @@
 "use client"
 
 import { useState } from "react"
-import { CodexRemoteHpcGuidePost } from "@/components/blog-posts/codex-remote-hpc-guide"
+import Link from "next/link"
+import { BLOG_POSTS } from "@/content/blog-posts"
 import { useLanguage } from "@/context/language-context"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
@@ -14,21 +15,6 @@ import {
 interface Tag {
   id: string
   name: {
-    en: string
-    zh: string
-  }
-}
-
-interface BlogPost {
-  id: string
-  slug: string
-  title: {
-    en: string
-    zh: string
-  }
-  date: string
-  tags: string[]
-  excerpt: {
     en: string
     zh: string
   }
@@ -51,23 +37,6 @@ const TAGS: Record<string, Tag> = {
   },
 }
 
-const USE_GUIDE_POST: BlogPost = {
-  id: "codex-remote-guide",
-  slug: "codex-remote-guide",
-  title: {
-    en: "Codex APP Remote HPC Guide",
-    zh: "Codex APP 远程连接HPC指南",
-  },
-  date: "2026-04-17",
-  tags: ["experience", "expression"],
-  excerpt: {
-    en: "From SSH keys and port forwarding to Codex remote access, this guide turns the original notes into a cleaner HPC workflow walkthrough.",
-    zh: "从密钥登录、端口转发到 Codex 远程连接，把 use.md 原文整理成一篇更适合阅读的博客文章。",
-  },
-}
-
-const BLOG_POSTS: BlogPost[] = [USE_GUIDE_POST]
-
 function getTagIcon(tagId: string) {
   switch (tagId) {
     case "experience":
@@ -83,12 +52,7 @@ export default function BlogPage() {
   const { language } = useLanguage()
   const [searchQuery, setSearchQuery] = useState("")
   const [selectedTag, setSelectedTag] = useState<string | null>(null)
-  const [selectedPostSlug, setSelectedPostSlug] = useState<string | null>(null)
   const languageKey = language === "en" ? "en" : "zh"
-
-  if (selectedPostSlug === USE_GUIDE_POST.slug) {
-    return <CodexRemoteHpcGuidePost language={languageKey} onBack={() => setSelectedPostSlug(null)} />
-  }
 
   const allTagIds = Array.from(new Set(BLOG_POSTS.flatMap((post) => post.tags)))
 
@@ -148,10 +112,9 @@ export default function BlogPage() {
       <div className="space-y-6">
         {filteredPosts.map((post) => (
           <Card key={post.id} className="group overflow-hidden">
-            <button
-              type="button"
+            <Link
+              href={`/blog/${post.slug}`}
               className="block w-full p-6 text-left sm:p-8"
-              onClick={() => setSelectedPostSlug(post.slug)}
             >
               <h2 className="text-2xl font-semibold tracking-tight transition-colors group-hover:text-foreground">
                 {post.title[languageKey]}
@@ -183,7 +146,7 @@ export default function BlogPage() {
                 {languageKey === "en" ? "Read more" : "阅读更多"}
                 <span className="ml-2 transition-transform duration-300 group-hover:translate-x-1">→</span>
               </div>
-            </button>
+            </Link>
           </Card>
         ))}
 
