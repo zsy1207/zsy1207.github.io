@@ -113,7 +113,7 @@ export default function BlogPage() {
         {filteredPosts.map((post) => (
           <Card key={post.id} className="group overflow-hidden">
             <Link
-              href={`/blog/${post.slug}`}
+              href={`/blogs/${post.slug}`}
               className="block w-full p-6 text-left sm:p-8"
             >
               <h2 className="text-2xl font-semibold tracking-tight transition-colors group-hover:text-foreground">

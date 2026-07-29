@@ -196,7 +196,7 @@ Custom SVG icons integrated using Next.js Image component:
 
 - Edit content in page files to replace placeholder text
 - Update resume information in `app/(routes)/resume/page.tsx`
-- Add blog posts in `app/(routes)/blog/page.tsx`
+- Add blog posts in `app/(routes)/blogs/page.tsx`
 - Add news items in `app/(routes)/news/page.tsx`
 - Replace the avatar image and SVG icons in the `public` folder
 

@@ -14,7 +14,7 @@ export function BlogPostPage({ post }: { post: BlogPost }) {
     <BlogPostArticle
       post={post}
       language={languageKey}
-      onBack={() => router.push("/blog")}
+      onBack={() => router.push("/blogs")}
     />
   )
 }
