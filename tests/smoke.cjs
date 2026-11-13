@@ -181,6 +181,11 @@ async function main() {
 }
 
 main().catch((error) => {
+  if (process.env.GITHUB_ACTIONS === 'true') {
+    const message = `${error.message} (last passed: ${passed.at(-1) || 'none'})`
+      .replaceAll('%', '%25').replaceAll('\r', '%0D').replaceAll('\n', '%0A')
+    console.error(`::error title=Browser regression failure::${message}`)
+  }
   console.error(error)
   process.exitCode = 1
 })
