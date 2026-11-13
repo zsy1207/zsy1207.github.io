@@ -89,7 +89,7 @@ If deployment fails or site doesn't update:
 
 1. Install dependencies:
    ```bash
-   npm install
+   npm ci
    ```
 
 2. Run the development server:
@@ -113,7 +113,7 @@ If deployment fails or site doesn't update:
 │   └── deploy.yml - Workflow for GitHub Pages deployment
 ├── app/ - Next.js App Router
 │   ├── (routes)/ - Page routes
-│   │   ├── blog/ - Blog page
+│   │   ├── blogs/ - Blog list and article pages
 │   │   ├── news/ - News page with timeline
 │   │   └── resume/ - Resume page
 │   ├── globals.css - Global styles
@@ -130,7 +130,7 @@ If deployment fails or site doesn't update:
 ├── lib/ - Utility functions
 │   └── utils.ts - Helper functions
 ├── public/ - Static assets
-│   ├── avatar.png - Profile avatar
+│   ├── photo.jpg - Profile photo
 │   ├── bilibili-svgrepo-com.svg - Bilibili icon
 │   └── researchgate-svgrepo-com.svg - ResearchGate icon
 ├── .nojekyll - Tells GitHub Pages not to use Jekyll processing
@@ -196,7 +196,7 @@ Custom SVG icons integrated using Next.js Image component:
 
 - Edit content in page files to replace placeholder text
 - Update resume information in `app/(routes)/resume/page.tsx`
-- Add blog posts in `app/(routes)/blogs/page.tsx`
+- Add blog posts in `content/blog-posts/` and register them in `content/blog-posts/index.ts`
 - Add news items in `app/(routes)/news/page.tsx`
 - Replace the avatar image and SVG icons in the `public` folder
 
