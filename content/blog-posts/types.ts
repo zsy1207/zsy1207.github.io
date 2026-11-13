@@ -1,7 +1,5 @@
-export interface LocalizedText {
-  en: string
-  zh: string
-}
+import type { LocalizedText } from "@/content/types"
+export type { LocalizedText } from "@/content/types"
 
 export interface BlogPost {
   id: string

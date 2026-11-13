@@ -23,12 +23,30 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "18"
+          node-version-file: ".nvmrc"
           cache: npm
       - name: Install dependencies
         run: npm ci
+      - name: Lint
+        run: npm run lint
+      - name: Type check
+        run: npm run typecheck
+      - name: Unit tests
+        run: npm test
       - name: Build with Next.js
         run: npm run build
+      - name: Install browser
+        run: npx playwright install --with-deps chromium
+      - name: Browser regression checks
+        run: |
+          npm start > "$RUNNER_TEMP/site.log" 2>&1 &
+          SITE_PID=$!
+          trap 'kill "$SITE_PID" 2>/dev/null || true' EXIT
+          for attempt in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:3000/ > /dev/null; then break; fi
+            sleep 1
+          done
+          npm run test:e2e
       - name: Create .nojekyll file
         run: touch out/.nojekyll
       - name: Upload artifact
@@ -45,4 +63,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4 
+        uses: actions/deploy-pages@v4

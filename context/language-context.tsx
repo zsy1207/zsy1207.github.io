@@ -1,45 +1,22 @@
 "use client"
 
-import React, { createContext, useContext, useState, useEffect } from "react"
+import { createContext, useContext, useMemo, type ReactNode } from "react"
+import { usePreference } from "@/lib/use-preference"
 
-export type Language = "en" | "zh"
+import type { Language } from "@/content/types"
+export type { Language } from "@/content/types"
+const LANGUAGES: readonly Language[] = ["en", "zh"]
+interface LanguageContextType { language: Language; setLanguage: (language: Language) => void }
+const LanguageContext = createContext<LanguageContextType | null>(null)
 
-interface LanguageContextType {
-  language: Language
-  setLanguage: (lang: Language) => void
+export function LanguageProvider({ children }: { children: ReactNode }) {
+  const { value: language, update: setLanguage } = usePreference("language", "en", LANGUAGES)
+  const value = useMemo(() => ({ language, setLanguage }), [language, setLanguage])
+  return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>
 }
 
-const LanguageContext = createContext<LanguageContextType>({
-  language: "en",
-  setLanguage: () => {},
-})
-
-export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguage] = useState<Language>("en")
-  
-  // Prefer English by default; load saved preference if available
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const saved = window.localStorage.getItem("language") as Language | null
-      if (saved === "en" || saved === "zh") {
-        setLanguage(saved)
-      } else {
-        setLanguage("en")
-      }
-    }
-  }, [])
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.localStorage.setItem("language", language)
-    }
-  }, [language])
-
-  return (
-    <LanguageContext.Provider value={{ language, setLanguage }}>
-      {children}
-    </LanguageContext.Provider>
-  )
+export function useLanguage() {
+  const context = useContext(LanguageContext)
+  if (!context) throw new Error("useLanguage requires LanguageProvider")
+  return context
 }
-
-export const useLanguage = () => useContext(LanguageContext)

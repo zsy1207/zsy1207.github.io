@@ -1,56 +1,24 @@
 "use client"
 
-import React, { createContext, useContext, useState, useEffect } from "react"
+import { createContext, useContext, useEffect, useMemo, type ReactNode } from "react"
+import { usePreference } from "@/lib/use-preference"
 
 type Theme = "light" | "dark"
+const THEMES: readonly Theme[] = ["light", "dark"]
+function systemTheme(): Theme { return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light" }
+const ThemeContext = createContext<{ theme: Theme; setTheme: (theme: Theme) => void } | null>(null)
 
-interface ThemeContextType {
-  theme: Theme
-  setTheme: (theme: Theme) => void
+export function ThemeProvider({ children }: { children: ReactNode }) {
+  const { value: theme, update: setTheme, ready } = usePreference("theme", "light", THEMES, systemTheme)
+  useEffect(() => {
+    if (ready) document.documentElement.classList.toggle("dark", theme === "dark")
+  }, [theme, ready])
+  const value = useMemo(() => ({ theme, setTheme }), [theme, setTheme])
+  return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
 }
 
-const ThemeContext = createContext<ThemeContextType>({
-  theme: "light",
-  setTheme: () => {},
-})
-
-export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>("light")
-  const [mounted, setMounted] = useState(false)
-
-  // Use useEffect to avoid hydration mismatch
-  useEffect(() => {
-    setMounted(true)
-    
-    // Check if user has a theme preference stored
-    const storedTheme = localStorage.getItem("theme") as Theme
-    if (storedTheme) {
-      setTheme(storedTheme)
-    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      setTheme("dark")
-    }
-  }, [])
-
-  useEffect(() => {
-    if (!mounted) return
-    
-    const root = window.document.documentElement
-    root.classList.remove("light", "dark")
-    root.classList.add(theme)
-    
-    localStorage.setItem("theme", theme)
-  }, [theme, mounted])
-
-  // Provide a stable context value that won't change on every render
-  const contextValue = React.useMemo(() => {
-    return { theme, setTheme }
-  }, [theme])
-  
-  return (
-    <ThemeContext.Provider value={contextValue}>
-      {children}
-    </ThemeContext.Provider>
-  )
+export function useTheme() {
+  const context = useContext(ThemeContext)
+  if (!context) throw new Error("useTheme requires ThemeProvider")
+  return context
 }
-
-export const useTheme = () => useContext(ThemeContext)

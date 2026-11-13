@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useLanguage } from "@/context/language-context"
@@ -12,21 +12,7 @@ import { useTheme } from "@/context/theme-context"
 import { useAnimation } from "@/context/animation-context"
 import { Menu, X } from "lucide-react"
 
-interface NavItem {
-  title: {
-    en: string
-    zh: string
-  }
-  href: string
-}
-
-const NAV_ITEMS: NavItem[] = [
-  { title: { en: "Home", zh: "首页" }, href: "/" },
-  { title: { en: "Resume", zh: "简历" }, href: "/resume" },
-  { title: { en: "Publications", zh: "出版物" }, href: "/publications" },
-  { title: { en: "Blogs", zh: "博客" }, href: "/blogs" },
-  { title: { en: "Projects", zh: "项目" }, href: "/projects" },
-]
+import { NAV_ITEMS } from "@/content/navigation"
 
 function isNavItemActive(pathname: string, href: string) {
   return pathname === href || (href !== "/" && pathname.startsWith(`${href}/`))
@@ -38,11 +24,25 @@ export function Navigation() {
   const { theme } = useTheme()
   const { enabled } = useAnimation()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  
+  const menuButton = useRef<HTMLButtonElement>(null)
+
+  useEffect(() => { setMobileMenuOpen(false) }, [pathname])
+  useEffect(() => {
+    if (!mobileMenuOpen) return
+    function closeOnEscape(event: KeyboardEvent) {
+      if (event.key === "Escape" && !event.defaultPrevented) {
+        setMobileMenuOpen(false)
+        menuButton.current?.focus()
+      }
+    }
+    document.addEventListener("keydown", closeOnEscape)
+    return () => document.removeEventListener("keydown", closeOnEscape)
+  }, [mobileMenuOpen])
+
   const toggleMobileMenu = () => {
     setMobileMenuOpen((prev) => !prev)
   }
-  
+
   return (
     <header className={cn(
       "sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60",
@@ -58,11 +58,11 @@ export function Navigation() {
               "flex items-center justify-center w-10 h-10",
               enabled && "transition-transform duration-300 group-hover:rotate-12"
             )}>
-              <Image 
-                src="/weather-icons-59-svgrepo-com.svg" 
-                alt="Weather Icon" 
-                width={32} 
-                height={32} 
+              <Image
+                src="/weather-icons-59-svgrepo-com.svg"
+                alt="Weather Icon"
+                width={32}
+                height={32}
                 className={cn(
                   theme === "dark" ? "invert" : "",
                   enabled && "transition-all duration-300 ease-out"
@@ -79,6 +79,7 @@ export function Navigation() {
           {NAV_ITEMS.map((item) => (
             <Link
               key={item.href}
+              aria-current={isNavItemActive(pathname, item.href) ? "page" : undefined}
               href={item.href}
               className={cn(
                 "transition-colors hover:text-foreground/80 py-1 px-1 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-primary after:w-0 hover:after:w-full",
@@ -99,8 +100,12 @@ export function Navigation() {
         )}>
           <ThemeToggle />
           <LanguageSwitcher />
-          <button 
-            onClick={toggleMobileMenu} 
+          <button
+            ref={menuButton}
+            type="button"
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-navigation"
+            onClick={toggleMobileMenu}
             className="md:hidden focus:outline-none"
             aria-label={mobileMenuOpen ? "Close Menu" : "Open Menu"}
           >
@@ -112,10 +117,10 @@ export function Navigation() {
           </button>
         </div>
       </div>
-      
+
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden p-4 bg-background border-t">
+        <div id="mobile-navigation" className="md:hidden p-4 bg-background border-t">
           <nav className="flex flex-col space-y-4">
             {NAV_ITEMS.map((item) => (
               <Link

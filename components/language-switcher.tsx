@@ -25,8 +25,9 @@ export function LanguageSwitcher() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button 
-          variant="outline" 
+        <Button
+          aria-label={language === "en" ? "Select language" : "选择语言"}
+          variant="outline"
           size="sm"
           className={cn(
             enabled && "transition-all duration-200 ease-out"
@@ -55,13 +56,13 @@ export function LanguageSwitcher() {
             variants={enabled ? dropdownItemVariants : undefined}
             initial="hidden"
             animate="visible"
-            transition={{ 
-              duration: 0.15, 
+            transition={{
+              duration: 0.15,
               delay: 0.05,
-              ease: [0.25, 0.1, 0.25, 1.0] 
+              ease: [0.25, 0.1, 0.25, 1.0]
             }}
           >
-            <DropdownMenuItem 
+            <DropdownMenuItem
               onClick={() => setLanguage("en")}
               className={cn(
                 enabled && "transition-all duration-200 ease-out"
@@ -74,13 +75,13 @@ export function LanguageSwitcher() {
             variants={enabled ? dropdownItemVariants : undefined}
             initial="hidden"
             animate="visible"
-            transition={{ 
-              duration: 0.15, 
+            transition={{
+              duration: 0.15,
               delay: 0.1,
-              ease: [0.25, 0.1, 0.25, 1.0] 
+              ease: [0.25, 0.1, 0.25, 1.0]
             }}
           >
-            <DropdownMenuItem 
+            <DropdownMenuItem
               onClick={() => setLanguage("zh")}
               className={cn(
                 enabled && "transition-all duration-200 ease-out"

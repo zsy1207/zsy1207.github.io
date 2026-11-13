@@ -1,14 +1,21 @@
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import localFont from "next/font/local"
 import "./globals.css"
 import { ThemeProvider } from "@/context/theme-context"
 import { LanguageProvider } from "@/context/language-context"
 import { AnimationProvider } from "@/context/animation-context"
 import { Navigation } from "@/components/navigation"
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = localFont({
+  src: "../node_modules/@fontsource-variable/inter/files/inter-latin-wght-normal.woff2",
+  weight: "100 900",
+  style: "normal",
+  display: "swap",
+  adjustFontFallback: "Arial",
+})
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://zsy1207.github.io"),
   title: "Shiyang (Zephyr) Zhou",
   description:
     "M.Sc. student in Meteorology at Fudan University; ocean-ice-atmosphere interactions, climate dynamics, monsoons, and extreme weather research.",

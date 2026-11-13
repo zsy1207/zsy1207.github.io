@@ -2,19 +2,20 @@
 
 import { useRouter } from "next/navigation"
 import { useLanguage } from "@/context/language-context"
-import type { BlogPost } from "@/content/blog-posts"
+import type { ReactNode } from "react"
 import { BlogPostArticle } from "./blog-post-article"
 
-export function BlogPostPage({ post }: { post: BlogPost }) {
+export function BlogPostPage({ children }: { children: ReactNode }) {
   const router = useRouter()
   const { language } = useLanguage()
   const languageKey = language === "en" ? "en" : "zh"
 
   return (
     <BlogPostArticle
-      post={post}
       language={languageKey}
       onBack={() => router.push("/blogs")}
-    />
+    >
+      {children}
+    </BlogPostArticle>
   )
 }
