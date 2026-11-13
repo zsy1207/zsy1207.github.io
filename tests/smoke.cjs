@@ -1,5 +1,11 @@
 const assert = require('node:assert/strict')
 const { chromium } = require('playwright')
+const { expect: baseExpect } = require('playwright/test')
+
+// Network idle does not imply React has restored preferences or committed input updates.
+const expect = baseExpect.configure({ timeout: 15000 })
+const cpuThrottle = Number(process.env.SMOKE_CPU_THROTTLE || 1)
+assert.ok(Number.isFinite(cpuThrottle) && cpuThrottle >= 1, 'SMOKE_CPU_THROTTLE must be a number >= 1')
 
 const baseURL = process.env.HOMEPAGE_TEST_URL || 'http://127.0.0.1:3000'
 const routes = [
@@ -13,6 +19,49 @@ function pass(name) {
   console.log(`PASS ${name}`)
 }
 
+async function newPage(owner, options) {
+  const page = await owner.newPage(options)
+  if (cpuThrottle > 1) {
+    const session = await page.context().newCDPSession(page)
+    await session.send('Emulation.setCPUThrottlingRate', { rate: cpuThrottle })
+  }
+  return page
+}
+
+async function assertNoNewMobileOverflow(page, route) {
+  await page.evaluate(() => document.fonts.ready)
+  if (route !== '/publications') {
+    assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), `${route}: no added mobile overflow`)
+    return
+  }
+
+  // The original UI has one unbroken DOI link that overflows at 390px.
+  // Its text width varies between browser/font engines; constrain the exact known
+  // element instead of granting arbitrary overflow pixels to the entire page.
+  const layout = await page.evaluate(() => {
+    const knownHref = 'https://doi.org/10.1016/j.atmosres.2026.108949'
+    const elements = Array.from(document.querySelectorAll('body *'))
+    const describe = (element, rect) => ({
+      tag: element.tagName,
+      href: element.getAttribute('href'),
+      left: rect.left,
+      right: rect.right,
+      width: rect.width,
+    })
+    const knownLinks = elements.filter((element) => element.tagName === 'A' && element.getAttribute('href') === knownHref)
+    const unexpected = elements.flatMap((element) => Array.from(element.getClientRects())
+      .filter((rect) => rect.left < -1 || rect.right > innerWidth + 1)
+      .filter((rect) => !(knownLinks.includes(element) && rect.left >= -1))
+      .map((rect) => describe(element, rect)))
+    const knownRight = Math.max(innerWidth, ...knownLinks.flatMap((element) => Array.from(element.getClientRects()).map((rect) => rect.right)))
+    return { viewport: innerWidth, scrollWidth: document.documentElement.scrollWidth, knownLinkCount: knownLinks.length, knownRight, unexpected }
+  })
+  const diagnostic = `${route}: no added mobile overflow ${JSON.stringify(layout)}`
+  assert.equal(layout.knownLinkCount, 1, diagnostic)
+  assert.deepEqual(layout.unexpected, [], diagnostic)
+  assert.ok(layout.scrollWidth <= Math.ceil(layout.knownRight) + 1, diagnostic)
+}
+
 async function main() {
   const browser = await chromium.launch({
     headless: true,
@@ -20,7 +69,7 @@ async function main() {
   })
 
   try {
-    const page = await browser.newPage({ viewport: { width: 1440, height: 1000 } })
+    const page = await newPage(browser, { viewport: { width: 1440, height: 1000 } })
     const errors = []
     page.on('pageerror', (error) => errors.push(error.message))
 
@@ -37,15 +86,17 @@ async function main() {
     await page.locator('header button').filter({ hasText: 'EN' }).click()
     await page.getByRole('menuitem', { name: '中文', exact: true }).click()
     await page.waitForFunction(() => localStorage.getItem('language') === 'zh')
+    await expect(page.locator('main')).toContainText('我目前正在')
     const chineseContent = await page.locator('main').innerText()
     assert.match(chineseContent, /[\u4e00-\u9fff]/)
     await page.reload({ waitUntil: 'networkidle' })
-    assert.equal(await page.locator('main').innerText(), chineseContent)
+    await expect.poll(() => page.locator('main').innerText()).toBe(chineseContent)
     pass('language selection survives reload')
 
     await page.locator('header button').filter({ hasText: '中文' }).click()
     await page.getByRole('menuitem', { name: 'English', exact: true }).click()
     await page.waitForFunction(() => localStorage.getItem('language') === 'en')
+    await expect(page.locator('main')).toContainText('I am currently pursuing')
     pass('language switches back to English')
 
     const themeControl = page.locator('header [role="button"], header button[aria-label*="theme"], header button[aria-label*="主题"], header button[aria-label*="mode"]').first()
@@ -53,7 +104,7 @@ async function main() {
     await themeControl.click()
     await page.waitForFunction((previous) => document.documentElement.classList.contains('dark') !== previous, wasDark)
     await page.reload({ waitUntil: 'networkidle' })
-    assert.equal(await page.locator('html').evaluate((html) => html.classList.contains('dark')), !wasDark)
+    await expect.poll(() => page.locator('html').evaluate((html) => html.classList.contains('dark'))).toBe(!wasDark)
     pass('theme selection survives reload')
     await themeControl.focus()
     await page.keyboard.press('Enter')
@@ -67,20 +118,21 @@ async function main() {
       const search = page.locator('main input[type="search"]')
       const originalContent = await page.locator('main').innerText()
       await search.fill('zzznomatchzzzz')
+      await expect.poll(() => page.locator('main').innerText()).not.toBe(originalContent)
       const emptyContent = await page.locator('main').innerText()
       assert.notEqual(emptyContent, originalContent, `${route}: search filters results`)
       assert.match(emptyContent, /no|没有|未找到/i, `${route}: empty state`)
       await search.fill('')
-      assert.equal(await page.locator('main').innerText(), originalContent)
+      await expect.poll(() => page.locator('main').innerText()).toBe(originalContent)
       pass(`${route} search and reset`)
     }
 
     const researchProject = page.locator('main a[href="https://github.com/zsy1207/atmospheric-science-research"]')
-    assert.ok(await researchProject.isVisible())
+    await expect(researchProject).toBeVisible()
     await page.getByText('Userscript', { exact: true }).first().click()
-    assert.equal(await researchProject.count(), 0)
+    await expect(researchProject).toHaveCount(0)
     await page.getByText('All', { exact: true }).click()
-    assert.ok(await researchProject.isVisible())
+    await expect(researchProject).toBeVisible()
     pass('project tag filter and reset')
 
     await page.setViewportSize({ width: 390, height: 844 })
@@ -89,26 +141,24 @@ async function main() {
     await page.locator('header button').filter({ hasText: 'EN' }).click()
     await page.keyboard.press('Escape')
     await page.getByRole('menu').waitFor({ state: 'hidden' })
-    assert.equal(await page.getByRole('button', { name: 'Close Menu', exact: true }).getAttribute('aria-expanded'), 'true')
+    await expect(page.getByRole('button', { name: 'Close Menu', exact: true })).toHaveAttribute('aria-expanded', 'true')
     pass('Escape dismisses only the topmost language dropdown')
     await page.keyboard.press('Escape')
     const menuButton = page.getByRole('button', { name: 'Open Menu', exact: true })
-    assert.equal(await menuButton.getAttribute('aria-expanded'), 'false')
-    assert.ok(await menuButton.evaluate((button) => button === document.activeElement))
+    await expect(menuButton).toHaveAttribute('aria-expanded', 'false')
+    await expect(menuButton).toBeFocused()
     await page.keyboard.press('Enter')
-    assert.equal(await page.getByRole('button', { name: 'Close Menu', exact: true }).getAttribute('aria-expanded'), 'true')
+    await expect(page.getByRole('button', { name: 'Close Menu', exact: true })).toHaveAttribute('aria-expanded', 'true')
     pass('mobile menu supports Escape and keyboard reopening')
     await page.locator('header nav:visible a[href="/resume"]').click()
     await page.waitForURL('**/resume')
-    assert.equal(await page.getByRole('button', { name: 'Open Menu', exact: true }).count(), 1)
+    await expect(page.getByRole('button', { name: 'Open Menu', exact: true })).toHaveCount(1)
     pass('mobile menu closes after navigation')
 
     for (const route of routes) {
       const response = await page.goto(`${baseURL}${route}`, { waitUntil: 'networkidle' })
       assert.equal(response.status(), 200)
-      // The unchanged publication layout already overflows by 4px at 390px; allow one pixel for rounding.
-      const overflowAllowance = route === '/publications' ? 5 : 1
-      assert.ok(await page.evaluate((allowance) => document.documentElement.scrollWidth <= innerWidth + allowance, overflowAllowance), `${route}: no added mobile overflow`)
+      await assertNoNewMobileOverflow(page, route)
       pass(`mobile ${route}`)
     }
 
@@ -129,7 +179,7 @@ async function main() {
         })
       }
     })
-    const blockedPage = await blockedStorage.newPage()
+    const blockedPage = await newPage(blockedStorage)
     blockedPage.on('pageerror', (error) => errors.push(error.message))
     await blockedPage.goto(`${baseURL}/`, { waitUntil: 'networkidle' })
     await blockedPage.locator('header button').filter({ hasText: 'EN' }).click()
@@ -145,18 +195,18 @@ async function main() {
       localStorage.setItem('language', 'invalid-language')
       localStorage.setItem('theme', 'invalid-theme')
     })
-    const invalidPage = await invalidStorage.newPage()
+    const invalidPage = await newPage(invalidStorage)
     invalidPage.on('pageerror', (error) => errors.push(error.message))
     await invalidPage.goto(`${baseURL}/`, { waitUntil: 'networkidle' })
-    assert.equal(await invalidPage.locator('header button').filter({ hasText: 'EN' }).count(), 1)
-    assert.match(await invalidPage.locator('main').innerText(), /I am currently pursuing/)
-    assert.ok(await invalidPage.locator('html').evaluate((html) => html.classList.contains('dark')))
+    await expect(invalidPage.locator('header button').filter({ hasText: 'EN' })).toHaveCount(1)
+    await expect(invalidPage.locator('main')).toContainText('I am currently pursuing')
+    await expect.poll(() => invalidPage.locator('html').evaluate((html) => html.classList.contains('dark'))).toBe(true)
     pass('invalid saved values fall back to English and system theme')
     await invalidStorage.close()
 
     const sharedStorage = await browser.newContext({ colorScheme: 'light' })
-    const firstTab = await sharedStorage.newPage()
-    const secondTab = await sharedStorage.newPage()
+    const firstTab = await newPage(sharedStorage)
+    const secondTab = await newPage(sharedStorage)
     for (const tab of [firstTab, secondTab]) {
       tab.on('pageerror', (error) => errors.push(error.message))
       await tab.goto(`${baseURL}/`, { waitUntil: 'networkidle' })
