@@ -12,13 +12,13 @@ export function ResumePage() {
 
   return (
     <>
-      <div className="flex justify-between items-center mb-8">
+      <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
         <h1 className="text-3xl font-bold tracking-tight">
           {RESUME_COPY.title[language]}
         </h1>
         <Button asChild variant="outline">
           <Link href="/周世扬_复旦大学_简历.pdf" download>
-            <Download className="mr-2 h-4 w-4" />
+            <Download className="mr-2 h-4 w-4" aria-hidden="true" />
             {RESUME_COPY.download[language]}
           </Link>
         </Button>
@@ -30,7 +30,7 @@ export function ResumePage() {
         </CardHeader>
         <CardContent className="space-y-6">
           <div>
-            <div className="flex justify-between items-start">
+            <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-1">
               <h3 className="font-bold">
                 {RESUME_COPY.fudanInstitution[language]}
               </h3>
@@ -38,7 +38,7 @@ export function ResumePage() {
                 {RESUME_COPY.fudanPeriod[language]}
               </p>
             </div>
-            <div className="flex justify-between items-start mt-1">
+            <div className="mt-1 flex flex-wrap items-start justify-between gap-x-4 gap-y-1">
               <p>
                 {RESUME_COPY.fudanDegree[language]
                 }
@@ -66,7 +66,7 @@ export function ResumePage() {
           </div>
 
           <div>
-            <div className="flex justify-between items-start">
+            <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-1">
               <h3 className="font-bold">
                 {RESUME_COPY.nuistInstitution[language]}
               </h3>
@@ -74,7 +74,7 @@ export function ResumePage() {
                 {RESUME_COPY.nuistPeriod[language]}
               </p>
             </div>
-            <div className="flex justify-between items-start mt-1">
+            <div className="mt-1 flex flex-wrap items-start justify-between gap-x-4 gap-y-1">
               <p>
                 {RESUME_COPY.nuistDegree[language]
                 }
@@ -110,7 +110,7 @@ export function ResumePage() {
         </CardHeader>
         <CardContent className="space-y-6">
           <div>
-            <div className="flex justify-between items-start">
+            <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-1">
               <h3 className="font-bold" style={{maxWidth: '75%'}}>
                 {RESUME_COPY.pacificTitle[language]
                 }
@@ -131,7 +131,7 @@ export function ResumePage() {
           </div>
 
           <div>
-            <div className="flex justify-between items-start">
+            <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-1">
               <h3 className="font-bold" style={{maxWidth: '75%'}}>
                 {RESUME_COPY.greeningTitle[language]
                 }
@@ -159,7 +159,7 @@ export function ResumePage() {
           <CardTitle>{RESUME_COPY.honorsTitle[language]}</CardTitle>
         </CardHeader>
         <CardContent className="space-y-2">
-          <div className="flex justify-between items-start">
+          <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-1">
             <h3 className="font-semibold">
               {RESUME_COPY.icmTitle[language]
               }
@@ -169,7 +169,7 @@ export function ResumePage() {
             </p>
           </div>
 
-          <div className="flex justify-between items-start">
+          <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-1">
             <h3 className="font-semibold">
               {RESUME_COPY.changwangTitle[language]
               }
@@ -179,7 +179,7 @@ export function ResumePage() {
             </p>
           </div>
 
-          <div className="flex justify-between items-start">
+          <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-1">
             <h3 className="font-semibold">
               {RESUME_COPY.modelingTitle[language]
               }
@@ -189,7 +189,7 @@ export function ResumePage() {
             </p>
           </div>
 
-          <div className="flex justify-between items-start">
+          <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-1">
             <h3 className="font-semibold">
               {RESUME_COPY.iscatTitle[language]
               }
@@ -199,7 +199,7 @@ export function ResumePage() {
             </p>
           </div>
 
-          <div className="flex justify-between items-start">
+          <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-1">
             <h3 className="font-semibold">
               {RESUME_COPY.knowledgeTitle[language]
               }
@@ -209,7 +209,7 @@ export function ResumePage() {
             </p>
           </div>
 
-          <div className="flex justify-between items-start">
+          <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-1">
             <h3 className="font-semibold">
               {RESUME_COPY.internetTitle[language]
               }
@@ -219,27 +219,27 @@ export function ResumePage() {
             </p>
           </div>
 
-          <div className="flex justify-between items-start">
+          <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-1">
             <h3 className="font-semibold">
               {RESUME_COPY.innovationTitle[language]
               }
             </h3>
           </div>
 
-          <div className="flex justify-between items-start">
+          <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-1">
             <h3 className="font-semibold flex flex-wrap" style={{width: '100%'}}>
               {RESUME_COPY.nuistHonors[language]
               }
             </h3>
           </div>
 
-          <div className="flex justify-between items-start">
+          <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-1">
             <h3 className="font-semibold">
               {RESUME_COPY.graduateTitle[language]}
             </h3>
           </div>
 
-          <div className="flex justify-between items-start">
+          <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-1">
             <h3 className="font-semibold">
               {RESUME_COPY.meteorologyTitle[language]}
             </h3>

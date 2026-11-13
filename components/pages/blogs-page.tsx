@@ -7,6 +7,7 @@ import { BLOG_TAGS as TAGS } from "@/content/blog-posts/tags"
 import { filterBlogPosts } from "@/lib/content-queries"
 import { useLanguage } from "@/context/language-context"
 import { Badge } from "@/components/ui/badge"
+import { FilterChip } from "@/components/ui/filter-chip"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import {
@@ -53,6 +54,8 @@ export function BlogsPage({ posts }: { posts: Omit<BlogPost, "markdown">[] }) {
 
         <Input
           type="search"
+          aria-label={languageKey === "en" ? "Search posts" : "搜索文章"}
+          aria-controls="blogs-results"
           placeholder={languageKey === "en" ? "Search posts..." : "搜索文章..."}
           className="w-full md:w-[260px]"
           value={searchQuery}
@@ -60,34 +63,36 @@ export function BlogsPage({ posts }: { posts: Omit<BlogPost, "markdown">[] }) {
         />
       </div>
 
-      <div className="mb-8 flex flex-wrap gap-2">
-        <Badge
-          variant={selectedTag === null ? "default" : "outline"}
-          className="cursor-pointer rounded-full px-3 py-1"
+      <div role="group" aria-label={languageKey === "en" ? "Filter posts by tag" : "按标签筛选文章"} className="mb-8 flex flex-wrap gap-2">
+        <FilterChip
+          selected={selectedTag === null}
           onClick={() => setSelectedTag(null)}
         >
           {languageKey === "en" ? "All" : "全部"}
-        </Badge>
+        </FilterChip>
         {allTagIds.map((tagId) => (
-          <Badge
+          <FilterChip
             key={tagId}
-            variant={selectedTag === tagId ? "default" : "outline"}
-            className="cursor-pointer rounded-full px-3 py-1"
+            selected={selectedTag === tagId}
             onClick={() => setSelectedTag(tagId)}
           >
             {TAGS[tagId]?.name[languageKey] ?? tagId}
-          </Badge>
+          </FilterChip>
         ))}
       </div>
 
-      <div className="space-y-6">
+      <p className="sr-only" role="status" aria-live="polite" aria-atomic="true">
+        {languageKey === "en" ? `${filteredPosts.length} posts found` : `找到 ${filteredPosts.length} 篇文章`}
+      </p>
+
+      <div id="blogs-results" className="space-y-6">
         {filteredPosts.map((post) => (
-          <Card key={post.id} className="group overflow-hidden">
+          <Card key={post.id} interactive className="group overflow-hidden">
             <Link
               href={`/blogs/${post.slug}`}
-              className="block w-full p-6 text-left sm:p-8"
+              className="block w-full p-6 text-left outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-ring sm:p-8"
             >
-              <h2 className="text-2xl font-semibold tracking-tight transition-colors group-hover:text-foreground">
+              <h2 className="break-words text-2xl font-semibold tracking-tight transition-colors group-hover:text-foreground">
                 {post.title[languageKey]}
               </h2>
               <div className="mt-4 flex flex-wrap gap-2">
@@ -115,7 +120,7 @@ export function BlogsPage({ posts }: { posts: Omit<BlogPost, "markdown">[] }) {
 
               <div className="mt-6 inline-flex items-center text-sm font-medium text-foreground/70 transition-colors group-hover:text-foreground">
                 {languageKey === "en" ? "Read more" : "阅读更多"}
-                <span className="ml-2 transition-transform duration-300 group-hover:translate-x-1">→</span>
+                <span aria-hidden="true" className="ml-2 transition-transform duration-200 motion-reduce:transition-none motion-safe:[@media(hover:hover)]:group-hover:translate-x-1 motion-safe:group-focus-within:translate-x-1">→</span>
               </div>
             </Link>
           </Card>

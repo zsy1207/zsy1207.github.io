@@ -23,7 +23,7 @@ export function PublicationsPage() {
                 </div>
                 <div className="space-y-4">
                   {group.publications.map((pub, index) => (
-                    <p key={index} className="leading-7 text-foreground">
+                    <p key={index} className="leading-7 text-foreground [overflow-wrap:anywhere] [&_a]:rounded-sm [&_a]:underline-offset-4 [&_a:focus-visible]:outline [&_a:focus-visible]:outline-2 [&_a:focus-visible]:outline-offset-2 [&_a:focus-visible]:outline-ring">
                       {pub.citation}
                     </p>
                   ))}

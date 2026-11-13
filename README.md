@@ -65,6 +65,14 @@ HOMEPAGE_TEST_URL=http://127.0.0.1:3002 CHROMIUM_PATH=/usr/bin/chromium npm run 
 
 The checks cover existing routes, desktop/mobile overflow regressions, language/theme persistence, search and filtering, mobile navigation, article 404s, CV download, and browser errors. A failing assertion exits nonzero. The existing Markdown image renderer intentionally retains its HTML output and can produce a Next.js image optimization advisory.
 
+## UI and motion conventions
+
+The original page structure, content, typography, and black/white palette are retained. `AnimationProvider` combines the animation setting with the live system `prefers-reduced-motion` preference. CSS also disables motion before hydration. Use `useAnimation().enabled` for any JavaScript animation; do not animate layout or static reading cards on hover.
+
+Interactive controls share brief color/focus feedback. Only interactive cards use hover shadows. The mobile navigation becomes inert immediately when closed, while its height/opacity transition finishes. Theme preference is applied by a small head script before first paint to prevent a light flash when restoring dark mode.
+
+Browser regression checks cover keyboard filtering, native theme controls, touch targets, menu focus/closing, actual theme animation frames, and live reduced-motion changes, in addition to the existing content and preference checks.
+
 ## Content updates
 
 - Edit resume translations and timeline data in `content/academic.ts`.

@@ -1,19 +1,23 @@
+"use client"
+
 import * as React from "react"
 import { useAnimation } from "@/context/animation-context"
 import { cn } from "@/lib/utils"
 
-const Card = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => {
+interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
+  interactive?: boolean
+}
+
+const Card = React.forwardRef<HTMLDivElement, CardProps>(({ className, interactive = false, ...props }, ref) => {
   const { enabled } = useAnimation()
-  
+
   return (
     <div
       ref={ref}
       className={cn(
         "rounded-lg border bg-card text-card-foreground shadow-sm",
-        enabled && "transition-all duration-200 ease-out hover:-translate-y-1 hover:shadow-md",
+        interactive && "hover:border-foreground/20 hover:shadow-md focus-within:border-foreground/30 focus-within:shadow-md",
+        interactive && enabled && "transition-[border-color,box-shadow] duration-200 ease-out motion-reduce:transition-none",
         className
       )}
       {...props}

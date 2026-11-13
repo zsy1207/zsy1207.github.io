@@ -20,7 +20,7 @@ export function HomePage() {
           <Avatar className="h-40 w-40 sm:h-48 sm:w-48 lg:h-56 lg:w-56 border-4 border-background shadow-md">
             <Image 
               src="/photo.jpg" 
-              alt="Avatar" 
+              alt={language === "en" ? "Shiyang Zhou" : "周世扬"}
               width={224} 
               height={224} 
               priority
@@ -33,16 +33,17 @@ export function HomePage() {
             {language === "en" ? "Shiyang (Zephyr) Zhou" : "周世扬"}
           </h1>
           <div className="text-lg sm:text-xl text-muted-foreground mb-4 leading-relaxed max-w-prose">
-            {language === "en" ? <>I am currently pursuing an M.Sc. in Meteorology at the <Link href="https://aos.fudan.edu.cn/" target="_blank" className="text-muted-foreground hover:underline">Department of Atmospheric and Oceanic Sciences (AOS)</Link>, <strong>Fudan University</strong>, advised by <strong><Link href="http://www.wenzhou-clim.com/" target="_blank" className="text-muted-foreground hover:underline">Prof. Wen Zhou</Link></strong>. My research focuses on <strong>ocean-ice-atmosphere interactions, climate dynamics, monsoons, and extreme weather</strong>. I am passionate about AI, large language models, esports, consumer tech, soccer, badminton, philosophy, and abstract art.</> : <>我目前正在<strong>复旦大学</strong><Link href="https://aos.fudan.edu.cn/" target="_blank" className="text-muted-foreground hover:underline">大气与海洋科学系</Link>攻读气象专业硕士，指导老师为<Link href="http://www.wenzhou-clim.com/" target="_blank" className="text-muted-foreground hover:underline">周文教授</Link>，研究方向为<strong>海-冰-气相互作用、气候动力学、季风与极端天气</strong>。我也是一位开发者，对AI/大模型/电竞/数码/足球/羽毛球/哲学/抽象艺术等领域都有浓厚的兴趣。</>}
+            {language === "en" ? <>I am currently pursuing an M.Sc. in Meteorology at the <Link href="https://aos.fudan.edu.cn/" target="_blank" rel="noopener noreferrer" className="interactive-link focus-ring rounded-sm text-muted-foreground hover:underline">Department of Atmospheric and Oceanic Sciences (AOS)</Link>, <strong>Fudan University</strong>, advised by <strong><Link href="http://www.wenzhou-clim.com/" target="_blank" rel="noopener noreferrer" className="interactive-link focus-ring rounded-sm text-muted-foreground hover:underline">Prof. Wen Zhou</Link></strong>. My research focuses on <strong>ocean-ice-atmosphere interactions, climate dynamics, monsoons, and extreme weather</strong>. I am passionate about AI, large language models, esports, consumer tech, soccer, badminton, philosophy, and abstract art.</> : <>我目前正在<strong>复旦大学</strong><Link href="https://aos.fudan.edu.cn/" target="_blank" rel="noopener noreferrer" className="interactive-link focus-ring rounded-sm text-muted-foreground hover:underline">大气与海洋科学系</Link>攻读气象专业硕士，指导老师为<Link href="http://www.wenzhou-clim.com/" target="_blank" rel="noopener noreferrer" className="interactive-link focus-ring rounded-sm text-muted-foreground hover:underline">周文教授</Link>，研究方向为<strong>海-冰-气相互作用、气候动力学、季风与极端天气</strong>。我也是一位开发者，对AI/大模型/电竞/数码/足球/羽毛球/哲学/抽象艺术等领域都有浓厚的兴趣。</>}
           </div>
-          <div className="flex items-center justify-center lg:justify-start mt-2 space-x-6">
+          <div className="mt-2 flex flex-wrap items-center justify-center gap-x-1.5 gap-y-3 min-[360px]:gap-x-2 sm:gap-x-6 lg:justify-start">
             {SOCIAL_LINKS.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
+                aria-label={link.name}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-full border border-border hover:bg-accent transition-colors"
+                className="focus-ring rounded-full border border-border p-2 transition-colors duration-150 hover:border-foreground/30 hover:bg-accent focus-visible:bg-accent"
               >
                 {link.icon === "mail" && <Mail className="h-7 w-7" />}
                 {link.icon === "github" && <Github className="h-7 w-7" />}

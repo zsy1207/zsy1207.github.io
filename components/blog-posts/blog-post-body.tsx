@@ -42,6 +42,7 @@ export function BlogPostBody({ markdown }: { markdown: string }) {
                   img: ({ src, alt }) => (
                     <img
                       src={src ?? ""}
+                      decoding="async"
                       alt={alt ?? ""}
                       className="mt-6 w-full rounded-2xl border border-border/70 bg-muted/30 object-cover shadow-sm"
                     />
@@ -53,7 +54,7 @@ export function BlogPostBody({ markdown }: { markdown: string }) {
                   ),
                   li: ({ children }) => <li className="pl-1">{children}</li>,
                   pre: ({ children }) => (
-                    <pre className="mt-6 overflow-x-auto rounded-2xl border border-slate-800 bg-slate-950 px-5 py-4 text-sm leading-7 text-slate-100 shadow-[0_18px_50px_-30px_rgba(15,23,42,0.9)]">
+                    <pre tabIndex={0} className="focus-ring mt-6 max-w-full overflow-x-auto overscroll-x-contain rounded-2xl border border-slate-800 bg-slate-950 px-5 py-4 text-sm leading-7 text-slate-100 shadow-[0_18px_50px_-30px_rgba(15,23,42,0.9)]">
                       {children}
                     </pre>
                   ),
@@ -78,6 +79,11 @@ export function BlogPostBody({ markdown }: { markdown: string }) {
                       </code>
                     )
                   },
+                  a: ({ href, title, children }) => (
+                    <a href={href} title={title} className="interactive-link focus-ring rounded-sm underline-offset-4 [overflow-wrap:anywhere]">
+                      {children}
+                    </a>
+                  ),
                   strong: ({ children }) => <strong className="font-semibold text-foreground">{children}</strong>,
                 }}
               >

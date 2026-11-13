@@ -19,6 +19,14 @@ function pass(name) {
   console.log(`PASS ${name}`)
 }
 
+function collectBrowserErrors(page, errors) {
+  page.on('pageerror', (error) => {
+    const detail = { url: page.url(), message: error.message, stack: error.stack }
+    errors.push(detail)
+    console.error('BROWSER ERROR', JSON.stringify(detail))
+  })
+}
+
 async function newPage(owner, options) {
   const page = await owner.newPage(options)
   if (cpuThrottle > 1) {
@@ -28,38 +36,40 @@ async function newPage(owner, options) {
   return page
 }
 
+async function sampleThemeMotion(page) {
+  const control = page.getByRole('button', { name: /Toggle color theme|切换明暗主题/ })
+  const previous = await control.getAttribute('aria-pressed')
+  const target = previous === 'true' ? 20 : 0
+  const readX = () => control.evaluate((button) => {
+    const thumb = button.querySelector('[aria-hidden="true"] > span')
+    if (!thumb) throw new Error('Theme thumb missing')
+    return new DOMMatrixReadOnly(getComputedStyle(thumb).transform).m41
+  })
+  await page.clock.runFor(32)
+  const samples = [await readX()]
+  await control.evaluate((button) => button.click())
+  await expect(control).toHaveAttribute('aria-pressed', String(previous !== 'true'))
+  // Advance the installed browser clock, not wall time, so CI CPU speed cannot
+  // turn a valid 180ms animation into an unobserved jump between two frames.
+  for (const elapsed of [16, 16, 32, 32, 32, 64, 64]) {
+    await page.clock.runFor(elapsed)
+    samples.push(await readX())
+  }
+  assert.ok(Math.abs(samples.at(-1) - target) < 0.01, `theme thumb settles at ${target}: ${JSON.stringify(samples)}`)
+  return samples
+}
+
 async function assertNoNewMobileOverflow(page, route) {
   await page.evaluate(() => document.fonts.ready)
-  if (route !== '/publications') {
-    assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), `${route}: no added mobile overflow`)
-    return
-  }
-
-  // The original UI has one unbroken DOI link that overflows at 390px.
-  // Its text width varies between browser/font engines; constrain the exact known
-  // element instead of granting arbitrary overflow pixels to the entire page.
-  const layout = await page.evaluate(() => {
-    const knownHref = 'https://doi.org/10.1016/j.atmosres.2026.108949'
-    const elements = Array.from(document.querySelectorAll('body *'))
-    const describe = (element, rect) => ({
-      tag: element.tagName,
-      href: element.getAttribute('href'),
-      left: rect.left,
-      right: rect.right,
-      width: rect.width,
-    })
-    const knownLinks = elements.filter((element) => element.tagName === 'A' && element.getAttribute('href') === knownHref)
-    const unexpected = elements.flatMap((element) => Array.from(element.getClientRects())
-      .filter((rect) => rect.left < -1 || rect.right > innerWidth + 1)
-      .filter((rect) => !(knownLinks.includes(element) && rect.left >= -1))
-      .map((rect) => describe(element, rect)))
-    const knownRight = Math.max(innerWidth, ...knownLinks.flatMap((element) => Array.from(element.getClientRects()).map((rect) => rect.right)))
-    return { viewport: innerWidth, scrollWidth: document.documentElement.scrollWidth, knownLinkCount: knownLinks.length, knownRight, unexpected }
-  })
-  const diagnostic = `${route}: no added mobile overflow ${JSON.stringify(layout)}`
-  assert.equal(layout.knownLinkCount, 1, diagnostic)
-  assert.deepEqual(layout.unexpected, [], diagnostic)
-  assert.ok(layout.scrollWidth <= Math.ceil(layout.knownRight) + 1, diagnostic)
+  const layout = await page.evaluate(() => ({
+    viewport: innerWidth,
+    scrollWidth: document.documentElement.scrollWidth,
+    overflowing: Array.from(document.querySelectorAll('body *')).flatMap((element) =>
+      Array.from(element.getClientRects())
+        .filter((rect) => rect.right > innerWidth + 1 || rect.left < -1)
+        .map((rect) => ({ tag: element.tagName, href: element.getAttribute('href'), left: rect.left, right: rect.right }))),
+  }))
+  assert.ok(layout.scrollWidth <= layout.viewport + 1, `${route}: mobile overflow ${JSON.stringify(layout)}`)
 }
 
 async function main() {
@@ -71,7 +81,7 @@ async function main() {
   try {
     const page = await newPage(browser, { viewport: { width: 1440, height: 1000 } })
     const errors = []
-    page.on('pageerror', (error) => errors.push(error.message))
+    collectBrowserErrors(page, errors)
 
     for (const route of routes) {
       const response = await page.goto(`${baseURL}${route}`, { waitUntil: 'networkidle' })
@@ -83,6 +93,14 @@ async function main() {
     }
 
     await page.goto(`${baseURL}/`, { waitUntil: 'networkidle' })
+    await page.keyboard.press('Tab')
+    const skipLink = page.getByRole('link', { name: 'Skip to content', exact: true })
+    await expect(skipLink).toBeFocused()
+    await expect(skipLink).toBeInViewport()
+    await page.keyboard.press('Enter')
+    await expect(page.locator('#main-content')).toBeFocused()
+    pass('first Tab reveals the skip link and Enter focuses main content')
+
     await page.locator('header button').filter({ hasText: 'EN' }).click()
     await page.getByRole('menuitem', { name: '中文', exact: true }).click()
     await page.waitForFunction(() => localStorage.getItem('language') === 'zh')
@@ -99,7 +117,8 @@ async function main() {
     await expect(page.locator('main')).toContainText('I am currently pursuing')
     pass('language switches back to English')
 
-    const themeControl = page.locator('header [role="button"], header button[aria-label*="theme"], header button[aria-label*="主题"], header button[aria-label*="mode"]').first()
+    const themeControl = page.getByRole('button', { name: /Toggle color theme|切换明暗主题/ })
+    assert.equal(await themeControl.evaluate((control) => control.tagName), 'BUTTON')
     const wasDark = await page.locator('html').evaluate((html) => html.classList.contains('dark'))
     await themeControl.click()
     await page.waitForFunction((previous) => document.documentElement.classList.contains('dark') !== previous, wasDark)
@@ -129,11 +148,26 @@ async function main() {
 
     const researchProject = page.locator('main a[href="https://github.com/zsy1207/atmospheric-science-research"]')
     await expect(researchProject).toBeVisible()
-    await page.getByText('Userscript', { exact: true }).first().click()
+    const projectFilter = page.getByRole('button', { name: 'Userscript', exact: true })
+    await projectFilter.focus()
+    await page.keyboard.press('Enter')
+    await expect(projectFilter).toHaveAttribute('aria-pressed', 'true')
     await expect(researchProject).toHaveCount(0)
-    await page.getByText('All', { exact: true }).click()
+    const allProjects = page.getByRole('button', { name: 'All', exact: true })
+    await allProjects.focus()
+    await page.keyboard.press('Space')
+    await expect(allProjects).toHaveAttribute('aria-pressed', 'true')
     await expect(researchProject).toBeVisible()
-    pass('project tag filter and reset')
+    pass('project filters support Enter, Space, selected state, and reset')
+
+    await page.goto(`${baseURL}/blogs`, { waitUntil: 'networkidle' })
+    const blogFilter = page.getByRole('button', { name: 'Experience', exact: true })
+    await blogFilter.focus()
+    await page.keyboard.press('Enter')
+    await expect(blogFilter).toHaveAttribute('aria-pressed', 'true')
+    await page.getByRole('button', { name: 'All', exact: true }).click()
+    await expect(blogFilter).toHaveAttribute('aria-pressed', 'false')
+    pass('blog filters support keyboard selection and reset')
 
     await page.setViewportSize({ width: 390, height: 844 })
     await page.goto(`${baseURL}/`, { waitUntil: 'networkidle' })
@@ -155,12 +189,103 @@ async function main() {
     await expect(page.getByRole('button', { name: 'Open Menu', exact: true })).toHaveCount(1)
     pass('mobile menu closes after navigation')
 
+    await menuButton.click()
+    await page.locator('main h1').click()
+    await expect(menuButton).toHaveAttribute('aria-expanded', 'false')
+    pass('mobile menu closes on outside pointer interaction')
+
+    await menuButton.click()
+    await page.locator('header button').filter({ hasText: 'EN' }).click()
+    await page.getByRole('menuitem', { name: '中文', exact: true }).click()
+    await expect(page.getByRole('button', { name: 'Close Menu', exact: true })).toHaveAttribute('aria-expanded', 'true')
+    await page.locator('header button').filter({ hasText: '中文' }).click()
+    await page.getByRole('menuitem', { name: 'English', exact: true }).click()
+    pass('language portal selection keeps the surrounding navigation open')
+
+    await page.getByRole('button', { name: 'Close Menu', exact: true }).click()
+    await expect(menuButton).toHaveAttribute('aria-expanded', 'false')
+    await page.keyboard.press('Tab')
+    assert.equal(await page.evaluate(() => Boolean(document.activeElement.closest('#mobile-navigation'))), false)
+    pass('closing navigation is removed from keyboard order immediately')
+
+    await menuButton.click()
+    await page.setViewportSize({ width: 1280, height: 900 })
+    await expect(page.locator('button[aria-controls="mobile-navigation"]')).toHaveAttribute('aria-expanded', 'false')
+    await page.setViewportSize({ width: 390, height: 844 })
+    await expect(menuButton).toHaveAttribute('aria-expanded', 'false')
+    pass('desktop breakpoint resets the mobile menu')
+
     for (const route of routes) {
       const response = await page.goto(`${baseURL}${route}`, { waitUntil: 'networkidle' })
       assert.equal(response.status(), 200)
       await assertNoNewMobileOverflow(page, route)
       pass(`mobile ${route}`)
     }
+
+    await page.goto(`${baseURL}/`, { waitUntil: 'networkidle' })
+    await expect(page.locator('html')).toHaveAttribute('data-motion', 'full')
+    const motionContext = await browser.newContext({ colorScheme: 'light' })
+    const motionPage = await newPage(motionContext)
+    collectBrowserErrors(motionPage, errors)
+    // Install before loading Framer Motion so it captures the controlled RAF.
+    await motionPage.clock.install()
+    await motionPage.goto(`${baseURL}/`, { waitUntil: 'networkidle' })
+    await expect(motionPage.locator('html')).toHaveAttribute('data-motion', 'full')
+    await motionPage.clock.pauseAt(await motionPage.evaluate(() => Date.now() + 1000))
+    const animatedPositions = await sampleThemeMotion(motionPage)
+    assert.ok(animatedPositions.some((position) => position > 0.01 && position < 19.99), `normal theme transition includes intermediate frames: ${JSON.stringify(animatedPositions)}`)
+    pass('normal theme transition has real intermediate motion frames')
+    await page.emulateMedia({ reducedMotion: 'reduce' })
+    await expect(page.locator('html')).toHaveAttribute('data-motion', 'reduced')
+    const motion = await page.evaluate(() => Array.from(document.querySelectorAll('body *')).map((element) => {
+      const style = getComputedStyle(element)
+      return { tag: element.tagName, animation: style.animationDuration, transition: style.transitionDuration }
+    }).filter(({ animation, transition }) => [...animation.split(','), ...transition.split(',')].some((duration) => parseFloat(duration) > 0.0001)))
+    assert.deepEqual(motion, [], 'reduced motion disables animated CSS transitions')
+    await page.getByRole('button', { name: 'Open Menu', exact: true }).click()
+    await expect(page.getByRole('button', { name: 'Close Menu', exact: true })).toHaveAttribute('aria-expanded', 'true')
+    await page.keyboard.press('Escape')
+    const previousTheme = await themeControl.getAttribute('aria-pressed')
+    await themeControl.click()
+    await expect(themeControl).toHaveAttribute('aria-pressed', String(previousTheme !== 'true'))
+    await motionPage.emulateMedia({ reducedMotion: 'reduce' })
+    await expect(motionPage.locator('html')).toHaveAttribute('data-motion', 'reduced')
+    const reducedPositions = await sampleThemeMotion(motionPage)
+    assert.ok(reducedPositions.every((position) => Math.abs(position) < 0.01 || Math.abs(position - 20) < 0.01), `reduced motion jumps directly to the final thumb position: ${JSON.stringify(reducedPositions)}`)
+    pass('reduced motion responds live and preserves menu/theme interactions')
+    await page.emulateMedia({ reducedMotion: 'no-preference' })
+    await expect(page.locator('html')).toHaveAttribute('data-motion', 'full')
+    await motionPage.emulateMedia({ reducedMotion: 'no-preference' })
+    await expect(motionPage.locator('html')).toHaveAttribute('data-motion', 'full')
+    const restoredPositions = await sampleThemeMotion(motionPage)
+    assert.ok(restoredPositions.some((position) => position > 0.01 && position < 19.99), `restored theme transition has intermediate frames: ${JSON.stringify(restoredPositions)}`)
+    pass('normal motion can be restored without reload')
+    await motionContext.close()
+
+    const touchContext = await browser.newContext({ viewport: { width: 390, height: 844 }, hasTouch: true, isMobile: true })
+    const touchPage = await newPage(touchContext)
+    collectBrowserErrors(touchPage, errors)
+    await touchPage.goto(`${baseURL}/`, { waitUntil: 'networkidle' })
+    for (const name of ['Toggle color theme', 'Select language', 'Open Menu']) {
+      const bounds = await touchPage.getByRole('button', { name, exact: true }).boundingBox()
+      assert.ok(bounds && bounds.width >= 44 && bounds.height >= 44, `${name}: 44px touch target ${JSON.stringify(bounds)}`)
+    }
+    pass('mobile header controls provide at least 44px touch targets')
+    await touchContext.close()
+
+    const initialThemeContext = await browser.newContext({ colorScheme: 'light' })
+    await initialThemeContext.addInitScript(() => localStorage.setItem('theme', 'dark'))
+    const initialThemePage = await newPage(initialThemeContext)
+    // Keep the inline theme bootstrap but prevent React from restoring preferences.
+    // This verifies the saved theme applies independently of hydration.
+    await initialThemePage.route(/\/_next\/.*\.js(?:\?.*)?$/, (route) => route.abort())
+    await initialThemePage.goto(`${baseURL}/`, { waitUntil: 'networkidle' })
+    await expect(initialThemePage.locator('html')).toHaveClass(/dark/)
+    const background = await initialThemePage.locator('body').evaluate((body) => getComputedStyle(body).backgroundColor)
+    const channels = background.match(/[\d.]+/g).slice(0, 3).map(Number)
+    assert.ok(channels.every((channel) => channel < 40), `saved dark theme before hydration: ${background}`)
+    pass('saved dark theme is applied before the client bundle loads')
+    await initialThemeContext.close()
 
     const pdf = await page.request.get(`${baseURL}/${encodeURIComponent('周世扬_复旦大学_简历.pdf')}`)
     assert.equal(pdf.status(), 200)
@@ -180,7 +305,7 @@ async function main() {
       }
     })
     const blockedPage = await newPage(blockedStorage)
-    blockedPage.on('pageerror', (error) => errors.push(error.message))
+    collectBrowserErrors(blockedPage, errors)
     await blockedPage.goto(`${baseURL}/`, { waitUntil: 'networkidle' })
     await blockedPage.locator('header button').filter({ hasText: 'EN' }).click()
     await blockedPage.getByRole('menuitem', { name: '中文', exact: true }).click()
@@ -196,7 +321,7 @@ async function main() {
       localStorage.setItem('theme', 'invalid-theme')
     })
     const invalidPage = await newPage(invalidStorage)
-    invalidPage.on('pageerror', (error) => errors.push(error.message))
+    collectBrowserErrors(invalidPage, errors)
     await invalidPage.goto(`${baseURL}/`, { waitUntil: 'networkidle' })
     await expect(invalidPage.locator('header button').filter({ hasText: 'EN' })).toHaveCount(1)
     await expect(invalidPage.locator('main')).toContainText('I am currently pursuing')
@@ -208,7 +333,7 @@ async function main() {
     const firstTab = await newPage(sharedStorage)
     const secondTab = await newPage(sharedStorage)
     for (const tab of [firstTab, secondTab]) {
-      tab.on('pageerror', (error) => errors.push(error.message))
+      collectBrowserErrors(tab, errors)
       await tab.goto(`${baseURL}/`, { waitUntil: 'networkidle' })
     }
     await firstTab.locator('header button').filter({ hasText: 'EN' }).click()

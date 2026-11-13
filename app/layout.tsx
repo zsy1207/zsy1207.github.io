@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import localFont from "next/font/local"
 import "./globals.css"
+import { THEME_INIT_SCRIPT } from "@/lib/theme-init"
 import { ThemeProvider } from "@/context/theme-context"
 import { LanguageProvider } from "@/context/language-context"
 import { AnimationProvider } from "@/context/animation-context"
@@ -31,13 +32,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head><script id="theme-init" dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} /></head>
       <body className={inter.className}>
         <ThemeProvider>
           <LanguageProvider>
             <AnimationProvider>
               <div className="flex flex-col min-h-screen">
                 <Navigation />
-                <main className="flex-1 mx-auto w-full max-w-4xl px-4 sm:px-6 lg:px-8 py-6">
+                <main id="main-content" tabIndex={-1} className="outline-none flex-1 mx-auto w-full max-w-4xl px-4 sm:px-6 lg:px-8 py-6">
                   {children}
                 </main>
               </div>
