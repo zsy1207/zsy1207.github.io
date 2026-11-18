@@ -22,7 +22,7 @@ export const PUBLICATION_GROUPS: PublicationYearGroup[] = [
                 href="https://doi.org/10.1007/s00376-026-6125-2"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary hover:underline"
+                className="interactive-link focus-ring rounded-sm"
               >
                 https://doi.org/10.1007/s00376-026-6125-2
               </a>
@@ -39,7 +39,7 @@ export const PUBLICATION_GROUPS: PublicationYearGroup[] = [
                 href="https://doi.org/10.1016/j.atmosres.2026.108949"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary hover:underline"
+                className="interactive-link focus-ring rounded-sm"
               >
                 https://doi.org/10.1016/j.atmosres.2026.108949
               </a>
@@ -55,7 +55,7 @@ export const PUBLICATION_GROUPS: PublicationYearGroup[] = [
                 href="https://doi.org/10.3390/atmos17050486"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary hover:underline"
+                className="interactive-link focus-ring rounded-sm"
               >
                 https://doi.org/10.3390/atmos17050486
               </a>

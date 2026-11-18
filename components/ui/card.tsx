@@ -15,9 +15,9 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(({ className, interacti
     <div
       ref={ref}
       className={cn(
-        "rounded-lg border bg-card text-card-foreground shadow-sm",
-        interactive && "hover:border-foreground/20 hover:shadow-md focus-within:border-foreground/30 focus-within:shadow-md",
-        interactive && enabled && "transition-[border-color,box-shadow] duration-200 ease-out motion-reduce:transition-none",
+        "rounded-lg border bg-card text-card-foreground",
+        interactive && "hover:border-foreground/25 focus-within:border-foreground/40",
+        interactive && enabled && "transition-colors duration-200 ease-out motion-reduce:transition-none",
         className
       )}
       {...props}
@@ -26,39 +26,24 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(({ className, interacti
 })
 Card.displayName = "Card"
 
-const CardHeader = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-  <div
-    ref={ref}
-    className={cn("flex flex-col space-y-1.5 p-6", className)}
-    {...props}
-  />
-))
-CardHeader.displayName = "CardHeader"
-
-const CardTitle = React.forwardRef<
-  HTMLParagraphElement,
-  React.HTMLAttributes<HTMLHeadingElement>
->(({ className, ...props }, ref) => (
-  <h3
-    ref={ref}
-    className={cn(
-      "text-2xl font-semibold leading-none tracking-tight",
-      className
-    )}
-    {...props}
-  />
-))
-CardTitle.displayName = "CardTitle"
-
 const CardContent = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
-  <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />
+  <div ref={ref} className={cn("p-6", className)} {...props} />
 ))
 CardContent.displayName = "CardContent"
 
-export { Card, CardHeader, CardTitle, CardContent }
+/** A titled card; the title is the page's second-level heading. */
+function SectionCard({ title, className, children }: { title: string; className?: string; children: React.ReactNode }) {
+  return (
+    <Card>
+      <section className="p-6">
+        <h2 className="text-lg font-semibold leading-none tracking-tight">{title}</h2>
+        <div className={cn("mt-5", className)}>{children}</div>
+      </section>
+    </Card>
+  )
+}
+
+export { Card, CardContent, SectionCard }

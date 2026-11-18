@@ -25,6 +25,7 @@ components/
   blog-posts/                Server Markdown renderer and client language/navigation shell
   ui/                        Reusable UI primitives
   navigation.tsx             Shared navigation
+  page-header.tsx            Shared page title, description, and actions
 content/
   academic.ts                Resume translations and timeline records
   publications.tsx           Original publication citations
@@ -39,6 +40,8 @@ public/                      Images, icons, and downloadable CV
 ```
 
 Keep route files small: resolve data and metadata on the server, then pass only the data required by the client view. Blog lists receive summaries rather than article Markdown. Article Markdown is rendered on the server and passed through a React children slot, keeping the parser out of the client bundle.
+
+Content dates are formatted in UTC by `lib/format-date.ts`, so a visitor's time zone cannot shift the day. The chosen language is also written to `<html lang>`.
 
 Language and theme preferences share one storage hook. It validates stored values, handles disabled storage, synchronizes storage events, and writes only deliberate changes so the initial render cannot overwrite saved preferences.
 
@@ -67,9 +70,9 @@ The checks cover existing routes, desktop/mobile overflow regressions, language/
 
 ## UI and motion conventions
 
-The original page structure, content, typography, and black/white palette are retained. `AnimationProvider` combines the animation setting with the live system `prefers-reduced-motion` preference. CSS also disables motion before hydration. Use `useAnimation().enabled` for any JavaScript animation; do not animate layout or static reading cards on hover.
+The page structure, content, Inter typeface, and black/white palette are retained. The header and every page share one width (`.site-container`) and one title block (`PageHeader`). Text uses three weights: regular for body, medium for labels, semibold for headings. Secondary information such as dates, locations, and tags uses `text-muted-foreground`. Cards are flat with a hairline border; colors come from the theme tokens in `app/globals.css`. `AnimationProvider` combines the animation setting with the live system `prefers-reduced-motion` preference. CSS also disables motion before hydration. Use `useAnimation().enabled` for any JavaScript animation; do not animate layout or static reading cards on hover.
 
-Interactive controls share brief color/focus feedback. Only interactive cards use hover shadows. The mobile navigation becomes inert immediately when closed, while its height/opacity transition finishes. Theme preference is applied by a small head script before first paint to prevent a light flash when restoring dark mode.
+Interactive controls share brief color/focus feedback. Interactive cards darken their border on hover and focus. The mobile navigation becomes inert immediately when closed, while its height/opacity transition finishes. Theme preference is applied by a small head script before first paint to prevent a light flash when restoring dark mode.
 
 Browser regression checks cover keyboard filtering, native theme controls, touch targets, menu focus/closing, actual theme animation frames, and live reduced-motion changes, in addition to the existing content and preference checks.
 

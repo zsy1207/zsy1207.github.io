@@ -56,8 +56,10 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    text-rendering: optimizeLegibility;
   }
+  ::selection { background: hsl(var(--foreground) / 0.12); }
 }
 /* Shared interaction timing, without changing the site's color palette. */
 @layer base {
@@ -79,11 +81,19 @@
     outline: 2px solid hsl(var(--ring));
     outline-offset: 3px;
   }
+  /* One horizontal measure for the header and every page. */
+  .site-container { @apply mx-auto w-full max-w-4xl px-5 sm:px-6 lg:px-8; }
   .interactive-link {
-    text-underline-offset: 0.2em;
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: hsl(var(--foreground) / 0.25);
+    text-underline-offset: 0.25em;
     transition: color var(--motion-fast) ease-out, text-decoration-color var(--motion-fast) ease-out;
   }
-  .interactive-link:hover { text-decoration-line: underline; }
+  .interactive-link:hover {
+    color: hsl(var(--foreground));
+    text-decoration-color: currentColor;
+  }
   .skip-link {
     @apply fixed left-4 top-3 z-[60] -translate-y-24 rounded-md bg-primary px-4 py-3 text-sm font-medium text-primary-foreground;
   }
@@ -91,8 +101,8 @@
   .nav-link::after {
     content: "";
     position: absolute;
-    height: 2px;
-    bottom: 6px;
+    height: 1px;
+    bottom: 8px;
     left: 4px;
     right: 4px;
     background: currentColor;

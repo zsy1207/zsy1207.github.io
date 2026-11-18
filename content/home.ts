@@ -1,4 +1,4 @@
-interface SocialLink {
+export interface SocialLink {
   name: string
   href: string
   icon: "mail" | "github" | "google-scholar" | "researchgate" | "bilibili"

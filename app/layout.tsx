@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import localFont from "next/font/local"
 import "./globals.css"
 import { THEME_INIT_SCRIPT } from "@/lib/theme-init"
@@ -13,16 +13,24 @@ const inter = localFont({
   style: "normal",
   display: "swap",
   adjustFontFallback: "Arial",
+  variable: "--font-inter",
 })
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://zsy1207.github.io"),
-  title: "Shiyang (Zephyr) Zhou",
+  title: { default: "Shiyang (Zephyr) Zhou", template: "%s · Shiyang (Zephyr) Zhou" },
   description:
     "M.Sc. student in Meteorology at Fudan University; ocean-ice-atmosphere interactions, climate dynamics, monsoons, and extreme weather research.",
   icons: {
     icon: "/weather-icons-59-svgrepo-com.svg",
   },
+}
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#09090b" },
+  ],
 }
 
 export default function RootLayout({
@@ -33,13 +41,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head><script id="theme-init" dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} /></head>
-      <body className={inter.className}>
+      <body className={`${inter.variable} font-sans`}>
         <ThemeProvider>
           <LanguageProvider>
             <AnimationProvider>
-              <div className="flex flex-col min-h-screen">
+              <div className="flex min-h-screen flex-col">
                 <Navigation />
-                <main id="main-content" tabIndex={-1} className="outline-none flex-1 mx-auto w-full max-w-4xl px-4 sm:px-6 lg:px-8 py-6">
+                <main id="main-content" tabIndex={-1} className="site-container flex-1 py-8 outline-none sm:py-12">
                   {children}
                 </main>
               </div>

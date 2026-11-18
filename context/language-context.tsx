@@ -1,6 +1,6 @@
 "use client"
 
-import { createContext, useContext, useMemo, type ReactNode } from "react"
+import { createContext, useContext, useEffect, useMemo, type ReactNode } from "react"
 import { usePreference } from "@/lib/use-preference"
 
 import type { Language } from "@/content/types"
@@ -12,6 +12,8 @@ const LanguageContext = createContext<LanguageContextType | null>(null)
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const { value: language, update: setLanguage } = usePreference("language", "en", LANGUAGES)
   const value = useMemo(() => ({ language, setLanguage }), [language, setLanguage])
+  // Browsers pick CJK glyphs and hyphenation from the document language.
+  useEffect(() => { document.documentElement.lang = language === "zh" ? "zh-CN" : "en" }, [language])
   return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>
 }
 

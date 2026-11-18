@@ -19,7 +19,7 @@ export function LanguageSwitcher() {
           aria-label={language === "en" ? "Select language" : "选择语言"}
           variant="outline"
           size="sm"
-          className="min-w-14"
+          className="min-w-14 font-normal text-foreground/80"
         >
           <span lang={language === "en" ? "en" : "zh-CN"}>{language === "en" ? "EN" : "中文"}</span>
         </Button>

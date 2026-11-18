@@ -24,8 +24,7 @@ export function ThemeToggle() {
       <span
         aria-hidden="true"
         className={cn(
-          "relative block h-6 w-12 rounded-full border",
-          isDark ? "border-zinc-700 bg-zinc-800" : "border-zinc-200 bg-white",
+          "relative block h-6 w-12 rounded-full border border-border bg-muted",
           enabled && "transition-colors duration-150 motion-reduce:transition-none"
         )}
       >
@@ -36,15 +35,12 @@ export function ThemeToggle() {
           initial={false}
           animate={{ x: isDark ? 0 : 20 }}
           transition={{ duration: enabled ? 0.18 : 0, ease: [0.22, 1, 0.36, 1] }}
-          className={cn(
-            "absolute left-[3px] top-px flex h-5 w-5 items-center justify-center rounded-full",
-            isDark ? "bg-zinc-700" : "bg-gray-200"
-          )}
+          className="absolute left-[3px] top-px flex h-5 w-5 items-center justify-center rounded-full border border-border bg-background text-foreground/75"
         >
           {isDark ? (
-            <Moon className="h-4 w-4 text-white" strokeWidth={1.5} />
+            <Moon className="h-3 w-3" strokeWidth={1.75} />
           ) : (
-            <Sun className="h-4 w-4 text-gray-700" strokeWidth={1.5} />
+            <Sun className="h-3 w-3" strokeWidth={1.75} />
           )}
         </motion.span>
       </span>

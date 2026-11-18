@@ -1,318 +1,142 @@
 "use client"
 
 import { Download } from "lucide-react"
+import Link from "next/link"
 import { useLanguage } from "@/context/language-context"
 import { Button } from "@/components/ui/button"
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
-import Link from "next/link"
-import { RESUME_COPY } from "@/content/academic"
+import { SectionCard } from "@/components/ui/card"
+import { PageHeader } from "@/components/page-header"
+import { RESUME_COPY, type LocalizedText } from "@/content/academic"
+import type { Language } from "@/content/types"
 
 export function ResumePage() {
   const { language } = useLanguage()
 
   return (
     <>
-      <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
-        <h1 className="text-3xl font-bold tracking-tight">
-          {RESUME_COPY.title[language]}
-        </h1>
+      <PageHeader title={RESUME_COPY.title[language]}>
         <Button asChild variant="outline">
           <Link href="/周世扬_复旦大学_简历.pdf" download>
             <Download className="mr-2 h-4 w-4" aria-hidden="true" />
             {RESUME_COPY.download[language]}
           </Link>
         </Button>
+      </PageHeader>
+
+      <div className="space-y-4">
+        <SectionCard title={RESUME_COPY.educationTitle[language]} className="space-y-7">
+          {EDUCATION.map((entry) => <ResumeEntry key={entry.title.en} entry={entry} language={language} />)}
+        </SectionCard>
+
+        <SectionCard title={RESUME_COPY.researchTitle[language]} className="space-y-7">
+          {RESEARCH.map((entry) => <ResumeEntry key={entry.title.en} entry={entry} language={language} />)}
+        </SectionCard>
+
+        <SectionCard title={RESUME_COPY.honorsTitle[language]}>
+          <ul className="space-y-2.5">
+            {HONORS.map((honor) => (
+              <li key={honor.title.en} className={ROW}>
+                <h3 className="font-medium">{honor.title[language]}</h3>
+                {honor.distinction && <p className={ASIDE}>{honor.distinction[language]}</p>}
+              </li>
+            ))}
+          </ul>
+        </SectionCard>
+
+        <SectionCard title={RESUME_COPY.skillsTitle[language]}>
+          <ul className="space-y-3">
+            {SKILLS.map((skill) => (
+              <li key={skill.label.en}>
+                <span className="font-medium">{skill.label[language]}</span>
+                <span className="text-foreground/80">{typeof skill.value === "string" ? skill.value : skill.value[language]}</span>
+              </li>
+            ))}
+          </ul>
+        </SectionCard>
       </div>
-
-      <Card className="mb-4">
-        <CardHeader>
-          <CardTitle>{RESUME_COPY.educationTitle[language]}</CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-6">
-          <div>
-            <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-1">
-              <h3 className="font-bold">
-                {RESUME_COPY.fudanInstitution[language]}
-              </h3>
-              <p className="text-sm text-right">
-                {RESUME_COPY.fudanPeriod[language]}
-              </p>
-            </div>
-            <div className="mt-1 flex flex-wrap items-start justify-between gap-x-4 gap-y-1">
-              <p>
-                {RESUME_COPY.fudanDegree[language]
-                }
-              </p>
-              <p className="text-sm text-right">
-                {RESUME_COPY.fudanLocation[language]}
-              </p>
-            </div>
-            <div className="mt-2 space-y-1"> {/* Added space-y-1 for consistent spacing */}
-              {/* --- Applied items-baseline here --- */}
-              <div className="flex items-baseline">
-                <div className="mr-2">•</div>
-                <div className="text-sm">
-                  {RESUME_COPY.fudanAdvisor[language]}
-                </div>
-              </div>
-              {/* --- Applied items-baseline here --- */}
-              <div className="flex items-baseline">
-                <div className="mr-2">•</div>
-                <div className="text-sm">
-                  {RESUME_COPY.fudanResearchDirection[language]}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-1">
-              <h3 className="font-bold">
-                {RESUME_COPY.nuistInstitution[language]}
-              </h3>
-              <p className="text-sm text-right">
-                {RESUME_COPY.nuistPeriod[language]}
-              </p>
-            </div>
-            <div className="mt-1 flex flex-wrap items-start justify-between gap-x-4 gap-y-1">
-              <p>
-                {RESUME_COPY.nuistDegree[language]
-                }
-              </p>
-              <p className="text-sm text-right">
-                {RESUME_COPY.nuistLocation[language]}
-              </p>
-            </div>
-            <div className="mt-2 space-y-1"> {/* Added space-y-1 for consistent spacing */}
-              {/* --- Applied items-baseline here --- */}
-              <div className="flex items-baseline">
-                <div className="mr-2">•</div>
-                <div className="text-sm">
-                  {RESUME_COPY.nuistGpa[language]}
-                </div>
-              </div>
-              {/* --- Applied items-baseline here --- */}
-              <div className="flex items-baseline">
-                <div className="mr-2">•</div>
-                <div className="text-sm">
-                  {RESUME_COPY.nuistCourses[language]
-                  }
-                </div>
-              </div>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
-
-      <Card className="mb-4">
-        <CardHeader>
-          <CardTitle>{RESUME_COPY.researchTitle[language]}</CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-6">
-          <div>
-            <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-1">
-              <h3 className="font-bold" style={{maxWidth: '75%'}}>
-                {RESUME_COPY.pacificTitle[language]
-                }
-              </h3>
-              <p className="text-sm text-right">
-                {RESUME_COPY.pacificPeriod[language]}
-              </p>
-            </div>
-            <div className="mt-2 space-y-1">
-              <div className="flex items-baseline">
-                <div className="mr-2">•</div>
-                <div className="text-sm">
-                  {RESUME_COPY.pacificDescription[language]
-                  }
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-1">
-              <h3 className="font-bold" style={{maxWidth: '75%'}}>
-                {RESUME_COPY.greeningTitle[language]
-                }
-              </h3>
-              <p className="text-sm text-right">
-                {RESUME_COPY.greeningPeriod[language]}
-              </p>
-            </div>
-            <div className="mt-2 space-y-1">
-              <div className="flex items-baseline">
-                <div className="mr-2">•</div>
-                <div className="text-sm">
-                  {RESUME_COPY.greeningDescription[language]
-                  }
-                </div>
-              </div>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
-
-      {/* Honors & Skills sections remain the same as they don't use the bullet point structure */}
-      <Card className="mb-4">
-        <CardHeader>
-          <CardTitle>{RESUME_COPY.honorsTitle[language]}</CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-2">
-          <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-1">
-            <h3 className="font-semibold">
-              {RESUME_COPY.icmTitle[language]
-              }
-            </h3>
-            <p className="text-sm text-right">
-              {RESUME_COPY.icmDistinction[language]}
-            </p>
-          </div>
-
-          <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-1">
-            <h3 className="font-semibold">
-              {RESUME_COPY.changwangTitle[language]
-              }
-            </h3>
-            <p className="text-sm text-right">
-              {RESUME_COPY.changwangDistinction[language]}
-            </p>
-          </div>
-
-          <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-1">
-            <h3 className="font-semibold">
-              {RESUME_COPY.modelingTitle[language]
-              }
-            </h3>
-            <p className="text-sm text-right">
-              {RESUME_COPY.modelingDistinction[language]}
-            </p>
-          </div>
-
-          <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-1">
-            <h3 className="font-semibold">
-              {RESUME_COPY.iscatTitle[language]
-              }
-            </h3>
-            <p className="text-sm text-right">
-              {RESUME_COPY.iscatDistinction[language]}
-            </p>
-          </div>
-
-          <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-1">
-            <h3 className="font-semibold">
-              {RESUME_COPY.knowledgeTitle[language]
-              }
-            </h3>
-            <p className="text-sm text-right">
-              {RESUME_COPY.knowledgeDistinction[language]}
-            </p>
-          </div>
-
-          <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-1">
-            <h3 className="font-semibold">
-              {RESUME_COPY.internetTitle[language]
-              }
-            </h3>
-            <p className="text-sm text-right">
-              {RESUME_COPY.internetDistinction[language]}
-            </p>
-          </div>
-
-          <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-1">
-            <h3 className="font-semibold">
-              {RESUME_COPY.innovationTitle[language]
-              }
-            </h3>
-          </div>
-
-          <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-1">
-            <h3 className="font-semibold flex flex-wrap" style={{width: '100%'}}>
-              {RESUME_COPY.nuistHonors[language]
-              }
-            </h3>
-          </div>
-
-          <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-1">
-            <h3 className="font-semibold">
-              {RESUME_COPY.graduateTitle[language]}
-            </h3>
-          </div>
-
-          <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-1">
-            <h3 className="font-semibold">
-              {RESUME_COPY.meteorologyTitle[language]}
-            </h3>
-          </div>
-        </CardContent>
-      </Card>
-
-      <Card>
-        <CardHeader>
-          <CardTitle>{RESUME_COPY.skillsTitle[language]}</CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-4">
-          <div className="flex items-start">
-            <div className="w-full">
-              <span className="font-semibold">
-                {RESUME_COPY.programmingLabel[language]}
-              </span>
-              <span>
-                Python, NCL, MATLAB, Fortran
-              </span>
-            </div>
-          </div>
-
-          <div className="flex items-start">
-            <div className="w-full">
-              <span className="font-semibold">
-                {RESUME_COPY.modelsLabel[language]}
-              </span>
-              <span>
-                CESM, WRF, CAMS-CSM, NeuralGCM
-              </span>
-            </div>
-          </div>
-
-          <div className="flex items-start">
-            <div className="w-full">
-              <span className="font-semibold">
-                {RESUME_COPY.certificatesLabel[language]}
-              </span>
-              <span>
-                {RESUME_COPY.certificates[language]
-                }
-              </span>
-            </div>
-          </div>
-
-          <div className="flex items-start">
-            <div className="w-full">
-              <span className="font-semibold">
-                {RESUME_COPY.softwareLabel[language]}
-              </span>
-              <span>
-                MICAPS, PUP, ChatGPT, Cursor, Obsidian, Zotero, Office, Photoshop, CapCut
-              </span>
-            </div>
-          </div>
-
-          <div className="flex items-start">
-            <div className="w-full">
-              <span className="font-semibold">
-                {RESUME_COPY.hobbiesLabel[language]}
-              </span>
-              <span>
-                {RESUME_COPY.hobbies[language]
-                }
-              </span>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
     </>
   )
 }
 
+function ResumeEntry({ entry, language }: { entry: ResumeEntryData; language: Language }) {
+  return (
+    <div>
+      <div className={ROW}>
+        <h3 className="font-semibold">{entry.title[language]}</h3>
+        <p className={ASIDE}>{entry.period[language]}</p>
+      </div>
+      {entry.subtitle && (
+        <div className={`mt-1 ${ROW}`}>
+          <p>{entry.subtitle[language]}</p>
+          {entry.location && <p className={ASIDE}>{entry.location[language]}</p>}
+        </div>
+      )}
+      <ul className="mt-3 list-disc space-y-1.5 pl-4 text-sm leading-6 text-foreground/80 marker:text-foreground/30">
+        {entry.details.map((detail) => <li key={detail.en} className="pl-1">{detail[language]}</li>)}
+      </ul>
+    </div>
+  )
+}
 
+// Title on the left, date or distinction on the right; stacked on small screens.
+const ROW = "grid items-baseline gap-x-8 gap-y-0.5 sm:grid-cols-[minmax(0,1fr)_auto]"
+const ASIDE = "text-sm tabular-nums text-muted-foreground sm:text-right"
 
+interface ResumeEntryData {
+  title: LocalizedText
+  period: LocalizedText
+  subtitle?: LocalizedText
+  location?: LocalizedText
+  details: LocalizedText[]
+}
+
+const EDUCATION: ResumeEntryData[] = [
+  {
+    title: RESUME_COPY.fudanInstitution,
+    period: RESUME_COPY.fudanPeriod,
+    subtitle: RESUME_COPY.fudanDegree,
+    location: RESUME_COPY.fudanLocation,
+    details: [RESUME_COPY.fudanAdvisor, RESUME_COPY.fudanResearchDirection],
+  },
+  {
+    title: RESUME_COPY.nuistInstitution,
+    period: RESUME_COPY.nuistPeriod,
+    subtitle: RESUME_COPY.nuistDegree,
+    location: RESUME_COPY.nuistLocation,
+    details: [RESUME_COPY.nuistGpa, RESUME_COPY.nuistCourses],
+  },
+]
+
+const RESEARCH: ResumeEntryData[] = [
+  {
+    title: RESUME_COPY.pacificTitle,
+    period: RESUME_COPY.pacificPeriod,
+    details: [RESUME_COPY.pacificDescription],
+  },
+  {
+    title: RESUME_COPY.greeningTitle,
+    period: RESUME_COPY.greeningPeriod,
+    details: [RESUME_COPY.greeningDescription],
+  },
+]
+
+const HONORS: { title: LocalizedText; distinction?: LocalizedText }[] = [
+  { title: RESUME_COPY.icmTitle, distinction: RESUME_COPY.icmDistinction },
+  { title: RESUME_COPY.changwangTitle, distinction: RESUME_COPY.changwangDistinction },
+  { title: RESUME_COPY.modelingTitle, distinction: RESUME_COPY.modelingDistinction },
+  { title: RESUME_COPY.iscatTitle, distinction: RESUME_COPY.iscatDistinction },
+  { title: RESUME_COPY.knowledgeTitle, distinction: RESUME_COPY.knowledgeDistinction },
+  { title: RESUME_COPY.internetTitle, distinction: RESUME_COPY.internetDistinction },
+  { title: RESUME_COPY.innovationTitle },
+  { title: RESUME_COPY.nuistHonors },
+  { title: RESUME_COPY.graduateTitle },
+  { title: RESUME_COPY.meteorologyTitle },
+]
+
+const SKILLS: { label: LocalizedText; value: LocalizedText | string }[] = [
+  { label: RESUME_COPY.programmingLabel, value: "Python, NCL, MATLAB, Fortran" },
+  { label: RESUME_COPY.modelsLabel, value: "CESM, WRF, CAMS-CSM, NeuralGCM" },
+  { label: RESUME_COPY.certificatesLabel, value: RESUME_COPY.certificates },
+  { label: RESUME_COPY.softwareLabel, value: "MICAPS, PUP, ChatGPT, Cursor, Obsidian, Zotero, Office, Photoshop, CapCut" },
+  { label: RESUME_COPY.hobbiesLabel, value: RESUME_COPY.hobbies },
+]
