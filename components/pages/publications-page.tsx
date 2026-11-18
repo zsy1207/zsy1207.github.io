@@ -18,9 +18,9 @@ export function PublicationsPage() {
         const offset = PUBLICATION_GROUPS.slice(0, groupIndex).reduce((count, earlier) => count + earlier.publications.length, 0)
         return (
           <Section key={group.year} label={group.year}>
-            <ol className="space-y-4" start={offset + 1}>
+            <ol className="space-y-2.5" start={offset + 1}>
               {group.publications.map((pub, index) => (
-                <li key={index} className="grid grid-cols-[2.25rem_minmax(0,1fr)] leading-[1.65] text-foreground/85 [overflow-wrap:anywhere] [&_strong]:font-semibold [&_strong]:text-foreground">
+                <li key={index} className="grid grid-cols-[2.25rem_minmax(0,1fr)] text-[15px] leading-[1.6] text-foreground/85 [overflow-wrap:anywhere] [&_strong]:font-semibold [&_strong]:text-foreground">
                   <span aria-hidden="true" className="tabular-nums text-muted-foreground">[{offset + index + 1}]</span>
                   <span>{pub.citation}</span>
                 </li>

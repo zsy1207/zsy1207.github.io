@@ -11,7 +11,7 @@ export function ResearchPage() {
     <>
       <PageHeader title={language === "en" ? "Research" : "研究"} />
 
-      <Section label={language === "en" ? "Status" : "状态"} className="text-foreground/75">
+      <Section label={language === "en" ? "Status" : "状态"} className="text-[15px] text-foreground/75">
         {language === "en" ? "To be updated." : "待更新"}
       </Section>
     </>

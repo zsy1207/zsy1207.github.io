@@ -12,15 +12,15 @@ export function NewsPage() {
     <>
       <PageHeader title={language === "en" ? "Timeline" : "时间线"} />
 
-      <ol className="relative ml-1.5 space-y-9 border-l border-border">
+      <ol className="relative ml-1.5 space-y-6 border-l border-border">
         {NEWS_ITEMS.map((item) => (
           <li key={item.date} className="relative pl-7">
             <span aria-hidden="true" className="absolute -left-[4.5px] top-1.5 h-2 w-2 rounded-full bg-foreground ring-4 ring-background" />
             <time dateTime={item.date} className="block text-sm tabular-nums text-muted-foreground">
               {formatDate(item.date, language)}
             </time>
-            <h2 className="mt-1.5 font-semibold">{item.title[language]}</h2>
-            <p className="mt-1.5 leading-[1.65] text-foreground/75">{item.content[language]}</p>
+            <h2 className="mt-1 font-semibold">{item.title[language]}</h2>
+            <p className="mt-1 text-[15px] leading-[1.6] text-foreground/75">{item.content[language]}</p>
           </li>
         ))}
       </ol>

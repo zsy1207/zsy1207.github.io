@@ -14,7 +14,7 @@ export function HomePage() {
   const { language } = useLanguage()
 
   return (
-    <div className="flex min-h-[calc(100dvh-16rem)] items-center justify-center">
+    <div className="flex min-h-[calc(100dvh-14rem)] items-center justify-center">
       <div className="flex flex-col items-center gap-8 pb-4 md:flex-row md:gap-14">
         <Avatar className="h-36 w-36 ring-1 ring-border sm:h-40 sm:w-40 md:h-48 md:w-48">
           <Image
