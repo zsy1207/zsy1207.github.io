@@ -58,7 +58,7 @@
   :root {
     --tracking-body: -0.011em;
     --tracking-tight: -0.02em;
-    --tracking-display: -0.025em;
+    --tracking-display: -0.035em;
   }
   html:lang(zh-CN) {
     --tracking-body: 0em;
