@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import Link from "next/link"
 import { BookOpen, Pencil } from "lucide-react"
 import type { BlogPost } from "@/content/blog-posts"
 import { BLOG_TAGS as TAGS } from "@/content/blog-posts/tags"
@@ -10,8 +9,8 @@ import { formatDate } from "@/lib/format-date"
 import { useLanguage } from "@/context/language-context"
 import { Badge } from "@/components/ui/badge"
 import { FilterChip } from "@/components/ui/filter-chip"
-import { Card, CardContent } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
+import { SearchInput } from "@/components/ui/search-input"
+import { EmptyList, ListEntry } from "@/components/list-entry"
 import { PageHeader } from "@/components/page-header"
 
 function getTagIcon(tagId: string) {
@@ -34,12 +33,10 @@ export function BlogsPage({ posts }: { posts: Omit<BlogPost, "markdown">[] }) {
         title={language === "en" ? "Blogs" : "博客"}
         description={language === "en" ? "Writing, notes, and practical guides." : "记录阅读、思考与实践经验。"}
       >
-        <Input
-          type="search"
+        <SearchInput
           aria-label={language === "en" ? "Search posts" : "搜索文章"}
           aria-controls="blogs-results"
           placeholder={language === "en" ? "Search posts..." : "搜索文章..."}
-          className="w-full md:w-[260px]"
           value={searchQuery}
           onChange={(event) => setSearchQuery(event.target.value)}
         />
@@ -60,43 +57,34 @@ export function BlogsPage({ posts }: { posts: Omit<BlogPost, "markdown">[] }) {
         {language === "en" ? `${filteredPosts.length} posts found` : `找到 ${filteredPosts.length} 篇文章`}
       </p>
 
-      <div id="blogs-results" className="space-y-4">
-        {filteredPosts.map((post) => (
-          <Card key={post.id} interactive className="group overflow-hidden">
-            <Link href={`/blogs/${post.slug}`} className="block p-6 outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-ring sm:p-7">
-              <h2 className="break-words text-xl font-semibold tracking-tight">
-                {post.title[language]}
-              </h2>
-              <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-2">
-                {post.tags.map((tagId) => (
-                  <Badge key={tagId} variant="outline" className="gap-1.5">
-                    {getTagIcon(tagId)}
-                    {TAGS[tagId]?.name[language] ?? tagId}
-                  </Badge>
-                ))}
-                <time dateTime={post.date} className="text-sm tabular-nums text-muted-foreground">
-                  {formatDate(post.date, language)}
-                </time>
-              </div>
-
-              <p className="mt-4 text-[15px] leading-7 text-muted-foreground">
-                {post.excerpt[language]}
-              </p>
-
-              <div className="mt-5 inline-flex items-center text-sm font-medium text-foreground/70 transition-colors group-hover:text-foreground">
-                {language === "en" ? "Read more" : "阅读更多"}
-                <span aria-hidden="true" className="ml-1.5 transition-transform duration-200 motion-reduce:transition-none motion-safe:[@media(hover:hover)]:group-hover:translate-x-1 motion-safe:group-focus-within:translate-x-1">→</span>
-              </div>
-            </Link>
-          </Card>
-        ))}
+      <div id="blogs-results" className="border-t border-border/70">
+        <ul>
+          {filteredPosts.map((post) => (
+            <ListEntry
+              key={post.id}
+              href={`/blogs/${post.slug}`}
+              title={post.title[language]}
+              summary={post.excerpt[language]}
+              action={language === "en" ? "Read more" : "阅读更多"}
+              meta={
+                <>
+                  <time dateTime={post.date} className="text-sm tabular-nums text-muted-foreground">
+                    {formatDate(post.date, language)}
+                  </time>
+                  {post.tags.map((tagId) => (
+                    <Badge key={tagId} variant="outline" className="gap-1.5">
+                      {getTagIcon(tagId)}
+                      {TAGS[tagId]?.name[language] ?? tagId}
+                    </Badge>
+                  ))}
+                </>
+              }
+            />
+          ))}
+        </ul>
 
         {filteredPosts.length === 0 && (
-          <Card className="border-dashed">
-            <CardContent className="py-12 text-center text-sm text-muted-foreground">
-              {language === "en" ? "No posts found." : "未找到文章。"}
-            </CardContent>
-          </Card>
+          <EmptyList>{language === "en" ? "No posts found." : "未找到文章。"}</EmptyList>
         )}
       </div>
     </>

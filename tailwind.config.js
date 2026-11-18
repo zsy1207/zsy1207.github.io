@@ -13,6 +13,12 @@ module.exports = {
           "var(--font-inter)", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI",
           "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "sans-serif",
         ],
+        // Serif for names and page titles. CJK falls back to a serif where the
+        // system has a good one, otherwise to the sans stack.
+        display: [
+          "var(--font-display)", "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC",
+          "PingFang SC", "Microsoft YaHei", "Georgia", "serif",
+        ],
         mono: ["ui-monospace", "SFMono-Regular", "Menlo", "Consolas", "Liberation Mono", "monospace"],
       },
       colors: {

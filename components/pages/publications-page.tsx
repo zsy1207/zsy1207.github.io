@@ -1,7 +1,8 @@
 "use client"
 
 import { useLanguage } from "@/context/language-context"
-import { Card, CardContent, SectionCard } from "@/components/ui/card"
+import { Section } from "@/components/section"
+import { EmptyList } from "@/components/list-entry"
 import { PageHeader } from "@/components/page-header"
 import { PUBLICATION_GROUPS } from "@/content/publications"
 
@@ -12,28 +13,26 @@ export function PublicationsPage() {
     <>
       <PageHeader title={language === "en" ? "Publications" : "出版物"} />
 
-      {PUBLICATION_GROUPS.length > 0 ? (
-        <div className="space-y-4">
-          {PUBLICATION_GROUPS.map((group) => (
-            <SectionCard key={group.year} title={group.year}>
-              <ul className="space-y-4">
-                {group.publications.map((pub, index) => (
-                  <li key={index} className="text-[15px] leading-7 text-foreground/80 [overflow-wrap:anywhere]">
-                    {pub.citation}
-                  </li>
-                ))}
-              </ul>
-            </SectionCard>
-          ))}
-        </div>
-      ) : (
-        <Card className="border-dashed">
-          <CardContent className="py-12 text-center text-sm text-muted-foreground">
+      {PUBLICATION_GROUPS.map((group) => (
+        <Section key={group.year} label={group.year}>
+          <ol className="space-y-6">
+            {group.publications.map((pub, index) => (
+              <li key={index} className="text-[15px] leading-7 text-foreground/80 [overflow-wrap:anywhere] [&_strong]:font-semibold [&_strong]:text-foreground">
+                {pub.citation}
+              </li>
+            ))}
+          </ol>
+        </Section>
+      ))}
+
+      {PUBLICATION_GROUPS.length === 0 && (
+        <div className="border-t border-border/70">
+          <EmptyList>
             {language === "en"
               ? "Publication list is being updated. Please check back later."
               : "待更新"}
-          </CardContent>
-        </Card>
+          </EmptyList>
+        </div>
       )}
     </>
   )

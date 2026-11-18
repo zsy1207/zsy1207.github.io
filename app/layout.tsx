@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/context/theme-context"
 import { LanguageProvider } from "@/context/language-context"
 import { AnimationProvider } from "@/context/animation-context"
 import { Navigation } from "@/components/navigation"
+import { Footer } from "@/components/footer"
 
 const inter = localFont({
   src: "../node_modules/@fontsource-variable/inter/files/inter-latin-wght-normal.woff2",
@@ -14,6 +15,15 @@ const inter = localFont({
   display: "swap",
   adjustFontFallback: "Arial",
   variable: "--font-inter",
+})
+
+const newsreader = localFont({
+  src: "../node_modules/@fontsource-variable/newsreader/files/newsreader-latin-wght-normal.woff2",
+  weight: "200 800",
+  style: "normal",
+  display: "swap",
+  adjustFontFallback: "Times New Roman",
+  variable: "--font-display",
 })
 
 export const metadata: Metadata = {
@@ -41,15 +51,16 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head><script id="theme-init" dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} /></head>
-      <body className={`${inter.variable} font-sans`}>
+      <body className={`${inter.variable} ${newsreader.variable} font-sans`}>
         <ThemeProvider>
           <LanguageProvider>
             <AnimationProvider>
-              <div className="flex min-h-screen flex-col">
+              <div className="flex min-h-screen flex-col overflow-x-clip">
                 <Navigation />
                 <main id="main-content" tabIndex={-1} className="site-container flex-1 py-8 outline-none sm:py-12">
                   {children}
                 </main>
+                <Footer />
               </div>
             </AnimationProvider>
           </LanguageProvider>

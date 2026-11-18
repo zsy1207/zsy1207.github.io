@@ -4,7 +4,7 @@ import { Download } from "lucide-react"
 import Link from "next/link"
 import { useLanguage } from "@/context/language-context"
 import { Button } from "@/components/ui/button"
-import { SectionCard } from "@/components/ui/card"
+import { Section } from "@/components/section"
 import { PageHeader } from "@/components/page-header"
 import { RESUME_COPY, type LocalizedText } from "@/content/academic"
 import type { Language } from "@/content/types"
@@ -23,16 +23,16 @@ export function ResumePage() {
         </Button>
       </PageHeader>
 
-      <div className="space-y-4">
-        <SectionCard title={RESUME_COPY.educationTitle[language]} className="space-y-7">
+      <div>
+        <Section label={RESUME_COPY.educationTitle[language]} className="space-y-8">
           {EDUCATION.map((entry) => <ResumeEntry key={entry.title.en} entry={entry} language={language} />)}
-        </SectionCard>
+        </Section>
 
-        <SectionCard title={RESUME_COPY.researchTitle[language]} className="space-y-7">
+        <Section label={RESUME_COPY.researchTitle[language]} className="space-y-8">
           {RESEARCH.map((entry) => <ResumeEntry key={entry.title.en} entry={entry} language={language} />)}
-        </SectionCard>
+        </Section>
 
-        <SectionCard title={RESUME_COPY.honorsTitle[language]}>
+        <Section label={RESUME_COPY.honorsTitle[language]}>
           <ul className="space-y-2.5">
             {HONORS.map((honor) => (
               <li key={honor.title.en} className={ROW}>
@@ -41,9 +41,9 @@ export function ResumePage() {
               </li>
             ))}
           </ul>
-        </SectionCard>
+        </Section>
 
-        <SectionCard title={RESUME_COPY.skillsTitle[language]}>
+        <Section label={RESUME_COPY.skillsTitle[language]}>
           <ul className="space-y-3">
             {SKILLS.map((skill) => (
               <li key={skill.label.en}>
@@ -52,7 +52,7 @@ export function ResumePage() {
               </li>
             ))}
           </ul>
-        </SectionCard>
+        </Section>
       </div>
     </>
   )

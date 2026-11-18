@@ -83,6 +83,13 @@
   }
   /* One horizontal measure for the header and every page. */
   .site-container { @apply mx-auto w-full max-w-4xl px-5 sm:px-6 lg:px-8; }
+  /* Isobar lines behind the home page, tinted with the theme's text color. */
+  .hero-contours {
+    background-color: hsl(var(--foreground) / 0.1);
+    -webkit-mask: url(/contours.svg) center / cover no-repeat;
+    mask: url(/contours.svg) center / cover no-repeat;
+  }
+  .section-label { @apply text-[13px] font-medium uppercase tracking-[0.1em] text-muted-foreground; }
   .interactive-link {
     text-decoration-line: underline;
     text-decoration-thickness: 1px;

@@ -15,7 +15,7 @@ export function BlogPostBody({ markdown }: { markdown: string }) {
     <ReactMarkdown
       components={{
         h1: ({ children }) => (
-          <h1 className="text-balance text-center text-3xl font-semibold tracking-tight sm:text-4xl">
+          <h1 className="mt-4 text-balance text-center font-display text-[2rem] font-medium leading-tight tracking-tight sm:text-[2.75rem]">
             {children}
           </h1>
         ),
@@ -25,7 +25,7 @@ export function BlogPostBody({ markdown }: { markdown: string }) {
           </h3>
         ),
         h5: ({ children }) => (
-          <h2 className="mt-12 border-l-2 border-foreground/20 pl-4 text-xl font-semibold tracking-tight sm:text-2xl">
+          <h2 className="mt-14 border-t border-border/70 pt-8 text-xl font-semibold tracking-tight sm:text-2xl">
             {children}
           </h2>
         ),
@@ -40,7 +40,7 @@ export function BlogPostBody({ markdown }: { markdown: string }) {
             src={src ?? ""}
             decoding="async"
             alt={alt ?? ""}
-            className="mt-6 w-full rounded-lg border bg-muted/30 object-cover"
+            className="mt-7 w-full rounded-lg border bg-muted/30 object-cover"
           />
         ),
         ul: ({ children }) => (

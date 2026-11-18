@@ -13,7 +13,7 @@ npm run dev
 
 Development runs on port 3000. It uses the normal Next.js router, including dynamic blog routes. Production uses `output: 'export'`; `.next/` holds build internals and `out/` holds the deployable site. Do not run development and production builds concurrently in the same checkout.
 
-Inter is bundled locally through `@fontsource-variable/inter`, preserving the font while removing Google Fonts requests from builds. Font licensing is included in the package. No application secrets or backend services are required.
+Inter (body) and Newsreader (names and page titles, `font-display`) are bundled locally through `@fontsource-variable`, so builds make no Google Fonts requests. Font licensing is included in the packages. No application secrets or backend services are required.
 
 ## Project structure
 
@@ -26,6 +26,9 @@ components/
   ui/                        Reusable UI primitives
   navigation.tsx             Shared navigation
   page-header.tsx            Shared page title, description, and actions
+  section.tsx                Ruled section with a label column
+  list-entry.tsx             Ruled list row for posts and projects
+  footer.tsx                 Copyright and profile links
 content/
   academic.ts                Resume translations and timeline records
   publications.tsx           Original publication citations
@@ -70,9 +73,9 @@ The checks cover existing routes, desktop/mobile overflow regressions, language/
 
 ## UI and motion conventions
 
-The page structure, content, Inter typeface, and black/white palette are retained. The header and every page share one width (`.site-container`) and one title block (`PageHeader`). Text uses three weights: regular for body, medium for labels, semibold for headings. Secondary information such as dates, locations, and tags uses `text-muted-foreground`. Cards are flat with a hairline border; colors come from the theme tokens in `app/globals.css`. `AnimationProvider` combines the animation setting with the live system `prefers-reduced-motion` preference. CSS also disables motion before hydration. Use `useAnimation().enabled` for any JavaScript animation; do not animate layout or static reading cards on hover.
+The page structure, content, Inter typeface, and black/white palette are retained. The header and every page share one width (`.site-container`) and one title block (`PageHeader`). Names and page titles use the serif `font-display`; everything else is Inter in three weights: regular for body, medium for labels, semibold for headings. Secondary information such as dates, locations, and tags uses `text-muted-foreground`. Pages are divided by hairline rules instead of boxes: `Section` puts a small label in the left column, and `ListEntry` renders posts and projects as ruled rows. The home page shows faint isobar lines (`public/contours.svg`, applied as a CSS mask so it follows the theme color). Colors come from the theme tokens in `app/globals.css`. `AnimationProvider` combines the animation setting with the live system `prefers-reduced-motion` preference. CSS also disables motion before hydration. Use `useAnimation().enabled` for any JavaScript animation; do not animate layout or static reading cards on hover.
 
-Interactive controls share brief color/focus feedback. Interactive cards darken their border on hover and focus. The mobile navigation becomes inert immediately when closed, while its height/opacity transition finishes. Theme preference is applied by a small head script before first paint to prevent a light flash when restoring dark mode.
+Interactive controls share brief color/focus feedback. List rows underline their title on hover. The mobile navigation becomes inert immediately when closed, while its height/opacity transition finishes. Theme preference is applied by a small head script before first paint to prevent a light flash when restoring dark mode.
 
 Browser regression checks cover keyboard filtering, native theme controls, touch targets, menu focus/closing, actual theme animation frames, and live reduced-motion changes, in addition to the existing content and preference checks.
 

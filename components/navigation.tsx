@@ -78,7 +78,7 @@ export function Navigation() {
             <span className={cn("flex h-9 w-9 shrink-0 items-center justify-center", enabled && "brand-icon-motion")}>
               <Image src="/weather-icons-59-svgrepo-com.svg" alt="" width={28} height={28} className="dark:invert" />
             </span>
-            <span className="hidden truncate whitespace-nowrap text-base font-semibold tracking-tight sm:inline-block">{language === "en" ? "Shiyang Zhou" : "Shiyang Zhou（周世扬）"}</span>
+            <span className="hidden truncate whitespace-nowrap font-display text-lg font-medium tracking-tight sm:inline-block">{language === "en" ? "Shiyang Zhou" : "Shiyang Zhou（周世扬）"}</span>
           </Link>
           <nav aria-label={language === "en" ? "Main navigation" : "主导航"} className="hidden min-w-0 items-center justify-center gap-5 text-sm lg:flex">
             {NAV_ITEMS.map((item) => (

@@ -40,7 +40,7 @@ export function generateMetadata({ params }: BlogPostRouteProps): Metadata {
 export default function BlogPostRoute({ params }: BlogPostRouteProps) {
   const post = getPost(params.slug)
   return (
-    <BlogPostPage>
+    <BlogPostPage date={post.date} tags={post.tags}>
       <BlogPostBody markdown={post.markdown} />
     </BlogPostPage>
   )
