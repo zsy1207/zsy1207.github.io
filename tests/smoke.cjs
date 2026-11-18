@@ -39,7 +39,7 @@ async function newPage(owner, options) {
 async function sampleThemeMotion(page) {
   const control = page.getByRole('button', { name: /Toggle color theme|切换明暗主题/ })
   const previous = await control.getAttribute('aria-pressed')
-  const target = previous === 'true' ? 20 : 0
+  const target = previous === 'true' ? 24 : 0
   const readX = () => control.evaluate((button) => {
     const thumb = button.querySelector('[aria-hidden="true"] > span')
     if (!thumb) throw new Error('Theme thumb missing')
@@ -224,7 +224,7 @@ async function main() {
     await expect(motionPage.locator('html')).toHaveAttribute('data-motion', 'full')
     await motionPage.clock.pauseAt(await motionPage.evaluate(() => Date.now() + 1000))
     const animatedPositions = await sampleThemeMotion(motionPage)
-    assert.ok(animatedPositions.some((position) => position > 0.01 && position < 19.99), `normal theme transition includes intermediate frames: ${JSON.stringify(animatedPositions)}`)
+    assert.ok(animatedPositions.some((position) => position > 0.01 && position < 23.99), `normal theme transition includes intermediate frames: ${JSON.stringify(animatedPositions)}`)
     pass('normal theme transition has real intermediate motion frames')
     await page.emulateMedia({ reducedMotion: 'reduce' })
     await expect(page.locator('html')).toHaveAttribute('data-motion', 'reduced')
@@ -242,14 +242,14 @@ async function main() {
     await motionPage.emulateMedia({ reducedMotion: 'reduce' })
     await expect(motionPage.locator('html')).toHaveAttribute('data-motion', 'reduced')
     const reducedPositions = await sampleThemeMotion(motionPage)
-    assert.ok(reducedPositions.every((position) => Math.abs(position) < 0.01 || Math.abs(position - 20) < 0.01), `reduced motion jumps directly to the final thumb position: ${JSON.stringify(reducedPositions)}`)
+    assert.ok(reducedPositions.every((position) => Math.abs(position) < 0.01 || Math.abs(position - 24) < 0.01), `reduced motion jumps directly to the final thumb position: ${JSON.stringify(reducedPositions)}`)
     pass('reduced motion responds live and preserves menu/theme interactions')
     await page.emulateMedia({ reducedMotion: 'no-preference' })
     await expect(page.locator('html')).toHaveAttribute('data-motion', 'full')
     await motionPage.emulateMedia({ reducedMotion: 'no-preference' })
     await expect(motionPage.locator('html')).toHaveAttribute('data-motion', 'full')
     const restoredPositions = await sampleThemeMotion(motionPage)
-    assert.ok(restoredPositions.some((position) => position > 0.01 && position < 19.99), `restored theme transition has intermediate frames: ${JSON.stringify(restoredPositions)}`)
+    assert.ok(restoredPositions.some((position) => position > 0.01 && position < 23.99), `restored theme transition has intermediate frames: ${JSON.stringify(restoredPositions)}`)
     pass('normal motion can be restored without reload')
     await motionContext.close()
 

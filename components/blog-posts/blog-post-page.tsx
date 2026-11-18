@@ -23,8 +23,8 @@ export function BlogPostPage({ date, tags, children }: BlogPostPageProps) {
         {language === "en" ? "Back to all posts" : "返回所有文章"}
       </Link>
 
-      <article className="mt-4 min-w-0 [overflow-wrap:anywhere] sm:mt-6">
-        <p className="section-label flex flex-wrap gap-x-2">
+      <article className="mt-6 min-w-0 [overflow-wrap:anywhere] sm:mt-8">
+        <p className="flex flex-wrap gap-x-2 text-sm text-muted-foreground">
           <time dateTime={date}>{formatDate(date, language)}</time>
           {tags.map((tagId) => (
             <span key={tagId}>· {BLOG_TAGS[tagId]?.name[language] ?? tagId}</span>

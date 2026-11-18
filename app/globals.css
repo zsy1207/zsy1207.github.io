@@ -58,7 +58,7 @@
   :root {
     --tracking-body: -0.011em;
     --tracking-tight: -0.02em;
-    --tracking-display: -0.032em;
+    --tracking-display: -0.035em;
   }
   html:lang(zh-CN) {
     --tracking-body: 0em;
@@ -80,7 +80,7 @@
     --motion-normal: 200ms;
     --motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
   }
-  html { scroll-padding-top: 4.5rem; }
+  html { scroll-padding-top: 5rem; }
   body { -webkit-tap-highlight-color: transparent; }
   :where(a, button, input, [tabindex]):focus-visible {
     outline: 2px solid hsl(var(--ring));
@@ -115,7 +115,7 @@
     content: "";
     position: absolute;
     height: 1px;
-    bottom: 6px;
+    bottom: 7px;
     left: 4px;
     right: 4px;
     background: currentColor;
