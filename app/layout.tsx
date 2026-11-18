@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next"
 import localFont from "next/font/local"
+import "@fontsource-variable/noto-sans-sc/wght.css"
 import "./globals.css"
 import { THEME_INIT_SCRIPT } from "@/lib/theme-init"
 import { ThemeProvider } from "@/context/theme-context"
@@ -15,15 +16,6 @@ const inter = localFont({
   display: "swap",
   adjustFontFallback: "Arial",
   variable: "--font-inter",
-})
-
-const newsreader = localFont({
-  src: "../node_modules/@fontsource-variable/newsreader/files/newsreader-latin-wght-normal.woff2",
-  weight: "200 800",
-  style: "normal",
-  display: "swap",
-  adjustFontFallback: "Times New Roman",
-  variable: "--font-display",
 })
 
 export const metadata: Metadata = {
@@ -51,13 +43,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head><script id="theme-init" dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} /></head>
-      <body className={`${inter.variable} ${newsreader.variable} font-sans`}>
+      <body className={`${inter.variable} font-sans`}>
         <ThemeProvider>
           <LanguageProvider>
             <AnimationProvider>
-              <div className="flex min-h-screen flex-col overflow-x-clip">
+              <div className="flex min-h-screen flex-col">
                 <Navigation />
-                <main id="main-content" tabIndex={-1} className="site-container flex-1 py-8 outline-none sm:py-12">
+                <main id="main-content" tabIndex={-1} className="site-container flex-1 py-6 outline-none sm:py-9">
                   {children}
                 </main>
                 <Footer />

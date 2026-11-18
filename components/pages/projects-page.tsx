@@ -35,7 +35,7 @@ export function ProjectsPage() {
         />
       </PageHeader>
 
-      <div role="group" aria-label={language === "en" ? "Filter projects by tag" : "按标签筛选项目"} className="mb-6 flex flex-wrap gap-2">
+      <div role="group" aria-label={language === "en" ? "Filter projects by tag" : "按标签筛选项目"} className="mb-5 flex flex-wrap gap-1.5">
         <FilterChip selected={selectedTag === null} onClick={() => setSelectedTag(null)}>
           {language === "en" ? "All" : "全部"}
         </FilterChip>

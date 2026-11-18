@@ -13,7 +13,7 @@ npm run dev
 
 Development runs on port 3000. It uses the normal Next.js router, including dynamic blog routes. Production uses `output: 'export'`; `.next/` holds build internals and `out/` holds the deployable site. Do not run development and production builds concurrently in the same checkout.
 
-Inter (body) and Newsreader (names and page titles, `font-display`) are bundled locally through `@fontsource-variable`, so builds make no Google Fonts requests. Font licensing is included in the packages. No application secrets or backend services are required.
+Inter (Latin) and Noto Sans SC, the web release of Source Han Sans (Chinese), are bundled locally through `@fontsource-variable`, so builds make no Google Fonts requests. Noto Sans SC is split into about 100 small files by character range; the browser fetches only the ones a page uses. Font licensing is included in the packages. No application secrets or backend services are required.
 
 ## Project structure
 
@@ -73,9 +73,9 @@ The checks cover existing routes, desktop/mobile overflow regressions, language/
 
 ## UI and motion conventions
 
-The page structure, content, Inter typeface, and black/white palette are retained. The header and every page share one width (`.site-container`) and one title block (`PageHeader`). Names and page titles use the serif `font-display`; everything else is Inter in three weights: regular for body, medium for labels, semibold for headings. Secondary information such as dates, locations, and tags uses `text-muted-foreground`. Pages are divided by hairline rules instead of boxes: `Section` puts a small label in the left column, and `ListEntry` renders posts and projects as ruled rows. The home page shows faint isobar lines (`public/contours.svg`, applied as a CSS mask so it follows the theme color). Colors come from the theme tokens in `app/globals.css`. `AnimationProvider` combines the animation setting with the live system `prefers-reduced-motion` preference. CSS also disables motion before hydration. Use `useAnimation().enabled` for any JavaScript animation; do not animate layout or static reading cards on hover.
+The page structure, content, Inter typeface, and black/white palette are retained. The header and every page share one width (`.site-container`) and one title block (`PageHeader`). Type is set in three weights: regular for body, medium for labels, semibold for headings. Letter spacing tightens with size for Latin text (`tracking-tight`, `tracking-display`) and is zero in Chinese. Secondary information such as dates, locations, and tags uses `text-muted-foreground`. Pages are divided by hairline rules instead of boxes: `Section` puts a small label in the left column, and `ListEntry` renders posts and projects as ruled rows. Colors come from the theme tokens in `app/globals.css`. `AnimationProvider` combines the animation setting with the live system `prefers-reduced-motion` preference. CSS also disables motion before hydration. Use `useAnimation().enabled` for any JavaScript animation; do not animate layout or static reading cards on hover.
 
-Interactive controls share brief color/focus feedback. List rows underline their title on hover. The mobile navigation becomes inert immediately when closed, while its height/opacity transition finishes. Theme preference is applied by a small head script before first paint to prevent a light flash when restoring dark mode.
+Interactive controls share brief color/focus feedback. The theme and language switches are matching pills; each changes its setting with one click. List rows underline their title on hover. The mobile navigation becomes inert immediately when closed, while its height/opacity transition finishes. Theme preference is applied by a small head script before first paint to prevent a light flash when restoring dark mode.
 
 Browser regression checks cover keyboard filtering, native theme controls, touch targets, menu focus/closing, actual theme animation frames, and live reduced-motion changes, in addition to the existing content and preference checks.
 

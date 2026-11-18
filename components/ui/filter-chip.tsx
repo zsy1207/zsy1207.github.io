@@ -15,7 +15,7 @@ export function FilterChip({ selected, className, ...props }: FilterChipProps) {
       aria-pressed={selected}
       className={cn(
         badgeVariants({ variant: selected ? "default" : "outline" }),
-        "focus-ring cursor-pointer px-3 py-1 disabled:pointer-events-none disabled:opacity-50 [@media(pointer:coarse)]:min-h-11",
+        "focus-ring cursor-pointer px-3 py-[3px] disabled:pointer-events-none disabled:opacity-50 [@media(pointer:coarse)]:min-h-11",
         !selected && "hover:border-foreground/25 hover:text-foreground",
         className,
       )}

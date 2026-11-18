@@ -50,7 +50,7 @@ export function Navigation() {
     }
     function closeOutside(event: Event) {
       const target = event.target
-      if (target instanceof Element && !header.current?.contains(target) && !target.closest("[data-navigation-overlay]")) {
+      if (target instanceof Element && !header.current?.contains(target)) {
         setMobileMenuOpen(false)
       }
     }
@@ -73,12 +73,12 @@ export function Navigation() {
     <>
       <a href="#main-content" className="skip-link">{language === "en" ? "Skip to content" : "跳转到正文"}</a>
       <header ref={header} className="sticky top-0 z-50 w-full border-b border-border/70 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/75">
-        <div className="site-container grid h-16 grid-cols-[minmax(0,1fr)_auto] items-center gap-2 lg:grid-cols-[auto_minmax(0,1fr)_auto] lg:gap-6">
+        <div className="site-container grid h-14 grid-cols-[minmax(0,1fr)_auto] items-center gap-2 lg:grid-cols-[auto_minmax(0,1fr)_auto] lg:gap-6">
           <Link href="/" className="focus-ring group -ml-1 flex min-h-11 min-w-0 items-center gap-1.5 rounded-sm" aria-label={language === "en" ? "Shiyang Zhou — Home" : "周世扬 — 首页"}>
             <span className={cn("flex h-9 w-9 shrink-0 items-center justify-center", enabled && "brand-icon-motion")}>
               <Image src="/weather-icons-59-svgrepo-com.svg" alt="" width={28} height={28} className="dark:invert" />
             </span>
-            <span className="hidden truncate whitespace-nowrap font-display text-lg font-medium tracking-tight sm:inline-block">{language === "en" ? "Shiyang Zhou" : "Shiyang Zhou（周世扬）"}</span>
+            <span className="hidden truncate whitespace-nowrap text-[15px] font-semibold tracking-tight sm:inline-block">{language === "en" ? "Shiyang Zhou" : "Shiyang Zhou（周世扬）"}</span>
           </Link>
           <nav aria-label={language === "en" ? "Main navigation" : "主导航"} className="hidden min-w-0 items-center justify-center gap-5 text-sm lg:flex">
             {NAV_ITEMS.map((item) => (
@@ -89,7 +89,7 @@ export function Navigation() {
               </Link>
             ))}
           </nav>
-          <div className="flex items-center justify-end gap-2 sm:gap-3">
+          <div className="flex items-center justify-end gap-1.5 sm:gap-2">
             <ThemeToggle />
             <LanguageSwitcher />
             <button ref={menuButton} type="button" aria-expanded={mobileMenuOpen} aria-controls="mobile-navigation"

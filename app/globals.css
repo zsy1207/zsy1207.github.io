@@ -55,10 +55,22 @@
   * {
     @apply border-border;
   }
+  :root {
+    --tracking-body: -0.011em;
+    --tracking-tight: -0.02em;
+    --tracking-display: -0.032em;
+  }
+  html:lang(zh-CN) {
+    --tracking-body: 0em;
+    --tracking-tight: 0em;
+    --tracking-display: 0em;
+  }
   body {
     @apply bg-background text-foreground antialiased;
+    letter-spacing: var(--tracking-body);
     text-rendering: optimizeLegibility;
   }
+  pre, code, kbd { letter-spacing: 0; }
   ::selection { background: hsl(var(--foreground) / 0.12); }
 }
 /* Shared interaction timing, without changing the site's color palette. */
@@ -68,7 +80,7 @@
     --motion-normal: 200ms;
     --motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
   }
-  html { scroll-padding-top: 5rem; }
+  html { scroll-padding-top: 4.5rem; }
   body { -webkit-tap-highlight-color: transparent; }
   :where(a, button, input, [tabindex]):focus-visible {
     outline: 2px solid hsl(var(--ring));
@@ -83,13 +95,7 @@
   }
   /* One horizontal measure for the header and every page. */
   .site-container { @apply mx-auto w-full max-w-4xl px-5 sm:px-6 lg:px-8; }
-  /* Isobar lines behind the home page, tinted with the theme's text color. */
-  .hero-contours {
-    background-color: hsl(var(--foreground) / 0.1);
-    -webkit-mask: url(/contours.svg) center / cover no-repeat;
-    mask: url(/contours.svg) center / cover no-repeat;
-  }
-  .section-label { @apply text-[13px] font-medium uppercase tracking-[0.1em] text-muted-foreground; }
+  .section-label { @apply text-xs font-medium uppercase tracking-[0.08em] text-muted-foreground; font-feature-settings: "case"; }
   .interactive-link {
     text-decoration-line: underline;
     text-decoration-thickness: 1px;
@@ -109,7 +115,7 @@
     content: "";
     position: absolute;
     height: 1px;
-    bottom: 8px;
+    bottom: 6px;
     left: 4px;
     right: 4px;
     background: currentColor;

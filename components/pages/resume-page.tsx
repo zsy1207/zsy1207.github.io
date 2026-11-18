@@ -15,25 +15,25 @@ export function ResumePage() {
   return (
     <>
       <PageHeader title={RESUME_COPY.title[language]}>
-        <Button asChild variant="outline">
+        <Button asChild variant="outline" size="sm">
           <Link href="/周世扬_复旦大学_简历.pdf" download>
-            <Download className="mr-2 h-4 w-4" aria-hidden="true" />
+            <Download className="mr-1.5 h-3.5 w-3.5" aria-hidden="true" />
             {RESUME_COPY.download[language]}
           </Link>
         </Button>
       </PageHeader>
 
       <div>
-        <Section label={RESUME_COPY.educationTitle[language]} className="space-y-8">
+        <Section label={RESUME_COPY.educationTitle[language]} className="space-y-5">
           {EDUCATION.map((entry) => <ResumeEntry key={entry.title.en} entry={entry} language={language} />)}
         </Section>
 
-        <Section label={RESUME_COPY.researchTitle[language]} className="space-y-8">
+        <Section label={RESUME_COPY.researchTitle[language]} className="space-y-5">
           {RESEARCH.map((entry) => <ResumeEntry key={entry.title.en} entry={entry} language={language} />)}
         </Section>
 
         <Section label={RESUME_COPY.honorsTitle[language]}>
-          <ul className="space-y-2.5">
+          <ul className="space-y-1.5 text-[15px]">
             {HONORS.map((honor) => (
               <li key={honor.title.en} className={ROW}>
                 <h3 className="font-medium">{honor.title[language]}</h3>
@@ -44,7 +44,7 @@ export function ResumePage() {
         </Section>
 
         <Section label={RESUME_COPY.skillsTitle[language]}>
-          <ul className="space-y-3">
+          <ul className="space-y-1.5 text-[15px]">
             {SKILLS.map((skill) => (
               <li key={skill.label.en}>
                 <span className="font-medium">{skill.label[language]}</span>
@@ -66,12 +66,12 @@ function ResumeEntry({ entry, language }: { entry: ResumeEntryData; language: La
         <p className={ASIDE}>{entry.period[language]}</p>
       </div>
       {entry.subtitle && (
-        <div className={`mt-1 ${ROW}`}>
+        <div className={`mt-0.5 text-[15px] ${ROW}`}>
           <p>{entry.subtitle[language]}</p>
           {entry.location && <p className={ASIDE}>{entry.location[language]}</p>}
         </div>
       )}
-      <ul className="mt-3 list-disc space-y-1.5 pl-4 text-sm leading-6 text-foreground/80 marker:text-foreground/30">
+      <ul className="mt-2 list-disc space-y-1 pl-4 text-sm leading-6 text-foreground/80 marker:text-foreground/30">
         {entry.details.map((detail) => <li key={detail.en} className="pl-1">{detail[language]}</li>)}
       </ul>
     </div>

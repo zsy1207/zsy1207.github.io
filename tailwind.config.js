@@ -9,17 +9,17 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
+        // Inter for Latin, Source Han Sans (Noto Sans SC) for Chinese.
         sans: [
-          "var(--font-inter)", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI",
-          "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "sans-serif",
-        ],
-        // Serif for names and page titles. CJK falls back to a serif where the
-        // system has a good one, otherwise to the sans stack.
-        display: [
-          "var(--font-display)", "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC",
-          "PingFang SC", "Microsoft YaHei", "Georgia", "serif",
+          "var(--font-inter)", "Noto Sans SC Variable", "Source Han Sans SC", "Noto Sans CJK SC",
+          "PingFang SC", "Microsoft YaHei", "ui-sans-serif", "system-ui", "sans-serif",
         ],
         mono: ["ui-monospace", "SFMono-Regular", "Menlo", "Consolas", "Liberation Mono", "monospace"],
+      },
+      // Inter needs tighter tracking as it gets larger; Chinese text gets none.
+      letterSpacing: {
+        tight: "var(--tracking-tight)",
+        display: "var(--tracking-display)",
       },
       colors: {
         border: "hsl(var(--border))",
@@ -63,5 +63,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [],
 }

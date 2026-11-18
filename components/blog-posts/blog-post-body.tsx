@@ -15,22 +15,22 @@ export function BlogPostBody({ markdown }: { markdown: string }) {
     <ReactMarkdown
       components={{
         h1: ({ children }) => (
-          <h1 className="mt-4 text-balance text-center font-display text-[2rem] font-medium leading-tight tracking-tight sm:text-[2.75rem]">
+          <h1 className="mt-2 text-balance text-[1.75rem] font-semibold leading-tight tracking-display sm:text-[2.125rem]">
             {children}
           </h1>
         ),
         h3: ({ children }) => (
-          <h3 className="mt-9 text-lg font-semibold tracking-tight">
+          <h3 className="mt-7 text-[17px] font-semibold tracking-tight">
             {children}
           </h3>
         ),
         h5: ({ children }) => (
-          <h2 className="mt-14 border-t border-border/70 pt-8 text-xl font-semibold tracking-tight sm:text-2xl">
+          <h2 className="mt-9 border-t border-border/70 pt-6 text-xl font-semibold tracking-tight">
             {children}
           </h2>
         ),
         p: ({ children }) => (
-          <p className="mt-5 text-[15px] leading-8 text-foreground/80 sm:text-base sm:leading-8">
+          <p className="mt-3.5 text-[15px] leading-7 text-foreground/80 sm:text-base sm:leading-7">
             {children}
           </p>
         ),
@@ -40,17 +40,17 @@ export function BlogPostBody({ markdown }: { markdown: string }) {
             src={src ?? ""}
             decoding="async"
             alt={alt ?? ""}
-            className="mt-7 w-full rounded-lg border bg-muted/30 object-cover"
+            className="mt-5 w-full rounded-lg border bg-muted/30 object-cover"
           />
         ),
         ul: ({ children }) => (
-          <ul className="mt-5 list-disc space-y-2 pl-5 text-[15px] leading-8 text-foreground/80 marker:text-foreground/30 sm:text-base sm:leading-8">
+          <ul className="mt-3.5 list-disc space-y-1 pl-5 text-[15px] leading-7 text-foreground/80 marker:text-foreground/30 sm:text-base sm:leading-7">
             {children}
           </ul>
         ),
         li: ({ children }) => <li className="pl-1">{children}</li>,
         pre: ({ children }) => (
-          <pre tabIndex={0} className="focus-ring mt-6 max-w-full overflow-x-auto overscroll-x-contain rounded-lg border border-zinc-800 bg-zinc-950 px-5 py-4 text-sm leading-7 text-zinc-100 dark:bg-zinc-900/60">
+          <pre tabIndex={0} className="focus-ring mt-4 max-w-full overflow-x-auto overscroll-x-contain rounded-lg border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm leading-6 text-zinc-100 dark:bg-zinc-900/60">
             {children}
           </pre>
         ),

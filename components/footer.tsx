@@ -10,7 +10,7 @@ export function Footer() {
 
   return (
     <footer className="border-t border-border/70">
-      <div className="site-container flex flex-wrap items-center justify-between gap-x-8 gap-y-3 py-8 text-sm text-muted-foreground">
+      <div className="site-container flex flex-wrap items-center justify-between gap-x-8 gap-y-2 py-5 text-[13px] text-muted-foreground">
         <p suppressHydrationWarning>
           © {new Date().getFullYear()} {language === "en" ? "Shiyang (Zephyr) Zhou" : "周世扬"}
         </p>

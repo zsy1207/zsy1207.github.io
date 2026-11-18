@@ -42,7 +42,7 @@ export function BlogsPage({ posts }: { posts: Omit<BlogPost, "markdown">[] }) {
         />
       </PageHeader>
 
-      <div role="group" aria-label={language === "en" ? "Filter posts by tag" : "按标签筛选文章"} className="mb-6 flex flex-wrap gap-2">
+      <div role="group" aria-label={language === "en" ? "Filter posts by tag" : "按标签筛选文章"} className="mb-5 flex flex-wrap gap-1.5">
         <FilterChip selected={selectedTag === null} onClick={() => setSelectedTag(null)}>
           {language === "en" ? "All" : "全部"}
         </FilterChip>
