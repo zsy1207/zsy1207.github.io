@@ -18,7 +18,7 @@ export function LanguageSwitcher() {
       onClick={() => setLanguage(isEnglish ? "zh" : "en")}
       aria-label={isEnglish ? "Switch to Chinese" : "切换到英文"}
     >
-      <span aria-hidden="true" className={`${SWITCH_TRACK} grid w-[76px] grid-cols-2 items-center text-xs font-medium leading-none tracking-normal`}>
+      <span aria-hidden="true" className={`${SWITCH_TRACK} grid w-[76px] grid-cols-2 items-center text-[13px] font-medium leading-none tracking-normal`}>
         <span
           className={cn(
             SWITCH_THUMB,
@@ -27,8 +27,8 @@ export function LanguageSwitcher() {
             !isEnglish && "translate-x-[35px]",
           )}
         />
-        <span className={cn("relative text-center", isEnglish ? "text-foreground" : "text-muted-foreground")}>EN</span>
-        <span className={cn("relative text-center", isEnglish ? "text-muted-foreground" : "text-foreground")}>中文</span>
+        <span className={cn("relative text-center transition-colors duration-150", isEnglish ? "text-foreground" : "text-muted-foreground")}>EN</span>
+        <span className={cn("relative text-center transition-colors duration-150", isEnglish ? "text-muted-foreground" : "text-foreground")}>中文</span>
       </span>
     </button>
   )

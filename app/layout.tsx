@@ -30,8 +30,8 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#09090b" },
+    { media: "(prefers-color-scheme: light)", color: "#f9fbfc" },
+    { media: "(prefers-color-scheme: dark)", color: "#0f1218" },
   ],
 }
 
@@ -49,7 +49,7 @@ export default function RootLayout({
             <AnimationProvider>
               <div className="flex min-h-screen flex-col">
                 <Navigation />
-                <main id="main-content" tabIndex={-1} className="site-container flex-1 py-6 outline-none sm:py-9">
+                <main id="main-content" tabIndex={-1} className="site-container flex-1 py-8 outline-none sm:py-12">
                   {children}
                 </main>
                 <Footer />

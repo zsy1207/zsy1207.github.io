@@ -15,29 +15,44 @@ export function ResumePage() {
   return (
     <>
       <PageHeader title={RESUME_COPY.title[language]}>
-        <Button asChild variant="outline" size="sm">
+        <Button
+          asChild
+          variant="outline"
+          size="sm"
+          className="group gap-2 rounded-lg px-3.5 text-sm font-medium"
+        >
           <Link href="/周世扬_复旦大学_简历.pdf" download>
-            <Download className="mr-2 h-4 w-4" aria-hidden="true" />
+            <Download
+              className="h-4 w-4 transition-transform duration-150 motion-safe:group-hover:translate-y-0.5"
+              aria-hidden="true"
+            />
             {RESUME_COPY.download[language]}
           </Link>
         </Button>
       </PageHeader>
 
       <div>
-        <Section label={RESUME_COPY.educationTitle[language]} className="space-y-5">
+        <Section label={RESUME_COPY.educationTitle[language]} className="space-y-7">
           {EDUCATION.map((entry) => <ResumeEntry key={entry.title.en} entry={entry} language={language} />)}
         </Section>
 
-        <Section label={RESUME_COPY.researchTitle[language]} className="space-y-5">
+        <Section label={RESUME_COPY.researchTitle[language]} className="space-y-7">
           {RESEARCH.map((entry) => <ResumeEntry key={entry.title.en} entry={entry} language={language} />)}
         </Section>
 
         <Section label={RESUME_COPY.honorsTitle[language]}>
-          <ul className="divide-y divide-border/60">
+          <ul className="-my-2.5 divide-y divide-border/60">
             {HONORS.map((honor) => (
-              <li key={honor.title.en} className={`py-[7px] text-[15px] first:pt-0 last:pb-0 ${ROW}`}>
-                <h3>{honor.title[language]}</h3>
-                {honor.distinction && <p className={ASIDE}>{honor.distinction[language]}</p>}
+              <li
+                key={honor.title.en}
+                className={`-mx-2.5 rounded-md px-2.5 py-2.5 text-base transition-colors duration-150 [@media(hover:hover)]:hover:bg-secondary/55 ${ROW}`}
+              >
+                <h3 className="leading-normal text-foreground/[0.92]">{honor.title[language]}</h3>
+                {honor.distinction && (
+                  <p className="shrink-0 text-sm font-medium text-muted-foreground sm:text-right">
+                    {honor.distinction[language]}
+                  </p>
+                )}
               </li>
             ))}
           </ul>
@@ -46,10 +61,17 @@ export function ResumePage() {
         <Section label={RESUME_COPY.skillsTitle[language]}>
           <dl className="divide-y divide-border/60">
             {SKILLS.map((skill) => (
-              <div key={skill.label.en} className="grid gap-x-6 gap-y-0.5 py-[7px] text-[15px] leading-6 first:pt-0 last:pb-0 sm:grid-cols-[8rem_minmax(0,1fr)]">
+              <div
+                key={skill.label.en}
+                className="grid gap-x-6 gap-y-1 py-2.5 text-base first:pt-0 last:pb-0 sm:grid-cols-[8.5rem_minmax(0,1fr)]"
+              >
                 {/* The copy ends each label with a colon; the column layout makes it redundant. */}
-                <dt className="text-muted-foreground">{skill.label[language].replace(/[:：]\s*$/, "")}</dt>
-                <dd>{typeof skill.value === "string" ? skill.value : skill.value[language]}</dd>
+                <dt className="text-sm font-medium leading-[1.7] text-muted-foreground">
+                  {skill.label[language].replace(/[:：]\s*$/, "")}
+                </dt>
+                <dd className="text-base prose-leading text-foreground/[0.88]">
+                  {typeof skill.value === "string" ? skill.value : skill.value[language]}
+                </dd>
               </div>
             ))}
           </dl>
@@ -63,25 +85,35 @@ function ResumeEntry({ entry, language }: { entry: ResumeEntryData; language: La
   return (
     <div>
       <div className={ROW}>
-        <h3 className="font-semibold">{entry.title[language]}</h3>
+        <h3 className="text-base font-semibold leading-snug text-foreground">{entry.title[language]}</h3>
         <p className={ASIDE}>{entry.period[language]}</p>
       </div>
       {entry.subtitle && (
-        <div className={`mt-0.5 text-[15px] ${ROW}`}>
-          <p className="text-foreground/80">{entry.subtitle[language]}</p>
+        <div className={`mt-1 ${ROW}`}>
+          <p className="text-base leading-snug text-foreground/80">{entry.subtitle[language]}</p>
           {entry.location && <p className={ASIDE}>{entry.location[language]}</p>}
         </div>
       )}
-      <ul className="mt-2 list-disc space-y-1 pl-[1.1rem] text-[15px] leading-[1.55] text-foreground/75 marker:text-foreground/30">
-        {entry.details.map((detail) => <li key={detail.en} className="pl-0.5">{detail[language]}</li>)}
-      </ul>
+      {entry.details.length === 1 ? (
+        <p className="mt-2.5 max-w-[62ch] text-base prose-leading text-foreground/75">
+          {entry.details[0][language]}
+        </p>
+      ) : entry.details.length > 1 ? (
+        <ul className="mt-2.5 list-disc space-y-1.5 pl-[1.15rem] text-base prose-leading text-foreground/75 marker:text-muted-foreground/50">
+          {entry.details.map((detail) => (
+            <li key={detail.en} className="pl-0.5">
+              {detail[language]}
+            </li>
+          ))}
+        </ul>
+      ) : null}
     </div>
   )
 }
 
 // Title on the left, date or distinction on the right; stacked on small screens.
-const ROW = "grid items-baseline gap-x-8 gap-y-0.5 leading-6 sm:grid-cols-[minmax(0,1fr)_auto]"
-const ASIDE = "text-sm tabular-nums text-muted-foreground sm:text-right"
+const ROW = "grid items-baseline gap-x-8 gap-y-0.5 sm:grid-cols-[minmax(0,1fr)_auto]"
+const ASIDE = "shrink-0 text-sm tabular-nums text-muted-foreground sm:text-right"
 
 interface ResumeEntryData {
   title: LocalizedText

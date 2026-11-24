@@ -21,11 +21,21 @@ export function Navigation() {
   const { language } = useLanguage()
   const { enabled } = useAnimation()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
   const menuButton = useRef<HTMLButtonElement>(null)
   const header = useRef<HTMLElement>(null)
   const mobileMenu = useRef<HTMLDivElement | null>(null)
 
   useEffect(() => { setMobileMenuOpen(false) }, [pathname])
+
+  useEffect(() => {
+    function onScroll() {
+      setScrolled(window.scrollY > 8)
+    }
+    onScroll()
+    window.addEventListener("scroll", onScroll, { passive: true })
+    return () => window.removeEventListener("scroll", onScroll)
+  }, [])
 
   useEffect(() => {
     const desktop = window.matchMedia("(min-width: 1024px)")
@@ -72,19 +82,46 @@ export function Navigation() {
   return (
     <>
       <a href="#main-content" className="skip-link">{language === "en" ? "Skip to content" : "跳转到正文"}</a>
-      <header ref={header} className="sticky top-0 z-50 w-full border-b border-border/70 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/75">
-        <div className="site-container grid h-[60px] grid-cols-[minmax(0,1fr)_auto] items-center gap-2 lg:grid-cols-[auto_minmax(0,1fr)_auto] lg:gap-6">
-          <Link href="/" className="focus-ring group -ml-1 flex min-h-11 min-w-0 items-center gap-1.5 rounded-sm" aria-label={language === "en" ? "Shiyang Zhou — Home" : "周世扬 — 首页"}>
-            <span className={cn("flex h-9 w-9 shrink-0 items-center justify-center", enabled && "brand-icon-motion")}>
-              <Image src="/weather-icons-59-svgrepo-com.svg" alt="" width={28} height={28} className="dark:invert" />
+      <header
+        ref={header}
+        className={cn(
+          "sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur-md transition-[border-color,box-shadow,background-color] duration-200 supports-[backdrop-filter]:bg-background/85",
+          scrolled
+            ? "border-border shadow-[0_1px_12px_-4px_hsl(var(--foreground)/0.08)] dark:shadow-[0_1px_16px_-4px_rgb(0_0_0/0.45)]"
+            : "border-border/75",
+        )}
+      >
+        <div className="site-container grid h-16 grid-cols-[minmax(0,1fr)_auto] items-center gap-2 lg:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] lg:gap-4">
+          <Link
+            href="/"
+            className="focus-ring group -ml-1 flex min-h-11 max-w-full min-w-0 items-center justify-self-start gap-1.5 rounded-sm"
+            aria-label={language === "en" ? "Shiyang Zhou — Home" : "周世扬 — 首页"}
+          >
+            <span className={cn("flex h-8 w-8 shrink-0 items-center justify-center", enabled && "brand-icon-motion")}>
+              <Image src="/weather-icons-59-svgrepo-com.svg" alt="" width={26} height={26} className="dark:invert" />
             </span>
-            <span className="hidden truncate whitespace-nowrap text-base font-semibold tracking-tight sm:inline-block">{language === "en" ? "Shiyang Zhou" : "Shiyang Zhou（周世扬）"}</span>
+            <span className="truncate whitespace-nowrap text-[15px] font-semibold tracking-tight text-foreground sm:text-[17px]">
+              {language === "en" ? (
+                "Shiyang Zhou"
+              ) : (
+                <>
+                  <span className="sm:hidden">周世扬</span>
+                  <span className="hidden sm:inline">Shiyang Zhou（周世扬）</span>
+                </>
+              )}
+            </span>
           </Link>
-          <nav aria-label={language === "en" ? "Main navigation" : "主导航"} className="hidden min-w-0 items-center justify-center gap-6 text-[15px] lg:flex">
+          <nav aria-label={language === "en" ? "Main navigation" : "主导航"} className="hidden min-w-0 items-center justify-center gap-6 text-sm lg:flex">
             {NAV_ITEMS.map((item) => (
-              <Link key={item.href} href={item.href} aria-current={isNavItemActive(pathname, item.href) ? "page" : undefined}
-                className={cn("focus-ring nav-link relative flex min-h-11 shrink-0 items-center rounded-sm px-1",
-                  isNavItemActive(pathname, item.href) ? "font-medium text-foreground" : "text-muted-foreground hover:text-foreground")}>
+              <Link
+                key={item.href}
+                href={item.href}
+                aria-current={isNavItemActive(pathname, item.href) ? "page" : undefined}
+                className={cn(
+                  "focus-ring nav-link relative flex min-h-11 shrink-0 items-center rounded-sm px-1 font-medium",
+                  isNavItemActive(pathname, item.href) ? "text-foreground" : "text-muted-foreground hover:text-foreground",
+                )}
+              >
                 {item.title[language]}
               </Link>
             ))}
@@ -92,27 +129,46 @@ export function Navigation() {
           <div className="flex items-center justify-end gap-2 sm:gap-2.5">
             <ThemeToggle />
             <LanguageSwitcher />
-            <button ref={menuButton} type="button" aria-expanded={mobileMenuOpen} aria-controls="mobile-navigation"
+            <button
+              ref={menuButton}
+              type="button"
+              aria-expanded={mobileMenuOpen}
+              aria-controls="mobile-navigation"
               onClick={() => setMobileMenuOpen((previous) => !previous)}
               className="focus-ring -mr-2 flex h-11 w-11 shrink-0 items-center justify-center rounded-md text-foreground/80 transition-colors duration-150 hover:bg-accent hover:text-foreground active:bg-accent lg:hidden"
-              aria-label={mobileMenuOpen ? "Close Menu" : "Open Menu"}>
+              aria-label={mobileMenuOpen ? "Close Menu" : "Open Menu"}
+            >
               {mobileMenuOpen ? <X className="h-5 w-5" strokeWidth={1.75} aria-hidden="true" /> : <Menu className="h-5 w-5" strokeWidth={1.75} aria-hidden="true" />}
             </button>
           </div>
         </div>
-        <div id="mobile-navigation" ref={(node) => { mobileMenu.current = node; if (node) node.inert = !mobileMenuOpen }}
-          data-state={mobileMenuOpen ? "open" : "closed"} aria-hidden={!mobileMenuOpen} className="mobile-navigation lg:hidden">
+        <div
+          id="mobile-navigation"
+          ref={(node) => { mobileMenu.current = node; if (node) node.inert = !mobileMenuOpen }}
+          data-state={mobileMenuOpen ? "open" : "closed"}
+          aria-hidden={!mobileMenuOpen}
+          className="mobile-navigation data-[state=open]:shadow-[0_12px_32px_-12px_hsl(var(--foreground)/0.12)] dark:data-[state=open]:shadow-[0_16px_36px_-12px_rgb(0_0_0/0.55)] lg:hidden"
+        >
           <div className="min-h-0 overflow-hidden">
-            <nav aria-label={language === "en" ? "Mobile navigation" : "移动导航"} className="site-container flex flex-col gap-1 border-t border-border/70 bg-background py-3">
-              {NAV_ITEMS.map((item) => (
-                <Link key={item.href} href={item.href} onClick={navigateFromMobile} tabIndex={mobileMenuOpen ? undefined : -1}
-                  aria-current={isNavItemActive(pathname, item.href) ? "page" : undefined}
-                  className={cn("focus-ring flex min-h-11 items-center rounded-md px-3 py-2 text-sm transition-colors duration-150 hover:bg-accent",
-                    isNavItemActive(pathname, item.href) ? "bg-accent font-medium text-foreground" : "text-muted-foreground hover:text-foreground")}>
-                  {item.title[language]}
-                </Link>
-              ))}
-            </nav>
+            <div className="border-t border-border/70 bg-background/[0.98] backdrop-blur-md">
+              <nav aria-label={language === "en" ? "Mobile navigation" : "移动导航"} className="site-container flex flex-col gap-1 py-3">
+                {NAV_ITEMS.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={navigateFromMobile}
+                    tabIndex={mobileMenuOpen ? undefined : -1}
+                    aria-current={isNavItemActive(pathname, item.href) ? "page" : undefined}
+                    className={cn(
+                      "focus-ring flex min-h-11 items-center rounded-md px-3 py-2 text-sm font-medium transition-colors duration-150 hover:bg-accent/70",
+                      isNavItemActive(pathname, item.href) ? "bg-accent text-foreground" : "text-muted-foreground hover:text-foreground",
+                    )}
+                  >
+                    {item.title[language]}
+                  </Link>
+                ))}
+              </nav>
+            </div>
           </div>
         </div>
       </header>

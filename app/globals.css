@@ -5,49 +5,51 @@
 @layer base {
   :root {
     color-scheme: light;
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
+    --background: 210 20% 98.6%;
+    --foreground: 220 22% 11%;
     --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
+    --card-foreground: 220 22% 11%;
     --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --primary: 240 5.9% 10%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
-    --destructive: 0 84.2% 60.2%;
+    --popover-foreground: 220 22% 11%;
+    --primary: 220 22% 13%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 214 18% 95%;
+    --secondary-foreground: 220 22% 13%;
+    --muted: 214 18% 94.5%;
+    --muted-foreground: 218 11% 42%;
+    --accent: 214 22% 93.5%;
+    --accent-foreground: 220 22% 11%;
+    --accent-ink: 213 52% 33%;
+    --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 5.9% 10%;
+    --border: 216 15% 88.5%;
+    --input: 216 15% 86%;
+    --ring: 213 52% 33%;
     --radius: 0.5rem;
   }
 
   .dark {
     color-scheme: dark;
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
+    --background: 222 22% 7.2%;
+    --foreground: 213 20% 94.5%;
+    --card: 222 20% 10.5%;
+    --card-foreground: 213 20% 94.5%;
+    --popover: 222 20% 10.5%;
+    --popover-foreground: 213 20% 94.5%;
+    --primary: 213 20% 94.5%;
+    --primary-foreground: 222 22% 9%;
+    --secondary: 222 16% 14.5%;
+    --secondary-foreground: 213 20% 94.5%;
+    --muted: 222 16% 14%;
+    --muted-foreground: 216 13% 64%;
+    --accent: 222 16% 16%;
+    --accent-foreground: 213 20% 94.5%;
+    --accent-ink: 211 66% 70%;
+    --destructive: 0 62.8% 36%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
+    --border: 220 15% 19.5%;
+    --input: 220 15% 22%;
+    --ring: 211 66% 70%;
   }
 }
 
@@ -59,28 +61,36 @@
     --tracking-body: -0.011em;
     --tracking-tight: -0.02em;
     --tracking-display: -0.035em;
+    --leading-body: 1.72;
   }
   html:lang(zh-CN) {
     --tracking-body: 0em;
     --tracking-tight: 0em;
     --tracking-display: 0em;
+    --leading-body: 1.84;
   }
   body {
     @apply bg-background text-foreground antialiased;
+    background-image: radial-gradient(ellipse 80% 380px at 50% 0%, hsl(var(--accent-ink) / 0.035), transparent 72%);
+    background-repeat: no-repeat;
     letter-spacing: var(--tracking-body);
     text-rendering: optimizeLegibility;
   }
+  .dark body {
+    background-image: radial-gradient(ellipse 80% 400px at 50% 0%, hsl(var(--accent-ink) / 0.048), transparent 72%);
+  }
   pre, code, kbd { letter-spacing: 0; }
-  ::selection { background: hsl(var(--foreground) / 0.12); }
+  ::selection { background: hsl(var(--accent-ink) / 0.16); }
 }
-/* Shared interaction timing, without changing the site's color palette. */
+
+/* Shared interaction timing tokens. */
 @layer base {
   :root {
     --motion-fast: 150ms;
     --motion-normal: 200ms;
     --motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
   }
-  html { scroll-padding-top: 5rem; }
+  html { scroll-padding-top: 5.5rem; }
   body { -webkit-tap-highlight-color: transparent; }
   :where(a, button, input, [tabindex]):focus-visible {
     outline: 2px solid hsl(var(--ring));
@@ -95,17 +105,17 @@
   }
   /* One horizontal measure for the header and every page. */
   .site-container { @apply mx-auto w-full max-w-4xl px-5 sm:px-6 lg:px-8; }
-  .section-label { @apply text-xs font-medium uppercase tracking-[0.08em] text-muted-foreground; font-feature-settings: "case"; }
+  .section-label { @apply text-sm font-medium text-muted-foreground; }
   .interactive-link {
     text-decoration-line: underline;
     text-decoration-thickness: 1px;
-    text-decoration-color: hsl(var(--foreground) / 0.25);
+    text-decoration-color: hsl(var(--accent-ink) / 0.35);
     text-underline-offset: 0.25em;
     transition: color var(--motion-fast) ease-out, text-decoration-color var(--motion-fast) ease-out;
   }
   .interactive-link:hover {
-    color: hsl(var(--foreground));
-    text-decoration-color: currentColor;
+    color: hsl(var(--accent-ink));
+    text-decoration-color: hsl(var(--accent-ink) / 0.85);
   }
   .skip-link {
     @apply fixed left-4 top-3 z-[60] -translate-y-24 rounded-md bg-primary px-4 py-3 text-sm font-medium text-primary-foreground;
@@ -114,11 +124,12 @@
   .nav-link::after {
     content: "";
     position: absolute;
-    height: 1px;
-    bottom: 7px;
-    left: 4px;
-    right: 4px;
-    background: currentColor;
+    height: 1.5px;
+    bottom: 6px;
+    left: 2px;
+    right: 2px;
+    background: hsl(var(--accent-ink));
+    border-radius: 9999px;
     transform: scaleX(0);
     transform-origin: center;
     transition: transform var(--motion-normal) var(--motion-ease);
@@ -142,12 +153,16 @@
     transition-delay: 0s;
   }
   .brand-icon-motion { transition: transform var(--motion-normal) var(--motion-ease); }
-  .page-enter { min-width: 0; animation: page-enter 180ms var(--motion-ease) both; }
+  .page-enter { min-width: 0; animation: page-enter var(--motion-normal) var(--motion-ease) both; }
+}
+
+@layer utilities {
+  .prose-leading { line-height: var(--leading-body); }
 }
 
 @keyframes page-enter {
-  from { opacity: 0.85; transform: translateY(3px); }
-  to { opacity: 1; transform: none; }
+  from { opacity: 0.7; }
+  to { opacity: 1; }
 }
 
 @media (hover: hover) and (pointer: fine) {
