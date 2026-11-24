@@ -5,25 +5,25 @@
 @layer base {
   :root {
     color-scheme: light;
-    --background: 210 20% 98.6%;
+    --background: 0 0% 100%;
     --foreground: 220 22% 11%;
     --card: 0 0% 100%;
     --card-foreground: 220 22% 11%;
     --popover: 0 0% 100%;
     --popover-foreground: 220 22% 11%;
     --primary: 220 22% 13%;
-    --primary-foreground: 210 20% 98%;
-    --secondary: 214 18% 95%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 214 16% 96%;
     --secondary-foreground: 220 22% 13%;
-    --muted: 214 18% 94.5%;
+    --muted: 214 16% 96%;
     --muted-foreground: 218 11% 42%;
-    --accent: 214 22% 93.5%;
+    --accent: 214 20% 94.5%;
     --accent-foreground: 220 22% 11%;
     --accent-ink: 213 52% 33%;
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 98%;
-    --border: 216 15% 88.5%;
-    --input: 216 15% 86%;
+    --border: 216 14% 90%;
+    --input: 216 14% 87%;
     --ring: 213 52% 33%;
     --radius: 0.5rem;
   }
@@ -71,13 +71,12 @@
   }
   body {
     @apply bg-background text-foreground antialiased;
-    background-image: radial-gradient(ellipse 80% 380px at 50% 0%, hsl(var(--accent-ink) / 0.035), transparent 72%);
-    background-repeat: no-repeat;
     letter-spacing: var(--tracking-body);
     text-rendering: optimizeLegibility;
   }
   .dark body {
     background-image: radial-gradient(ellipse 80% 400px at 50% 0%, hsl(var(--accent-ink) / 0.048), transparent 72%);
+    background-repeat: no-repeat;
   }
   pre, code, kbd { letter-spacing: 0; }
   ::selection { background: hsl(var(--accent-ink) / 0.16); }

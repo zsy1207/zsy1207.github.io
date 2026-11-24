@@ -28,7 +28,7 @@ export function HomePage() {
           />
           <span
             aria-hidden="true"
-            className="pointer-events-none absolute inset-0 rounded-full shadow-[inset_0_0_16px_hsl(var(--foreground)/0.05)] dark:shadow-[inset_0_0_24px_rgb(0_0_0/0.24)]"
+            className="pointer-events-none absolute inset-0 rounded-full dark:shadow-[inset_0_0_24px_rgb(0_0_0/0.24)]"
           />
         </Avatar>
         <div className="w-full max-w-[36rem]">
