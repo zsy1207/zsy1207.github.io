@@ -129,7 +129,7 @@ const EDUCATION: ResumeEntryData[] = [
     period: RESUME_COPY.fudanPeriod,
     subtitle: RESUME_COPY.fudanDegree,
     location: RESUME_COPY.fudanLocation,
-    details: [RESUME_COPY.fudanAdvisor, RESUME_COPY.fudanResearchDirection],
+    details: [RESUME_COPY.fudanAdvisor, RESUME_COPY.fudanResearchDirection, RESUME_COPY.fudanGpa],
   },
   {
     title: RESUME_COPY.nuistInstitution,

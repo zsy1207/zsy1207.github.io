@@ -40,6 +40,10 @@ export const RESUME_COPY = {
     en: "Advisor: Prof. Wen Zhou",
     zh: "指导老师：周文教授",
   },
+  fudanGpa: {
+    en: "GPA: 3.83 (3/47)",
+    zh: "GPA：3.83（3/47）",
+  },
   fudanResearchDirection: {
     en: "Research Direction: Ocean-Ice-Atmosphere Interactions, Climate Dynamics, Monsoons, and Extreme Weather",
     zh: "研究方向：海-冰-气相互作用、气候动力学、季风与极端天气",
