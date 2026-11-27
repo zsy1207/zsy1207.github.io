@@ -185,8 +185,8 @@ export const RESUME_COPY = {
     zh: "证书：",
   },
   certificates: {
-    en: "Computer Level 2, CET-6, Driver's License",
-    zh: "计算机二级, CET-6, 驾驶证",
+    en: "Computer Level 2, CET-6, Alibaba Cloud LLM Engineer (ACA), Driver's License",
+    zh: "计算机二级, CET-6, 阿里云大模型工程师ACA认证, 驾驶证",
   },
   softwareLabel: {
     en: "Software: ",
